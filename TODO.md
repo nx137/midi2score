@@ -61,11 +61,14 @@
 | R1-3h | 二值化 / 反演指标 / 倒置对 / repeat 分组 → 已裁定（D-0030–D-0033） | — | done |
 | R1-3i | **导出侧交付 1–4**（68+3 导出复现 / 五格 Tier / 分位点 / 裁定5 逐值一致） | — | done（EV-S19–S22） |
 | R1-3j | 分位点估计量 → 已裁定（D-0035 A+：estimator-free 主描述 + R-7 次描述；P5 不得进摘要/判据） | — | done |
-| R1-4a | G1' 交付 5：反演一致度（0/±1/±2 + micro/macro + 绝对计数 + bootstrap 对基线） | R1-3l | blocked（坐标系待裁定） |
+| R1-4a-0 | 交付 5 第 0 步：含 repeat + 含 pedal 乐谱的通道自检（新门） | — | todo |
+| R1-4a-b | ①b 锚点还原（复用分段线性规则，展开坐标由 nASAP 给出） | R1-4a-0 | todo |
+| R1-4a | 交付 5：0/±1/±2 拍曲线 + micro/macro + 逐作曲家 + 绝对计数混淆 | R1-4a-b | todo |
+| R1-4c | bootstrap 10,000 对 always_down / beat_periodic_N | R1-4a | todo |
 | R1-3k | Main 口径 → 已裁定（D-0039：以谓词为准，§4.4 已勘误） | — | done |
-| R1-3l | 坐标系 = 展开 → 已裁定（D-0042 A）；**4a(i)/(ii) 两门不过，停机待裁定 S/T 计数口径** | controller 裁定 | blocked |
+| R1-3l | 坐标系 → 已裁定 **A4**（D-0045）：记号计数 as-written / 恒等式限 58 首 / 10 首 coordinate_ambiguous；4a(ii) 撤销 | — | done |
 | R1-3m | 交付 6 收讫 + `assignment_sha256` 冻结标识 | — | done（EV-S34） |
-| R1-3n | 欠账 #4：as-written 半边**已报**（13 首中 8 首在主轴、train4/test3/val1、69/3840 元素）；**unfolded 半边**待 S/T 口径 | R1-3l | blocked |
+| R1-3n | 欠账 #4 **结清**（8/13 在主轴、69/3840 = 1.8%；13 首全 `S=0` → 坐标不变，unfolded 半边不需要） | — | done |
 | R1-3o | 决策权限边界规则入库（D-0044） | — | done |
 | R1-4b | G1' 交付 6：主表划分冻结 | — | done（EV-S26；hash `52ae1314…`） |
 

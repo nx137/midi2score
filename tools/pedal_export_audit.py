@@ -26,6 +26,10 @@ PEDAL_XPATH = ".//*[local-name()='pedal']"
 T2B_GAP = 0.10  # 报告阈值（非闸门），本轮冻结
 
 
+def has_repeat(xml_path: Path) -> bool:
+    return bool(etree.parse(str(xml_path)).getroot().xpath(".//*[local-name()='repeat']"))
+
+
 def scan_pedal(xml_path: Path) -> dict:
     """文档顺序扫描。未闭合/孤立 stop 为全局口径；倒置对为局部 balance 跌破 0（不钳位）。"""
     elems = etree.parse(str(xml_path)).getroot().xpath(PEDAL_XPATH)
@@ -54,6 +58,7 @@ def scan_pedal(xml_path: Path) -> dict:
         "inverted_pairs": inverted,
         "staves_first_pedal_is_stop": first_is_stop_staves,
         "balance_final": balance,
+        "has_repeat": has_repeat(xml_path),
     }
 
 
@@ -83,17 +88,22 @@ def main() -> int:
     for r in probe["rows"]:
         seq = scan_pedal(args.dataset / r["relative_path"])
         S, T, C = seq["pedal_start"], seq["pedal_stop"], r["cc64_messages"] if r["cc64_messages"] is not None else 0
-        tier, I, g, gap = classify(S, T, C)
+        if seq["has_repeat"]:
+            tier, I, g, gap = "coordinate_ambiguous", None, None, None
+        else:
+            tier, I, g, gap = classify(S, T, C)
         residual = (I - C) - 2 * (seq["unclosed_start"] + seq["orphan_stop"] + seq["inverted_pairs"]) if tier in ("T2", "T2b") else None
         rows.append({
             **r, **seq, "C": C, "I": I, "g": g, "tier": tier,
-            "cc64_over_identity": (round(C / I, 4) if I > 0 else None),
+            "cc64_over_identity": (round(C / I, 4) if (I or 0) > 0 else None),
             "gap_pct": (round(gap * 100, 2) if gap is not None else None),
             "explanatory_residual": residual,
             "source_xml_sha256": hashlib.sha256((args.dataset / r["relative_path"]).read_bytes()).hexdigest(),
         })
 
     positives = [r for r in rows if r["kind"] == "positive"]
+    effective = [r for r in positives if not r["has_repeat"]]
+    ambiguous = [r for r in positives if r["has_repeat"]]
     negatives = [r for r in rows if r["kind"] == "negative"]
 
     # ---- 裁定 5：与既有记录逐值一致（全部重叠乐谱）----
@@ -117,7 +127,7 @@ def main() -> int:
     overlap_all_match = all(o["match"] for o in overlap) if overlap else False
 
     # ---- 分位点（定义域：min(S,T) > 0）----
-    ratios = sorted(r["cc64_over_identity"] for r in positives if r["cc64_over_identity"] is not None)
+    ratios = sorted(r["cc64_over_identity"] for r in effective if r["cc64_over_identity"] is not None)
     pct = {}
     if ratios:
         arr = np.array(ratios)
@@ -130,9 +140,9 @@ def main() -> int:
             pct[method] = {"P5": vals[0], "P50": vals[1], "P95": vals[2]}
 
     buckets = {"gap==0": 0, "0<g<=0.01": 0, "0.01<g<=0.05": 0, "0.05<g<=0.10": 0, "g>0.10": 0}
-    for r in positives:
+    for r in effective:
         g = r["g"]
-        if r["I"] == 0:
+        if (r["I"] or 0) == 0:
             continue
         if g == 0:
             buckets["gap==0"] += 1
@@ -154,6 +164,7 @@ def main() -> int:
     summary = {
         "ruling": "D-0027/D-0028 五格谓词",
         "n_positive": len(positives), "n_negative": len(negatives),
+        "n_effective_no_repeat": len(effective), "n_coordinate_ambiguous": len(ambiguous),
         "negative_with_zero_cc64": sum(1 for r in negatives if r["C"] == 0),
         "negative_files": [r["relative_path"] for r in negatives],
         "tier_counts": {k: len(v) for k, v in sorted(tiers.items())},
@@ -177,6 +188,10 @@ def main() -> int:
         w = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")
         w.writeheader()
         w.writerows(positives)
+    with (args.out_dir / "tiers_effective.csv").open("w", encoding="utf-8", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore"); w.writeheader(); w.writerows(effective)
+    with (args.out_dir / "tiers_coordinate_ambiguous.csv").open("w", encoding="utf-8", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore"); w.writeheader(); w.writerows(ambiguous)
     with (args.out_dir / "baseline_overlap.csv").open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=["relative_path", "old_cc64", "new_cc64", "match", "old_output_bytes", "new_output_bytes"], extrasaction="ignore")
         w.writeheader()
