@@ -50,4 +50,7 @@
 | AC-E5 | 原始语料未进入 git（HC-06 / 计划书 §4.3 许可） | git check-ignore -v data/asap-dataset + git status | pass（2026-10-07） |
 | AC-E6 | 科研环境 pin 一致（§10.1 版本组合） | `pip freeze` 对照 requirements-research.txt | pass（2026-10-07，EV-S14） |
 | AC-E7 | 导出链路可用：含 pedal 乐谱导出 MIDI 确实产生 CC64，负对照为 0 | `tools/musescore_export_probe.py --force`（20+2 样本） | pass（20/20 成功，0 真否决；EV-S15） |
-| AC-E8 | R1-3b 判据口径（恒等式 vs 字面元素比）已裁定并生效 | 需用户裁定（D-0022） | not_run |
+| AC-E8 | R1-3b/G0 判据口径已裁定并生效（D-0025：唯一否决条件 + 恒等式诊断量 + 作废带宽 + Tier 分类） | 对照 D-0025 逐条 | pass（2026-10-07） |
+| AC-E9 | 全量导出 Tier 表与分位点已产出（逐首列名，含 T2 七字段） | `evidence/R1/G1-tiers/tiers.csv` | pass（68 首；EV-S17） |
+| AC-E10 | 唯一否决条件（T1）判定 | 待 T1/T3 互斥化裁定（D-0027） | blocked |
+| AC-E11 | 划分冻结（§4.1：70/10/20、seed 20260101、曲目为不可分单位、SHA256） | G1' 产出 | not_run |

@@ -164,7 +164,6 @@ def main() -> int:
     print(f"negative controls with CC64==0: {sum(1 for r in negatives if r['cc64_messages'] == 0)}/{len(negatives)}")
     print(f"structurally unbalanced (start != stop): {len(unbalanced)}/{len(positives)}")
     print(f"identity  CC64 == 2*min(start,stop): {identity_ok}/{len(positives)}")
-    print(f"literal   CC64 / pedal_elements ~= 1.0: {sum(1 for r in positives if (r['cc64_per_pedal_element'] or 0) >= 0.8)}/{len(positives)}")
     print(f"failures: {failures}")
     print(f"positive with ZERO cc64 (informational): {no_cc64}")
     print(f"G0 VETO (start>0 but cc64==0): {vetoes}")

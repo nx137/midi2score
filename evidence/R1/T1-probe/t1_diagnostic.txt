@@ -1,0 +1,20 @@
+====================================================================================================
+Prokofiev/Toccata/xml_score.musicxml
+  musicxml version = 3.1
+  parts = 1, staves(score-partwise) = 1
+  pedal elements = 1  types = {'start': 1}
+    #0 type=start line=None staff=None number=None parent=direction-type < direction < measure
+  run1: exit=0 out_exists=True total_msgs=9454 cc64=0 all_controls={6: 1, 7: 1, 10: 1, 91: 1, 93: 1, 100: 2, 101: 2, 121: 1} channels={0: 10}
+         stdout='' stderr=''
+  run2: exit=0 out_exists=True total_msgs=9454 cc64=0 all_controls={6: 1, 7: 1, 10: 1, 91: 1, 93: 1, 100: 2, 101: 2, 121: 1} channels={0: 10}
+         stdout='' stderr=''
+====================================================================================================
+Schubert/Impromptu_op.90_D.899/3/xml_score.musicxml
+  musicxml version = 3.1
+  parts = 1, staves(score-partwise) = 1
+  pedal elements = 1  types = {'start': 1}
+    #0 type=start line=None staff=None number=None parent=direction-type < direction < measure
+  run1: exit=0 out_exists=True total_msgs=5595 cc64=0 all_controls={6: 1, 7: 1, 10: 1, 91: 1, 93: 1, 100: 2, 101: 2, 121: 1} channels={0: 10}
+         stdout='' stderr=''
+  run2: exit=0 out_exists=True total_msgs=5595 cc64=0 all_controls={6: 1, 7: 1, 10: 1, 91: 1, 93: 1, 100: 2, 101: 2, 121: 1} channels={0: 10}
+         stdout='' stderr=''
