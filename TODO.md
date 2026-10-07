@@ -72,7 +72,9 @@
 | R1-4a-e | 第 0 步通道自检 | — | done（EV-S38；条件①未触发） |
 | R1-4a-j | 主指标：渲染侧坐标化 | 改走**顺序对应 + tick/PPQ**（DTW 暂不建）；闭环 3 例中 2 例近乎精确，**Ravel 偏差 4.3 拍未归因 → 自检未过** | todo |
 | R1-4a-k | 归因 Ravel 偏差 | 第 2 轮：确认为累加漂移，时号口径更差 → **未通过** | done |
-| R1-4a-z | **触发预声明降级（§9.3 / B4）**：claim 降为「数据集+评测协议+阴性结果」 | — | done（D-0049） |
+| R1-4a-z | ~~触发预声明降级~~ **D-0049 已撤销**（D-0050 重开） | — | done |
+| R1-5a | 43 首通道覆盖率表（逐首列名 + 特征 + 分类） | — | done（`coverage_43.md`；in_grid 18 / T2类 9 / deviation 8 / no_data 8） |
+| R1-5b | 主指标：限定有效域后出数 | R1-5a | todo |
 | R1-4a-b | ①b 锚点还原（复用分段线性规则，展开坐标由 nASAP 给出） | R1-4a-0 | todo |
 | R1-4a | 交付 5：0/±1/±2 拍曲线 + micro/macro + 逐作曲家 + 绝对计数混淆 | R1-4a-b | todo |
 | R1-4c | bootstrap 10,000 对 always_down / beat_periodic_N | R1-4a | todo |

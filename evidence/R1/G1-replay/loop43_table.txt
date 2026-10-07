@@ -1,0 +1,11 @@
+43 �����᣺��� 43����ƫ������ 43
+��λƫ������������: 15/43
+���ƫ��Ҳ�ڸ���: 7/43
+
+score                                               med       max inGrid  #bkp  #vc  #ped
+Beethoven/Piano_Sonatas/11-2/xml_score.musicxml   0.0042    0.0042   True   169    6   166
+Traceback (most recent call last):
+  File "C:\Users\34423\AppData\Local\Temp\loop43.py", line 55, in <module>
+    print(f"{r['score']:<46} {r['median_dev_qn']:>8} {r['max_dev_qn']:>9} {str(r['median_in_grid']):>6} {r['n_backup']:>5} {r['n_voice']:>4} {r['n_pedal']:>5}")
+                             ^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: unsupported format string passed to NoneType.__format__
