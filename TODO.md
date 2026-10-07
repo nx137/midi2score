@@ -64,7 +64,8 @@
 | R1-4a-0 | 交付 5 第 0 步：通道自检 | — | todo |
 | R1-4a-b | ①b 锚点还原 | — | done（解析验证通过；36 首 / 271 对） |
 | R1-4a-c | 修匹配：贪心 → 最优指派 | — | done（F1 单调、错向=0） |
-| R1-4a-d | ④ 基线 + bootstrap 10,000 + macro/逐作曲家 | — | todo |
+| R1-4a-d | ④ 基线 + bootstrap | — | done（**未通过 → 停机条件 ③ 触发**；见 `RESULT_phase4_baselines.md`） |
+| R1-4a-f | **Plan B 讨论**（指标是否对稠密规则预测器过于宽容） | 用户/主控裁定 | blocked |
 | R1-4a-e | 第 0 步通道自检（含 repeat 谱） | — | todo |
 | R1-4a-b | ①b 锚点还原（复用分段线性规则，展开坐标由 nASAP 给出） | R1-4a-0 | todo |
 | R1-4a | 交付 5：0/±1/±2 拍曲线 + micro/macro + 逐作曲家 + 绝对计数混淆 | R1-4a-b | todo |
