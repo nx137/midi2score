@@ -70,7 +70,7 @@
 | R1-4a-h | **第 0 步通道自检**（优先级高于主指标） | R1-4a-g | todo |
 | R1-4a-i | 主指标（回放保真度）；若仍输周期基线 → §9.3 降级路径 | R1-4a-h | todo |
 | R1-4a-e | 第 0 步通道自检 | — | done（EV-S38；条件①未触发） |
-| R1-4a-j | 主指标：需渲染器 MIDI ↔ 谱面位置的单调映射（S4 对齐） | — | todo |
+| R1-4a-j | 主指标：渲染 MIDI ↔ 谱面的单调映射 | 首次实现**自检失败**（映射非单调，oracle R=0.024 不可信）→ 改用**音高感知 DTW** | todo |
 | R1-4a-b | ①b 锚点还原（复用分段线性规则，展开坐标由 nASAP 给出） | R1-4a-0 | todo |
 | R1-4a | 交付 5：0/±1/±2 拍曲线 + micro/macro + 逐作曲家 + 绝对计数混淆 | R1-4a-b | todo |
 | R1-4c | bootstrap 10,000 对 always_down / beat_periodic_N | R1-4a | todo |
