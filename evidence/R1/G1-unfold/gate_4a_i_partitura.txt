@@ -1,0 +1,17 @@
+4a(i) 门 — partitura unfold 是否复制 pedal 方向元素、能否给出原始 S_unf/T_unf
+命令: python tools/repeat_expansion_probe.py --dataset data/asap-dataset --out-dir evidence/R1/G1-coordsys --exitcode-file Chopin/Sonata_3/3rd/xml_score.musicxml --exitcode-repeat 3
+      及会话内 partitura 探测（load_score -> merge_parts -> unfold_part_maximal -> iter_all）
+
+score                                  书写 S/T        partitura pedal(written)  pedal(unfolded)   written_notes  unfolded_notes
+Beethoven/Piano_Sonatas/31-2           2 / 7 (9 elems)  2  (SustainPedalDirection)  2              978            1428
+Liszt/Hungarian_Rhapsodies/6           181 / 181        181                        187            4956           5447
+Schumann/Arabeske                      127 / 68         127                        137            2838           3076
+
+结论:
+1) unfold 会复制 pedal 方向元素（Liszt 181->187, Arabeske 127->137）；31-2 不变，因其反复区间内无 pedal。
+2) 但 partitura 的 SustainPedalDirection 是【成对合并】对象（31-2: XML 9 个 pedal 元素 -> 2 个对象），
+   因此无法从 partitura 读出展开后的原始 start/stop 计数。
+3) 绕道「展开后回写 MusicXML 再数元素」不可行：
+   - Chopin/Ballades/3 原 S=240 T=240 pedal_all=480 -> 回写后 S=240 T=0 pedal_all=454（丢 stop）
+   - 展开版 save_musicxml 直接崩溃: AttributeError: 'NoneType' object has no attribute 'actual_notes'
+=> 4a(i) 门：不过。按裁定停机上报，未使用乘法近似。
