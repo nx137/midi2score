@@ -34,16 +34,16 @@
 | T3-3 | `conflicting` → `interrupt()` 暂停；普通 approve 不放行，需显式 override | — | done |
 | T3-4 | 程序不得自动修改 `TASK_CHARTER.md`（无写路径 + 意图拦截 + 哈希校验） | — | done |
 
-## 阶段 4：测试（未启动）
+## 阶段 4：测试（已完成）
 
 | ID | 待办 | blocking | 状态 |
 |:--|:--|:--|:--|
-| T4-1 | 相同 thread_id 恢复状态 | 阶段 3 确认 | todo |
-| T4-2 | 不同 thread_id 相互隔离 | T4-1 | todo |
-| T4-3 | store 跨 thread 读取长期决策 | T4-1 | todo |
-| T4-4 | `TASK_CHARTER.md` 不被普通任务自动修改 | T4-1 | todo |
-| T4-5 | 目标冲突进入人工确认 | T4-1 | todo |
-| T4-6 | 进程重启后从持久化后端恢复 | T4-1 | todo |
+| T4-1 | 相同 thread_id 恢复状态 | — | done（test_ac1） |
+| T4-2 | 不同 thread_id 相互隔离 | — | done（test_ac2） |
+| T4-3 | store 跨 thread 读取长期决策 | — | done（test_ac3） |
+| T4-4 | `TASK_CHARTER.md` 不被普通任务自动修改 | — | done（test_ac4，哈希+mtime） |
+| T4-5 | 目标冲突进入人工确认 | — | done（test_ac5） |
+| T4-6 | 进程重启后从持久化后端恢复 | — | done（test_ac6，真双进程） |
 
 ## 科研侧起步（阶段 2–4 完成后启动，需另行批准）
 

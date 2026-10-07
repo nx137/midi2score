@@ -19,12 +19,12 @@
 
 | ID | 验收标准 | 判定方法 | result |
 |:--|:--|:--|:--|
-| AC-S1 | 相同 `thread_id` 可以恢复任务状态 | 阶段 4 测试 1 | pass（阶段 2：test_resume_same_thread） |
-| AC-S2 | 不同 `thread_id` 互相隔离 | 阶段 4 测试 2 | pass（阶段 2：test_thread_isolation） |
-| AC-S3 | store 可以跨 thread 读取长期决策 | 阶段 4 测试 3 | pass（阶段 2：test_store_cross_thread） |
-| AC-S4 | `TASK_CHARTER.md` 不会被普通任务自动修改（运行前后 sha256 一致） | 阶段 4 测试 4 | pass（阶段 2：test_charter_not_modified） |
-| AC-S5 | 目标冲突时进入人工确认（`interrupt()`，不自动继续） | 阶段 4 测试 5 | pass（阶段 3：三值判定 + conflicting 普通 approve 不放行，需显式 override；test_alignment_* / test_conflicting_*） |
-| AC-S6 | 进程重启后可从持久化后端恢复 | 阶段 4 测试 6（独立进程二次运行） | 部分（阶段 2：demo [5] 重开 SQLite 读回同一 thread；独立进程测试待阶段 4） |
+| AC-S1 | 相同 `thread_id` 可以恢复任务状态 | 阶段 4 测试 1 | pass（阶段 4 验收：test_ac1_same_thread_resumes_state） |
+| AC-S2 | 不同 `thread_id` 互相隔离 | 阶段 4 测试 2 | pass（阶段 4 验收：test_ac2_different_threads_are_isolated） |
+| AC-S3 | store 可以跨 thread 读取长期决策 | 阶段 4 测试 3 | pass（阶段 4 验收：test_ac3_store_reads_across_threads） |
+| AC-S4 | `TASK_CHARTER.md` 不会被普通任务自动修改（运行前后 sha256 一致） | 阶段 4 测试 4 | pass（阶段 4 验收：test_ac4_charter_not_modified_by_task，哈希+mtime 均不变） |
+| AC-S5 | 目标冲突时进入人工确认（`interrupt()`，不自动继续） | 阶段 4 测试 5 | pass（阶段 4 验收：test_ac5_conflict_requires_human_confirmation，普通 approve 不放行） |
+| AC-S6 | 进程重启后可从持久化后端恢复 | 阶段 4 测试 6（独立进程二次运行） | pass（阶段 4 验收：test_ac6_state_survives_process_restart，两个真实进程 PID 不同） |
 | AC-S7 | 状态 schema 明确：结构化字段承载任务对象，**不是把所有信息塞进 messages** | 代码审查（阶段 2） | pass（schemas.py：TypedDict + Pydantic 记录，任务对象不入 messages） |
 | AC-S8 | 多轮运行不无限追加消息上下文（裁剪 / 摘要 / 结构化） | messages 窗口裁剪测试（阶段 2） | pass（test_messages_window_bounded，上限 20） |
 | AC-S9 | 稳定 thread_id：`research:midi2score:<task_id>`，非每次随机生成 | 代码审查（阶段 2） | pass（graph.stable_thread_id → research:{project}:{task}） |
