@@ -60,9 +60,10 @@
 | R1-3g | T1/T3 互斥化 → 已裁定（D-0027 选 A + D-0029 五格谓词含 T4） | — | done |
 | R1-3h | 二值化 / 反演指标 / 倒置对 / repeat 分组 → 已裁定（D-0030–D-0033） | — | done |
 | R1-3i | **导出侧交付 1–4**（68+3 导出复现 / 五格 Tier / 分位点 / 裁定5 逐值一致） | — | done（EV-S19–S22） |
-| R1-3j | **待裁定**：分位点估计量（D-0035；R-7 P5=0.91485 vs nearest_rank 0.8837） | controller 裁定 | blocked |
-| R1-4a | G1' 交付 5：反演一致度（0/±1/±2 + micro/macro + 绝对计数） | R1-3j | blocked |
-| R1-4b | G1' 交付 6：主表划分冻结（70/10/20、seed 20260101、曲目/变体同折、SHA256） | R1-3j | blocked |
+| R1-3j | 分位点估计量 → 已裁定（D-0035 A+：estimator-free 主描述 + R-7 次描述；P5 不得进摘要/判据） | — | done |
+| R1-4a | G1' 交付 5：反演一致度（0/±1/±2 + micro/macro + 绝对计数 + bootstrap 对基线） | R1-4b | todo（本轮未开始） |
+| R1-3k | **待 controller 裁定**：Main 口径正文 vs 数字冲突（D-0037；本轮暂用能复现 43/291/3840 的乐谱级口径） | controller 裁定 | blocked |
+| R1-4b | G1' 交付 6：主表划分冻结 | — | done（EV-S26；hash `52ae1314…`） |
 
 ## 明确不做（YAGNI）
 

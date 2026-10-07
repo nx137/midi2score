@@ -1,0 +1,375 @@
+{
+  "seed": 20260101,
+  "ratios": {
+    "train": 0.7,
+    "val": 0.1,
+    "test": 0.2
+  },
+  "filter": "SCORE-LEVEL: passing perf = robust_note_alignment==1.0 AND score_and_performance_aligned is True AND note_alignment file exists; Main scores = touched scores (43); Main performances = ALL metadata rows of those scores (291)",
+  "main_scores": [
+    "Beethoven/Piano_Sonatas/11-2/xml_score.musicxml",
+    "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml",
+    "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+    "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+    "Beethoven/Piano_Sonatas/29-2/xml_score.musicxml",
+    "Beethoven/Piano_Sonatas/29-3/xml_score.musicxml",
+    "Beethoven/Piano_Sonatas/29-4/xml_score.musicxml",
+    "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml",
+    "Beethoven/Piano_Sonatas/31-2_no_repeat/xml_score.musicxml",
+    "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml",
+    "Brahms/Six_Pieces_op_118/2/xml_score.musicxml",
+    "Chopin/Ballades/1/xml_score.musicxml",
+    "Chopin/Ballades/3/xml_score.musicxml",
+    "Chopin/Barcarolle/xml_score.musicxml",
+    "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "Chopin/Etudes_op_10/10/xml_score.musicxml",
+    "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "Chopin/Etudes_op_10/7/xml_score.musicxml",
+    "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "Chopin/Etudes_op_25/1/xml_score.musicxml",
+    "Chopin/Etudes_op_25/12/xml_score.musicxml",
+    "Chopin/Etudes_op_25/8/xml_score.musicxml",
+    "Chopin/Scherzos/20/xml_score.musicxml",
+    "Chopin/Scherzos/31/xml_score.musicxml",
+    "Chopin/Scherzos/39/xml_score.musicxml",
+    "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml",
+    "Chopin/Sonata_2/2nd/xml_score.musicxml",
+    "Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml",
+    "Chopin/Sonata_3/2nd/xml_score.musicxml",
+    "Chopin/Sonata_3/3rd/xml_score.musicxml",
+    "Chopin/Sonata_3/4th/xml_score.musicxml",
+    "Debussy/Images_Book_1/1_Reflets_dans_lEau/xml_score.musicxml",
+    "Liszt/Ballade_2/xml_score.musicxml",
+    "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "Ravel/Pavane/xml_score.musicxml",
+    "Schumann/Arabeske/xml_score.musicxml",
+    "Schumann/Kreisleriana/4/xml_score.musicxml",
+    "Schumann/Kreisleriana/6/xml_score.musicxml",
+    "Schumann/Kreisleriana/7/xml_score.musicxml",
+    "Scriabin/Etudes_op_8/11/xml_score.musicxml",
+    "Scriabin/Sonatas/5/xml_score.musicxml"
+  ],
+  "main_performances": 291,
+  "main_pedal_elements": 3840,
+  "n_groups": 41,
+  "other_pool": {
+    "composers": [
+      "Brahms",
+      "Debussy",
+      "Ravel",
+      "Scriabin"
+    ],
+    "groups": 5,
+    "scores": 5
+  },
+  "fold_groups": {
+    "train": [
+      "Beethoven||Piano_Sonatas_11-2",
+      "Beethoven||Piano_Sonatas_26-2",
+      "Beethoven||Piano_Sonatas_29-2",
+      "Beethoven||Piano_Sonatas_29-3",
+      "Beethoven||Piano_Sonatas_31-2",
+      "Beethoven||Piano_Sonatas_32-1",
+      "Chopin||Ballades_3",
+      "Chopin||Barcarolle",
+      "Chopin||Etudes_op_10_1",
+      "Chopin||Etudes_op_10_10",
+      "Chopin||Etudes_op_10_5",
+      "Chopin||Etudes_op_25_1",
+      "Chopin||Etudes_op_25_12",
+      "Chopin||Scherzos_20",
+      "Chopin||Scherzos_39",
+      "Chopin||Sonata_2_1st",
+      "Chopin||Sonata_3_2nd",
+      "Chopin||Sonata_3_3rd",
+      "Chopin||Sonata_3_4th",
+      "Liszt||Ballade_2",
+      "Liszt||Gran_Etudes_de_Paganini_2_La_campanella",
+      "Ravel||Pavane",
+      "Schumann||Kreisleriana_4",
+      "Schumann||Kreisleriana_6",
+      "Scriabin||Etudes_op_8_11",
+      "Scriabin||Sonatas_5"
+    ],
+    "val": [
+      "Beethoven||Piano_Sonatas_21-3",
+      "Chopin||Etudes_op_10_7",
+      "Chopin||Etudes_op_25_8",
+      "Debussy||Images_Book_1_1_Reflets_dans_lEau",
+      "Liszt||Transcendental_Etudes_10",
+      "Schumann||Kreisleriana_7"
+    ],
+    "test": [
+      "Beethoven||Piano_Sonatas_28-1",
+      "Beethoven||Piano_Sonatas_29-4",
+      "Brahms||Six_Pieces_op_118_2",
+      "Chopin||Ballades_1",
+      "Chopin||Etudes_op_10_8",
+      "Chopin||Scherzos_31",
+      "Chopin||Sonata_2_2nd",
+      "Liszt||Transcendental_Etudes_5",
+      "Schumann||Arabeske"
+    ]
+  },
+  "fold_counts": {
+    "train": {
+      "groups": 26,
+      "scores": 27,
+      "performances": 178,
+      "pedal_elements": 2448,
+      "composer_scores": {
+        "Beethoven": 7,
+        "Chopin": 13,
+        "Liszt": 2,
+        "Ravel": 1,
+        "Schumann": 2,
+        "Scriabin": 2
+      }
+    },
+    "val": {
+      "groups": 6,
+      "scores": 6,
+      "performances": 31,
+      "pedal_elements": 143,
+      "composer_scores": {
+        "Beethoven": 1,
+        "Chopin": 2,
+        "Debussy": 1,
+        "Liszt": 1,
+        "Schumann": 1
+      }
+    },
+    "test": {
+      "groups": 9,
+      "scores": 10,
+      "performances": 82,
+      "pedal_elements": 1249,
+      "composer_scores": {
+        "Beethoven": 2,
+        "Brahms": 1,
+        "Chopin": 5,
+        "Liszt": 1,
+        "Schumann": 1
+      }
+    }
+  },
+  "score_meta": {
+    "Beethoven/Piano_Sonatas/11-2/xml_score.musicxml": {
+      "composer": "Beethoven",
+      "title": "Piano_Sonatas_11-2",
+      "group": "Beethoven||Piano_Sonatas_11-2"
+    },
+    "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml": {
+      "composer": "Beethoven",
+      "title": "Piano_Sonatas_21-3",
+      "group": "Beethoven||Piano_Sonatas_21-3"
+    },
+    "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml": {
+      "composer": "Beethoven",
+      "title": "Piano_Sonatas_26-2",
+      "group": "Beethoven||Piano_Sonatas_26-2"
+    },
+    "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml": {
+      "composer": "Beethoven",
+      "title": "Piano_Sonatas_28-1",
+      "group": "Beethoven||Piano_Sonatas_28-1"
+    },
+    "Beethoven/Piano_Sonatas/29-2/xml_score.musicxml": {
+      "composer": "Beethoven",
+      "title": "Piano_Sonatas_29-2",
+      "group": "Beethoven||Piano_Sonatas_29-2"
+    },
+    "Beethoven/Piano_Sonatas/29-3/xml_score.musicxml": {
+      "composer": "Beethoven",
+      "title": "Piano_Sonatas_29-3",
+      "group": "Beethoven||Piano_Sonatas_29-3"
+    },
+    "Beethoven/Piano_Sonatas/29-4/xml_score.musicxml": {
+      "composer": "Beethoven",
+      "title": "Piano_Sonatas_29-4",
+      "group": "Beethoven||Piano_Sonatas_29-4"
+    },
+    "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml": {
+      "composer": "Beethoven",
+      "title": "Piano_Sonatas_31-2",
+      "group": "Beethoven||Piano_Sonatas_31-2"
+    },
+    "Beethoven/Piano_Sonatas/31-2_no_repeat/xml_score.musicxml": {
+      "composer": "Beethoven",
+      "title": "Piano_Sonatas_31-2",
+      "group": "Beethoven||Piano_Sonatas_31-2"
+    },
+    "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml": {
+      "composer": "Beethoven",
+      "title": "Piano_Sonatas_32-1",
+      "group": "Beethoven||Piano_Sonatas_32-1"
+    },
+    "Brahms/Six_Pieces_op_118/2/xml_score.musicxml": {
+      "composer": "Brahms",
+      "title": "Six_Pieces_op_118_2",
+      "group": "Brahms||Six_Pieces_op_118_2"
+    },
+    "Chopin/Ballades/1/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Ballades_1",
+      "group": "Chopin||Ballades_1"
+    },
+    "Chopin/Ballades/3/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Ballades_3",
+      "group": "Chopin||Ballades_3"
+    },
+    "Chopin/Barcarolle/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Barcarolle",
+      "group": "Chopin||Barcarolle"
+    },
+    "Chopin/Etudes_op_10/1/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Etudes_op_10_1",
+      "group": "Chopin||Etudes_op_10_1"
+    },
+    "Chopin/Etudes_op_10/10/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Etudes_op_10_10",
+      "group": "Chopin||Etudes_op_10_10"
+    },
+    "Chopin/Etudes_op_10/5/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Etudes_op_10_5",
+      "group": "Chopin||Etudes_op_10_5"
+    },
+    "Chopin/Etudes_op_10/7/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Etudes_op_10_7",
+      "group": "Chopin||Etudes_op_10_7"
+    },
+    "Chopin/Etudes_op_10/8/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Etudes_op_10_8",
+      "group": "Chopin||Etudes_op_10_8"
+    },
+    "Chopin/Etudes_op_25/1/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Etudes_op_25_1",
+      "group": "Chopin||Etudes_op_25_1"
+    },
+    "Chopin/Etudes_op_25/12/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Etudes_op_25_12",
+      "group": "Chopin||Etudes_op_25_12"
+    },
+    "Chopin/Etudes_op_25/8/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Etudes_op_25_8",
+      "group": "Chopin||Etudes_op_25_8"
+    },
+    "Chopin/Scherzos/20/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Scherzos_20",
+      "group": "Chopin||Scherzos_20"
+    },
+    "Chopin/Scherzos/31/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Scherzos_31",
+      "group": "Chopin||Scherzos_31"
+    },
+    "Chopin/Scherzos/39/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Scherzos_39",
+      "group": "Chopin||Scherzos_39"
+    },
+    "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Sonata_2_1st",
+      "group": "Chopin||Sonata_2_1st"
+    },
+    "Chopin/Sonata_2/2nd/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Sonata_2_2nd",
+      "group": "Chopin||Sonata_2_2nd"
+    },
+    "Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Sonata_2_2nd",
+      "group": "Chopin||Sonata_2_2nd"
+    },
+    "Chopin/Sonata_3/2nd/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Sonata_3_2nd",
+      "group": "Chopin||Sonata_3_2nd"
+    },
+    "Chopin/Sonata_3/3rd/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Sonata_3_3rd",
+      "group": "Chopin||Sonata_3_3rd"
+    },
+    "Chopin/Sonata_3/4th/xml_score.musicxml": {
+      "composer": "Chopin",
+      "title": "Sonata_3_4th",
+      "group": "Chopin||Sonata_3_4th"
+    },
+    "Debussy/Images_Book_1/1_Reflets_dans_lEau/xml_score.musicxml": {
+      "composer": "Debussy",
+      "title": "Images_Book_1_1_Reflets_dans_lEau",
+      "group": "Debussy||Images_Book_1_1_Reflets_dans_lEau"
+    },
+    "Liszt/Ballade_2/xml_score.musicxml": {
+      "composer": "Liszt",
+      "title": "Ballade_2",
+      "group": "Liszt||Ballade_2"
+    },
+    "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml": {
+      "composer": "Liszt",
+      "title": "Gran_Etudes_de_Paganini_2_La_campanella",
+      "group": "Liszt||Gran_Etudes_de_Paganini_2_La_campanella"
+    },
+    "Liszt/Transcendental_Etudes/10/xml_score.musicxml": {
+      "composer": "Liszt",
+      "title": "Transcendental_Etudes_10",
+      "group": "Liszt||Transcendental_Etudes_10"
+    },
+    "Liszt/Transcendental_Etudes/5/xml_score.musicxml": {
+      "composer": "Liszt",
+      "title": "Transcendental_Etudes_5",
+      "group": "Liszt||Transcendental_Etudes_5"
+    },
+    "Ravel/Pavane/xml_score.musicxml": {
+      "composer": "Ravel",
+      "title": "Pavane",
+      "group": "Ravel||Pavane"
+    },
+    "Schumann/Arabeske/xml_score.musicxml": {
+      "composer": "Schumann",
+      "title": "Arabeske",
+      "group": "Schumann||Arabeske"
+    },
+    "Schumann/Kreisleriana/4/xml_score.musicxml": {
+      "composer": "Schumann",
+      "title": "Kreisleriana_4",
+      "group": "Schumann||Kreisleriana_4"
+    },
+    "Schumann/Kreisleriana/6/xml_score.musicxml": {
+      "composer": "Schumann",
+      "title": "Kreisleriana_6",
+      "group": "Schumann||Kreisleriana_6"
+    },
+    "Schumann/Kreisleriana/7/xml_score.musicxml": {
+      "composer": "Schumann",
+      "title": "Kreisleriana_7",
+      "group": "Schumann||Kreisleriana_7"
+    },
+    "Scriabin/Etudes_op_8/11/xml_score.musicxml": {
+      "composer": "Scriabin",
+      "title": "Etudes_op_8_11",
+      "group": "Scriabin||Etudes_op_8_11"
+    },
+    "Scriabin/Sonatas/5/xml_score.musicxml": {
+      "composer": "Scriabin",
+      "title": "Sonatas_5",
+      "group": "Scriabin||Sonatas_5"
+    }
+  }
+}

@@ -6,8 +6,8 @@
 ## 当前
 
 - **更新时间**：2026-10-07（阶段 1–4 + 语料 / 渲染器 / manifest 核验）
-- **当前阶段**：G1' 中检停机点 —— 导出侧交付 1–4 已完成（68+3 导出 / 五格 Tier / 分位点 / 逐值一致），**停机对齐分位点估计量（D-0035）**；交付 5–6（反演一致度、划分冻结）待恢复
-- **阶段状态**：系统侧 18/18 PASS；科研侧 T1=0、T4=0（不触发路线作废）、裁定5 **71/71 逐值一致**；**停机待 controller 裁定分位点估计量（D-0035）后继续交付 5–6**
+- **当前阶段**：G1' —— 交付 1–4 已完成；零成本项 (a)–(d) 已完成；**交付 6（划分冻结）已完成**；**交付 5（反演一致度）未开始**；遗留待裁定 D-0037（Main 口径正文冲突）
+- **阶段状态**：系统侧 18/18 PASS；科研侧 T1=0/T4=0、裁定5 71/71、Main 精确复现 43/291/3840、划分已冻结（`52ae1314…`）；**交付 5 待下一轮**
 - **活动任务**：`R1`（科研侧推进）
 - **分支**：`main` → `origin/main`（https://github.com/nx137/midi2score.git，已推送）
 - **thread_id 约定**（阶段 2 实现）：`research:midi2score:<task_id>`，稳定可推导，禁止每次随机生成
@@ -31,7 +31,7 @@
 |:--|:--|:--|:--|
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
 | 2026-10-07 | 语料 manifest 口径 | `python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv` | **PASS**：复现出计划书哈希 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa`（1,305 条 / 465,861,631 B；EV-S6、EV-S10、D-0020） |
-| 2026-10-07 | R1-3i 导出侧交付 1–4 | `musescore_export_probe.py --positive 68 --negative 3 --force` + `pedal_export_audit.py` | **68/68 导出成功；负对照 3/3 为 0 CC64**；五格 Tier = OK 42 / T1 0 / T2(含T2b) 13 / T3 13 / T4 0；**裁定5 = 71/71 逐值一致**；P5 = 0.91485(R-7) / 0.8837(nearest_rank)（EV-S19–S22） |
+| 2026-10-07 | 零成本项 (a)–(d) + 交付 6 | `export_pairing_audit.py` + `split_freeze.py` | 旧式自检 42 首中 **20 首非零**（缺陷 #6 证实）；奇数 C = **0**；unexplained 4/31/33；三候选规则**无清零**；**Main 精确复现 43/291/3840**；划分 train 26/val 6/test 9 组（EV-S23–S26） |\n| 2026-10-07 | R1-3i 导出侧交付 1–4 | `musescore_export_probe.py --positive 68 --negative 3 --force` + `pedal_export_audit.py` | **68/68 导出成功；负对照 3/3 为 0 CC64**；五格 Tier = OK 42 / T1 0 / T2(含T2b) 13 / T3 13 / T4 0；**裁定5 = 71/71 逐值一致**；P5 = 0.91485(R-7) / 0.8837(nearest_rank)（EV-S19–S22） |
 | 2026-10-07 | R1-3f 全量 Tier 分级 | `musescore_export_probe.py --positive 68 --force` + `pedal_export_audit.py` | **68/68 导出成功**；负对照 2/2；恒等式 55/68；Tier = OK 42 / T2 10 / T2b 3 / T3 11 / T1 2（字面）；P5/P50/P95 = 0.9148/1.0/1.0（n=55）；裁定 5 命中（432/478）（EV-S17） |
 | 2026-10-07 | R1-3g T1 取证（停机上报） | `tools/t1_diagnostic.py` | **T1 命题**：字面 T1 = 2 首，均为 `start=1, stop=0` → 与 T3 定义重叠（T1∩T3=2）；重跑两次一致；**加 `min>0` 后 T1 = 0/68**（EV-S18） |
 | 2026-10-07 | R1-1 环境 | `python -m venv .venv-research` + `pip install -r requirements-research.txt` | **PASS**：Python 3.14.6；partitura 1.9.0 / mido 1.3.3 / music21 10.5.0 / parangonar 3.3.3 / lxml 6.1.3 / numpy 2.5.3 / pandas 3.0.6 全部命中（EV-S14） |

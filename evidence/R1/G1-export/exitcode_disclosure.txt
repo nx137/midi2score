@@ -1,0 +1,8 @@
+n_total = 71  n_exit_nonzero = 2
+  positive  exit=3221225477  out_bytes=14305   Chopin/Sonata_3/3rd/xml_score.musicxml
+  negative  exit=3221225477  out_bytes=4822    Bach/Fugue/bwv_846/xml_score.musicxml
+
+=== bwv_846 explicit x3 ===
+  run1: exit=0 bytes=4822 sha256=99fd163c973c3663
+  run2: exit=3221225477 bytes=4822 sha256=99fd163c973c3663
+  run3: exit=3221225477 bytes=4822 sha256=99fd163c973c3663
