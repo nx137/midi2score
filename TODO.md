@@ -15,15 +15,15 @@
 | T1-5 | 文档级校验（文件齐全 / 硬约束可机读 / 无 conversation_summary.md）并记录证据 | codex | — | done |
 | T1-6 | 展示 `git diff` 并提交阶段 1 | codex | — | done |
 
-## 阶段 2：LangGraph 最小骨架（未启动）
+## 阶段 2：LangGraph 最小骨架（已完成，待用户确认）
 
 | ID | 待办 | blocking | 状态 |
 |:--|:--|:--|:--|
-| T2-1 | 定义结构化 `TaskState`（TypedDict）+ Pydantic 记录模型（decision/assumption/evidence/todo/acceptance） | 阶段 1 用户确认 | todo |
-| T2-2 | planner / executor / verifier / human_review 四节点 | T2-1 | todo |
-| T2-3 | checkpointer（SqliteSaver）+ store（SqliteStore）+ 稳定 thread_id（`research:midi2score:<task_id>`） | T2-1 | todo |
-| T2-4 | messages 窗口裁剪（不无限追加；不建 conversation_summary.md） | T2-1 | todo |
-| T2-5 | 最小运行示例 + 中断/恢复会话示例（`Command(resume=...)`、`get_state`、`get_state_history`） | T2-2 / T2-3 | todo |
+| T2-1 | 定义结构化 `TaskState`（TypedDict）+ Pydantic 记录模型 | — | done |
+| T2-2 | planner / executor / verifier / human_review 四节点 | — | done |
+| T2-3 | checkpointer（SqliteSaver）+ store（SqliteStore）+ 稳定 thread_id | — | done |
+| T2-4 | messages 窗口裁剪（上限 20；不建 conversation_summary.md） | — | done |
+| T2-5 | 最小运行示例 + 中断/恢复会话示例 | — | done |
 
 ## 阶段 3：目标偏离检测（未启动）
 

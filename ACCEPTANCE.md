@@ -19,16 +19,16 @@
 
 | ID | 验收标准 | 判定方法 | result |
 |:--|:--|:--|:--|
-| AC-S1 | 相同 `thread_id` 可以恢复任务状态 | 阶段 4 测试 1 | not_run |
-| AC-S2 | 不同 `thread_id` 互相隔离 | 阶段 4 测试 2 | not_run |
-| AC-S3 | store 可以跨 thread 读取长期决策 | 阶段 4 测试 3 | not_run |
-| AC-S4 | `TASK_CHARTER.md` 不会被普通任务自动修改（运行前后 sha256 一致） | 阶段 4 测试 4 | not_run |
-| AC-S5 | 目标冲突时进入人工确认（`interrupt()`，不自动继续） | 阶段 4 测试 5 | not_run |
-| AC-S6 | 进程重启后可从持久化后端恢复 | 阶段 4 测试 6（独立进程二次运行） | not_run |
-| AC-S7 | 状态 schema 明确：结构化字段承载任务对象，**不是把所有信息塞进 messages** | 代码审查（阶段 2） | not_run |
-| AC-S8 | 多轮运行不无限追加消息上下文（裁剪 / 摘要 / 结构化） | messages 窗口裁剪测试（阶段 2） | not_run |
-| AC-S9 | 稳定 thread_id：`research:midi2score:<task_id>`，非每次随机生成 | 代码审查（阶段 2） | not_run |
-| AC-S10 | `task_alignment` 三值可用且有明确口径 | 代码审查（阶段 3） | not_run |
+| AC-S1 | 相同 `thread_id` 可以恢复任务状态 | 阶段 4 测试 1 | pass（阶段 2：test_resume_same_thread） |
+| AC-S2 | 不同 `thread_id` 互相隔离 | 阶段 4 测试 2 | pass（阶段 2：test_thread_isolation） |
+| AC-S3 | store 可以跨 thread 读取长期决策 | 阶段 4 测试 3 | pass（阶段 2：test_store_cross_thread） |
+| AC-S4 | `TASK_CHARTER.md` 不会被普通任务自动修改（运行前后 sha256 一致） | 阶段 4 测试 4 | pass（阶段 2：test_charter_not_modified） |
+| AC-S5 | 目标冲突时进入人工确认（`interrupt()`，不自动继续） | 阶段 4 测试 5 | 部分（阶段 2：章程漂移→human_review 中断，test_verifier_detects_charter_drift；三值判定待阶段 3） |
+| AC-S6 | 进程重启后可从持久化后端恢复 | 阶段 4 测试 6（独立进程二次运行） | 部分（阶段 2：demo [5] 重开 SQLite 读回同一 thread；独立进程测试待阶段 4） |
+| AC-S7 | 状态 schema 明确：结构化字段承载任务对象，**不是把所有信息塞进 messages** | 代码审查（阶段 2） | pass（schemas.py：TypedDict + Pydantic 记录，任务对象不入 messages） |
+| AC-S8 | 多轮运行不无限追加消息上下文（裁剪 / 摘要 / 结构化） | messages 窗口裁剪测试（阶段 2） | pass（test_messages_window_bounded，上限 20） |
+| AC-S9 | 稳定 thread_id：`research:midi2score:<task_id>`，非每次随机生成 | 代码审查（阶段 2） | pass（graph.stable_thread_id → research:{project}:{task}） |
+| AC-S10 | `task_alignment` 三值可用且有明确口径 | 代码审查（阶段 3） | not_run（阶段 3） |
 
 ## C. 治理验收（阶段 1）
 

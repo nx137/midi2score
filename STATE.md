@@ -6,9 +6,9 @@
 ## 当前
 
 - **更新时间**：2026-10-07（阶段 1 + 语料下载 / 渲染器核验）
-- **当前阶段**：阶段 1 —— 项目规则与科研任务文件
-- **阶段状态**：交付物已完成、文档级校验 PASS、**阶段 1 已提交（单一干净提交）**；等待用户确认后进入阶段 2
-- **活动任务**：`PHASE-1`
+- **当前阶段**：阶段 2 —— LangGraph 最小骨架（已完成，待用户确认）
+- **阶段状态**：阶段 1 已提交；阶段 2 骨架完成、测试 6/6 PASS、示例 exit 0；**等待用户确认后进入阶段 3**
+- **活动任务**：`PHASE-2`
 - **分支**：`main` → `origin/main`（https://github.com/nx137/midi2score.git，已推送）
 - **thread_id 约定**（阶段 2 实现）：`research:midi2score:<task_id>`，稳定可推导，禁止每次随机生成
 
@@ -30,6 +30,8 @@
 | 时间 | 范围 | 命令 | 结果 |
 |:--|:--|:--|:--|
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
+| 2026-10-07 | 阶段 2：骨架测试 | `.\.venv\Scripts\python.exe -m pytest -q` | **PASS 6/6**：恢复 / 隔离 / 跨线程 store / 章程不可变 / 消息窗口≤20 / 章程漂移停在人工确认（EV-S7） |
+| 2026-10-07 | 阶段 2：运行示例 | `python -m research_agent.demo` | **exit 0**：停在 human_review → resume approve → phase=reviewed → 写入 D-WP-1 → 重开 SQLite 读回（EV-S8）；无 msgpack 警告（EV-S9） |
 | 2026-10-07 | 语料 + 渲染器（R1） | git clone --depth 1 --branch v2.1.1；git rev-parse HEAD；文件计数 + 字节求和；MuseScore4.exe --version | **PASS**：HEAD 4097b457…、tag v2.1.1、242 MusicXML + 1,063 alignment = 1,305、**465,861,631 B 与计划书一致**、10,314 文件、23 个 repeat 变体目录；MuseScore4 4.7.5 exit 0。**未复现** manifest SHA256（格式未规定，见 EV-S6） |
 
 > 阶段 1 没有可执行代码，因此没有单元测试可跑；`pytest` 将在阶段 2 随依赖引入。
@@ -48,10 +50,22 @@
 - **Git 身份 / 远程**：已完成 —— 提交身份 `nx137 <nx137@users.noreply.github.com>`；remote `origin` 已配置并推送 `main`。
 - 阶段 2–4 代码与 6 项测试：**未开始**。
 
+## 阶段 2 交付物（2026-10-07）
+
+| 文件 | 内容 |
+|:--|:--|
+| `pyproject.toml` | 依赖 langgraph>=1.2,<2 / langgraph-checkpoint-sqlite>=3.1,<4 / pydantic>=2.13,<3；dev: pytest |
+| `src/research_agent/schemas.py` | `TaskState`(TypedDict) + 9 个 Pydantic 记录模型 + `merge_by_id` reducer |
+| `src/research_agent/memory.py` | 章程加载/hash、硬约束解析、消息窗口裁剪、store 读写 helper |
+| `src/research_agent/nodes.py` | planner / executor / verifier / human_review |
+| `src/research_agent/graph.py` | 图装配、条件路由、SqliteSaver+SqliteStore、稳定 thread_id、serde 白名单 |
+| `src/research_agent/demo.py` | 运行 + 中断 + 恢复 + 历史 + 跨线程 store + 重启恢复示例 |
+| `tests/test_graph.py` | 6 项骨架测试 |
+
 ## 下一步（确认后）
 
 1. 提交阶段 1 —— 已完成（单次干净提交，已 amend 掉早前的本地草稿提交）。
-2. 阶段 2：结构化 `TaskState` + planner/executor/verifier/human_review + SqliteSaver/SqliteStore + 稳定 thread_id + 运行与恢复示例。
+2. 阶段 3：实现 `task_alignment` 三值判定 + `conflicting` 强制人工确认 + 禁止程序修改 `TASK_CHARTER.md`。
 
 ## 关键路径提醒
 
