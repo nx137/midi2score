@@ -1,0 +1,10 @@
+{
+  "dataset": "E:/midi2score/data/asap-dataset",
+  "dataset_git_head": "4097b45757bed854818cf87e77b92323ebf90615",
+  "entry_count": 1305,
+  "musicxml_count": 242,
+  "note_alignment_count": 1063,
+  "total_bytes": 465861631,
+  "manifest_path": "E:\\midi2score\\evidence\\corpus_manifest.csv",
+  "manifest_sha256": "051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa"
+}

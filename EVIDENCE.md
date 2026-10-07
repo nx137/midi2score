@@ -55,7 +55,12 @@
 | EV-S3 | 阶段 1 文档级校验：9/9 文件存在；`TASK_CHARTER.md` 硬约束可机读（HC 16 条 + GV 6 条）；`AGENTS.md` 覆盖全部必需规则；无 `conversation_summary.md`；全部文档 UTF-8 无 BOM | PowerShell 校验脚本（2026-10-07），结果 **PASS** | verified_in_this_repo |
 | EV-S4 | 语料 CPJKU/asap-dataset 已克隆到 data/asap-dataset（本地、已 gitignore）：HEAD 4097b45757bed854818cf87e77b92323ebf90615、tag v2.1.1（远端 tag 经 GitHub API 核实指向同一 commit）；*.musicxml = 242、note_alignment.tsv = 1,063、合计 1,305；两者总字节 = 465,861,631（与计划书完全一致）；仓库文件总数 = 10,314；repeat 变体独立目录 = 23；工作树 clean | git clone --depth 1 --branch v2.1.1 + git rev-parse HEAD + 文件计数 + Measure-Object -Sum | verified_in_this_repo |
 | EV-S5 | 渲染器本机可用：D:\MuseScore 4\bin\MuseScore4.exe --version 输出 MuseScore4 4.7.5，exit code 0（与 HC-05 钉死版本一致） | Start-Process --version（2026-10-07） | verified_in_this_repo |
-| EV-S6 | manifest SHA256 051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa 未复现：计划书未规定该 manifest 的序列化格式（字段/排序/分隔符），无法从文件树唯一重建；已用文件集 + 总字节数作等价核验 | 需原作者提供 manifest 生成脚本或 manifest 文件 | not_verified |
+| EV-S6 | manifest SHA256 051713f7… **已复现**：口径 = 242 musicxml + 1063 note_alignment 各记 (entry_type,relative_path,bytes,sha256) 写成 CSV（UTF-8 无 BOM / CRLF / 按 (entry_type, path.lower()) 排序），manifest 哈希 = 该 CSV 文件自身的 sha256 | python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv，输出哈希与计划书一致（2026-10-07） | verified_in_this_repo |
 | EV-S7 | 阶段 2 测试：`pytest -q` → **6 passed**（恢复、隔离、跨线程 store、章程不可变、消息窗口 ≤20、章程漂移停在人工确认） | `.\.venv\Scripts\python.exe -m pytest -q`（exit 0，2026-10-07） | verified_in_this_repo |
 | EV-S8 | 阶段 2 示例：`python -m research_agent.demo` exit 0；`thread_id=research:midi2score:PHASE-2`；首次 invoke 停在 `human_review`，`Command(resume='approve')` 后 `phase=reviewed`、写入 `D-WP-1`；重开 SQLite 后读回同一 thread | 见 STATE.md 阶段 2 测试记录 | verified_in_this_repo |
 | EV-S9 | checkpoint 自定义类型反序列化：`JsonPlusSerializer(allowed_msgpack_modules=[...])` 显式登记 9 个 schema 类，消除 "unregistered type" 警告（未用 True 全放行） | `python -m research_agent.demo` 无警告输出 | verified_in_this_repo |
+
+| EV-S10 | 口径溯源：生成器为已废弃仓库的 `data/corpus_manifest_quality.py`（manifest 子命令），其产物 `corpus_manifest.csv` 的 sha256 即 `051713f7…`（已用 Get-FileHash 直接复核原文件）；本仓库据其格式写出等价工具 `tools/corpus_manifest.py` 并复现同一哈希 | Get-FileHash 原 CSV + 重跑本仓库工具 | verified_in_this_repo |
+
+- 冻结产物：`evidence/corpus_manifest.csv`（1,305 行 + 表头）与 `evidence/corpus_manifest_summary.json`（含 dataset commit 与 manifest_sha256）。
+- 注意：summary 里的 `script_sha256` 记录的是**当时**的脚本字节（`5dd9f12b…`），现盘脚本已变化（`42A45F39…`）；因此该口径的可复现性依赖**格式 + 命令**，不依赖脚本字节不变。

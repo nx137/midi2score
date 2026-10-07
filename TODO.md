@@ -53,7 +53,7 @@
 | R1-2 | 获取 CPJKU/asap-dataset@v2.1.1：已完成（HEAD/tag/1,305 条/465,861,631 B 全部命中，见 EV-S4） | — | done |
 | R1-3 | MuseScore Studio 4.7.5 安装核验（--version → 4.7.5, exit 0，见 EV-S5） | — | done |
 | R1-3b | 测通 MuseScore CLI 导出（3 首样本产生 CC64，比值 ≈1.0） | R1-2 / R1-3 | todo |
-| R1-3c | manifest SHA256 口径确认（计划书未规定序列化格式） | 用户/主控提供口径 | blocked |
+| R1-3c | manifest SHA256 口径确认：已复现（CSV 列/排序/行尾 + 该 CSV 的 sha256），工具与产物入库 | — | done |
 | R1-4 | **G1'**：43/43 主轴乐谱回放通道端到端 + 反演基线 + 划分冻结（先决闸门） | R1-2 / R1-3 | todo |
 
 ## 明确不做（YAGNI）

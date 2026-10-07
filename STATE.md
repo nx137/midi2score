@@ -30,6 +30,7 @@
 | 时间 | 范围 | 命令 | 结果 |
 |:--|:--|:--|:--|
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
+| 2026-10-07 | 语料 manifest 口径 | `python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv` | **PASS**：复现出计划书哈希 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa`（1,305 条 / 465,861,631 B；EV-S6、EV-S10、D-0020） |
 | 2026-10-07 | 阶段 2：骨架测试 | `.\.venv\Scripts\python.exe -m pytest -q` | **PASS 6/6**：恢复 / 隔离 / 跨线程 store / 章程不可变 / 消息窗口≤20 / 章程漂移停在人工确认（EV-S7） |
 | 2026-10-07 | 阶段 2：运行示例 | `python -m research_agent.demo` | **exit 0**：停在 human_review → resume approve → phase=reviewed → 写入 D-WP-1 → 重开 SQLite 读回（EV-S8）；无 msgpack 警告（EV-S9） |
 | 2026-10-07 | 语料 + 渲染器（R1） | git clone --depth 1 --branch v2.1.1；git rev-parse HEAD；文件计数 + 字节求和；MuseScore4.exe --version | **PASS**：HEAD 4097b457…、tag v2.1.1、242 MusicXML + 1,063 alignment = 1,305、**465,861,631 B 与计划书一致**、10,314 文件、23 个 repeat 变体目录；MuseScore4 4.7.5 exit 0。**未复现** manifest SHA256（格式未规定，见 EV-S6） |
@@ -77,4 +78,4 @@
 
 - 语料：data/asap-dataset/（CPJKU/asap-dataset@v2.1.1，HEAD 4097b45757bed854818cf87e77b92323ebf90615，工作树 clean）——**已 gitignore，绝不提交**（HC-06）。
 - 渲染器：D:\MuseScore 4\bin\MuseScore4.exe = MuseScore4 4.7.5（HC-05 钉死版本）。
-- 未完成：manifest SHA256 口径确认（R1-3c）、MuseScore CLI 实导出验证（R1-3b）。
+- manifest 口径已解决：`evidence/corpus_manifest.csv` 的 sha256 = `051713f7…`（复现命令见 EV-S6；R1-3c 关闭）。

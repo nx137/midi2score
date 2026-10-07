@@ -26,3 +26,4 @@
 | D-0017 | 2026-10-07 | 计划书 §2.2 / §9.3 | adopted | 闸门体系：**G0（已过）/ G1'（先决）/ G2 / G3**；未通过即切换方案，不许硬扛。 | 里程碑、论文走向 | 无闸门推进：风险后置且不可控 |
 | D-0018 | 2026-10-07 | 计划书 §2.2 / §9.2 | adopted | 合成语料（PDMX）落地**后置于 G1'**。 | M6、E2 | 与 G1' 并行：把不可控风险前置到关键路径 |
 | D-0019 | 2026-10-07 | 计划书 §2.2 / §1.3 | adopted | 规则只做基线（B1/B2）与解码合成器，不得进入标签构造路径（`HC-09`）。 | 标签层、B1/B2 | 规则造标签：把工程补丁误当研究方案 |
+| D-0020 | 2026-10-07 | 用户要求解决 + 证据溯源 | confirmed | 语料身份 manifest 口径冻结：242 musicxml + 1063 note_alignment 的 (entry_type,relative_path,bytes,sha256) CSV，UTF-8 无 BOM / CRLF / 按 (entry_type, path.lower()) 排序；manifest_sha256 = 该 CSV 文件自身的 sha256。工具 `tools/corpus_manifest.py`，产物 `evidence/corpus_manifest.csv`，已在 v2.1.1 语料上复现出计划书记录的 051713f7… | 语料身份冻结 G0 / EVIDENCE.md EV-S6/EV-S10 | 用"文件数+总字节"作等价核验：现在不再需要，原哈希已真正复现 |
