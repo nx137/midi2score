@@ -142,6 +142,34 @@ def main() -> int:
         "fold_groups": {k: sorted(v) for k, v in fold_groups.items()},
         "fold_counts": {k: counts(k) for k in fold_groups},
         "score_meta": score_meta,
+        "per_performance": [
+            {
+                "midi_performance": (r.get("midi_performance") or "").replace("\\", "/"),
+                "xml_score": (r.get("xml_score") or "").replace("\\", "/"),
+                "robust_note_alignment": r.get("robust_note_alignment"),
+                "score_and_performance_aligned": ann.get((r.get("midi_performance") or "").replace("\\", "/"), {}).get("score_and_performance_aligned"),
+                "alignment_path": (r.get("note_alignments") or "").replace("\\", "/"),
+                "alignment_file_exists": bool((ds / (r.get("note_alignments") or "").replace("\\", "/")).is_file()),
+                "qualifying": any(r is q for q in passing),
+                "fold": next((f for f, gs in fold_groups.items()
+                              if (r.get("xml_score") or "").replace("\\", "/") in {x for g in gs for x in groups[g]}), None),
+            }
+            for r in kept
+        ],
+        "non_qualifying_in_main": [
+            {
+                "midi_performance": (r.get("midi_performance") or "").replace("\\", "/"),
+                "xml_score": (r.get("xml_score") or "").replace("\\", "/"),
+                "robust_note_alignment": r.get("robust_note_alignment"),
+                "score_and_performance_aligned": ann.get((r.get("midi_performance") or "").replace("\\", "/"), {}).get("score_and_performance_aligned"),
+                "alignment_path": (r.get("note_alignments") or "").replace("\\", "/"),
+            }
+            for r in kept if not any(r is q for q in passing)
+        ],
+        "composer_fold_matrix": {
+            f: dict(sorted(Counter(score_meta[x]["composer"] for g in gs for x in groups[g]).items()))
+            for f, gs in fold_groups.items()
+        },
     }
     payload = json.dumps(result, indent=2, ensure_ascii=False) + "\n"
     args.out.parent.mkdir(parents=True, exist_ok=True)

@@ -1,0 +1,9 @@
+=== ��a ����չ�������Բ��� ===
+  Beethoven/Piano_Sonatas/31-2                  notes=1345    cc64=4     exit=0 bytes=9475
+  Beethoven/Piano_Sonatas/31-2_no_repeat        notes=1156    cc64=4     exit=0 bytes=8196
+  -> ratio(no_repeat / with_repeat) = 0.8595�����ۣ�MuseScore չ���������������ӽ���no_repeat/�з��� = 0.8595��
+
+=== �˳���ԳƸ��֣�Chopin/Sonata_3/3rd/xml_score.musicxml ��3 ===
+  run1: exit=3221225477 bytes=14305 sha256=d7bf722885123989
+  run2: exit=3221225477 bytes=14305 sha256=d7bf722885123989
+  run3: exit=0 bytes=14305 sha256=d7bf722885123989

@@ -371,5 +371,2992 @@
       "title": "Sonatas_5",
       "group": "Scriabin||Sonatas_5"
     }
+  },
+  "per_performance": [
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/11-2/MaximovI04.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/11-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/11-2/MaximovI04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/21-3/KimSY04M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/21-3/KimSY04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/21-3/Sekino05M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/21-3/Sekino05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/21-3/YOO05M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/21-3/YOO05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/26-2/HONG05M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/26-2/HONG05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/26-2/Huang02.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/26-2/Huang02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/26-2/LEE_K05M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/26-2/LEE_K05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/26-2/Tysman01.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/26-2/Tysman01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/26-2/Zhdanov05.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/26-2/Zhdanov05_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/28-1/Atzinger01.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/28-1/Atzinger01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/28-1/KimHJ02M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/28-1/KimHJ02M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/28-1/KyykhynenT06M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/28-1/KyykhynenT06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/28-1/WangY04M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/28-1/WangY04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/28-1/Zhdanov01.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/28-1/Zhdanov01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/29-2/ChowK03.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/29-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/29-2/ChowK03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/29-3/ChowK04.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/29-3/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/29-3/ChowK04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/29-4/ChowK05M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/29-4/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/29-4/ChowK05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/29-4/DANILO01.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/29-4/xml_score.musicxml",
+      "robust_note_alignment": "",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Beethoven/Piano_Sonatas/29-4/DANILO01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": false,
+      "qualifying": false,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/31-2/ADIG05M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/31-2/ADIG05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/31-2/AbdelmoulaJS04.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/31-2/AbdelmoulaJS04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/31-2/HuangSW09.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/31-2/HuangSW09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/31-2/LeungM04.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/31-2/LeungM04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/31-2_no_repeat/Na06.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/31-2_no_repeat/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/31-2_no_repeat/Na06_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/31-2/Stahievitch02.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/31-2/Stahievitch02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/31-2/Zuber04.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/31-2/Zuber04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/32-1/DupreeF03M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/32-1/DupreeF03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/32-1/HouY04M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/32-1/HouY04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/32-1/Jussow02.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/32-1/Jussow02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/32-1/Jussow06M.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/32-1/Jussow06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/32-1/MORET01.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Beethoven/Piano_Sonatas/32-1/MORET01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Brahms/Six_Pieces_op_118/2/Shilyaev03.mid",
+      "xml_score": "Brahms/Six_Pieces_op_118/2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Brahms/Six_Pieces_op_118/2/Shilyaev03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/Ali01.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/Ali01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/BuiJL04M.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/BuiJL04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/Day04.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/Day04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/Dossin05.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/Dossin05_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/JIA06M.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/JIA06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/KimSuyeon04M.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/KimSuyeon04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/LeeKoeun03.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/LeeKoeun03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/LeeKoeun06.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/LeeKoeun06_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/LinTao04.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/LinTao04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/McNamara02.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/McNamara02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/Mo07M.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/Mo07M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/MunA19M.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "0.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Chopin/Ballades/1/MunA19M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": false,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/Richardson13M.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/Richardson13M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/SINKEV05.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/SINKEV05_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/SINKEV11.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/SINKEV11_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/Sladek04M.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/Sladek04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/YeSijing01.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/YeSijing01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/Zhou06M.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/1/Zhou06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/3/Ko11M.mid",
+      "xml_score": "Chopin/Ballades/3/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/3/Ko11M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/3/LinPeng06M.mid",
+      "xml_score": "Chopin/Ballades/3/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/3/LinPeng06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/3/Tan02.mid",
+      "xml_score": "Chopin/Ballades/3/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Ballades/3/Tan02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Barcarolle/Kociuban13.mid",
+      "xml_score": "Chopin/Barcarolle/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Barcarolle/Kociuban13_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Barcarolle/LeeSH05M.mid",
+      "xml_score": "Chopin/Barcarolle/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Barcarolle/LeeSH05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Barcarolle/Na03.mid",
+      "xml_score": "Chopin/Barcarolle/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Barcarolle/Na03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Barcarolle/Na09M.mid",
+      "xml_score": "Chopin/Barcarolle/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Barcarolle/Na09M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Barcarolle/Ozel10M.mid",
+      "xml_score": "Chopin/Barcarolle/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Barcarolle/Ozel10M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Barcarolle/Park10M.mid",
+      "xml_score": "Chopin/Barcarolle/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Barcarolle/Park10M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Barcarolle/Rozanski07M.mid",
+      "xml_score": "Chopin/Barcarolle/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Barcarolle/Rozanski07M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Barcarolle/Verbaite03.mid",
+      "xml_score": "Chopin/Barcarolle/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Barcarolle/Verbaite03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Barcarolle/Wilshire04.mid",
+      "xml_score": "Chopin/Barcarolle/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Barcarolle/Wilshire04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Avdeeva02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Avdeeva02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/ChenW03M.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/ChenW03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/HSU02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/HSU02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/ISHIDA04.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/ISHIDA04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Jussow03.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Jussow03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/KaiRuiR03M.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/KaiRuiR03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/LeeHanchien02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/LeeHanchien02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/LiYZ02M.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/LiYZ02M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/LuM02M.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Chopin/Etudes_op_10/1/LuM02M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": false,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Mikhailoff05.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Mikhailoff05_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/MorozovS02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/MorozovS02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/MunA07M.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/MunA07M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/NAKAJI02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/NAKAJI02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Park02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Park02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Savitski03.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Savitski03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Shelest02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Shelest02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Stahievitch03.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Stahievitch03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/SunY03M.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/SunY03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Terenkova02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Terenkova02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Tysman02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Tysman02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Verbaite02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Verbaite02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/YeF03M.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/YeF03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/YuP02M.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/YuP02M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Zhdanov02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Zhdanov02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/Zukiewicz02.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/1/Zukiewicz02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/10/Na_2009_02.mid",
+      "xml_score": "Chopin/Etudes_op_10/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/10/Na_2009_02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/10/WangH02M.mid",
+      "xml_score": "Chopin/Etudes_op_10/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/10/WangH02M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/10/Wilshire02.mid",
+      "xml_score": "Chopin/Etudes_op_10/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/10/Wilshire02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/10/Yanagitani02.mid",
+      "xml_score": "Chopin/Etudes_op_10/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/10/Yanagitani02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/5/Bach02.mid",
+      "xml_score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/5/Bach02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/5/Feiner_2006_02.mid",
+      "xml_score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/5/Feiner_2006_02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/5/KimEunhae04.mid",
+      "xml_score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/5/KimEunhae04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/5/Koshoeva02.mid",
+      "xml_score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/5/Koshoeva02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/5/LIAO03.mid",
+      "xml_score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/5/LIAO03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/5/LiA03M.mid",
+      "xml_score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/5/LiA03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/5/LiC02M.mid",
+      "xml_score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/5/LiC02M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/5/Rozanski03.mid",
+      "xml_score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/5/Rozanski03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/5/Tario02.mid",
+      "xml_score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/5/Tario02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/5/USHIKI03.mid",
+      "xml_score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/5/USHIKI03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/5/ZhangW03M.mid",
+      "xml_score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/5/ZhangW03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/7/ChenL02.mid",
+      "xml_score": "Chopin/Etudes_op_10/7/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/7/ChenL02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/7/Namirovsky02.mid",
+      "xml_score": "Chopin/Etudes_op_10/7/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/7/Namirovsky02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/7/SINKEV03.mid",
+      "xml_score": "Chopin/Etudes_op_10/7/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/7/SINKEV03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/BENABD02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/BENABD02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Benabdallah02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Benabdallah02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/CHOE01.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/CHOE01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/ChenJie03.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/ChenJie03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/FONG02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/FONG02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Georgieva03.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Georgieva03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/IVLEVA02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/IVLEVA02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Kwok02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Kwok02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/KyykhynenT09M.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/KyykhynenT09M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/LeeEunjin02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/LeeEunjin02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/LeeHwakyu02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/LeeHwakyu02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/LeeJisun02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/LeeJisun02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/LiuLangning02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/LiuLangning02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Lou03M.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Lou03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/LuEric03M.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/LuEric03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Masycheva02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Masycheva02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/MiyashitaM05M.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/MiyashitaM05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/ParkH02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/ParkH02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Rizikov03M.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Rizikov03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/SCHU03.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/SCHU03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Sekino03.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Sekino03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Shilyaev02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Shilyaev02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Soukhovetski02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Soukhovetski02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Tak02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Tak02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Tetzloff02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Tetzloff02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Tetzloff07M.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Tetzloff07M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/YOU02.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/YOU02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/8/Zhou03M.mid",
+      "xml_score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_10/8/Zhou03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/1/Erice03.mid",
+      "xml_score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/1/Erice03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/1/LeeN03M.mid",
+      "xml_score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/1/LeeN03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/1/TongB02M.mid",
+      "xml_score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/1/TongB02M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/1/TuanS04M.mid",
+      "xml_score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/1/TuanS04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/1/Wong03M.mid",
+      "xml_score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/1/Wong03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/12/Atzinger03.mid",
+      "xml_score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/12/Atzinger03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/12/BorickC04M.mid",
+      "xml_score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/12/BorickC04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/12/Golubeva02.mid",
+      "xml_score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/12/Golubeva02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/12/HouKimberly03M.mid",
+      "xml_score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/12/HouKimberly03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/12/KWON03.mid",
+      "xml_score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/12/KWON03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/12/Kunz03.mid",
+      "xml_score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/12/Kunz03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/12/LuA04M.mid",
+      "xml_score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/12/LuA04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/12/Meek01.mid",
+      "xml_score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/12/Meek01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/12/Yang03.mid",
+      "xml_score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/12/Yang03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/8/DeTurck02.mid",
+      "xml_score": "Chopin/Etudes_op_25/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/8/DeTurck02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/8/MORET03.mid",
+      "xml_score": "Chopin/Etudes_op_25/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/8/MORET03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/8/SOLOM03.mid",
+      "xml_score": "Chopin/Etudes_op_25/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/8/SOLOM03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_25/8/Toscano02.mid",
+      "xml_score": "Chopin/Etudes_op_25/8/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Etudes_op_25/8/Toscano02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/20/Kurz04M.mid",
+      "xml_score": "Chopin/Scherzos/20/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/20/Kurz04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/20/Wong03.mid",
+      "xml_score": "Chopin/Scherzos/20/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/20/Wong03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/20/Wong04M.mid",
+      "xml_score": "Chopin/Scherzos/20/xml_score.musicxml",
+      "robust_note_alignment": "0.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Chopin/Scherzos/20/Wong04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": false,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/20/ZhangYunling04M.mid",
+      "xml_score": "Chopin/Scherzos/20/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/20/ZhangYunling04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/ChenW04M.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/ChenW04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/Dossin06.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/Dossin06_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/HuNY08M.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/HuNY08M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/Jussow04.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/Jussow04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/Jussow11M.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/Jussow11M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/LeeN04M.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/LeeN04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/LinTami06M.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/LinTami06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/LuoJ12M.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/LuoJ12M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/SunD04M.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/SunD04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/TongB04M.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/TongB04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/TuanS05M.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/TuanS05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/31/ZhangW04M.mid",
+      "xml_score": "Chopin/Scherzos/31/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/31/ZhangW04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/39/Arciglione13M.mid",
+      "xml_score": "Chopin/Scherzos/39/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/39/Arciglione13M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/39/Bult-ItoS05M.mid",
+      "xml_score": "Chopin/Scherzos/39/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Scherzos/39/Bult-ItoS05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_2/1st_no_repeat/Giltburg02.mid",
+      "xml_score": "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_2/1st_no_repeat/Giltburg02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_2/1st_no_repeat/Jia03.mid",
+      "xml_score": "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_2/1st_no_repeat/Jia03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_2/1st_no_repeat/Knoll10.mid",
+      "xml_score": "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_2/1st_no_repeat/Knoll10_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_2/1st_no_repeat/MATSUM03.mid",
+      "xml_score": "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_2/1st_no_repeat/MATSUM03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_2/2nd/KaszoS14.mid",
+      "xml_score": "Chopin/Sonata_2/2nd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_2/2nd/KaszoS14_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_2/2nd_no_repeat/Giltburg02.mid",
+      "xml_score": "Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_2/2nd_no_repeat/Giltburg02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_2/2nd_no_repeat/Knoll10.mid",
+      "xml_score": "Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_2/2nd_no_repeat/Knoll10_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/2nd/GarritsonL09.mid",
+      "xml_score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/2nd/GarritsonL09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/2nd/HONG08.mid",
+      "xml_score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/2nd/HONG08_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/2nd/HuangSW04.mid",
+      "xml_score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/2nd/HuangSW04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/2nd/Huangci06.mid",
+      "xml_score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/2nd/Huangci06_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/2nd/KimSJ08.mid",
+      "xml_score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/2nd/KimSJ08_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/2nd/KimSY21.mid",
+      "xml_score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/2nd/KimSY21_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/2nd/SCHU09.mid",
+      "xml_score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/2nd/SCHU09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/2nd/Shybayeva07.mid",
+      "xml_score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/2nd/Shybayeva07_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/2nd/mikahailoff01.mid",
+      "xml_score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/2nd/mikahailoff01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/3rd/GarritsonL10.mid",
+      "xml_score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/3rd/GarritsonL10_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/3rd/HONG08.mid",
+      "xml_score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/3rd/HONG08_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/3rd/HuangSW05.mid",
+      "xml_score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/3rd/HuangSW05_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/3rd/Huangci06.mid",
+      "xml_score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/3rd/Huangci06_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/3rd/KimSJ09.mid",
+      "xml_score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/3rd/KimSJ09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/3rd/KimSY22.mid",
+      "xml_score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/3rd/KimSY22_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/3rd/SCHU09.mid",
+      "xml_score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/3rd/SCHU09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/3rd/Shybayeva07.mid",
+      "xml_score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/3rd/Shybayeva07_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/3rd/mikahailoff01.mid",
+      "xml_score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/3rd/mikahailoff01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/4th/GarritsonL11M.mid",
+      "xml_score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/4th/GarritsonL11M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/4th/HONG08.mid",
+      "xml_score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/4th/HONG08_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/4th/HuangSW06M.mid",
+      "xml_score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/4th/HuangSW06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/4th/Huangci06.mid",
+      "xml_score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/4th/Huangci06_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/4th/KimSJ10M.mid",
+      "xml_score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/4th/KimSJ10M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/4th/KimSY23M.mid",
+      "xml_score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/4th/KimSY23M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/4th/SCHU09.mid",
+      "xml_score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/4th/SCHU09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/4th/Shybayeva07.mid",
+      "xml_score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/4th/Shybayeva07_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Chopin/Sonata_3/4th/mikahailoff01.mid",
+      "xml_score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Chopin/Sonata_3/4th/mikahailoff01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Debussy/Images_Book_1/1_Reflets_dans_lEau/Kleisen11M.mid",
+      "xml_score": "Debussy/Images_Book_1/1_Reflets_dans_lEau/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Debussy/Images_Book_1/1_Reflets_dans_lEau/Kleisen11M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Debussy/Images_Book_1/1_Reflets_dans_lEau/ParkJH13M.mid",
+      "xml_score": "Debussy/Images_Book_1/1_Reflets_dans_lEau/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Debussy/Images_Book_1/1_Reflets_dans_lEau/ParkJH13M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Ballade_2/Broberg03.mid",
+      "xml_score": "Liszt/Ballade_2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Ballade_2/Broberg03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Ballade_2/GarritsonL04M.mid",
+      "xml_score": "Liszt/Ballade_2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Ballade_2/GarritsonL04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Ballade_2/Jin07M.mid",
+      "xml_score": "Liszt/Ballade_2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Ballade_2/Jin07M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Ballade_2/KIM_J04.mid",
+      "xml_score": "Liszt/Ballade_2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Ballade_2/KIM_J04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Ballade_2/Min06M.mid",
+      "xml_score": "Liszt/Ballade_2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Ballade_2/Min06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Ballade_2/Sham05.mid",
+      "xml_score": "Liszt/Ballade_2/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Ballade_2/Sham05_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Albright04.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Albright04_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Ali03.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Ali03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Bogdanovitch02.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Bogdanovitch02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/BuiJL03M.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/BuiJL03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/FALIKS02_2004.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/FALIKS02_2004_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Faliks02.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Faliks02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Faliks03.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Faliks03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Gasanov02.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Gasanov02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/HUAN_J03.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/HUAN_J03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Hao03.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Hao03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/KanM06.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/KanM06_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Kolessova07.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Kolessova07_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/LeungR04M.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/LeungR04M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Levitsky02.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Levitsky02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Levitsky06M.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Levitsky06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Lin02.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Lin02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Lin07M.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Lin07M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/LiuC05M.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/LiuC05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/LiuY03M.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/LiuY03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/MunA08M.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/MunA08M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/SEBAST02.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/SEBAST02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Seredenko02.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Seredenko02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Sychev03.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Sychev03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/TET03.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/TET03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/VuV06M.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/VuV06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Yang05M.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Yang05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Yoon02.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Yoon02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/ZhangH02.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/ZhangH02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/ZhangH07M.mid",
+      "xml_score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/ZhangH07M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/CaoJ03M.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/CaoJ03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/Goldberg02.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/Goldberg02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/HAGINO03.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/HAGINO03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/Huang17M.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/Huang17M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/Hwang03.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/Hwang03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/Kim02.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/Kim02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/Ladid02.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/Ladid02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/LeungM06M.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/LeungM06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/MCVEY02.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/MCVEY02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/MorozovY03.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/MorozovY03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/Qin03.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/Qin03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/SUDBIN02.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/SUDBIN02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/Shamray02.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/Shamray02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/Tran02.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/Tran02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/Uiasiuk03.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/Uiasiuk03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/10/Yeletskiy03.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/10/Yeletskiy03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/5/Gryaznov02.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/5/Gryaznov02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/5/HUAN_B03.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/5/HUAN_B03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/5/Huang16M.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/5/Huang16M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/5/Huangci01.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/5/Huangci01_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/5/KIM_W02.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/5/KIM_W02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/5/LiuY06M.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/5/LiuY06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/5/Min03M.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/5/Min03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/5/Park03M.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/5/Park03M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/5/Sun09.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/5/Sun09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/5/Wang06M.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/5/Wang06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Liszt/Transcendental_Etudes/5/WangY02M.mid",
+      "xml_score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Liszt/Transcendental_Etudes/5/WangY02M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Ravel/Pavane/ChenS03.mid",
+      "xml_score": "Ravel/Pavane/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Ravel/Pavane/ChenS03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Ravel/Pavane/Zhdanov08.mid",
+      "xml_score": "Ravel/Pavane/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Ravel/Pavane/Zhdanov08_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Schumann/Arabeske/Min09M.mid",
+      "xml_score": "Schumann/Arabeske/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Schumann/Arabeske/Min09M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Schumann/Arabeske/ParkS15M.mid",
+      "xml_score": "Schumann/Arabeske/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Schumann/Arabeske/ParkS15M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "test"
+    },
+    {
+      "midi_performance": "Schumann/Kreisleriana/4/ParkJH07.mid",
+      "xml_score": "Schumann/Kreisleriana/4/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Schumann/Kreisleriana/4/ParkJH07_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Schumann/Kreisleriana/4/Yarden09.mid",
+      "xml_score": "Schumann/Kreisleriana/4/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Schumann/Kreisleriana/4/Yarden09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Schumann/Kreisleriana/6/JohannsonP07.mid",
+      "xml_score": "Schumann/Kreisleriana/6/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Schumann/Kreisleriana/6/JohannsonP07_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Schumann/Kreisleriana/6/ParkJH09.mid",
+      "xml_score": "Schumann/Kreisleriana/6/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Schumann/Kreisleriana/6/ParkJH09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Schumann/Kreisleriana/6/Yarden09.mid",
+      "xml_score": "Schumann/Kreisleriana/6/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Schumann/Kreisleriana/6/Yarden09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Schumann/Kreisleriana/7/JohannsonP08.mid",
+      "xml_score": "Schumann/Kreisleriana/7/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Schumann/Kreisleriana/7/JohannsonP08_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Schumann/Kreisleriana/7/ParkJH10.mid",
+      "xml_score": "Schumann/Kreisleriana/7/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Schumann/Kreisleriana/7/ParkJH10_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Schumann/Kreisleriana/7/Yarden09.mid",
+      "xml_score": "Schumann/Kreisleriana/7/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Schumann/Kreisleriana/7/Yarden09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "val"
+    },
+    {
+      "midi_performance": "Scriabin/Etudes_op_8/11/Shi03.mid",
+      "xml_score": "Scriabin/Etudes_op_8/11/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Scriabin/Etudes_op_8/11/Shi03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Etudes_op_8/11/Shi08M.mid",
+      "xml_score": "Scriabin/Etudes_op_8/11/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Scriabin/Etudes_op_8/11/Shi08M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Etudes_op_8/11/YeF09.mid",
+      "xml_score": "Scriabin/Etudes_op_8/11/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Scriabin/Etudes_op_8/11/YeF09_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/ChernovA06M.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "0.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Scriabin/Sonatas/5/ChernovA06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": false,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/FALIKS06.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "0.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Scriabin/Sonatas/5/FALIKS06_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": false,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/FaB05M.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Scriabin/Sonatas/5/FaB05M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/GarritsonL06M.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Scriabin/Sonatas/5/GarritsonL06M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/Ko07M.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "0.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Scriabin/Sonatas/5/Ko07M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": false,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/Na03.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Scriabin/Sonatas/5/Na03_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/Na07M.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Scriabin/Sonatas/5/Na07M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/TET02.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Scriabin/Sonatas/5/TET02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/Yeletskiy02.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Scriabin/Sonatas/5/Yeletskiy02_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/Yeletskiy07M.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": true,
+      "alignment_path": "Scriabin/Sonatas/5/Yeletskiy07M_note_alignments/note_alignment.tsv",
+      "alignment_file_exists": true,
+      "qualifying": true,
+      "fold": "train"
+    }
+  ],
+  "non_qualifying_in_main": [
+    {
+      "midi_performance": "Beethoven/Piano_Sonatas/29-4/DANILO01.mid",
+      "xml_score": "Beethoven/Piano_Sonatas/29-4/xml_score.musicxml",
+      "robust_note_alignment": "",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Beethoven/Piano_Sonatas/29-4/DANILO01_note_alignments/note_alignment.tsv"
+    },
+    {
+      "midi_performance": "Chopin/Ballades/1/MunA19M.mid",
+      "xml_score": "Chopin/Ballades/1/xml_score.musicxml",
+      "robust_note_alignment": "0.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Chopin/Ballades/1/MunA19M_note_alignments/note_alignment.tsv"
+    },
+    {
+      "midi_performance": "Chopin/Etudes_op_10/1/LuM02M.mid",
+      "xml_score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+      "robust_note_alignment": "1.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Chopin/Etudes_op_10/1/LuM02M_note_alignments/note_alignment.tsv"
+    },
+    {
+      "midi_performance": "Chopin/Scherzos/20/Wong04M.mid",
+      "xml_score": "Chopin/Scherzos/20/xml_score.musicxml",
+      "robust_note_alignment": "0.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Chopin/Scherzos/20/Wong04M_note_alignments/note_alignment.tsv"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/ChernovA06M.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "0.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Scriabin/Sonatas/5/ChernovA06M_note_alignments/note_alignment.tsv"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/FALIKS06.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "0.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Scriabin/Sonatas/5/FALIKS06_note_alignments/note_alignment.tsv"
+    },
+    {
+      "midi_performance": "Scriabin/Sonatas/5/Ko07M.mid",
+      "xml_score": "Scriabin/Sonatas/5/xml_score.musicxml",
+      "robust_note_alignment": "0.0",
+      "score_and_performance_aligned": false,
+      "alignment_path": "Scriabin/Sonatas/5/Ko07M_note_alignments/note_alignment.tsv"
+    }
+  ],
+  "composer_fold_matrix": {
+    "train": {
+      "Beethoven": 7,
+      "Chopin": 13,
+      "Liszt": 2,
+      "Ravel": 1,
+      "Schumann": 2,
+      "Scriabin": 2
+    },
+    "val": {
+      "Beethoven": 1,
+      "Chopin": 2,
+      "Debussy": 1,
+      "Liszt": 1,
+      "Schumann": 1
+    },
+    "test": {
+      "Beethoven": 2,
+      "Brahms": 1,
+      "Chopin": 5,
+      "Liszt": 1,
+      "Schumann": 1
+    }
   }
 }

@@ -1,0 +1,14 @@
+score                                            repeats    S    T     C    I match
+Beethoven/Piano_Sonatas/31-2/xml_score.musicxml        6    2    7     4    4  True
+Beethoven/Piano_Sonatas/31-2_no_repeat/xml_score.musicxml       4    2    7     4    4  True
+Beethoven/Piano_Sonatas/32-1/xml_score.musicxml        2    3    4     6    6  True
+Brahms/Six_Pieces_op_118/2/xml_score.musicxml          2    1    1     2    2  True
+Chopin/Sonata_2/2nd/xml_score.musicxml                 2    0    1     0    0 False
+Liszt/Hungarian_Rhapsodies/6/xml_score.musicxml        2  181  181   356  362 False
+Schumann/Arabeske/xml_score.musicxml                   6  127   68   136  136  True
+Schumann/Kreisleriana/3/xml_score.musicxml             4    0    1     0    0 False
+Schumann/Kreisleriana/3_no_repeat/xml_score.musicxml       2    0    1     0    0 False
+Schumann/Kreisleriana/7/xml_score.musicxml             4    1    1     2    2  True
+
+�� repeat ��ǵ�����: 6/10 = 60%
+���� repeat ��ǵ�����: 36/58 = 62%

@@ -296,7 +296,9 @@ PDMX（no_license_conflict 子集）
 
 **第 1 层：全量**（统计口径，不用于训练）= 含印刷 pedal 的记谱 **68 首 / 416 演奏 / 7669 元素**。
 
-**第 2 层：主轴 Main**（论文主表口径）= `robust_note_alignment ∈ {0,1}` 且 `score_and_performance_aligned == True` 之后保留 = **43 首 / 291 演奏 / 3840 元素**。
+**第 2 层：主轴 Main**（论文主表口径）= **43 首 / 291 演奏 / 3840 元素**。
+
+> ⚠️ **勘误（2026-10-07，D-0039，主控缺陷 #7）**：本行原写 `robust_note_alignment ∈ {0,1}`，**该措辞作废**（`== 0` 意为对齐不稳健，纳入筛选等于反向筛选）。冻结谓词见 `FIELD_DEFINITIONS.md` §6：演奏级 `robust_note_alignment == "1.0"` ∧ `score_and_performance_aligned is True` ∧ alignment 文件存在；乐谱级 = 命中乐谱；纳入集 = 这些乐谱的**全部**演奏。三个数字（43 / 291 / 3840）不变。
 
 **Table 2（双栏并列，强制披露，不得省略）**
 
