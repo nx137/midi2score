@@ -1,0 +1,5 @@
+score (no <repeat>)                            xml_notes midi_notes   ratio
+Chopin/Ballades/3/xml_score.musicxml                4810       4508   0.937   repeats=0
+Chopin/Scherzos/39/xml_score.musicxml               5348       5238   0.979   repeats=0
+Ravel/Miroirs/3_Une_Barque/xml_score.musicxml       4698       4657   0.991   repeats=0
+Beethoven/Piano_Sonatas/29-2/xml_score.musicxml      2030       1842   0.907   repeats=0

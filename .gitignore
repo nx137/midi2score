@@ -35,3 +35,6 @@ credentials.json
 
 # Generated MIDI from export probes (regenerate via tools/musescore_export_probe.py)
 evidence/**/*.mid
+
+# Partitura round-trip byproducts (not evidence)
+evidence/**/rt_*.musicxml

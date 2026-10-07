@@ -63,7 +63,9 @@
 | R1-3j | 分位点估计量 → 已裁定（D-0035 A+：estimator-free 主描述 + R-7 次描述；P5 不得进摘要/判据） | — | done |
 | R1-4a | G1' 交付 5：反演一致度（0/±1/±2 + micro/macro + 绝对计数 + bootstrap 对基线） | R1-3l | blocked（坐标系待裁定） |
 | R1-3k | Main 口径 → 已裁定（D-0039：以谓词为准，§4.4 已勘误） | — | done |
-| R1-3l | **待裁定**：坐标系统一性（D-0040；导出展开 vs S/T 书写） | controller 裁定 | blocked |
+| R1-3l | 坐标系 = 展开 → 已裁定（D-0042 A）；**4a(i)/(ii) 两门不过，停机待裁定 S/T 计数口径** | controller 裁定 | blocked |
+| R1-3m | 交付 6 收讫 + `assignment_sha256` 冻结标识 | — | done（EV-S34） |
+| R1-3n | 欠账 #4：13 首零 CC64 在 43 主轴/三折的分布（as-written 与 unfolded 两版对照） | R1-3l 重算 | blocked |
 | R1-4b | G1' 交付 6：主表划分冻结 | — | done（EV-S26；hash `52ae1314…`） |
 
 ## 明确不做（YAGNI）
