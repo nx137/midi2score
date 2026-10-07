@@ -5,7 +5,7 @@
 
 ## 当前
 
-- **更新时间**：2026-10-07
+- **更新时间**：2026-10-07（阶段 1 + 语料下载 / 渲染器核验）
 - **当前阶段**：阶段 1 —— 项目规则与科研任务文件
 - **阶段状态**：交付物已完成、文档级校验 PASS、**阶段 1 已提交（单一干净提交）**；等待用户确认后进入阶段 2
 - **活动任务**：`PHASE-1`
@@ -30,6 +30,7 @@
 | 时间 | 范围 | 命令 | 结果 |
 |:--|:--|:--|:--|
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
+| 2026-10-07 | 语料 + 渲染器（R1） | git clone --depth 1 --branch v2.1.1；git rev-parse HEAD；文件计数 + 字节求和；MuseScore4.exe --version | **PASS**：HEAD 4097b457…、tag v2.1.1、242 MusicXML + 1,063 alignment = 1,305、**465,861,631 B 与计划书一致**、10,314 文件、23 个 repeat 变体目录；MuseScore4 4.7.5 exit 0。**未复现** manifest SHA256（格式未规定，见 EV-S6） |
 
 > 阶段 1 没有可执行代码，因此没有单元测试可跑；`pytest` 将在阶段 2 随依赖引入。
 > 上表为真实执行结果，复现方式见 `EVIDENCE.md` 的 `EV-S3`。
@@ -55,5 +56,11 @@
 ## 关键路径提醒
 
 - **G1'（回放通道端到端）是所有科研工作的先决闸门**（计划书 §9.3）。
-- 本仓库**尚未**获取语料、**尚未**安装 MuseScore、**尚未**运行任何实验；任何实验结论当前一律为 `not_run`。
+- 语料与渲染器已就位（见下节）；但**尚未运行任何科研实验**，所有实验结论仍为 `not_run`。
 - `TASK_CHARTER.md` 不得被程序自动修改（`GV-01`）；违反即为 `conflicting`。
+
+## 数据与渲染器（2026-10-07）
+
+- 语料：data/asap-dataset/（CPJKU/asap-dataset@v2.1.1，HEAD 4097b45757bed854818cf87e77b92323ebf90615，工作树 clean）——**已 gitignore，绝不提交**（HC-06）。
+- 渲染器：D:\MuseScore 4\bin\MuseScore4.exe = MuseScore4 4.7.5（HC-05 钉死版本）。
+- 未完成：manifest SHA256 口径确认（R1-3c）、MuseScore CLI 实导出验证（R1-3b）。

@@ -39,3 +39,12 @@
 | AC-G3 | 事实 / 决策 / 假设 / 建议 / 待办严格分区；未运行实验标注 `not_run` | 文档审查 | pass（2026-10-07） |
 | AC-G4 | 提交前展示 `git diff` | 阶段 1 提交记录 | not_run |
 | AC-G5 | 不存在 `conversation_summary.md`；记忆不实现为无限增长的摘要文件 | 文件系统检索 | pass（2026-10-07） |
+## D. 环境前置验收（计划书 §10.3）
+
+| ID | 验收标准 | 判定方法 | result |
+|:--|:--|:--|:--|
+| AC-E1 | 语料 pin 一致：本地 HEAD = 4097b457…，tag = v2.1.1 | git rev-parse HEAD / describe --tags | pass（2026-10-07） |
+| AC-E2 | 语料文件集一致：242 MusicXML + 1,063 alignment = 1,305 条；总字节 465,861,631 | 文件计数 + Measure-Object -Sum | pass（2026-10-07） |
+| AC-E3 | manifest SHA256 051713f7… 复核 | 需原作者提供 manifest 生成口径 | not_run（格式未规定） |
+| AC-E4 | MuseScore Studio 4.7.5 本机可用（HC-05） | MuseScore4.exe --version → MuseScore4 4.7.5, exit 0 | pass（2026-10-07） |
+| AC-E5 | 原始语料未进入 git（HC-06 / 计划书 §4.3 许可） | git check-ignore -v data/asap-dataset + git status | pass（2026-10-07） |

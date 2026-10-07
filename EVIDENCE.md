@@ -13,7 +13,7 @@
 
 | ID | 事实 | 状态 |
 |:--|:--|:--|
-| EV-01 | 语料身份：1,305 条身份记录（242 MusicXML + 1,063 alignment），总字节 `465,861,631`，manifest SHA256 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa` | claimed_by_charter；not_verified_in_this_repo |
+| EV-01 | 语料身份：1,305 条身份记录（242 MusicXML + 1,063 alignment），总字节 `465,861,631`，manifest SHA256 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa` | 文件集与字节数：verified_in_this_repo（EV-S4）；manifest 哈希：未复现（EV-S6） |
 | EV-02 | CC64 全量普查：1,053/1,066 演奏含 CC64；总消息 4,511,940；**非端点值 92.3339%**（N = 370 组合）；13 条无 CC64 | claimed_by_charter；not_verified_in_this_repo |
 | EV-03 | pedal 元素：7,669 个全部为 `start`/`stop`；非二值候选 **0**；`type` = start 3,910 / stop 3,759（未闭合 151）；`sign` 从未使用；`line` = yes 4,751 / 缺省 2,450 / no 468 | claimed_by_charter；not_verified_in_this_repo |
 | EV-04 | MusicXML 版本分布：3.1 = 227 / 1.1 = 9 / 3.0 = 4 / 2.0 = 1 / 缺失 = 1；含 pedal 的 68 首中 3.1 = 61，7 首非 3.1 共 504 元素（**故不得笼统写"版本 3.1"**，`HC-10`） | claimed_by_charter；not_verified_in_this_repo |
@@ -24,7 +24,7 @@
 
 | ID | 事实 | 状态 |
 |:--|:--|:--|
-| EV-07 | MuseScore Studio 4.7.5：**71/71** 导出成功（68 含 pedal + 3 负对照）；511,250 条消息；7,168 条 CC64；非端点值 0%；负对照 3/3 含 0 条 CC64 | claimed_by_charter；not_verified_in_this_repo |
+| EV-07 | MuseScore Studio 4.7.5：**71/71** 导出成功（68 含 pedal + 3 负对照）；511,250 条消息；7,168 条 CC64；非端点值 0%；负对照 3/3 含 0 条 CC64 | 渲染器版本可用性：verified_in_this_repo（EV-S5）；71/71 导出结果：claimed_by_charter |
 | EV-08 | `-f` 行为：clean 文件上惰性；带/不带 `-f` 产物 SHA256 相同 = `518942ebc97724e10fdeae04485595a5afe1252a946324b0fd5aded428a50360` | claimed_by_charter；not_verified_in_this_repo |
 | EV-09 | `-f` 异常：23 个文件无 `-f` 时退出码 `1320`，stdout/stderr 为空、不生成 MIDI；独立进程复现 6/6。**机制未定，按证据记录、不猜测原因** | claimed_by_charter；not_verified_in_this_repo |
 | EV-10 | 渲染器恒等式：`CC64 消息数 == 2 × min(pedal_start, pedal_stop)`，45 个 clean 文件中命中 40（88.9%）；5 个例外已列名 | claimed_by_charter；not_verified_in_this_repo |
@@ -53,3 +53,6 @@
 | EV-S1 | 权威规格源哈希：`PedNotate_Plan_v3.0.md` SHA256 = `ED95FA15D104967AFD54A0156DC07B027E91AAFE9605C6EB470DAC7F142628A9` | `Get-FileHash -Algorithm SHA256`（2026-10-07） | verified_in_this_repo |
 | EV-S2 | 章程冻结哈希：`TASK_CHARTER.md` SHA256 = `4762A7EDCD55CA7FC7F862CA2FC0C2EDCDAFC9F743BA01EAC0322160A756C9A8` | 同上；运行期由 `charter_sha256` 复核 | verified_in_this_repo |
 | EV-S3 | 阶段 1 文档级校验：9/9 文件存在；`TASK_CHARTER.md` 硬约束可机读（HC 16 条 + GV 6 条）；`AGENTS.md` 覆盖全部必需规则；无 `conversation_summary.md`；全部文档 UTF-8 无 BOM | PowerShell 校验脚本（2026-10-07），结果 **PASS** | verified_in_this_repo |
+| EV-S4 | 语料 CPJKU/asap-dataset 已克隆到 data/asap-dataset（本地、已 gitignore）：HEAD 4097b45757bed854818cf87e77b92323ebf90615、tag v2.1.1（远端 tag 经 GitHub API 核实指向同一 commit）；*.musicxml = 242、note_alignment.tsv = 1,063、合计 1,305；两者总字节 = 465,861,631（与计划书完全一致）；仓库文件总数 = 10,314；repeat 变体独立目录 = 23；工作树 clean | git clone --depth 1 --branch v2.1.1 + git rev-parse HEAD + 文件计数 + Measure-Object -Sum | verified_in_this_repo |
+| EV-S5 | 渲染器本机可用：D:\MuseScore 4\bin\MuseScore4.exe --version 输出 MuseScore4 4.7.5，exit code 0（与 HC-05 钉死版本一致） | Start-Process --version（2026-10-07） | verified_in_this_repo |
+| EV-S6 | manifest SHA256 051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa 未复现：计划书未规定该 manifest 的序列化格式（字段/排序/分隔符），无法从文件树唯一重建；已用文件集 + 总字节数作等价核验 | 需原作者提供 manifest 生成脚本或 manifest 文件 | not_verified |
