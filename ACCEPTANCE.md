@@ -48,3 +48,6 @@
 | AC-E3 | manifest SHA256 051713f7… 复核 | 需原作者提供 manifest 生成口径 | not_run（格式未规定） |
 | AC-E4 | MuseScore Studio 4.7.5 本机可用（HC-05） | MuseScore4.exe --version → MuseScore4 4.7.5, exit 0 | pass（2026-10-07） |
 | AC-E5 | 原始语料未进入 git（HC-06 / 计划书 §4.3 许可） | git check-ignore -v data/asap-dataset + git status | pass（2026-10-07） |
+| AC-E6 | 科研环境 pin 一致（§10.1 版本组合） | `pip freeze` 对照 requirements-research.txt | pass（2026-10-07，EV-S14） |
+| AC-E7 | 导出链路可用：含 pedal 乐谱导出 MIDI 确实产生 CC64，负对照为 0 | `tools/musescore_export_probe.py --force`（20+2 样本） | pass（20/20 成功，0 真否决；EV-S15） |
+| AC-E8 | R1-3b 判据口径（恒等式 vs 字面元素比）已裁定并生效 | 需用户裁定（D-0022） | not_run |

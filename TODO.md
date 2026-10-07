@@ -49,12 +49,14 @@
 
 | ID | 待办 | blocking | 状态 |
 |:--|:--|:--|:--|
-| R1-1 | 建独立环境，按计划书 §10.1 pin 版本（partitura 1.9.0 / mido 1.3.3 / music21 10.5.0 / parangonar 3.3.3） | 系统可用 | todo |
+| R1-1 | 建独立环境并 pin 版本（`.venv-research` + `requirements-research.txt`） | — | done（EV-S14） |
 | R1-2 | 获取 CPJKU/asap-dataset@v2.1.1：已完成（HEAD/tag/1,305 条/465,861,631 B 全部命中，见 EV-S4） | — | done |
 | R1-3 | MuseScore Studio 4.7.5 安装核验（--version → 4.7.5, exit 0，见 EV-S5） | — | done |
-| R1-3b | 测通 MuseScore CLI 导出（3 首样本产生 CC64，比值 ≈1.0） | R1-2 / R1-3 | todo |
+| R1-3b | MuseScore CLI 导出探针（20 正样本 + 2 负对照，20/20 成功，0 真否决） | — | done（EV-S15/S16） |
 | R1-3c | manifest SHA256 口径确认：已复现（CSV 列/排序/行尾 + 该 CSV 的 sha256），工具与产物入库 | — | done |
-| R1-4 | **G1'**：43/43 主轴乐谱回放通道端到端 + 反演基线 + 划分冻结（先决闸门） | R1-2 / R1-3 | todo |
+| R1-3d | **待裁定**：R1-3b 判据口径（恒等式 vs 字面元素比） | 用户裁定 | blocked |
+| R1-3e | 导出统一加 `-f`（规避 4/20 的 exit-1320） | — | done（EV-S15） |
+| R1-4 | **G1'**：43/43 主轴乐谱回放通道端到端 + 反演基线 + 划分冻结（先决闸门） | R1-3d + 用户裁定划分/阈值 | todo |
 
 ## 明确不做（YAGNI）
 

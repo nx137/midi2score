@@ -2,6 +2,7 @@
 __pycache__/
 *.py[cod]
 .venv/
+.venv-research/
 venv/
 .env
 .pytest_cache/
@@ -31,3 +32,6 @@ Thumbs.db
 .env.*
 *.key
 credentials.json
+
+# Generated MIDI from export probes (regenerate via tools/musescore_export_probe.py)
+evidence/**/*.mid

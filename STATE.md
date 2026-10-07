@@ -6,9 +6,9 @@
 ## 当前
 
 - **更新时间**：2026-10-07（阶段 1–4 + 语料 / 渲染器 / manifest 核验）
-- **当前阶段**：阶段 4 —— 验收测试（已完成，待用户确认）
-- **阶段状态**：阶段 1–4 全部完成，测试 **18/18 PASS**（含真双进程重启），示例 exit 0；**等待用户验收**
-- **活动任务**：`PHASE-4`
+- **当前阶段**：科研侧 R1（系统骨架阶段 1–4 已完成）；R1-1/R1-2/R1-3/R1-3b/R1-3c 完成，**G1' 阻塞于 3 项研究级取值待裁定**
+- **阶段状态**：系统侧 18/18 PASS；科研侧导出链路 20/20 成功、0 真否决；**等待用户裁定 D-0022（判据口径）与 D-0023（划分/阈值/指标）后进入 G1'**
+- **活动任务**：`R1`（科研侧推进）
 - **分支**：`main` → `origin/main`（https://github.com/nx137/midi2score.git，已推送）
 - **thread_id 约定**（阶段 2 实现）：`research:midi2score:<task_id>`，稳定可推导，禁止每次随机生成
 
@@ -31,6 +31,8 @@
 |:--|:--|:--|:--|
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
 | 2026-10-07 | 语料 manifest 口径 | `python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv` | **PASS**：复现出计划书哈希 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa`（1,305 条 / 465,861,631 B；EV-S6、EV-S10、D-0020） |
+| 2026-10-07 | R1-1 环境 | `python -m venv .venv-research` + `pip install -r requirements-research.txt` | **PASS**：Python 3.14.6；partitura 1.9.0 / mido 1.3.3 / music21 10.5.0 / parangonar 3.3.3 / lxml 6.1.3 / numpy 2.5.3 / pandas 3.0.6 全部命中（EV-S14） |
+| 2026-10-07 | R1-3b 导出探针 | `tools/musescore_export_probe.py --positive 20 --negative 2 [--force]` | **PASS**：不加 `-f` 16/20（4 例 exit 1320 无产物）；**加 `-f` 20/20**；负对照 2/2 为 0 CC64；**真否决 0/20**；恒等式 16/20；`Chopin/Ballades/1=432`、`Ballades/3=478` 与计划书逐值一致（EV-S15/S16） |
 | 2026-10-07 | 阶段 4：验收测试（6/6 项） | `.\.venv\Scripts\python.exe -m pytest -q` | **PASS 18/18**：ac1 恢复 / ac2 隔离 / ac3 跨线程 store / ac4 章程哈希+mtime 不变 / ac5 冲突转人工 / **ac6 真双进程重启（PID 不同）**（EV-S13） |
 | 2026-10-07 | 阶段 3：三值判定+章程保护 | `.\.venv\Scripts\python.exe -m pytest -q` | **PASS 12/12**：aligned / partially_aligned / conflicting；conflicting 普通 approve 不放行、override 才放行并记 human_override；修改章程意图被拒绝且文件哈希不变（EV-S11） |
 | 2026-10-07 | 阶段 3：示例 | `python -m research_agent.demo` | **exit 0**：demo[6] conflicting → blocked_by_human；demo[7] override → reviewed + D-WP-1/human_override（EV-S12） |
@@ -82,3 +84,13 @@
 - 语料：data/asap-dataset/（CPJKU/asap-dataset@v2.1.1，HEAD 4097b45757bed854818cf87e77b92323ebf90615，工作树 clean）——**已 gitignore，绝不提交**（HC-06）。
 - 渲染器：D:\MuseScore 4\bin\MuseScore4.exe = MuseScore4 4.7.5（HC-05 钉死版本）。
 - manifest 口径已解决：`evidence/corpus_manifest.csv` 的 sha256 = `051713f7…`（复现命令见 EV-S6；R1-3c 关闭）。
+## 科研侧待裁定（阻塞 G1'）
+
+| 决策 | 建议（推荐项） | 备选 |
+|:--|:--|:--|
+| D-0022 R1-3b 判据口径 | 主判据用渲染器恒等式 `CC64 == 2×min(start,stop)`；否决条件 = `start>0` 却 0 CC64；元素比降为诊断量 | (a) 保持字面 `CC64/元素数≈1.0`（会 9/20 假失败）(b) 先扩到 68 首再定 |
+| D-0023 划分比例 / 种子 | train/val/test = 60/20/20，seed = 20261007，按作曲家分层，repeat 变体绑同一 piece-group | 其他比例/种子 |
+| D-0023 二值化阈值 | `value ≥ 64 = ON`，`≤ 63 = OFF`；并报 50/60/63/70/80 敏感性 | 其他不等号方向/阈值 |
+| D-0023 反演一致度指标 | 逐锚点 DOWN/UP vs 印刷记号，容差 ±1 拍，micro P/R/F1 + 逐作曲家 | 其他容差/指标 |
+
+> 依据计划书执行纪律第 1 条：文中未写明的取值，执行者不得自行发明，必须停下等裁定。
