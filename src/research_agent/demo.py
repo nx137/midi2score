@@ -68,6 +68,31 @@ def main() -> int:
         snap3 = graph3.get_state(cfg)
         print(f"    phase = {snap3.values.get('current_phase')}  approval = {snap3.values.get('approval')}")
         print(f"    charter_sha256 前 16 位 = {str(snap3.values.get('charter_sha256'))[:16]}")
+
+    print("\n[6] 目标偏离：conflicting 时普通 approve 不放行")
+    with sqlite_persistence() as (cp4, store4):
+        graph4 = compile_graph(cp4, store4)
+        drift = initial_state(project)
+        drift["charter_sha256"] = "0" * 64  # 模拟章程被外部改动
+        cfg_drift = thread_config(project, "PHASE-3-DRIFT")
+        graph4.invoke(drift, cfg_drift)
+        al = graph4.get_state(cfg_drift).values["alignment"]
+        print(f"    alignment = {al.verdict}")
+        print(f"    violates  = {al.violates}")
+        graph4.invoke(Command(resume="approve"), cfg_drift)
+        print(f"    普通 approve 后 phase = {graph4.get_state(cfg_drift).values['current_phase']}（未放行）")
+
+    print("\n[7] 只有显式 override 才放行，并记为人工覆盖决策")
+    with sqlite_persistence() as (cp5, store5):
+        graph5 = compile_graph(cp5, store5)
+        drift2 = initial_state(project)
+        drift2["charter_sha256"] = "0" * 64
+        cfg_ovr = thread_config(project, "PHASE-3-OVERRIDE")
+        graph5.invoke(drift2, cfg_ovr)
+        graph5.invoke(Command(resume="override"), cfg_ovr)
+        vals = graph5.get_state(cfg_ovr).values
+        d = vals["decisions"]["D-WP-1"]
+        print(f"    phase = {vals['current_phase']}  decision = {d.id}  source = {d.source}")
     return 0
 
 

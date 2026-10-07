@@ -84,7 +84,7 @@ AlignmentVerdict = Literal["aligned", "partially_aligned", "conflicting"]
 
 
 class AlignmentResult(Record):
-    """目标偏离判定。阶段 3 填充；阶段 2 恒为 None。"""
+    """目标偏离判定（阶段 3）：aligned / partially_aligned / conflicting。"""
 
     verdict: AlignmentVerdict = "aligned"
     violates: list[str] = Field(default_factory=list)
@@ -123,6 +123,7 @@ class TaskState(TypedDict):
     verification: VerificationResult | None
 
     alignment: AlignmentResult | None
+    charter_write_attempt: bool
     recalled_decisions: list[str]
     pending_human_action: str | None
     approval: str | None

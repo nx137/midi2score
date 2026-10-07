@@ -64,3 +64,5 @@
 
 - 冻结产物：`evidence/corpus_manifest.csv`（1,305 行 + 表头）与 `evidence/corpus_manifest_summary.json`（含 dataset commit 与 manifest_sha256）。
 - 注意：summary 里的 `script_sha256` 记录的是**当时**的脚本字节（`5dd9f12b…`），现盘脚本已变化（`42A45F39…`）；因此该口径的可复现性依赖**格式 + 命令**，不依赖脚本字节不变。
+| EV-S11 | 阶段 3 测试：`pytest -q` → **12 passed**（新增三值判定：aligned / partially_aligned / conflicting、conflicting 普通 approve 不放行、override 放行并记 source=human_override、修改章程意图被拒绝且文件哈希不变） | `.\.venv\Scripts\python.exe -m pytest -q`（exit 0，2026-10-07） | verified_in_this_repo |
+| EV-S12 | 阶段 3 示例：demo [6] 章程哈希漂移 → `alignment=conflicting`、`violates=['GV-01: ...']`、普通 approve 后 `phase=blocked_by_human`（未放行）；[7] 显式 override 后 `phase=reviewed`、`decision=D-WP-1 source=human_override` | `python -m research_agent.demo`（exit 0） | verified_in_this_repo |

@@ -54,7 +54,19 @@ list(graph.get_state_history(cfg))                 # 检查点历史
 
 ## 边界
 
-- 阶段 2 的 verifier 只做**章程哈希**与**证据诚实性**检查；三值目标偏离判定
-  （`aligned` / `partially_aligned` / `conflicting`）在阶段 3 接入。
+- verifier 输出三值目标偏离判定：`aligned` / `partially_aligned` / `conflicting`。
+  `conflicting`（章程哈希漂移、或检测到修改章程的意图）一律暂停；**普通 approve 不放行，必须显式 override**，
+  且会记为 `source=human_override` 的决策。
 - 默认使用 stub 模型，**不引入任何 LLM 供应商 SDK**。
 - 原始语料 `data/asap-dataset/` 与本地 SQLite 均**不入库**。
+
+## 目标偏离检测（阶段 3）
+
+| 判定 | 触发条件 | 处置 |
+|:--|:--|:--|
+| `aligned` | 服务于 GOAL-1，且无 HC/GV 违规、无待确认问题 | 进入人在环闸门批准 |
+| `partially_aligned` | 未违反硬约束，但存在待确认项（如证据 `verified` 无 command、工作包未挂到任何 RQ） | 暂停，需人工确认 |
+| `conflicting` | 违反 HC/GV：章程哈希漂移、或检测到修改 `TASK_CHARTER.md` 的意图 | **暂停，普通 approve 不放行**；只有显式 `override` 才继续 |
+
+章程保护是三重机制：① 代码中不存在写 `TASK_CHARTER.md` 的路径；② 执行器对"修改章程"意图直接拒绝
+（关键词启发式，保守起见宁可误报）；③ verifier 每次比对文件 sha256，漂移即 `conflicting`。

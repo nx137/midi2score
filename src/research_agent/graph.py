@@ -18,6 +18,7 @@ from .schemas import TaskState
 
 DEFAULT_LLM: Callable[[str], str] = nodes._stub_llm
 APPROVE_WORDS = nodes.APPROVE_WORDS
+OVERRIDE_WORDS = nodes.OVERRIDE_WORDS
 
 DATA_DIR = Path(__file__).resolve().parents[2] / "data"
 CHECKPOINT_DB = DATA_DIR / "checkpoints.db"
@@ -49,16 +50,17 @@ def thread_config(project_id: str, task_id: str, **extra: object) -> dict:
 
 
 def route_after_verifier(state: TaskState) -> str:
-    verification = state.get("verification")
-    if verification and verification.passed:
-        return "human_review"
-    if state.get("iteration", 0) >= state.get("max_iterations", 3):
-        return "human_review"
-    return "planner"
+    """三值判定后一律进入人在环闸门：conflicting 必须人工确认，aligned 也需批准。"""
+    return "human_review"
 
 
 def route_after_review(state: TaskState) -> str:
-    if str(state.get("approval", "")).strip().lower() in APPROVE_WORDS:
+    if state.get("current_phase") == "blocked_by_human":
+        return "end"
+    answer = str(state.get("approval", "")).strip().lower()
+    if answer in APPROVE_WORDS or answer in OVERRIDE_WORDS:
+        return "end"
+    if state.get("iteration", 0) >= state.get("max_iterations", 3):
         return "end"
     return "planner"
 

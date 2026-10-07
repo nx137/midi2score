@@ -23,6 +23,19 @@ MAX_MESSAGES = 20
 
 _CONSTRAINT_RE = re.compile(r"^- \*\*(HC-\d+|GV-\d+)\*\* (.+)$")
 
+# ponytail: 关键词启发式，宁可误报也要拦住；升级路径 = 由 LLM 做意图判定
+_CHARTER_TARGET = r"(TASK_CHARTER\.md|任务章程|章程)"
+_CHARTER_VERB = r"(?:(?<!被)(?<!是否)(修改)|写入|改写|编辑|删除|覆盖|变更|rewrite|write|edit|modify|delete|overwrite)"
+_CHARTER_WRITE_RE = re.compile(
+    rf"(?:{_CHARTER_TARGET}[^\n]{{0,40}}?{_CHARTER_VERB}|{_CHARTER_VERB}[^\n]{{0,40}}?{_CHARTER_TARGET})",
+    re.IGNORECASE,
+)
+
+
+def is_charter_write_attempt(text: str) -> bool:
+    """检测"修改章程"的意图；命中则拒绝执行并交由人工确认（GV-01）。"""
+    return bool(_CHARTER_WRITE_RE.search(text or ""))
+
 
 def sha256_file(path: Path) -> str:
     return hashlib.sha256(Path(path).read_bytes()).hexdigest()
@@ -98,6 +111,7 @@ def initial_state(project_id: str = "midi2score", max_iterations: int = 3) -> di
         "last_result": None,
         "verification": None,
         "alignment": None,
+        "charter_write_attempt": False,
         "recalled_decisions": [],
         "pending_human_action": None,
         "approval": None,
@@ -106,6 +120,6 @@ def initial_state(project_id: str = "midi2score", max_iterations: int = 3) -> di
 
 __all__ = [
     "CHARTER_PATH", "MAX_MESSAGES", "as_dict", "decisions_ns", "initial_state",
-    "load_charter", "recall_decisions", "remember_decision", "sha256_file", "trim_messages",
+    "is_charter_write_attempt", "load_charter", "recall_decisions", "remember_decision", "sha256_file", "trim_messages",
     
 ]

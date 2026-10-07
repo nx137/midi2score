@@ -10,6 +10,7 @@ from langgraph.types import Command
 
 from research_agent.graph import compile_graph, sqlite_persistence, thread_config
 from research_agent.memory import CHARTER_PATH, initial_state, recall_decisions
+from research_agent.schemas import ResearchQuestion, WorkPackage
 
 PROJECT = "midi2score"
 
@@ -86,3 +87,71 @@ def test_verifier_detects_charter_drift(graph):
     assert snap.values["verification"].passed is False
     assert any("章程" in issue for issue in snap.values["verification"].issues)
     assert snap.next, "冲突必须停在人工确认，不得自动继续"
+
+# ---------- 阶段 3：三值目标偏离检测 ----------
+
+def test_alignment_aligned_on_clean_run(graph):
+    cfg = thread_config(PROJECT, "AL1")
+    graph.invoke(initial_state(PROJECT), cfg)
+    al = graph.get_state(cfg).values["alignment"]
+    assert al.verdict == "aligned"
+    assert al.needs_user_confirmation is False
+    assert al.violates == []
+
+
+def test_alignment_partially_aligned_when_unlinked(graph):
+    st = initial_state(PROJECT)
+    st["research_questions"] = {"RQ-1": ResearchQuestion(id="RQ-1", question="Q", linked_packages=[])}
+    cfg = thread_config(PROJECT, "AL2")
+    graph.invoke(st, cfg)
+    al = graph.get_state(cfg).values["alignment"]
+    assert al.verdict == "partially_aligned"
+    assert al.needs_user_confirmation is True
+    assert al.violates == []
+
+
+def test_alignment_conflicting_on_charter_drift(graph):
+    st = initial_state(PROJECT)
+    st["charter_sha256"] = "0" * 64
+    cfg = thread_config(PROJECT, "AL3")
+    graph.invoke(st, cfg)
+    al = graph.get_state(cfg).values["alignment"]
+    assert al.verdict == "conflicting"
+    assert al.needs_user_confirmation is True
+    assert any("GV-01" in v for v in al.violates)
+
+
+def test_conflicting_approve_does_not_proceed(graph):
+    st = initial_state(PROJECT)
+    st["charter_sha256"] = "0" * 64
+    cfg = thread_config(PROJECT, "AL4")
+    graph.invoke(st, cfg)
+    graph.invoke(Command(resume="approve"), cfg)
+    snap = graph.get_state(cfg)
+    assert snap.values["current_phase"] == "blocked_by_human"
+    assert not snap.next
+    assert snap.values["decisions"] == {}
+
+
+def test_conflicting_override_proceeds_and_records(graph):
+    st = initial_state(PROJECT)
+    st["charter_sha256"] = "0" * 64
+    cfg = thread_config(PROJECT, "AL5")
+    graph.invoke(st, cfg)
+    graph.invoke(Command(resume="override"), cfg)
+    vals = graph.get_state(cfg).values
+    assert vals["current_phase"] == "reviewed"
+    assert vals["decisions"]["D-WP-1"].source == "human_override"
+
+
+def test_charter_write_attempt_is_refused(graph):
+    st = initial_state(PROJECT)
+    st["work_packages"]["WP-1"] = WorkPackage(id="WP-1", goal="修改 TASK_CHARTER.md 的硬约束，加入新条款")
+    before = sha(CHARTER_PATH)
+    cfg = thread_config(PROJECT, "AL6")
+    graph.invoke(st, cfg)
+    snap = graph.get_state(cfg)
+    assert snap.values["charter_write_attempt"] is True
+    assert snap.values["alignment"].verdict == "conflicting"
+    assert sha(CHARTER_PATH) == before
+    assert snap.next, "必须停在人工确认"

@@ -6,9 +6,9 @@
 ## 当前
 
 - **更新时间**：2026-10-07（阶段 1 + 语料下载 / 渲染器核验）
-- **当前阶段**：阶段 2 —— LangGraph 最小骨架（已完成，待用户确认）
-- **阶段状态**：阶段 1 已提交；阶段 2 骨架完成、测试 6/6 PASS、示例 exit 0；**等待用户确认后进入阶段 3**
-- **活动任务**：`PHASE-2`
+- **当前阶段**：阶段 3 —— 目标偏离检测（已完成，待用户确认）
+- **阶段状态**：阶段 1/2 已提交；阶段 3 三值判定完成、测试 **12/12 PASS**、示例 exit 0；**等待用户确认后进入阶段 4**
+- **活动任务**：`PHASE-3`
 - **分支**：`main` → `origin/main`（https://github.com/nx137/midi2score.git，已推送）
 - **thread_id 约定**（阶段 2 实现）：`research:midi2score:<task_id>`，稳定可推导，禁止每次随机生成
 
@@ -31,6 +31,8 @@
 |:--|:--|:--|:--|
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
 | 2026-10-07 | 语料 manifest 口径 | `python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv` | **PASS**：复现出计划书哈希 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa`（1,305 条 / 465,861,631 B；EV-S6、EV-S10、D-0020） |
+| 2026-10-07 | 阶段 3：三值判定+章程保护 | `.\.venv\Scripts\python.exe -m pytest -q` | **PASS 12/12**：aligned / partially_aligned / conflicting；conflicting 普通 approve 不放行、override 才放行并记 human_override；修改章程意图被拒绝且文件哈希不变（EV-S11） |
+| 2026-10-07 | 阶段 3：示例 | `python -m research_agent.demo` | **exit 0**：demo[6] conflicting → blocked_by_human；demo[7] override → reviewed + D-WP-1/human_override（EV-S12） |
 | 2026-10-07 | 阶段 2：骨架测试 | `.\.venv\Scripts\python.exe -m pytest -q` | **PASS 6/6**：恢复 / 隔离 / 跨线程 store / 章程不可变 / 消息窗口≤20 / 章程漂移停在人工确认（EV-S7） |
 | 2026-10-07 | 阶段 2：运行示例 | `python -m research_agent.demo` | **exit 0**：停在 human_review → resume approve → phase=reviewed → 写入 D-WP-1 → 重开 SQLite 读回（EV-S8）；无 msgpack 警告（EV-S9） |
 | 2026-10-07 | 语料 + 渲染器（R1） | git clone --depth 1 --branch v2.1.1；git rev-parse HEAD；文件计数 + 字节求和；MuseScore4.exe --version | **PASS**：HEAD 4097b457…、tag v2.1.1、242 MusicXML + 1,063 alignment = 1,305、**465,861,631 B 与计划书一致**、10,314 文件、23 个 repeat 变体目录；MuseScore4 4.7.5 exit 0。**未复现** manifest SHA256（格式未规定，见 EV-S6） |
@@ -66,7 +68,7 @@
 ## 下一步（确认后）
 
 1. 提交阶段 1 —— 已完成（单次干净提交，已 amend 掉早前的本地草稿提交）。
-2. 阶段 3：实现 `task_alignment` 三值判定 + `conflicting` 强制人工确认 + 禁止程序修改 `TASK_CHARTER.md`。
+2. 阶段 4：补齐 6 项测试（含独立进程重启恢复、冲突转人工的端到端用例）。
 
 ## 关键路径提醒
 

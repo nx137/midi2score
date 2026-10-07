@@ -25,14 +25,14 @@
 | T2-4 | messages 窗口裁剪（上限 20；不建 conversation_summary.md） | — | done |
 | T2-5 | 最小运行示例 + 中断/恢复会话示例 | — | done |
 
-## 阶段 3：目标偏离检测（未启动）
+## 阶段 3：目标偏离检测（已完成，待用户确认）
 
 | ID | 待办 | blocking | 状态 |
 |:--|:--|:--|:--|
-| T3-1 | `task_alignment` 字段：`aligned` / `partially_aligned` / `conflicting` | 阶段 2 确认 | todo |
-| T3-2 | verifier 校验：服务 GOAL-1、不违反 HC/GV、是否需要用户确认 | T3-1 | todo |
-| T3-3 | `conflicting` → `interrupt()` 暂停并要求人工确认 | T3-1 | todo |
-| T3-4 | 程序不得自动修改 `TASK_CHARTER.md`（charter_sha256 校验 + 只读） | T3-1 | todo |
+| T3-1 | `task_alignment` 字段：`aligned` / `partially_aligned` / `conflicting` | — | done |
+| T3-2 | verifier 校验：服务 GOAL-1、不违反 HC/GV、是否需要用户确认 | — | done |
+| T3-3 | `conflicting` → `interrupt()` 暂停；普通 approve 不放行，需显式 override | — | done |
+| T3-4 | 程序不得自动修改 `TASK_CHARTER.md`（无写路径 + 意图拦截 + 哈希校验） | — | done |
 
 ## 阶段 4：测试（未启动）
 
