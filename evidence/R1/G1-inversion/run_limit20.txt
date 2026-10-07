@@ -1,0 +1,5 @@
+��Χ = Main 43 ���в��� repeat �� 36 �ף�D-0045 ���������巶Χ��
+���� (score, performance) �� = 20
+tol ��0��: n=20 microF1=0.0257
+tol ��1��: n=20 microF1=0.1011
+tol ��2��: n=20 microF1=0.0978

@@ -16,6 +16,8 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import mido
+import numpy as np
+from scipy.optimize import linear_sum_assignment
 from lxml import etree
 
 GRID = 0.25  # 十六分音符，单位 = 四分音符
@@ -33,8 +35,10 @@ def parse_score(xml_path: Path) -> tuple[dict[str, tuple[int, float]], list[tupl
     divisions = 1.0
     notes: dict[str, tuple[int, float]] = {}
     pedals: list[tuple[int, float, str]] = []
+    measure_start = 0.0
     for mi, measure in enumerate(root.xpath(".//*[local-name()='measure']")):
         pos = 0.0
+        max_pos = 0.0
         for el in measure.iter():
             tag = etree.QName(el).localname
             if tag == "divisions":
@@ -178,7 +182,7 @@ def main() -> int:
             tp = fp = fn = wrong = 0
             used = set()
             for (pos, lab, rep) in pred:
-                hit = [x for x in truth if abs(x[0] - pos) <= tol * 4 and x[2] == rep]
+                hit = [x for x in truth if abs(x[0] - pos) <= tol and x[2] == rep]
                 same = [x for x in hit if x[1] == lab]
                 if same and same[0] not in used:
                     used.add(same[0]); tp += 1
