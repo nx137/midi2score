@@ -1,0 +1,8945 @@
+[
+  {
+    "score": "Beethoven/Piano_Sonatas/11-2/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/11-2/MaximovI04.mid",
+    "n_truth": 158,
+    "n_pred": 686,
+    "tol0": {
+      "tp": 34,
+      "fp": 647,
+      "fn": 124,
+      "wrong": 5,
+      "P": 0.0496,
+      "R": 0.2152,
+      "F1": 0.0806
+    },
+    "tol1": {
+      "tp": 52,
+      "fp": 486,
+      "fn": 106,
+      "wrong": 148,
+      "P": 0.0758,
+      "R": 0.3291,
+      "F1": 0.1232
+    },
+    "tol2": {
+      "tp": 54,
+      "fp": 342,
+      "fn": 104,
+      "wrong": 290,
+      "P": 0.0787,
+      "R": 0.3418,
+      "F1": 0.128
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/21-3/KimSY04M.mid",
+    "n_truth": 7,
+    "n_pred": 714,
+    "tol0": {
+      "tp": 0,
+      "fp": 714,
+      "fn": 7,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 700,
+      "fn": 0,
+      "wrong": 7,
+      "P": 0.0098,
+      "R": 1.0,
+      "F1": 0.0194
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 700,
+      "fn": 1,
+      "wrong": 8,
+      "P": 0.0084,
+      "R": 0.8571,
+      "F1": 0.0166
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/21-3/Sekino05M.mid",
+    "n_truth": 7,
+    "n_pred": 649,
+    "tol0": {
+      "tp": 0,
+      "fp": 649,
+      "fn": 7,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 635,
+      "fn": 0,
+      "wrong": 7,
+      "P": 0.0108,
+      "R": 1.0,
+      "F1": 0.0213
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 635,
+      "fn": 1,
+      "wrong": 8,
+      "P": 0.0092,
+      "R": 0.8571,
+      "F1": 0.0183
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/21-3/YOO05M.mid",
+    "n_truth": 7,
+    "n_pred": 608,
+    "tol0": {
+      "tp": 0,
+      "fp": 608,
+      "fn": 7,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 594,
+      "fn": 0,
+      "wrong": 7,
+      "P": 0.0115,
+      "R": 1.0,
+      "F1": 0.0228
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 594,
+      "fn": 1,
+      "wrong": 8,
+      "P": 0.0099,
+      "R": 0.8571,
+      "F1": 0.0195
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/26-2/HONG05M.mid",
+    "n_truth": 3,
+    "n_pred": 262,
+    "tol0": {
+      "tp": 3,
+      "fp": 259,
+      "fn": 0,
+      "wrong": 0,
+      "P": 0.0115,
+      "R": 1.0,
+      "F1": 0.0226
+    },
+    "tol1": {
+      "tp": 3,
+      "fp": 246,
+      "fn": 0,
+      "wrong": 13,
+      "P": 0.0115,
+      "R": 1.0,
+      "F1": 0.0226
+    },
+    "tol2": {
+      "tp": 3,
+      "fp": 244,
+      "fn": 0,
+      "wrong": 15,
+      "P": 0.0115,
+      "R": 1.0,
+      "F1": 0.0226
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/26-2/Huang02.mid",
+    "n_truth": 3,
+    "n_pred": 318,
+    "tol0": {
+      "tp": 2,
+      "fp": 314,
+      "fn": 1,
+      "wrong": 2,
+      "P": 0.0063,
+      "R": 0.6667,
+      "F1": 0.0125
+    },
+    "tol1": {
+      "tp": 3,
+      "fp": 295,
+      "fn": 0,
+      "wrong": 20,
+      "P": 0.0094,
+      "R": 1.0,
+      "F1": 0.0187
+    },
+    "tol2": {
+      "tp": 3,
+      "fp": 279,
+      "fn": 0,
+      "wrong": 36,
+      "P": 0.0094,
+      "R": 1.0,
+      "F1": 0.0187
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/26-2/LEE_K05M.mid",
+    "n_truth": 3,
+    "n_pred": 280,
+    "tol0": {
+      "tp": 0,
+      "fp": 280,
+      "fn": 3,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 3,
+      "fp": 264,
+      "fn": 0,
+      "wrong": 13,
+      "P": 0.0107,
+      "R": 1.0,
+      "F1": 0.0212
+    },
+    "tol2": {
+      "tp": 3,
+      "fp": 252,
+      "fn": 0,
+      "wrong": 25,
+      "P": 0.0107,
+      "R": 1.0,
+      "F1": 0.0212
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/26-2/Tysman01.mid",
+    "n_truth": 3,
+    "n_pred": 326,
+    "tol0": {
+      "tp": 2,
+      "fp": 324,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0061,
+      "R": 0.6667,
+      "F1": 0.0122
+    },
+    "tol1": {
+      "tp": 3,
+      "fp": 295,
+      "fn": 0,
+      "wrong": 28,
+      "P": 0.0092,
+      "R": 1.0,
+      "F1": 0.0182
+    },
+    "tol2": {
+      "tp": 3,
+      "fp": 292,
+      "fn": 0,
+      "wrong": 31,
+      "P": 0.0092,
+      "R": 1.0,
+      "F1": 0.0182
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/26-2/Zhdanov05.mid",
+    "n_truth": 3,
+    "n_pred": 183,
+    "tol0": {
+      "tp": 1,
+      "fp": 182,
+      "fn": 2,
+      "wrong": 0,
+      "P": 0.0055,
+      "R": 0.3333,
+      "F1": 0.0108
+    },
+    "tol1": {
+      "tp": 2,
+      "fp": 178,
+      "fn": 1,
+      "wrong": 3,
+      "P": 0.0109,
+      "R": 0.6667,
+      "F1": 0.0215
+    },
+    "tol2": {
+      "tp": 3,
+      "fp": 174,
+      "fn": 0,
+      "wrong": 6,
+      "P": 0.0164,
+      "R": 1.0,
+      "F1": 0.0323
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/28-1/Atzinger01.mid",
+    "n_truth": 2,
+    "n_pred": 414,
+    "tol0": {
+      "tp": 0,
+      "fp": 414,
+      "fn": 2,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 2,
+      "fp": 406,
+      "fn": 0,
+      "wrong": 6,
+      "P": 0.0048,
+      "R": 1.0,
+      "F1": 0.0096
+    },
+    "tol2": {
+      "tp": 2,
+      "fp": 401,
+      "fn": 0,
+      "wrong": 11,
+      "P": 0.0048,
+      "R": 1.0,
+      "F1": 0.0096
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/28-1/KimHJ02M.mid",
+    "n_truth": 2,
+    "n_pred": 426,
+    "tol0": {
+      "tp": 0,
+      "fp": 426,
+      "fn": 2,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 2,
+      "fp": 415,
+      "fn": 0,
+      "wrong": 9,
+      "P": 0.0047,
+      "R": 1.0,
+      "F1": 0.0093
+    },
+    "tol2": {
+      "tp": 2,
+      "fp": 406,
+      "fn": 0,
+      "wrong": 18,
+      "P": 0.0047,
+      "R": 1.0,
+      "F1": 0.0093
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/28-1/KyykhynenT06M.mid",
+    "n_truth": 2,
+    "n_pred": 455,
+    "tol0": {
+      "tp": 1,
+      "fp": 454,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0022,
+      "R": 0.5,
+      "F1": 0.0044
+    },
+    "tol1": {
+      "tp": 2,
+      "fp": 444,
+      "fn": 0,
+      "wrong": 9,
+      "P": 0.0044,
+      "R": 1.0,
+      "F1": 0.0088
+    },
+    "tol2": {
+      "tp": 2,
+      "fp": 439,
+      "fn": 0,
+      "wrong": 14,
+      "P": 0.0044,
+      "R": 1.0,
+      "F1": 0.0088
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/28-1/WangY04M.mid",
+    "n_truth": 2,
+    "n_pred": 433,
+    "tol0": {
+      "tp": 0,
+      "fp": 433,
+      "fn": 2,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 2,
+      "fp": 423,
+      "fn": 0,
+      "wrong": 8,
+      "P": 0.0046,
+      "R": 1.0,
+      "F1": 0.0092
+    },
+    "tol2": {
+      "tp": 2,
+      "fp": 411,
+      "fn": 0,
+      "wrong": 20,
+      "P": 0.0046,
+      "R": 1.0,
+      "F1": 0.0092
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/28-1/Zhdanov01.mid",
+    "n_truth": 2,
+    "n_pred": 407,
+    "tol0": {
+      "tp": 0,
+      "fp": 407,
+      "fn": 2,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 2,
+      "fp": 399,
+      "fn": 0,
+      "wrong": 6,
+      "P": 0.0049,
+      "R": 1.0,
+      "F1": 0.0098
+    },
+    "tol2": {
+      "tp": 2,
+      "fp": 395,
+      "fn": 0,
+      "wrong": 10,
+      "P": 0.0049,
+      "R": 1.0,
+      "F1": 0.0098
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/29-2/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/29-2/ChowK03.mid",
+    "n_truth": 4,
+    "n_pred": 295,
+    "tol0": {
+      "tp": 0,
+      "fp": 295,
+      "fn": 4,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 282,
+      "fn": 0,
+      "wrong": 9,
+      "P": 0.0136,
+      "R": 1.0,
+      "F1": 0.0268
+    },
+    "tol2": {
+      "tp": 4,
+      "fp": 269,
+      "fn": 0,
+      "wrong": 22,
+      "P": 0.0136,
+      "R": 1.0,
+      "F1": 0.0268
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/29-3/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/29-3/ChowK04.mid",
+    "n_truth": 6,
+    "n_pred": 1335,
+    "tol0": {
+      "tp": 0,
+      "fp": 1334,
+      "fn": 6,
+      "wrong": 1,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 6,
+      "fp": 1264,
+      "fn": 0,
+      "wrong": 65,
+      "P": 0.0045,
+      "R": 1.0,
+      "F1": 0.0089
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 1207,
+      "fn": 0,
+      "wrong": 122,
+      "P": 0.0045,
+      "R": 1.0,
+      "F1": 0.0089
+    }
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/29-4/xml_score.musicxml",
+    "performance": "Beethoven/Piano_Sonatas/29-4/ChowK05M.mid",
+    "n_truth": 22,
+    "n_pred": 1437,
+    "tol0": {
+      "tp": 4,
+      "fp": 1426,
+      "fn": 18,
+      "wrong": 7,
+      "P": 0.0028,
+      "R": 0.1818,
+      "F1": 0.0055
+    },
+    "tol1": {
+      "tp": 19,
+      "fp": 1322,
+      "fn": 3,
+      "wrong": 96,
+      "P": 0.0132,
+      "R": 0.8636,
+      "F1": 0.026
+    },
+    "tol2": {
+      "tp": 17,
+      "fp": 1271,
+      "fn": 5,
+      "wrong": 149,
+      "P": 0.0118,
+      "R": 0.7727,
+      "F1": 0.0233
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/Ali01.mid",
+    "n_truth": 464,
+    "n_pred": 659,
+    "tol0": {
+      "tp": 64,
+      "fp": 501,
+      "fn": 400,
+      "wrong": 94,
+      "P": 0.0971,
+      "R": 0.1379,
+      "F1": 0.114
+    },
+    "tol1": {
+      "tp": 218,
+      "fp": 150,
+      "fn": 246,
+      "wrong": 291,
+      "P": 0.3308,
+      "R": 0.4698,
+      "F1": 0.3882
+    },
+    "tol2": {
+      "tp": 150,
+      "fp": 112,
+      "fn": 314,
+      "wrong": 397,
+      "P": 0.2276,
+      "R": 0.3233,
+      "F1": 0.2671
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/BuiJL04M.mid",
+    "n_truth": 464,
+    "n_pred": 820,
+    "tol0": {
+      "tp": 76,
+      "fp": 624,
+      "fn": 388,
+      "wrong": 120,
+      "P": 0.0927,
+      "R": 0.1638,
+      "F1": 0.1184
+    },
+    "tol1": {
+      "tp": 237,
+      "fp": 191,
+      "fn": 227,
+      "wrong": 392,
+      "P": 0.289,
+      "R": 0.5108,
+      "F1": 0.3692
+    },
+    "tol2": {
+      "tp": 156,
+      "fp": 140,
+      "fn": 308,
+      "wrong": 524,
+      "P": 0.1902,
+      "R": 0.3362,
+      "F1": 0.243
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/Day04.mid",
+    "n_truth": 464,
+    "n_pred": 848,
+    "tol0": {
+      "tp": 87,
+      "fp": 670,
+      "fn": 377,
+      "wrong": 91,
+      "P": 0.1026,
+      "R": 0.1875,
+      "F1": 0.1326
+    },
+    "tol1": {
+      "tp": 242,
+      "fp": 197,
+      "fn": 222,
+      "wrong": 409,
+      "P": 0.2854,
+      "R": 0.5216,
+      "F1": 0.3689
+    },
+    "tol2": {
+      "tp": 161,
+      "fp": 139,
+      "fn": 303,
+      "wrong": 548,
+      "P": 0.1899,
+      "R": 0.347,
+      "F1": 0.2454
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/Dossin05.mid",
+    "n_truth": 464,
+    "n_pred": 657,
+    "tol0": {
+      "tp": 53,
+      "fp": 500,
+      "fn": 411,
+      "wrong": 104,
+      "P": 0.0807,
+      "R": 0.1142,
+      "F1": 0.0946
+    },
+    "tol1": {
+      "tp": 219,
+      "fp": 148,
+      "fn": 245,
+      "wrong": 290,
+      "P": 0.3333,
+      "R": 0.472,
+      "F1": 0.3907
+    },
+    "tol2": {
+      "tp": 148,
+      "fp": 101,
+      "fn": 316,
+      "wrong": 408,
+      "P": 0.2253,
+      "R": 0.319,
+      "F1": 0.264
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/JIA06M.mid",
+    "n_truth": 464,
+    "n_pred": 765,
+    "tol0": {
+      "tp": 57,
+      "fp": 620,
+      "fn": 407,
+      "wrong": 88,
+      "P": 0.0745,
+      "R": 0.1228,
+      "F1": 0.0928
+    },
+    "tol1": {
+      "tp": 235,
+      "fp": 163,
+      "fn": 229,
+      "wrong": 367,
+      "P": 0.3072,
+      "R": 0.5065,
+      "F1": 0.3824
+    },
+    "tol2": {
+      "tp": 154,
+      "fp": 113,
+      "fn": 310,
+      "wrong": 498,
+      "P": 0.2013,
+      "R": 0.3319,
+      "F1": 0.2506
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/KimSuyeon04M.mid",
+    "n_truth": 464,
+    "n_pred": 842,
+    "tol0": {
+      "tp": 50,
+      "fp": 694,
+      "fn": 414,
+      "wrong": 98,
+      "P": 0.0594,
+      "R": 0.1078,
+      "F1": 0.0766
+    },
+    "tol1": {
+      "tp": 239,
+      "fp": 192,
+      "fn": 225,
+      "wrong": 411,
+      "P": 0.2838,
+      "R": 0.5151,
+      "F1": 0.366
+    },
+    "tol2": {
+      "tp": 159,
+      "fp": 132,
+      "fn": 305,
+      "wrong": 551,
+      "P": 0.1888,
+      "R": 0.3427,
+      "F1": 0.2435
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/LeeKoeun03.mid",
+    "n_truth": 464,
+    "n_pred": 786,
+    "tol0": {
+      "tp": 59,
+      "fp": 661,
+      "fn": 405,
+      "wrong": 66,
+      "P": 0.0751,
+      "R": 0.1272,
+      "F1": 0.0944
+    },
+    "tol1": {
+      "tp": 232,
+      "fp": 186,
+      "fn": 232,
+      "wrong": 368,
+      "P": 0.2952,
+      "R": 0.5,
+      "F1": 0.3712
+    },
+    "tol2": {
+      "tp": 157,
+      "fp": 123,
+      "fn": 307,
+      "wrong": 506,
+      "P": 0.1997,
+      "R": 0.3384,
+      "F1": 0.2512
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/LeeKoeun06.mid",
+    "n_truth": 464,
+    "n_pred": 755,
+    "tol0": {
+      "tp": 51,
+      "fp": 634,
+      "fn": 413,
+      "wrong": 70,
+      "P": 0.0675,
+      "R": 0.1099,
+      "F1": 0.0837
+    },
+    "tol1": {
+      "tp": 232,
+      "fp": 168,
+      "fn": 232,
+      "wrong": 355,
+      "P": 0.3073,
+      "R": 0.5,
+      "F1": 0.3806
+    },
+    "tol2": {
+      "tp": 152,
+      "fp": 110,
+      "fn": 312,
+      "wrong": 493,
+      "P": 0.2013,
+      "R": 0.3276,
+      "F1": 0.2494
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/LinTao04.mid",
+    "n_truth": 464,
+    "n_pred": 802,
+    "tol0": {
+      "tp": 73,
+      "fp": 631,
+      "fn": 391,
+      "wrong": 98,
+      "P": 0.091,
+      "R": 0.1573,
+      "F1": 0.1153
+    },
+    "tol1": {
+      "tp": 236,
+      "fp": 184,
+      "fn": 228,
+      "wrong": 382,
+      "P": 0.2943,
+      "R": 0.5086,
+      "F1": 0.3728
+    },
+    "tol2": {
+      "tp": 153,
+      "fp": 137,
+      "fn": 311,
+      "wrong": 512,
+      "P": 0.1908,
+      "R": 0.3297,
+      "F1": 0.2417
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/McNamara02.mid",
+    "n_truth": 464,
+    "n_pred": 779,
+    "tol0": {
+      "tp": 54,
+      "fp": 644,
+      "fn": 410,
+      "wrong": 81,
+      "P": 0.0693,
+      "R": 0.1164,
+      "F1": 0.0869
+    },
+    "tol1": {
+      "tp": 223,
+      "fp": 171,
+      "fn": 241,
+      "wrong": 385,
+      "P": 0.2863,
+      "R": 0.4806,
+      "F1": 0.3588
+    },
+    "tol2": {
+      "tp": 151,
+      "fp": 127,
+      "fn": 313,
+      "wrong": 501,
+      "P": 0.1938,
+      "R": 0.3254,
+      "F1": 0.243
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/Mo07M.mid",
+    "n_truth": 464,
+    "n_pred": 804,
+    "tol0": {
+      "tp": 91,
+      "fp": 621,
+      "fn": 373,
+      "wrong": 92,
+      "P": 0.1132,
+      "R": 0.1961,
+      "F1": 0.1435
+    },
+    "tol1": {
+      "tp": 235,
+      "fp": 162,
+      "fn": 229,
+      "wrong": 407,
+      "P": 0.2923,
+      "R": 0.5065,
+      "F1": 0.3707
+    },
+    "tol2": {
+      "tp": 156,
+      "fp": 107,
+      "fn": 308,
+      "wrong": 541,
+      "P": 0.194,
+      "R": 0.3362,
+      "F1": 0.2461
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/MunA19M.mid",
+    "n_truth": 464,
+    "n_pred": 725,
+    "tol0": {
+      "tp": 55,
+      "fp": 613,
+      "fn": 409,
+      "wrong": 57,
+      "P": 0.0759,
+      "R": 0.1185,
+      "F1": 0.0925
+    },
+    "tol1": {
+      "tp": 222,
+      "fp": 152,
+      "fn": 242,
+      "wrong": 351,
+      "P": 0.3062,
+      "R": 0.4784,
+      "F1": 0.3734
+    },
+    "tol2": {
+      "tp": 153,
+      "fp": 107,
+      "fn": 311,
+      "wrong": 465,
+      "P": 0.211,
+      "R": 0.3297,
+      "F1": 0.2574
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/Richardson13M.mid",
+    "n_truth": 464,
+    "n_pred": 755,
+    "tol0": {
+      "tp": 72,
+      "fp": 590,
+      "fn": 392,
+      "wrong": 93,
+      "P": 0.0954,
+      "R": 0.1552,
+      "F1": 0.1181
+    },
+    "tol1": {
+      "tp": 233,
+      "fp": 151,
+      "fn": 231,
+      "wrong": 371,
+      "P": 0.3086,
+      "R": 0.5022,
+      "F1": 0.3823
+    },
+    "tol2": {
+      "tp": 153,
+      "fp": 97,
+      "fn": 311,
+      "wrong": 505,
+      "P": 0.2026,
+      "R": 0.3297,
+      "F1": 0.251
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/SINKEV05.mid",
+    "n_truth": 464,
+    "n_pred": 938,
+    "tol0": {
+      "tp": 48,
+      "fp": 761,
+      "fn": 416,
+      "wrong": 129,
+      "P": 0.0512,
+      "R": 0.1034,
+      "F1": 0.0685
+    },
+    "tol1": {
+      "tp": 243,
+      "fp": 232,
+      "fn": 221,
+      "wrong": 463,
+      "P": 0.2591,
+      "R": 0.5237,
+      "F1": 0.3466
+    },
+    "tol2": {
+      "tp": 158,
+      "fp": 161,
+      "fn": 306,
+      "wrong": 619,
+      "P": 0.1684,
+      "R": 0.3405,
+      "F1": 0.2254
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/SINKEV11.mid",
+    "n_truth": 464,
+    "n_pred": 903,
+    "tol0": {
+      "tp": 55,
+      "fp": 731,
+      "fn": 409,
+      "wrong": 117,
+      "P": 0.0609,
+      "R": 0.1185,
+      "F1": 0.0805
+    },
+    "tol1": {
+      "tp": 242,
+      "fp": 210,
+      "fn": 222,
+      "wrong": 451,
+      "P": 0.268,
+      "R": 0.5216,
+      "F1": 0.3541
+    },
+    "tol2": {
+      "tp": 160,
+      "fp": 147,
+      "fn": 304,
+      "wrong": 596,
+      "P": 0.1772,
+      "R": 0.3448,
+      "F1": 0.2341
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/Sladek04M.mid",
+    "n_truth": 464,
+    "n_pred": 732,
+    "tol0": {
+      "tp": 56,
+      "fp": 583,
+      "fn": 408,
+      "wrong": 93,
+      "P": 0.0765,
+      "R": 0.1207,
+      "F1": 0.0936
+    },
+    "tol1": {
+      "tp": 237,
+      "fp": 147,
+      "fn": 227,
+      "wrong": 348,
+      "P": 0.3238,
+      "R": 0.5108,
+      "F1": 0.3963
+    },
+    "tol2": {
+      "tp": 153,
+      "fp": 101,
+      "fn": 311,
+      "wrong": 478,
+      "P": 0.209,
+      "R": 0.3297,
+      "F1": 0.2559
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/YeSijing01.mid",
+    "n_truth": 464,
+    "n_pred": 805,
+    "tol0": {
+      "tp": 96,
+      "fp": 622,
+      "fn": 368,
+      "wrong": 87,
+      "P": 0.1193,
+      "R": 0.2069,
+      "F1": 0.1513
+    },
+    "tol1": {
+      "tp": 231,
+      "fp": 163,
+      "fn": 233,
+      "wrong": 411,
+      "P": 0.287,
+      "R": 0.4978,
+      "F1": 0.3641
+    },
+    "tol2": {
+      "tp": 159,
+      "fp": 119,
+      "fn": 305,
+      "wrong": 527,
+      "P": 0.1975,
+      "R": 0.3427,
+      "F1": 0.2506
+    }
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "performance": "Chopin/Ballades/1/Zhou06M.mid",
+    "n_truth": 464,
+    "n_pred": 812,
+    "tol0": {
+      "tp": 69,
+      "fp": 635,
+      "fn": 395,
+      "wrong": 108,
+      "P": 0.085,
+      "R": 0.1487,
+      "F1": 0.1082
+    },
+    "tol1": {
+      "tp": 236,
+      "fp": 180,
+      "fn": 228,
+      "wrong": 396,
+      "P": 0.2906,
+      "R": 0.5086,
+      "F1": 0.3699
+    },
+    "tol2": {
+      "tp": 158,
+      "fp": 124,
+      "fn": 306,
+      "wrong": 530,
+      "P": 0.1946,
+      "R": 0.3405,
+      "F1": 0.2476
+    }
+  },
+  {
+    "score": "Chopin/Ballades/3/xml_score.musicxml",
+    "performance": "Chopin/Ballades/3/Ko11M.mid",
+    "n_truth": 478,
+    "n_pred": 867,
+    "tol0": {
+      "tp": 110,
+      "fp": 653,
+      "fn": 368,
+      "wrong": 104,
+      "P": 0.1269,
+      "R": 0.2301,
+      "F1": 0.1636
+    },
+    "tol1": {
+      "tp": 258,
+      "fp": 131,
+      "fn": 220,
+      "wrong": 478,
+      "P": 0.2976,
+      "R": 0.5397,
+      "F1": 0.3836
+    },
+    "tol2": {
+      "tp": 163,
+      "fp": 72,
+      "fn": 315,
+      "wrong": 632,
+      "P": 0.188,
+      "R": 0.341,
+      "F1": 0.2424
+    }
+  },
+  {
+    "score": "Chopin/Ballades/3/xml_score.musicxml",
+    "performance": "Chopin/Ballades/3/LinPeng06M.mid",
+    "n_truth": 478,
+    "n_pred": 722,
+    "tol0": {
+      "tp": 79,
+      "fp": 557,
+      "fn": 399,
+      "wrong": 86,
+      "P": 0.1094,
+      "R": 0.1653,
+      "F1": 0.1317
+    },
+    "tol1": {
+      "tp": 260,
+      "fp": 84,
+      "fn": 218,
+      "wrong": 378,
+      "P": 0.3601,
+      "R": 0.5439,
+      "F1": 0.4333
+    },
+    "tol2": {
+      "tp": 162,
+      "fp": 50,
+      "fn": 316,
+      "wrong": 510,
+      "P": 0.2244,
+      "R": 0.3389,
+      "F1": 0.27
+    }
+  },
+  {
+    "score": "Chopin/Ballades/3/xml_score.musicxml",
+    "performance": "Chopin/Ballades/3/Tan02.mid",
+    "n_truth": 478,
+    "n_pred": 855,
+    "tol0": {
+      "tp": 114,
+      "fp": 645,
+      "fn": 364,
+      "wrong": 96,
+      "P": 0.1333,
+      "R": 0.2385,
+      "F1": 0.171
+    },
+    "tol1": {
+      "tp": 271,
+      "fp": 84,
+      "fn": 207,
+      "wrong": 500,
+      "P": 0.317,
+      "R": 0.5669,
+      "F1": 0.4066
+    },
+    "tol2": {
+      "tp": 168,
+      "fp": 52,
+      "fn": 310,
+      "wrong": 635,
+      "P": 0.1965,
+      "R": 0.3515,
+      "F1": 0.2521
+    }
+  },
+  {
+    "score": "Chopin/Barcarolle/xml_score.musicxml",
+    "performance": "Chopin/Barcarolle/Kociuban13.mid",
+    "n_truth": 452,
+    "n_pred": 634,
+    "tol0": {
+      "tp": 92,
+      "fp": 439,
+      "fn": 360,
+      "wrong": 103,
+      "P": 0.1451,
+      "R": 0.2035,
+      "F1": 0.1694
+    },
+    "tol1": {
+      "tp": 163,
+      "fp": 12,
+      "fn": 289,
+      "wrong": 459,
+      "P": 0.2571,
+      "R": 0.3606,
+      "F1": 0.3002
+    },
+    "tol2": {
+      "tp": 84,
+      "fp": 0,
+      "fn": 368,
+      "wrong": 550,
+      "P": 0.1325,
+      "R": 0.1858,
+      "F1": 0.1547
+    }
+  },
+  {
+    "score": "Chopin/Barcarolle/xml_score.musicxml",
+    "performance": "Chopin/Barcarolle/LeeSH05M.mid",
+    "n_truth": 452,
+    "n_pred": 730,
+    "tol0": {
+      "tp": 75,
+      "fp": 545,
+      "fn": 377,
+      "wrong": 110,
+      "P": 0.1027,
+      "R": 0.1659,
+      "F1": 0.1269
+    },
+    "tol1": {
+      "tp": 167,
+      "fp": 4,
+      "fn": 285,
+      "wrong": 559,
+      "P": 0.2288,
+      "R": 0.3695,
+      "F1": 0.2826
+    },
+    "tol2": {
+      "tp": 85,
+      "fp": 0,
+      "fn": 367,
+      "wrong": 645,
+      "P": 0.1164,
+      "R": 0.1881,
+      "F1": 0.1438
+    }
+  },
+  {
+    "score": "Chopin/Barcarolle/xml_score.musicxml",
+    "performance": "Chopin/Barcarolle/Na03.mid",
+    "n_truth": 452,
+    "n_pred": 619,
+    "tol0": {
+      "tp": 100,
+      "fp": 410,
+      "fn": 352,
+      "wrong": 109,
+      "P": 0.1616,
+      "R": 0.2212,
+      "F1": 0.1867
+    },
+    "tol1": {
+      "tp": 163,
+      "fp": 0,
+      "fn": 289,
+      "wrong": 456,
+      "P": 0.2633,
+      "R": 0.3606,
+      "F1": 0.3044
+    },
+    "tol2": {
+      "tp": 86,
+      "fp": 0,
+      "fn": 366,
+      "wrong": 533,
+      "P": 0.1389,
+      "R": 0.1903,
+      "F1": 0.1606
+    }
+  },
+  {
+    "score": "Chopin/Barcarolle/xml_score.musicxml",
+    "performance": "Chopin/Barcarolle/Na09M.mid",
+    "n_truth": 452,
+    "n_pred": 700,
+    "tol0": {
+      "tp": 98,
+      "fp": 482,
+      "fn": 354,
+      "wrong": 120,
+      "P": 0.14,
+      "R": 0.2168,
+      "F1": 0.1701
+    },
+    "tol1": {
+      "tp": 168,
+      "fp": 2,
+      "fn": 284,
+      "wrong": 530,
+      "P": 0.24,
+      "R": 0.3717,
+      "F1": 0.2917
+    },
+    "tol2": {
+      "tp": 87,
+      "fp": 0,
+      "fn": 365,
+      "wrong": 613,
+      "P": 0.1243,
+      "R": 0.1925,
+      "F1": 0.151
+    }
+  },
+  {
+    "score": "Chopin/Barcarolle/xml_score.musicxml",
+    "performance": "Chopin/Barcarolle/Ozel10M.mid",
+    "n_truth": 452,
+    "n_pred": 746,
+    "tol0": {
+      "tp": 117,
+      "fp": 518,
+      "fn": 335,
+      "wrong": 111,
+      "P": 0.1568,
+      "R": 0.2588,
+      "F1": 0.1953
+    },
+    "tol1": {
+      "tp": 161,
+      "fp": 2,
+      "fn": 291,
+      "wrong": 583,
+      "P": 0.2158,
+      "R": 0.3562,
+      "F1": 0.2688
+    },
+    "tol2": {
+      "tp": 86,
+      "fp": 0,
+      "fn": 366,
+      "wrong": 660,
+      "P": 0.1153,
+      "R": 0.1903,
+      "F1": 0.1436
+    }
+  },
+  {
+    "score": "Chopin/Barcarolle/xml_score.musicxml",
+    "performance": "Chopin/Barcarolle/Park10M.mid",
+    "n_truth": 452,
+    "n_pred": 566,
+    "tol0": {
+      "tp": 100,
+      "fp": 380,
+      "fn": 352,
+      "wrong": 86,
+      "P": 0.1767,
+      "R": 0.2212,
+      "F1": 0.1965
+    },
+    "tol1": {
+      "tp": 153,
+      "fp": 10,
+      "fn": 299,
+      "wrong": 403,
+      "P": 0.2703,
+      "R": 0.3385,
+      "F1": 0.3006
+    },
+    "tol2": {
+      "tp": 83,
+      "fp": 0,
+      "fn": 369,
+      "wrong": 483,
+      "P": 0.1466,
+      "R": 0.1836,
+      "F1": 0.1631
+    }
+  },
+  {
+    "score": "Chopin/Barcarolle/xml_score.musicxml",
+    "performance": "Chopin/Barcarolle/Rozanski07M.mid",
+    "n_truth": 452,
+    "n_pred": 350,
+    "tol0": {
+      "tp": 80,
+      "fp": 211,
+      "fn": 372,
+      "wrong": 59,
+      "P": 0.2286,
+      "R": 0.177,
+      "F1": 0.1995
+    },
+    "tol1": {
+      "tp": 126,
+      "fp": 0,
+      "fn": 326,
+      "wrong": 224,
+      "P": 0.36,
+      "R": 0.2788,
+      "F1": 0.3142
+    },
+    "tol2": {
+      "tp": 69,
+      "fp": 0,
+      "fn": 383,
+      "wrong": 281,
+      "P": 0.1971,
+      "R": 0.1527,
+      "F1": 0.1721
+    }
+  },
+  {
+    "score": "Chopin/Barcarolle/xml_score.musicxml",
+    "performance": "Chopin/Barcarolle/Verbaite03.mid",
+    "n_truth": 452,
+    "n_pred": 767,
+    "tol0": {
+      "tp": 161,
+      "fp": 471,
+      "fn": 291,
+      "wrong": 135,
+      "P": 0.2099,
+      "R": 0.3562,
+      "F1": 0.2642
+    },
+    "tol1": {
+      "tp": 160,
+      "fp": 10,
+      "fn": 292,
+      "wrong": 597,
+      "P": 0.2086,
+      "R": 0.354,
+      "F1": 0.2625
+    },
+    "tol2": {
+      "tp": 87,
+      "fp": 0,
+      "fn": 365,
+      "wrong": 680,
+      "P": 0.1134,
+      "R": 0.1925,
+      "F1": 0.1427
+    }
+  },
+  {
+    "score": "Chopin/Barcarolle/xml_score.musicxml",
+    "performance": "Chopin/Barcarolle/Wilshire04.mid",
+    "n_truth": 452,
+    "n_pred": 809,
+    "tol0": {
+      "tp": 132,
+      "fp": 546,
+      "fn": 320,
+      "wrong": 131,
+      "P": 0.1632,
+      "R": 0.292,
+      "F1": 0.2094
+    },
+    "tol1": {
+      "tp": 164,
+      "fp": 4,
+      "fn": 288,
+      "wrong": 641,
+      "P": 0.2027,
+      "R": 0.3628,
+      "F1": 0.2601
+    },
+    "tol2": {
+      "tp": 88,
+      "fp": 0,
+      "fn": 364,
+      "wrong": 721,
+      "P": 0.1088,
+      "R": 0.1947,
+      "F1": 0.1396
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Avdeeva02.mid",
+    "n_truth": 5,
+    "n_pred": 158,
+    "tol0": {
+      "tp": 0,
+      "fp": 158,
+      "fn": 5,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 5,
+      "fp": 146,
+      "fn": 0,
+      "wrong": 7,
+      "P": 0.0316,
+      "R": 1.0,
+      "F1": 0.0613
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 134,
+      "fn": 0,
+      "wrong": 19,
+      "P": 0.0316,
+      "R": 1.0,
+      "F1": 0.0613
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/ChenW03M.mid",
+    "n_truth": 5,
+    "n_pred": 138,
+    "tol0": {
+      "tp": 0,
+      "fp": 138,
+      "fn": 5,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 126,
+      "fn": 1,
+      "wrong": 8,
+      "P": 0.029,
+      "R": 0.8,
+      "F1": 0.0559
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 116,
+      "fn": 0,
+      "wrong": 17,
+      "P": 0.0362,
+      "R": 1.0,
+      "F1": 0.0699
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/HSU02.mid",
+    "n_truth": 5,
+    "n_pred": 177,
+    "tol0": {
+      "tp": 3,
+      "fp": 173,
+      "fn": 2,
+      "wrong": 1,
+      "P": 0.0169,
+      "R": 0.6,
+      "F1": 0.033
+    },
+    "tol1": {
+      "tp": 5,
+      "fp": 160,
+      "fn": 0,
+      "wrong": 12,
+      "P": 0.0282,
+      "R": 1.0,
+      "F1": 0.0549
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 147,
+      "fn": 0,
+      "wrong": 25,
+      "P": 0.0282,
+      "R": 1.0,
+      "F1": 0.0549
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/ISHIDA04.mid",
+    "n_truth": 5,
+    "n_pred": 185,
+    "tol0": {
+      "tp": 1,
+      "fp": 184,
+      "fn": 4,
+      "wrong": 0,
+      "P": 0.0054,
+      "R": 0.2,
+      "F1": 0.0105
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 172,
+      "fn": 1,
+      "wrong": 9,
+      "P": 0.0216,
+      "R": 0.8,
+      "F1": 0.0421
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 155,
+      "fn": 0,
+      "wrong": 25,
+      "P": 0.027,
+      "R": 1.0,
+      "F1": 0.0526
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Jussow03.mid",
+    "n_truth": 5,
+    "n_pred": 150,
+    "tol0": {
+      "tp": 0,
+      "fp": 149,
+      "fn": 5,
+      "wrong": 1,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 139,
+      "fn": 1,
+      "wrong": 7,
+      "P": 0.0267,
+      "R": 0.8,
+      "F1": 0.0516
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 125,
+      "fn": 0,
+      "wrong": 20,
+      "P": 0.0333,
+      "R": 1.0,
+      "F1": 0.0645
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/KaiRuiR03M.mid",
+    "n_truth": 5,
+    "n_pred": 150,
+    "tol0": {
+      "tp": 1,
+      "fp": 147,
+      "fn": 4,
+      "wrong": 2,
+      "P": 0.0067,
+      "R": 0.2,
+      "F1": 0.0129
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 138,
+      "fn": 1,
+      "wrong": 8,
+      "P": 0.0267,
+      "R": 0.8,
+      "F1": 0.0516
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 125,
+      "fn": 0,
+      "wrong": 20,
+      "P": 0.0333,
+      "R": 1.0,
+      "F1": 0.0645
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/LeeHanchien02.mid",
+    "n_truth": 5,
+    "n_pred": 167,
+    "tol0": {
+      "tp": 0,
+      "fp": 165,
+      "fn": 5,
+      "wrong": 2,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 5,
+      "fp": 150,
+      "fn": 0,
+      "wrong": 12,
+      "P": 0.0299,
+      "R": 1.0,
+      "F1": 0.0581
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 139,
+      "fn": 0,
+      "wrong": 23,
+      "P": 0.0299,
+      "R": 1.0,
+      "F1": 0.0581
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/LiYZ02M.mid",
+    "n_truth": 5,
+    "n_pred": 166,
+    "tol0": {
+      "tp": 2,
+      "fp": 163,
+      "fn": 3,
+      "wrong": 1,
+      "P": 0.012,
+      "R": 0.4,
+      "F1": 0.0234
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 150,
+      "fn": 1,
+      "wrong": 12,
+      "P": 0.0241,
+      "R": 0.8,
+      "F1": 0.0468
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 137,
+      "fn": 0,
+      "wrong": 24,
+      "P": 0.0301,
+      "R": 1.0,
+      "F1": 0.0585
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/LuM02M.mid",
+    "n_truth": 5,
+    "n_pred": 261,
+    "tol0": {
+      "tp": 2,
+      "fp": 259,
+      "fn": 3,
+      "wrong": 0,
+      "P": 0.0077,
+      "R": 0.4,
+      "F1": 0.015
+    },
+    "tol1": {
+      "tp": 5,
+      "fp": 238,
+      "fn": 0,
+      "wrong": 18,
+      "P": 0.0192,
+      "R": 1.0,
+      "F1": 0.0376
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 223,
+      "fn": 0,
+      "wrong": 33,
+      "P": 0.0192,
+      "R": 1.0,
+      "F1": 0.0376
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Mikhailoff05.mid",
+    "n_truth": 5,
+    "n_pred": 157,
+    "tol0": {
+      "tp": 0,
+      "fp": 157,
+      "fn": 5,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 145,
+      "fn": 1,
+      "wrong": 8,
+      "P": 0.0255,
+      "R": 0.8,
+      "F1": 0.0494
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 133,
+      "fn": 0,
+      "wrong": 19,
+      "P": 0.0318,
+      "R": 1.0,
+      "F1": 0.0617
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/MorozovS02.mid",
+    "n_truth": 5,
+    "n_pred": 155,
+    "tol0": {
+      "tp": 1,
+      "fp": 153,
+      "fn": 4,
+      "wrong": 1,
+      "P": 0.0065,
+      "R": 0.2,
+      "F1": 0.0125
+    },
+    "tol1": {
+      "tp": 5,
+      "fp": 142,
+      "fn": 0,
+      "wrong": 8,
+      "P": 0.0323,
+      "R": 1.0,
+      "F1": 0.0625
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 130,
+      "fn": 0,
+      "wrong": 20,
+      "P": 0.0323,
+      "R": 1.0,
+      "F1": 0.0625
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/MunA07M.mid",
+    "n_truth": 5,
+    "n_pred": 153,
+    "tol0": {
+      "tp": 1,
+      "fp": 152,
+      "fn": 4,
+      "wrong": 0,
+      "P": 0.0065,
+      "R": 0.2,
+      "F1": 0.0127
+    },
+    "tol1": {
+      "tp": 5,
+      "fp": 141,
+      "fn": 0,
+      "wrong": 7,
+      "P": 0.0327,
+      "R": 1.0,
+      "F1": 0.0633
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 133,
+      "fn": 0,
+      "wrong": 15,
+      "P": 0.0327,
+      "R": 1.0,
+      "F1": 0.0633
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/NAKAJI02.mid",
+    "n_truth": 5,
+    "n_pred": 166,
+    "tol0": {
+      "tp": 1,
+      "fp": 164,
+      "fn": 4,
+      "wrong": 1,
+      "P": 0.006,
+      "R": 0.2,
+      "F1": 0.0117
+    },
+    "tol1": {
+      "tp": 5,
+      "fp": 148,
+      "fn": 0,
+      "wrong": 13,
+      "P": 0.0301,
+      "R": 1.0,
+      "F1": 0.0585
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 134,
+      "fn": 0,
+      "wrong": 27,
+      "P": 0.0301,
+      "R": 1.0,
+      "F1": 0.0585
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Park02.mid",
+    "n_truth": 5,
+    "n_pred": 166,
+    "tol0": {
+      "tp": 0,
+      "fp": 165,
+      "fn": 5,
+      "wrong": 1,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 152,
+      "fn": 1,
+      "wrong": 10,
+      "P": 0.0241,
+      "R": 0.8,
+      "F1": 0.0468
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 139,
+      "fn": 0,
+      "wrong": 22,
+      "P": 0.0301,
+      "R": 1.0,
+      "F1": 0.0585
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Savitski03.mid",
+    "n_truth": 5,
+    "n_pred": 138,
+    "tol0": {
+      "tp": 0,
+      "fp": 137,
+      "fn": 5,
+      "wrong": 1,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 129,
+      "fn": 1,
+      "wrong": 5,
+      "P": 0.029,
+      "R": 0.8,
+      "F1": 0.0559
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 119,
+      "fn": 0,
+      "wrong": 14,
+      "P": 0.0362,
+      "R": 1.0,
+      "F1": 0.0699
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Shelest02.mid",
+    "n_truth": 5,
+    "n_pred": 152,
+    "tol0": {
+      "tp": 0,
+      "fp": 150,
+      "fn": 5,
+      "wrong": 2,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 141,
+      "fn": 1,
+      "wrong": 7,
+      "P": 0.0263,
+      "R": 0.8,
+      "F1": 0.051
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 129,
+      "fn": 0,
+      "wrong": 18,
+      "P": 0.0329,
+      "R": 1.0,
+      "F1": 0.0637
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Stahievitch03.mid",
+    "n_truth": 5,
+    "n_pred": 162,
+    "tol0": {
+      "tp": 0,
+      "fp": 162,
+      "fn": 5,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 147,
+      "fn": 1,
+      "wrong": 11,
+      "P": 0.0247,
+      "R": 0.8,
+      "F1": 0.0479
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 133,
+      "fn": 0,
+      "wrong": 24,
+      "P": 0.0309,
+      "R": 1.0,
+      "F1": 0.0599
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/SunY03M.mid",
+    "n_truth": 5,
+    "n_pred": 163,
+    "tol0": {
+      "tp": 1,
+      "fp": 160,
+      "fn": 4,
+      "wrong": 2,
+      "P": 0.0061,
+      "R": 0.2,
+      "F1": 0.0119
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 148,
+      "fn": 1,
+      "wrong": 11,
+      "P": 0.0245,
+      "R": 0.8,
+      "F1": 0.0476
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 136,
+      "fn": 0,
+      "wrong": 22,
+      "P": 0.0307,
+      "R": 1.0,
+      "F1": 0.0595
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Terenkova02.mid",
+    "n_truth": 5,
+    "n_pred": 171,
+    "tol0": {
+      "tp": 1,
+      "fp": 170,
+      "fn": 4,
+      "wrong": 0,
+      "P": 0.0058,
+      "R": 0.2,
+      "F1": 0.0114
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 156,
+      "fn": 1,
+      "wrong": 11,
+      "P": 0.0234,
+      "R": 0.8,
+      "F1": 0.0455
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 142,
+      "fn": 0,
+      "wrong": 24,
+      "P": 0.0292,
+      "R": 1.0,
+      "F1": 0.0568
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Tysman02.mid",
+    "n_truth": 5,
+    "n_pred": 176,
+    "tol0": {
+      "tp": 0,
+      "fp": 174,
+      "fn": 5,
+      "wrong": 2,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 5,
+      "fp": 160,
+      "fn": 0,
+      "wrong": 11,
+      "P": 0.0284,
+      "R": 1.0,
+      "F1": 0.0552
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 144,
+      "fn": 0,
+      "wrong": 27,
+      "P": 0.0284,
+      "R": 1.0,
+      "F1": 0.0552
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Verbaite02.mid",
+    "n_truth": 5,
+    "n_pred": 166,
+    "tol0": {
+      "tp": 3,
+      "fp": 162,
+      "fn": 2,
+      "wrong": 1,
+      "P": 0.0181,
+      "R": 0.6,
+      "F1": 0.0351
+    },
+    "tol1": {
+      "tp": 5,
+      "fp": 148,
+      "fn": 0,
+      "wrong": 13,
+      "P": 0.0301,
+      "R": 1.0,
+      "F1": 0.0585
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 138,
+      "fn": 0,
+      "wrong": 23,
+      "P": 0.0301,
+      "R": 1.0,
+      "F1": 0.0585
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/YeF03M.mid",
+    "n_truth": 5,
+    "n_pred": 170,
+    "tol0": {
+      "tp": 0,
+      "fp": 170,
+      "fn": 5,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 157,
+      "fn": 1,
+      "wrong": 9,
+      "P": 0.0235,
+      "R": 0.8,
+      "F1": 0.0457
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 141,
+      "fn": 0,
+      "wrong": 24,
+      "P": 0.0294,
+      "R": 1.0,
+      "F1": 0.0571
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/YuP02M.mid",
+    "n_truth": 5,
+    "n_pred": 152,
+    "tol0": {
+      "tp": 2,
+      "fp": 149,
+      "fn": 3,
+      "wrong": 1,
+      "P": 0.0132,
+      "R": 0.4,
+      "F1": 0.0255
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 144,
+      "fn": 1,
+      "wrong": 4,
+      "P": 0.0263,
+      "R": 0.8,
+      "F1": 0.051
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 133,
+      "fn": 0,
+      "wrong": 14,
+      "P": 0.0329,
+      "R": 1.0,
+      "F1": 0.0637
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Zhdanov02.mid",
+    "n_truth": 5,
+    "n_pred": 160,
+    "tol0": {
+      "tp": 0,
+      "fp": 160,
+      "fn": 5,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 148,
+      "fn": 1,
+      "wrong": 8,
+      "P": 0.025,
+      "R": 0.8,
+      "F1": 0.0485
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 136,
+      "fn": 0,
+      "wrong": 19,
+      "P": 0.0312,
+      "R": 1.0,
+      "F1": 0.0606
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/1/Zukiewicz02.mid",
+    "n_truth": 5,
+    "n_pred": 163,
+    "tol0": {
+      "tp": 1,
+      "fp": 161,
+      "fn": 4,
+      "wrong": 1,
+      "P": 0.0061,
+      "R": 0.2,
+      "F1": 0.0119
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 150,
+      "fn": 1,
+      "wrong": 9,
+      "P": 0.0245,
+      "R": 0.8,
+      "F1": 0.0476
+    },
+    "tol2": {
+      "tp": 5,
+      "fp": 137,
+      "fn": 0,
+      "wrong": 21,
+      "P": 0.0307,
+      "R": 1.0,
+      "F1": 0.0595
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/10/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/10/Na_2009_02.mid",
+    "n_truth": 286,
+    "n_pred": 321,
+    "tol0": {
+      "tp": 41,
+      "fp": 240,
+      "fn": 245,
+      "wrong": 40,
+      "P": 0.1277,
+      "R": 0.1434,
+      "F1": 0.1351
+    },
+    "tol1": {
+      "tp": 109,
+      "fp": 0,
+      "fn": 177,
+      "wrong": 212,
+      "P": 0.3396,
+      "R": 0.3811,
+      "F1": 0.3591
+    },
+    "tol2": {
+      "tp": 60,
+      "fp": 0,
+      "fn": 226,
+      "wrong": 261,
+      "P": 0.1869,
+      "R": 0.2098,
+      "F1": 0.1977
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/10/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/10/WangH02M.mid",
+    "n_truth": 286,
+    "n_pred": 276,
+    "tol0": {
+      "tp": 109,
+      "fp": 148,
+      "fn": 177,
+      "wrong": 19,
+      "P": 0.3949,
+      "R": 0.3811,
+      "F1": 0.3879
+    },
+    "tol1": {
+      "tp": 111,
+      "fp": 0,
+      "fn": 175,
+      "wrong": 165,
+      "P": 0.4022,
+      "R": 0.3881,
+      "F1": 0.395
+    },
+    "tol2": {
+      "tp": 60,
+      "fp": 0,
+      "fn": 226,
+      "wrong": 216,
+      "P": 0.2174,
+      "R": 0.2098,
+      "F1": 0.2135
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/10/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/10/Wilshire02.mid",
+    "n_truth": 286,
+    "n_pred": 416,
+    "tol0": {
+      "tp": 81,
+      "fp": 286,
+      "fn": 205,
+      "wrong": 49,
+      "P": 0.1947,
+      "R": 0.2832,
+      "F1": 0.2308
+    },
+    "tol1": {
+      "tp": 117,
+      "fp": 0,
+      "fn": 169,
+      "wrong": 299,
+      "P": 0.2812,
+      "R": 0.4091,
+      "F1": 0.3333
+    },
+    "tol2": {
+      "tp": 61,
+      "fp": 0,
+      "fn": 225,
+      "wrong": 355,
+      "P": 0.1466,
+      "R": 0.2133,
+      "F1": 0.1738
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/10/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/10/Yanagitani02.mid",
+    "n_truth": 286,
+    "n_pred": 309,
+    "tol0": {
+      "tp": 97,
+      "fp": 172,
+      "fn": 189,
+      "wrong": 40,
+      "P": 0.3139,
+      "R": 0.3392,
+      "F1": 0.3261
+    },
+    "tol1": {
+      "tp": 117,
+      "fp": 0,
+      "fn": 169,
+      "wrong": 192,
+      "P": 0.3786,
+      "R": 0.4091,
+      "F1": 0.3933
+    },
+    "tol2": {
+      "tp": 62,
+      "fp": 0,
+      "fn": 224,
+      "wrong": 247,
+      "P": 0.2006,
+      "R": 0.2168,
+      "F1": 0.2084
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/5/Bach02.mid",
+    "n_truth": 12,
+    "n_pred": 205,
+    "tol0": {
+      "tp": 1,
+      "fp": 203,
+      "fn": 11,
+      "wrong": 1,
+      "P": 0.0049,
+      "R": 0.0833,
+      "F1": 0.0092
+    },
+    "tol1": {
+      "tp": 10,
+      "fp": 174,
+      "fn": 2,
+      "wrong": 21,
+      "P": 0.0488,
+      "R": 0.8333,
+      "F1": 0.0922
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 141,
+      "fn": 1,
+      "wrong": 53,
+      "P": 0.0537,
+      "R": 0.9167,
+      "F1": 0.1014
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/5/Feiner_2006_02.mid",
+    "n_truth": 12,
+    "n_pred": 325,
+    "tol0": {
+      "tp": 4,
+      "fp": 320,
+      "fn": 8,
+      "wrong": 1,
+      "P": 0.0123,
+      "R": 0.3333,
+      "F1": 0.0237
+    },
+    "tol1": {
+      "tp": 10,
+      "fp": 264,
+      "fn": 2,
+      "wrong": 51,
+      "P": 0.0308,
+      "R": 0.8333,
+      "F1": 0.0593
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 212,
+      "fn": 1,
+      "wrong": 102,
+      "P": 0.0338,
+      "R": 0.9167,
+      "F1": 0.0653
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/5/KimEunhae04.mid",
+    "n_truth": 12,
+    "n_pred": 181,
+    "tol0": {
+      "tp": 1,
+      "fp": 180,
+      "fn": 11,
+      "wrong": 0,
+      "P": 0.0055,
+      "R": 0.0833,
+      "F1": 0.0104
+    },
+    "tol1": {
+      "tp": 10,
+      "fp": 157,
+      "fn": 2,
+      "wrong": 14,
+      "P": 0.0552,
+      "R": 0.8333,
+      "F1": 0.1036
+    },
+    "tol2": {
+      "tp": 10,
+      "fp": 136,
+      "fn": 2,
+      "wrong": 35,
+      "P": 0.0552,
+      "R": 0.8333,
+      "F1": 0.1036
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/5/Koshoeva02.mid",
+    "n_truth": 12,
+    "n_pred": 251,
+    "tol0": {
+      "tp": 4,
+      "fp": 246,
+      "fn": 8,
+      "wrong": 1,
+      "P": 0.0159,
+      "R": 0.3333,
+      "F1": 0.0304
+    },
+    "tol1": {
+      "tp": 11,
+      "fp": 211,
+      "fn": 1,
+      "wrong": 29,
+      "P": 0.0438,
+      "R": 0.9167,
+      "F1": 0.0837
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 179,
+      "fn": 1,
+      "wrong": 61,
+      "P": 0.0438,
+      "R": 0.9167,
+      "F1": 0.0837
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/5/LIAO03.mid",
+    "n_truth": 12,
+    "n_pred": 235,
+    "tol0": {
+      "tp": 1,
+      "fp": 233,
+      "fn": 11,
+      "wrong": 1,
+      "P": 0.0043,
+      "R": 0.0833,
+      "F1": 0.0081
+    },
+    "tol1": {
+      "tp": 11,
+      "fp": 200,
+      "fn": 1,
+      "wrong": 24,
+      "P": 0.0468,
+      "R": 0.9167,
+      "F1": 0.0891
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 165,
+      "fn": 1,
+      "wrong": 59,
+      "P": 0.0468,
+      "R": 0.9167,
+      "F1": 0.0891
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/5/LiA03M.mid",
+    "n_truth": 12,
+    "n_pred": 223,
+    "tol0": {
+      "tp": 0,
+      "fp": 223,
+      "fn": 12,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 183,
+      "fn": 3,
+      "wrong": 31,
+      "P": 0.0404,
+      "R": 0.75,
+      "F1": 0.0766
+    },
+    "tol2": {
+      "tp": 10,
+      "fp": 149,
+      "fn": 2,
+      "wrong": 64,
+      "P": 0.0448,
+      "R": 0.8333,
+      "F1": 0.0851
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/5/LiC02M.mid",
+    "n_truth": 12,
+    "n_pred": 223,
+    "tol0": {
+      "tp": 1,
+      "fp": 221,
+      "fn": 11,
+      "wrong": 1,
+      "P": 0.0045,
+      "R": 0.0833,
+      "F1": 0.0085
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 184,
+      "fn": 3,
+      "wrong": 30,
+      "P": 0.0404,
+      "R": 0.75,
+      "F1": 0.0766
+    },
+    "tol2": {
+      "tp": 10,
+      "fp": 153,
+      "fn": 2,
+      "wrong": 60,
+      "P": 0.0448,
+      "R": 0.8333,
+      "F1": 0.0851
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/5/Rozanski03.mid",
+    "n_truth": 12,
+    "n_pred": 215,
+    "tol0": {
+      "tp": 1,
+      "fp": 214,
+      "fn": 11,
+      "wrong": 0,
+      "P": 0.0047,
+      "R": 0.0833,
+      "F1": 0.0088
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 180,
+      "fn": 3,
+      "wrong": 26,
+      "P": 0.0419,
+      "R": 0.75,
+      "F1": 0.0793
+    },
+    "tol2": {
+      "tp": 10,
+      "fp": 147,
+      "fn": 2,
+      "wrong": 58,
+      "P": 0.0465,
+      "R": 0.8333,
+      "F1": 0.0881
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/5/Tario02.mid",
+    "n_truth": 12,
+    "n_pred": 230,
+    "tol0": {
+      "tp": 2,
+      "fp": 228,
+      "fn": 10,
+      "wrong": 0,
+      "P": 0.0087,
+      "R": 0.1667,
+      "F1": 0.0165
+    },
+    "tol1": {
+      "tp": 10,
+      "fp": 185,
+      "fn": 2,
+      "wrong": 35,
+      "P": 0.0435,
+      "R": 0.8333,
+      "F1": 0.0826
+    },
+    "tol2": {
+      "tp": 10,
+      "fp": 153,
+      "fn": 2,
+      "wrong": 67,
+      "P": 0.0435,
+      "R": 0.8333,
+      "F1": 0.0826
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/5/USHIKI03.mid",
+    "n_truth": 12,
+    "n_pred": 177,
+    "tol0": {
+      "tp": 0,
+      "fp": 177,
+      "fn": 12,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 10,
+      "fp": 155,
+      "fn": 2,
+      "wrong": 12,
+      "P": 0.0565,
+      "R": 0.8333,
+      "F1": 0.1058
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 133,
+      "fn": 1,
+      "wrong": 33,
+      "P": 0.0621,
+      "R": 0.9167,
+      "F1": 0.1164
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/5/ZhangW03M.mid",
+    "n_truth": 12,
+    "n_pred": 242,
+    "tol0": {
+      "tp": 3,
+      "fp": 238,
+      "fn": 9,
+      "wrong": 1,
+      "P": 0.0124,
+      "R": 0.25,
+      "F1": 0.0236
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 206,
+      "fn": 3,
+      "wrong": 27,
+      "P": 0.0372,
+      "R": 0.75,
+      "F1": 0.0709
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 170,
+      "fn": 1,
+      "wrong": 61,
+      "P": 0.0455,
+      "R": 0.9167,
+      "F1": 0.0866
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/7/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/7/ChenL02.mid",
+    "n_truth": 18,
+    "n_pred": 196,
+    "tol0": {
+      "tp": 2,
+      "fp": 192,
+      "fn": 16,
+      "wrong": 2,
+      "P": 0.0102,
+      "R": 0.1111,
+      "F1": 0.0187
+    },
+    "tol1": {
+      "tp": 15,
+      "fp": 144,
+      "fn": 3,
+      "wrong": 37,
+      "P": 0.0765,
+      "R": 0.8333,
+      "F1": 0.1402
+    },
+    "tol2": {
+      "tp": 12,
+      "fp": 127,
+      "fn": 6,
+      "wrong": 57,
+      "P": 0.0612,
+      "R": 0.6667,
+      "F1": 0.1121
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/7/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/7/Namirovsky02.mid",
+    "n_truth": 18,
+    "n_pred": 339,
+    "tol0": {
+      "tp": 7,
+      "fp": 331,
+      "fn": 11,
+      "wrong": 1,
+      "P": 0.0206,
+      "R": 0.3889,
+      "F1": 0.0392
+    },
+    "tol1": {
+      "tp": 15,
+      "fp": 278,
+      "fn": 3,
+      "wrong": 46,
+      "P": 0.0442,
+      "R": 0.8333,
+      "F1": 0.084
+    },
+    "tol2": {
+      "tp": 12,
+      "fp": 244,
+      "fn": 6,
+      "wrong": 83,
+      "P": 0.0354,
+      "R": 0.6667,
+      "F1": 0.0672
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/7/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/7/SINKEV03.mid",
+    "n_truth": 18,
+    "n_pred": 146,
+    "tol0": {
+      "tp": 5,
+      "fp": 141,
+      "fn": 13,
+      "wrong": 0,
+      "P": 0.0342,
+      "R": 0.2778,
+      "F1": 0.061
+    },
+    "tol1": {
+      "tp": 15,
+      "fp": 93,
+      "fn": 3,
+      "wrong": 38,
+      "P": 0.1027,
+      "R": 0.8333,
+      "F1": 0.1829
+    },
+    "tol2": {
+      "tp": 12,
+      "fp": 76,
+      "fn": 6,
+      "wrong": 58,
+      "P": 0.0822,
+      "R": 0.6667,
+      "F1": 0.1463
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/BENABD02.mid",
+    "n_truth": 72,
+    "n_pred": 369,
+    "tol0": {
+      "tp": 20,
+      "fp": 338,
+      "fn": 52,
+      "wrong": 11,
+      "P": 0.0542,
+      "R": 0.2778,
+      "F1": 0.0907
+    },
+    "tol1": {
+      "tp": 51,
+      "fp": 182,
+      "fn": 21,
+      "wrong": 136,
+      "P": 0.1382,
+      "R": 0.7083,
+      "F1": 0.2313
+    },
+    "tol2": {
+      "tp": 44,
+      "fp": 118,
+      "fn": 28,
+      "wrong": 207,
+      "P": 0.1192,
+      "R": 0.6111,
+      "F1": 0.1995
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Benabdallah02.mid",
+    "n_truth": 72,
+    "n_pred": 381,
+    "tol0": {
+      "tp": 10,
+      "fp": 360,
+      "fn": 62,
+      "wrong": 11,
+      "P": 0.0262,
+      "R": 0.1389,
+      "F1": 0.0442
+    },
+    "tol1": {
+      "tp": 49,
+      "fp": 200,
+      "fn": 23,
+      "wrong": 132,
+      "P": 0.1286,
+      "R": 0.6806,
+      "F1": 0.2163
+    },
+    "tol2": {
+      "tp": 44,
+      "fp": 140,
+      "fn": 28,
+      "wrong": 197,
+      "P": 0.1155,
+      "R": 0.6111,
+      "F1": 0.1943
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/CHOE01.mid",
+    "n_truth": 72,
+    "n_pred": 344,
+    "tol0": {
+      "tp": 14,
+      "fp": 318,
+      "fn": 58,
+      "wrong": 12,
+      "P": 0.0407,
+      "R": 0.1944,
+      "F1": 0.0673
+    },
+    "tol1": {
+      "tp": 49,
+      "fp": 159,
+      "fn": 23,
+      "wrong": 136,
+      "P": 0.1424,
+      "R": 0.6806,
+      "F1": 0.2356
+    },
+    "tol2": {
+      "tp": 46,
+      "fp": 104,
+      "fn": 26,
+      "wrong": 194,
+      "P": 0.1337,
+      "R": 0.6389,
+      "F1": 0.2212
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/ChenJie03.mid",
+    "n_truth": 72,
+    "n_pred": 338,
+    "tol0": {
+      "tp": 15,
+      "fp": 311,
+      "fn": 57,
+      "wrong": 12,
+      "P": 0.0444,
+      "R": 0.2083,
+      "F1": 0.0732
+    },
+    "tol1": {
+      "tp": 52,
+      "fp": 162,
+      "fn": 20,
+      "wrong": 124,
+      "P": 0.1538,
+      "R": 0.7222,
+      "F1": 0.2537
+    },
+    "tol2": {
+      "tp": 44,
+      "fp": 109,
+      "fn": 28,
+      "wrong": 185,
+      "P": 0.1302,
+      "R": 0.6111,
+      "F1": 0.2146
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/FONG02.mid",
+    "n_truth": 72,
+    "n_pred": 233,
+    "tol0": {
+      "tp": 11,
+      "fp": 212,
+      "fn": 61,
+      "wrong": 10,
+      "P": 0.0472,
+      "R": 0.1528,
+      "F1": 0.0721
+    },
+    "tol1": {
+      "tp": 43,
+      "fp": 111,
+      "fn": 29,
+      "wrong": 79,
+      "P": 0.1845,
+      "R": 0.5972,
+      "F1": 0.282
+    },
+    "tol2": {
+      "tp": 41,
+      "fp": 78,
+      "fn": 31,
+      "wrong": 114,
+      "P": 0.176,
+      "R": 0.5694,
+      "F1": 0.2689
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Georgieva03.mid",
+    "n_truth": 72,
+    "n_pred": 337,
+    "tol0": {
+      "tp": 8,
+      "fp": 319,
+      "fn": 64,
+      "wrong": 10,
+      "P": 0.0237,
+      "R": 0.1111,
+      "F1": 0.0391
+    },
+    "tol1": {
+      "tp": 46,
+      "fp": 147,
+      "fn": 26,
+      "wrong": 144,
+      "P": 0.1365,
+      "R": 0.6389,
+      "F1": 0.2249
+    },
+    "tol2": {
+      "tp": 41,
+      "fp": 91,
+      "fn": 31,
+      "wrong": 205,
+      "P": 0.1217,
+      "R": 0.5694,
+      "F1": 0.2005
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/IVLEVA02.mid",
+    "n_truth": 72,
+    "n_pred": 290,
+    "tol0": {
+      "tp": 15,
+      "fp": 260,
+      "fn": 57,
+      "wrong": 15,
+      "P": 0.0517,
+      "R": 0.2083,
+      "F1": 0.0829
+    },
+    "tol1": {
+      "tp": 51,
+      "fp": 127,
+      "fn": 21,
+      "wrong": 112,
+      "P": 0.1759,
+      "R": 0.7083,
+      "F1": 0.2818
+    },
+    "tol2": {
+      "tp": 44,
+      "fp": 81,
+      "fn": 28,
+      "wrong": 165,
+      "P": 0.1517,
+      "R": 0.6111,
+      "F1": 0.2431
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Kwok02.mid",
+    "n_truth": 72,
+    "n_pred": 311,
+    "tol0": {
+      "tp": 9,
+      "fp": 290,
+      "fn": 63,
+      "wrong": 12,
+      "P": 0.0289,
+      "R": 0.125,
+      "F1": 0.047
+    },
+    "tol1": {
+      "tp": 50,
+      "fp": 156,
+      "fn": 22,
+      "wrong": 105,
+      "P": 0.1608,
+      "R": 0.6944,
+      "F1": 0.2611
+    },
+    "tol2": {
+      "tp": 43,
+      "fp": 104,
+      "fn": 29,
+      "wrong": 164,
+      "P": 0.1383,
+      "R": 0.5972,
+      "F1": 0.2245
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/KyykhynenT09M.mid",
+    "n_truth": 72,
+    "n_pred": 217,
+    "tol0": {
+      "tp": 10,
+      "fp": 198,
+      "fn": 62,
+      "wrong": 9,
+      "P": 0.0461,
+      "R": 0.1389,
+      "F1": 0.0692
+    },
+    "tol1": {
+      "tp": 47,
+      "fp": 94,
+      "fn": 25,
+      "wrong": 76,
+      "P": 0.2166,
+      "R": 0.6528,
+      "F1": 0.3253
+    },
+    "tol2": {
+      "tp": 40,
+      "fp": 68,
+      "fn": 32,
+      "wrong": 109,
+      "P": 0.1843,
+      "R": 0.5556,
+      "F1": 0.2768
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/LeeEunjin02.mid",
+    "n_truth": 72,
+    "n_pred": 388,
+    "tol0": {
+      "tp": 20,
+      "fp": 352,
+      "fn": 52,
+      "wrong": 16,
+      "P": 0.0515,
+      "R": 0.2778,
+      "F1": 0.087
+    },
+    "tol1": {
+      "tp": 50,
+      "fp": 182,
+      "fn": 22,
+      "wrong": 156,
+      "P": 0.1289,
+      "R": 0.6944,
+      "F1": 0.2174
+    },
+    "tol2": {
+      "tp": 47,
+      "fp": 121,
+      "fn": 25,
+      "wrong": 220,
+      "P": 0.1211,
+      "R": 0.6528,
+      "F1": 0.2043
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/LeeHwakyu02.mid",
+    "n_truth": 72,
+    "n_pred": 285,
+    "tol0": {
+      "tp": 11,
+      "fp": 266,
+      "fn": 61,
+      "wrong": 8,
+      "P": 0.0386,
+      "R": 0.1528,
+      "F1": 0.0616
+    },
+    "tol1": {
+      "tp": 51,
+      "fp": 124,
+      "fn": 21,
+      "wrong": 110,
+      "P": 0.1789,
+      "R": 0.7083,
+      "F1": 0.2857
+    },
+    "tol2": {
+      "tp": 43,
+      "fp": 84,
+      "fn": 29,
+      "wrong": 158,
+      "P": 0.1509,
+      "R": 0.5972,
+      "F1": 0.2409
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/LeeJisun02.mid",
+    "n_truth": 72,
+    "n_pred": 452,
+    "tol0": {
+      "tp": 23,
+      "fp": 414,
+      "fn": 49,
+      "wrong": 15,
+      "P": 0.0509,
+      "R": 0.3194,
+      "F1": 0.0878
+    },
+    "tol1": {
+      "tp": 53,
+      "fp": 213,
+      "fn": 19,
+      "wrong": 186,
+      "P": 0.1173,
+      "R": 0.7361,
+      "F1": 0.2023
+    },
+    "tol2": {
+      "tp": 44,
+      "fp": 143,
+      "fn": 28,
+      "wrong": 265,
+      "P": 0.0973,
+      "R": 0.6111,
+      "F1": 0.1679
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/LiuLangning02.mid",
+    "n_truth": 72,
+    "n_pred": 300,
+    "tol0": {
+      "tp": 20,
+      "fp": 272,
+      "fn": 52,
+      "wrong": 8,
+      "P": 0.0667,
+      "R": 0.2778,
+      "F1": 0.1075
+    },
+    "tol1": {
+      "tp": 49,
+      "fp": 144,
+      "fn": 23,
+      "wrong": 107,
+      "P": 0.1633,
+      "R": 0.6806,
+      "F1": 0.2634
+    },
+    "tol2": {
+      "tp": 46,
+      "fp": 96,
+      "fn": 26,
+      "wrong": 158,
+      "P": 0.1533,
+      "R": 0.6389,
+      "F1": 0.2473
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Lou03M.mid",
+    "n_truth": 72,
+    "n_pred": 362,
+    "tol0": {
+      "tp": 13,
+      "fp": 336,
+      "fn": 59,
+      "wrong": 13,
+      "P": 0.0359,
+      "R": 0.1806,
+      "F1": 0.0599
+    },
+    "tol1": {
+      "tp": 51,
+      "fp": 152,
+      "fn": 21,
+      "wrong": 159,
+      "P": 0.1409,
+      "R": 0.7083,
+      "F1": 0.235
+    },
+    "tol2": {
+      "tp": 46,
+      "fp": 94,
+      "fn": 26,
+      "wrong": 222,
+      "P": 0.1271,
+      "R": 0.6389,
+      "F1": 0.212
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/LuEric03M.mid",
+    "n_truth": 72,
+    "n_pred": 272,
+    "tol0": {
+      "tp": 13,
+      "fp": 253,
+      "fn": 59,
+      "wrong": 6,
+      "P": 0.0478,
+      "R": 0.1806,
+      "F1": 0.0756
+    },
+    "tol1": {
+      "tp": 48,
+      "fp": 120,
+      "fn": 24,
+      "wrong": 104,
+      "P": 0.1765,
+      "R": 0.6667,
+      "F1": 0.2791
+    },
+    "tol2": {
+      "tp": 39,
+      "fp": 79,
+      "fn": 33,
+      "wrong": 154,
+      "P": 0.1434,
+      "R": 0.5417,
+      "F1": 0.2267
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Masycheva02.mid",
+    "n_truth": 72,
+    "n_pred": 323,
+    "tol0": {
+      "tp": 16,
+      "fp": 293,
+      "fn": 56,
+      "wrong": 14,
+      "P": 0.0495,
+      "R": 0.2222,
+      "F1": 0.081
+    },
+    "tol1": {
+      "tp": 48,
+      "fp": 150,
+      "fn": 24,
+      "wrong": 125,
+      "P": 0.1486,
+      "R": 0.6667,
+      "F1": 0.243
+    },
+    "tol2": {
+      "tp": 44,
+      "fp": 92,
+      "fn": 28,
+      "wrong": 187,
+      "P": 0.1362,
+      "R": 0.6111,
+      "F1": 0.2228
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/MiyashitaM05M.mid",
+    "n_truth": 72,
+    "n_pred": 465,
+    "tol0": {
+      "tp": 18,
+      "fp": 430,
+      "fn": 54,
+      "wrong": 17,
+      "P": 0.0387,
+      "R": 0.25,
+      "F1": 0.067
+    },
+    "tol1": {
+      "tp": 50,
+      "fp": 232,
+      "fn": 22,
+      "wrong": 183,
+      "P": 0.1075,
+      "R": 0.6944,
+      "F1": 0.1862
+    },
+    "tol2": {
+      "tp": 47,
+      "fp": 156,
+      "fn": 25,
+      "wrong": 262,
+      "P": 0.1011,
+      "R": 0.6528,
+      "F1": 0.175
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/ParkH02.mid",
+    "n_truth": 72,
+    "n_pred": 427,
+    "tol0": {
+      "tp": 10,
+      "fp": 409,
+      "fn": 62,
+      "wrong": 8,
+      "P": 0.0234,
+      "R": 0.1389,
+      "F1": 0.0401
+    },
+    "tol1": {
+      "tp": 51,
+      "fp": 205,
+      "fn": 21,
+      "wrong": 171,
+      "P": 0.1194,
+      "R": 0.7083,
+      "F1": 0.2044
+    },
+    "tol2": {
+      "tp": 46,
+      "fp": 134,
+      "fn": 26,
+      "wrong": 247,
+      "P": 0.1077,
+      "R": 0.6389,
+      "F1": 0.1844
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Rizikov03M.mid",
+    "n_truth": 72,
+    "n_pred": 368,
+    "tol0": {
+      "tp": 10,
+      "fp": 348,
+      "fn": 62,
+      "wrong": 10,
+      "P": 0.0272,
+      "R": 0.1389,
+      "F1": 0.0455
+    },
+    "tol1": {
+      "tp": 50,
+      "fp": 173,
+      "fn": 22,
+      "wrong": 145,
+      "P": 0.1359,
+      "R": 0.6944,
+      "F1": 0.2273
+    },
+    "tol2": {
+      "tp": 45,
+      "fp": 123,
+      "fn": 27,
+      "wrong": 200,
+      "P": 0.1223,
+      "R": 0.625,
+      "F1": 0.2045
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/SCHU03.mid",
+    "n_truth": 72,
+    "n_pred": 288,
+    "tol0": {
+      "tp": 15,
+      "fp": 264,
+      "fn": 57,
+      "wrong": 9,
+      "P": 0.0521,
+      "R": 0.2083,
+      "F1": 0.0833
+    },
+    "tol1": {
+      "tp": 50,
+      "fp": 134,
+      "fn": 22,
+      "wrong": 104,
+      "P": 0.1736,
+      "R": 0.6944,
+      "F1": 0.2778
+    },
+    "tol2": {
+      "tp": 43,
+      "fp": 100,
+      "fn": 29,
+      "wrong": 145,
+      "P": 0.1493,
+      "R": 0.5972,
+      "F1": 0.2389
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Sekino03.mid",
+    "n_truth": 72,
+    "n_pred": 424,
+    "tol0": {
+      "tp": 13,
+      "fp": 396,
+      "fn": 59,
+      "wrong": 15,
+      "P": 0.0307,
+      "R": 0.1806,
+      "F1": 0.0524
+    },
+    "tol1": {
+      "tp": 50,
+      "fp": 226,
+      "fn": 22,
+      "wrong": 148,
+      "P": 0.1179,
+      "R": 0.6944,
+      "F1": 0.2016
+    },
+    "tol2": {
+      "tp": 45,
+      "fp": 149,
+      "fn": 27,
+      "wrong": 230,
+      "P": 0.1061,
+      "R": 0.625,
+      "F1": 0.1815
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Shilyaev02.mid",
+    "n_truth": 72,
+    "n_pred": 404,
+    "tol0": {
+      "tp": 12,
+      "fp": 379,
+      "fn": 60,
+      "wrong": 13,
+      "P": 0.0297,
+      "R": 0.1667,
+      "F1": 0.0504
+    },
+    "tol1": {
+      "tp": 50,
+      "fp": 212,
+      "fn": 22,
+      "wrong": 142,
+      "P": 0.1238,
+      "R": 0.6944,
+      "F1": 0.2101
+    },
+    "tol2": {
+      "tp": 45,
+      "fp": 145,
+      "fn": 27,
+      "wrong": 214,
+      "P": 0.1114,
+      "R": 0.625,
+      "F1": 0.1891
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Soukhovetski02.mid",
+    "n_truth": 72,
+    "n_pred": 289,
+    "tol0": {
+      "tp": 8,
+      "fp": 273,
+      "fn": 64,
+      "wrong": 8,
+      "P": 0.0277,
+      "R": 0.1111,
+      "F1": 0.0443
+    },
+    "tol1": {
+      "tp": 48,
+      "fp": 120,
+      "fn": 24,
+      "wrong": 121,
+      "P": 0.1661,
+      "R": 0.6667,
+      "F1": 0.2659
+    },
+    "tol2": {
+      "tp": 44,
+      "fp": 73,
+      "fn": 28,
+      "wrong": 172,
+      "P": 0.1522,
+      "R": 0.6111,
+      "F1": 0.2438
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Tak02.mid",
+    "n_truth": 72,
+    "n_pred": 215,
+    "tol0": {
+      "tp": 10,
+      "fp": 196,
+      "fn": 62,
+      "wrong": 9,
+      "P": 0.0465,
+      "R": 0.1389,
+      "F1": 0.0697
+    },
+    "tol1": {
+      "tp": 44,
+      "fp": 86,
+      "fn": 28,
+      "wrong": 85,
+      "P": 0.2047,
+      "R": 0.6111,
+      "F1": 0.3066
+    },
+    "tol2": {
+      "tp": 35,
+      "fp": 58,
+      "fn": 37,
+      "wrong": 122,
+      "P": 0.1628,
+      "R": 0.4861,
+      "F1": 0.2439
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Tetzloff02.mid",
+    "n_truth": 72,
+    "n_pred": 327,
+    "tol0": {
+      "tp": 13,
+      "fp": 308,
+      "fn": 59,
+      "wrong": 6,
+      "P": 0.0398,
+      "R": 0.1806,
+      "F1": 0.0652
+    },
+    "tol1": {
+      "tp": 50,
+      "fp": 142,
+      "fn": 22,
+      "wrong": 135,
+      "P": 0.1529,
+      "R": 0.6944,
+      "F1": 0.2506
+    },
+    "tol2": {
+      "tp": 43,
+      "fp": 101,
+      "fn": 29,
+      "wrong": 183,
+      "P": 0.1315,
+      "R": 0.5972,
+      "F1": 0.2155
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Tetzloff07M.mid",
+    "n_truth": 72,
+    "n_pred": 304,
+    "tol0": {
+      "tp": 14,
+      "fp": 278,
+      "fn": 58,
+      "wrong": 12,
+      "P": 0.0461,
+      "R": 0.1944,
+      "F1": 0.0745
+    },
+    "tol1": {
+      "tp": 51,
+      "fp": 128,
+      "fn": 21,
+      "wrong": 125,
+      "P": 0.1678,
+      "R": 0.7083,
+      "F1": 0.2713
+    },
+    "tol2": {
+      "tp": 43,
+      "fp": 90,
+      "fn": 29,
+      "wrong": 171,
+      "P": 0.1414,
+      "R": 0.5972,
+      "F1": 0.2287
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/YOU02.mid",
+    "n_truth": 72,
+    "n_pred": 335,
+    "tol0": {
+      "tp": 14,
+      "fp": 312,
+      "fn": 58,
+      "wrong": 9,
+      "P": 0.0418,
+      "R": 0.1944,
+      "F1": 0.0688
+    },
+    "tol1": {
+      "tp": 48,
+      "fp": 145,
+      "fn": 24,
+      "wrong": 142,
+      "P": 0.1433,
+      "R": 0.6667,
+      "F1": 0.2359
+    },
+    "tol2": {
+      "tp": 45,
+      "fp": 99,
+      "fn": 27,
+      "wrong": 191,
+      "P": 0.1343,
+      "R": 0.625,
+      "F1": 0.2211
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_10/8/Zhou03M.mid",
+    "n_truth": 72,
+    "n_pred": 246,
+    "tol0": {
+      "tp": 14,
+      "fp": 217,
+      "fn": 58,
+      "wrong": 15,
+      "P": 0.0569,
+      "R": 0.1944,
+      "F1": 0.0881
+    },
+    "tol1": {
+      "tp": 47,
+      "fp": 99,
+      "fn": 25,
+      "wrong": 100,
+      "P": 0.1911,
+      "R": 0.6528,
+      "F1": 0.2956
+    },
+    "tol2": {
+      "tp": 40,
+      "fp": 66,
+      "fn": 32,
+      "wrong": 140,
+      "P": 0.1626,
+      "R": 0.5556,
+      "F1": 0.2516
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/1/Erice03.mid",
+    "n_truth": 182,
+    "n_pred": 205,
+    "tol0": {
+      "tp": 43,
+      "fp": 90,
+      "fn": 139,
+      "wrong": 72,
+      "P": 0.2098,
+      "R": 0.2363,
+      "F1": 0.2222
+    },
+    "tol1": {
+      "tp": 64,
+      "fp": 1,
+      "fn": 118,
+      "wrong": 140,
+      "P": 0.3122,
+      "R": 0.3516,
+      "F1": 0.3307
+    },
+    "tol2": {
+      "tp": 37,
+      "fp": 1,
+      "fn": 145,
+      "wrong": 167,
+      "P": 0.1805,
+      "R": 0.2033,
+      "F1": 0.1912
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/1/LeeN03M.mid",
+    "n_truth": 182,
+    "n_pred": 224,
+    "tol0": {
+      "tp": 50,
+      "fp": 90,
+      "fn": 132,
+      "wrong": 84,
+      "P": 0.2232,
+      "R": 0.2747,
+      "F1": 0.2463
+    },
+    "tol1": {
+      "tp": 65,
+      "fp": 1,
+      "fn": 117,
+      "wrong": 158,
+      "P": 0.2902,
+      "R": 0.3571,
+      "F1": 0.3202
+    },
+    "tol2": {
+      "tp": 38,
+      "fp": 1,
+      "fn": 144,
+      "wrong": 185,
+      "P": 0.1696,
+      "R": 0.2088,
+      "F1": 0.1872
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/1/TongB02M.mid",
+    "n_truth": 182,
+    "n_pred": 148,
+    "tol0": {
+      "tp": 38,
+      "fp": 52,
+      "fn": 144,
+      "wrong": 58,
+      "P": 0.2568,
+      "R": 0.2088,
+      "F1": 0.2303
+    },
+    "tol1": {
+      "tp": 55,
+      "fp": 3,
+      "fn": 127,
+      "wrong": 90,
+      "P": 0.3716,
+      "R": 0.3022,
+      "F1": 0.3333
+    },
+    "tol2": {
+      "tp": 36,
+      "fp": 1,
+      "fn": 146,
+      "wrong": 111,
+      "P": 0.2432,
+      "R": 0.1978,
+      "F1": 0.2182
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/1/TuanS04M.mid",
+    "n_truth": 182,
+    "n_pred": 156,
+    "tol0": {
+      "tp": 25,
+      "fp": 70,
+      "fn": 157,
+      "wrong": 61,
+      "P": 0.1603,
+      "R": 0.1374,
+      "F1": 0.1479
+    },
+    "tol1": {
+      "tp": 56,
+      "fp": 1,
+      "fn": 126,
+      "wrong": 99,
+      "P": 0.359,
+      "R": 0.3077,
+      "F1": 0.3314
+    },
+    "tol2": {
+      "tp": 36,
+      "fp": 1,
+      "fn": 146,
+      "wrong": 119,
+      "P": 0.2308,
+      "R": 0.1978,
+      "F1": 0.213
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/1/Wong03M.mid",
+    "n_truth": 182,
+    "n_pred": 214,
+    "tol0": {
+      "tp": 62,
+      "fp": 81,
+      "fn": 120,
+      "wrong": 71,
+      "P": 0.2897,
+      "R": 0.3407,
+      "F1": 0.3131
+    },
+    "tol1": {
+      "tp": 65,
+      "fp": 3,
+      "fn": 117,
+      "wrong": 146,
+      "P": 0.3037,
+      "R": 0.3571,
+      "F1": 0.3283
+    },
+    "tol2": {
+      "tp": 38,
+      "fp": 1,
+      "fn": 144,
+      "wrong": 175,
+      "P": 0.1776,
+      "R": 0.2088,
+      "F1": 0.1919
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/12/Atzinger03.mid",
+    "n_truth": 1,
+    "n_pred": 219,
+    "tol0": {
+      "tp": 0,
+      "fp": 219,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 216,
+      "fn": 0,
+      "wrong": 2,
+      "P": 0.0046,
+      "R": 1.0,
+      "F1": 0.0091
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 216,
+      "fn": 0,
+      "wrong": 2,
+      "P": 0.0046,
+      "R": 1.0,
+      "F1": 0.0091
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/12/BorickC04M.mid",
+    "n_truth": 1,
+    "n_pred": 186,
+    "tol0": {
+      "tp": 0,
+      "fp": 186,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 183,
+      "fn": 0,
+      "wrong": 2,
+      "P": 0.0054,
+      "R": 1.0,
+      "F1": 0.0107
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 183,
+      "fn": 0,
+      "wrong": 2,
+      "P": 0.0054,
+      "R": 1.0,
+      "F1": 0.0107
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/12/Golubeva02.mid",
+    "n_truth": 1,
+    "n_pred": 233,
+    "tol0": {
+      "tp": 0,
+      "fp": 233,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 232,
+      "fn": 0,
+      "wrong": 0,
+      "P": 0.0043,
+      "R": 1.0,
+      "F1": 0.0085
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 232,
+      "fn": 0,
+      "wrong": 0,
+      "P": 0.0043,
+      "R": 1.0,
+      "F1": 0.0085
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/12/HouKimberly03M.mid",
+    "n_truth": 1,
+    "n_pred": 187,
+    "tol0": {
+      "tp": 0,
+      "fp": 187,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 184,
+      "fn": 0,
+      "wrong": 2,
+      "P": 0.0053,
+      "R": 1.0,
+      "F1": 0.0106
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 184,
+      "fn": 0,
+      "wrong": 2,
+      "P": 0.0053,
+      "R": 1.0,
+      "F1": 0.0106
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/12/KWON03.mid",
+    "n_truth": 1,
+    "n_pred": 206,
+    "tol0": {
+      "tp": 1,
+      "fp": 205,
+      "fn": 0,
+      "wrong": 0,
+      "P": 0.0049,
+      "R": 1.0,
+      "F1": 0.0097
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 201,
+      "fn": 0,
+      "wrong": 4,
+      "P": 0.0049,
+      "R": 1.0,
+      "F1": 0.0097
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 197,
+      "fn": 0,
+      "wrong": 8,
+      "P": 0.0049,
+      "R": 1.0,
+      "F1": 0.0097
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/12/Kunz03.mid",
+    "n_truth": 1,
+    "n_pred": 186,
+    "tol0": {
+      "tp": 0,
+      "fp": 186,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 183,
+      "fn": 0,
+      "wrong": 2,
+      "P": 0.0054,
+      "R": 1.0,
+      "F1": 0.0107
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 183,
+      "fn": 0,
+      "wrong": 2,
+      "P": 0.0054,
+      "R": 1.0,
+      "F1": 0.0107
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/12/LuA04M.mid",
+    "n_truth": 1,
+    "n_pred": 202,
+    "tol0": {
+      "tp": 0,
+      "fp": 202,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 199,
+      "fn": 0,
+      "wrong": 2,
+      "P": 0.005,
+      "R": 1.0,
+      "F1": 0.0099
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 199,
+      "fn": 0,
+      "wrong": 2,
+      "P": 0.005,
+      "R": 1.0,
+      "F1": 0.0099
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/12/Meek01.mid",
+    "n_truth": 1,
+    "n_pred": 227,
+    "tol0": {
+      "tp": 0,
+      "fp": 227,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 226,
+      "fn": 0,
+      "wrong": 0,
+      "P": 0.0044,
+      "R": 1.0,
+      "F1": 0.0088
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 226,
+      "fn": 0,
+      "wrong": 0,
+      "P": 0.0044,
+      "R": 1.0,
+      "F1": 0.0088
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/12/Yang03.mid",
+    "n_truth": 1,
+    "n_pred": 194,
+    "tol0": {
+      "tp": 0,
+      "fp": 194,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 189,
+      "fn": 0,
+      "wrong": 4,
+      "P": 0.0052,
+      "R": 1.0,
+      "F1": 0.0103
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 185,
+      "fn": 0,
+      "wrong": 8,
+      "P": 0.0052,
+      "R": 1.0,
+      "F1": 0.0103
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/8/DeTurck02.mid",
+    "n_truth": 96,
+    "n_pred": 178,
+    "tol0": {
+      "tp": 33,
+      "fp": 143,
+      "fn": 63,
+      "wrong": 2,
+      "P": 0.1854,
+      "R": 0.3438,
+      "F1": 0.2409
+    },
+    "tol1": {
+      "tp": 41,
+      "fp": 38,
+      "fn": 55,
+      "wrong": 99,
+      "P": 0.2303,
+      "R": 0.4271,
+      "F1": 0.2993
+    },
+    "tol2": {
+      "tp": 28,
+      "fp": 19,
+      "fn": 68,
+      "wrong": 131,
+      "P": 0.1573,
+      "R": 0.2917,
+      "F1": 0.2044
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/8/MORET03.mid",
+    "n_truth": 96,
+    "n_pred": 192,
+    "tol0": {
+      "tp": 40,
+      "fp": 149,
+      "fn": 56,
+      "wrong": 3,
+      "P": 0.2083,
+      "R": 0.4167,
+      "F1": 0.2778
+    },
+    "tol1": {
+      "tp": 46,
+      "fp": 39,
+      "fn": 50,
+      "wrong": 107,
+      "P": 0.2396,
+      "R": 0.4792,
+      "F1": 0.3194
+    },
+    "tol2": {
+      "tp": 25,
+      "fp": 30,
+      "fn": 71,
+      "wrong": 137,
+      "P": 0.1302,
+      "R": 0.2604,
+      "F1": 0.1736
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/8/SOLOM03.mid",
+    "n_truth": 96,
+    "n_pred": 148,
+    "tol0": {
+      "tp": 54,
+      "fp": 91,
+      "fn": 42,
+      "wrong": 3,
+      "P": 0.3649,
+      "R": 0.5625,
+      "F1": 0.4426
+    },
+    "tol1": {
+      "tp": 40,
+      "fp": 26,
+      "fn": 56,
+      "wrong": 82,
+      "P": 0.2703,
+      "R": 0.4167,
+      "F1": 0.3279
+    },
+    "tol2": {
+      "tp": 22,
+      "fp": 19,
+      "fn": 74,
+      "wrong": 107,
+      "P": 0.1486,
+      "R": 0.2292,
+      "F1": 0.1803
+    }
+  },
+  {
+    "score": "Chopin/Etudes_op_25/8/xml_score.musicxml",
+    "performance": "Chopin/Etudes_op_25/8/Toscano02.mid",
+    "n_truth": 96,
+    "n_pred": 155,
+    "tol0": {
+      "tp": 48,
+      "fp": 104,
+      "fn": 48,
+      "wrong": 3,
+      "P": 0.3097,
+      "R": 0.5,
+      "F1": 0.3825
+    },
+    "tol1": {
+      "tp": 38,
+      "fp": 30,
+      "fn": 58,
+      "wrong": 87,
+      "P": 0.2452,
+      "R": 0.3958,
+      "F1": 0.3028
+    },
+    "tol2": {
+      "tp": 26,
+      "fp": 19,
+      "fn": 70,
+      "wrong": 110,
+      "P": 0.1677,
+      "R": 0.2708,
+      "F1": 0.2072
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/20/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/20/Kurz04M.mid",
+    "n_truth": 420,
+    "n_pred": 674,
+    "tol0": {
+      "tp": 39,
+      "fp": 549,
+      "fn": 381,
+      "wrong": 86,
+      "P": 0.0579,
+      "R": 0.0929,
+      "F1": 0.0713
+    },
+    "tol1": {
+      "tp": 238,
+      "fp": 279,
+      "fn": 182,
+      "wrong": 157,
+      "P": 0.3531,
+      "R": 0.5667,
+      "F1": 0.4351
+    },
+    "tol2": {
+      "tp": 160,
+      "fp": 271,
+      "fn": 260,
+      "wrong": 243,
+      "P": 0.2374,
+      "R": 0.381,
+      "F1": 0.2925
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/20/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/20/Wong03.mid",
+    "n_truth": 420,
+    "n_pred": 986,
+    "tol0": {
+      "tp": 83,
+      "fp": 811,
+      "fn": 337,
+      "wrong": 92,
+      "P": 0.0842,
+      "R": 0.1976,
+      "F1": 0.1181
+    },
+    "tol1": {
+      "tp": 266,
+      "fp": 441,
+      "fn": 154,
+      "wrong": 279,
+      "P": 0.2698,
+      "R": 0.6333,
+      "F1": 0.3784
+    },
+    "tol2": {
+      "tp": 171,
+      "fp": 428,
+      "fn": 249,
+      "wrong": 387,
+      "P": 0.1734,
+      "R": 0.4071,
+      "F1": 0.2432
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/20/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/20/Wong04M.mid",
+    "n_truth": 420,
+    "n_pred": 890,
+    "tol0": {
+      "tp": 33,
+      "fp": 808,
+      "fn": 387,
+      "wrong": 49,
+      "P": 0.0371,
+      "R": 0.0786,
+      "F1": 0.0504
+    },
+    "tol1": {
+      "tp": 240,
+      "fp": 416,
+      "fn": 180,
+      "wrong": 234,
+      "P": 0.2697,
+      "R": 0.5714,
+      "F1": 0.3664
+    },
+    "tol2": {
+      "tp": 168,
+      "fp": 391,
+      "fn": 252,
+      "wrong": 331,
+      "P": 0.1888,
+      "R": 0.4,
+      "F1": 0.2565
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/20/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/20/ZhangYunling04M.mid",
+    "n_truth": 420,
+    "n_pred": 1046,
+    "tol0": {
+      "tp": 48,
+      "fp": 877,
+      "fn": 372,
+      "wrong": 121,
+      "P": 0.0459,
+      "R": 0.1143,
+      "F1": 0.0655
+    },
+    "tol1": {
+      "tp": 273,
+      "fp": 531,
+      "fn": 147,
+      "wrong": 242,
+      "P": 0.261,
+      "R": 0.65,
+      "F1": 0.3724
+    },
+    "tol2": {
+      "tp": 177,
+      "fp": 515,
+      "fn": 243,
+      "wrong": 354,
+      "P": 0.1692,
+      "R": 0.4214,
+      "F1": 0.2415
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/ChenW04M.mid",
+    "n_truth": 479,
+    "n_pred": 985,
+    "tol0": {
+      "tp": 21,
+      "fp": 887,
+      "fn": 458,
+      "wrong": 77,
+      "P": 0.0213,
+      "R": 0.0438,
+      "F1": 0.0287
+    },
+    "tol1": {
+      "tp": 391,
+      "fp": 309,
+      "fn": 88,
+      "wrong": 285,
+      "P": 0.397,
+      "R": 0.8163,
+      "F1": 0.5342
+    },
+    "tol2": {
+      "tp": 308,
+      "fp": 254,
+      "fn": 171,
+      "wrong": 423,
+      "P": 0.3127,
+      "R": 0.643,
+      "F1": 0.4208
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/Dossin06.mid",
+    "n_truth": 479,
+    "n_pred": 886,
+    "tol0": {
+      "tp": 25,
+      "fp": 774,
+      "fn": 454,
+      "wrong": 87,
+      "P": 0.0282,
+      "R": 0.0522,
+      "F1": 0.0366
+    },
+    "tol1": {
+      "tp": 334,
+      "fp": 335,
+      "fn": 145,
+      "wrong": 217,
+      "P": 0.377,
+      "R": 0.6973,
+      "F1": 0.4894
+    },
+    "tol2": {
+      "tp": 291,
+      "fp": 272,
+      "fn": 188,
+      "wrong": 323,
+      "P": 0.3284,
+      "R": 0.6075,
+      "F1": 0.4264
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/HuNY08M.mid",
+    "n_truth": 479,
+    "n_pred": 1012,
+    "tol0": {
+      "tp": 34,
+      "fp": 923,
+      "fn": 445,
+      "wrong": 55,
+      "P": 0.0336,
+      "R": 0.071,
+      "F1": 0.0456
+    },
+    "tol1": {
+      "tp": 371,
+      "fp": 369,
+      "fn": 108,
+      "wrong": 272,
+      "P": 0.3666,
+      "R": 0.7745,
+      "F1": 0.4977
+    },
+    "tol2": {
+      "tp": 304,
+      "fp": 287,
+      "fn": 175,
+      "wrong": 421,
+      "P": 0.3004,
+      "R": 0.6347,
+      "F1": 0.4078
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/Jussow04.mid",
+    "n_truth": 479,
+    "n_pred": 850,
+    "tol0": {
+      "tp": 38,
+      "fp": 727,
+      "fn": 441,
+      "wrong": 85,
+      "P": 0.0447,
+      "R": 0.0793,
+      "F1": 0.0572
+    },
+    "tol1": {
+      "tp": 361,
+      "fp": 307,
+      "fn": 118,
+      "wrong": 182,
+      "P": 0.4247,
+      "R": 0.7537,
+      "F1": 0.5433
+    },
+    "tol2": {
+      "tp": 291,
+      "fp": 263,
+      "fn": 188,
+      "wrong": 296,
+      "P": 0.3424,
+      "R": 0.6075,
+      "F1": 0.4379
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/Jussow11M.mid",
+    "n_truth": 479,
+    "n_pred": 804,
+    "tol0": {
+      "tp": 47,
+      "fp": 685,
+      "fn": 432,
+      "wrong": 72,
+      "P": 0.0585,
+      "R": 0.0981,
+      "F1": 0.0733
+    },
+    "tol1": {
+      "tp": 361,
+      "fp": 286,
+      "fn": 118,
+      "wrong": 157,
+      "P": 0.449,
+      "R": 0.7537,
+      "F1": 0.5627
+    },
+    "tol2": {
+      "tp": 290,
+      "fp": 244,
+      "fn": 189,
+      "wrong": 270,
+      "P": 0.3607,
+      "R": 0.6054,
+      "F1": 0.4521
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/LeeN04M.mid",
+    "n_truth": 479,
+    "n_pred": 1064,
+    "tol0": {
+      "tp": 14,
+      "fp": 949,
+      "fn": 465,
+      "wrong": 101,
+      "P": 0.0132,
+      "R": 0.0292,
+      "F1": 0.0181
+    },
+    "tol1": {
+      "tp": 377,
+      "fp": 402,
+      "fn": 102,
+      "wrong": 285,
+      "P": 0.3543,
+      "R": 0.7871,
+      "F1": 0.4887
+    },
+    "tol2": {
+      "tp": 301,
+      "fp": 320,
+      "fn": 178,
+      "wrong": 443,
+      "P": 0.2829,
+      "R": 0.6284,
+      "F1": 0.3901
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/LinTami06M.mid",
+    "n_truth": 479,
+    "n_pred": 955,
+    "tol0": {
+      "tp": 8,
+      "fp": 838,
+      "fn": 471,
+      "wrong": 109,
+      "P": 0.0084,
+      "R": 0.0167,
+      "F1": 0.0112
+    },
+    "tol1": {
+      "tp": 367,
+      "fp": 335,
+      "fn": 112,
+      "wrong": 253,
+      "P": 0.3843,
+      "R": 0.7662,
+      "F1": 0.5119
+    },
+    "tol2": {
+      "tp": 301,
+      "fp": 256,
+      "fn": 178,
+      "wrong": 398,
+      "P": 0.3152,
+      "R": 0.6284,
+      "F1": 0.4198
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/LuoJ12M.mid",
+    "n_truth": 479,
+    "n_pred": 1214,
+    "tol0": {
+      "tp": 32,
+      "fp": 1084,
+      "fn": 447,
+      "wrong": 98,
+      "P": 0.0264,
+      "R": 0.0668,
+      "F1": 0.0378
+    },
+    "tol1": {
+      "tp": 391,
+      "fp": 449,
+      "fn": 88,
+      "wrong": 374,
+      "P": 0.3221,
+      "R": 0.8163,
+      "F1": 0.4619
+    },
+    "tol2": {
+      "tp": 312,
+      "fp": 367,
+      "fn": 167,
+      "wrong": 535,
+      "P": 0.257,
+      "R": 0.6514,
+      "F1": 0.3686
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/SunD04M.mid",
+    "n_truth": 479,
+    "n_pred": 1090,
+    "tol0": {
+      "tp": 22,
+      "fp": 992,
+      "fn": 457,
+      "wrong": 76,
+      "P": 0.0202,
+      "R": 0.0459,
+      "F1": 0.028
+    },
+    "tol1": {
+      "tp": 396,
+      "fp": 366,
+      "fn": 83,
+      "wrong": 328,
+      "P": 0.3633,
+      "R": 0.8267,
+      "F1": 0.5048
+    },
+    "tol2": {
+      "tp": 317,
+      "fp": 284,
+      "fn": 162,
+      "wrong": 489,
+      "P": 0.2908,
+      "R": 0.6618,
+      "F1": 0.4041
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/TongB04M.mid",
+    "n_truth": 479,
+    "n_pred": 955,
+    "tol0": {
+      "tp": 24,
+      "fp": 836,
+      "fn": 455,
+      "wrong": 95,
+      "P": 0.0251,
+      "R": 0.0501,
+      "F1": 0.0335
+    },
+    "tol1": {
+      "tp": 369,
+      "fp": 344,
+      "fn": 110,
+      "wrong": 242,
+      "P": 0.3864,
+      "R": 0.7704,
+      "F1": 0.5146
+    },
+    "tol2": {
+      "tp": 305,
+      "fp": 285,
+      "fn": 174,
+      "wrong": 365,
+      "P": 0.3194,
+      "R": 0.6367,
+      "F1": 0.4254
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/TuanS05M.mid",
+    "n_truth": 479,
+    "n_pred": 982,
+    "tol0": {
+      "tp": 14,
+      "fp": 893,
+      "fn": 465,
+      "wrong": 75,
+      "P": 0.0143,
+      "R": 0.0292,
+      "F1": 0.0192
+    },
+    "tol1": {
+      "tp": 388,
+      "fp": 332,
+      "fn": 91,
+      "wrong": 262,
+      "P": 0.3951,
+      "R": 0.81,
+      "F1": 0.5311
+    },
+    "tol2": {
+      "tp": 315,
+      "fp": 267,
+      "fn": 164,
+      "wrong": 400,
+      "P": 0.3208,
+      "R": 0.6576,
+      "F1": 0.4312
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/31/ZhangW04M.mid",
+    "n_truth": 479,
+    "n_pred": 1176,
+    "tol0": {
+      "tp": 15,
+      "fp": 1055,
+      "fn": 464,
+      "wrong": 106,
+      "P": 0.0128,
+      "R": 0.0313,
+      "F1": 0.0181
+    },
+    "tol1": {
+      "tp": 411,
+      "fp": 379,
+      "fn": 68,
+      "wrong": 386,
+      "P": 0.3495,
+      "R": 0.858,
+      "F1": 0.4967
+    },
+    "tol2": {
+      "tp": 327,
+      "fp": 300,
+      "fn": 152,
+      "wrong": 549,
+      "P": 0.2781,
+      "R": 0.6827,
+      "F1": 0.3952
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/39/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/39/Arciglione13M.mid",
+    "n_truth": 218,
+    "n_pred": 722,
+    "tol0": {
+      "tp": 14,
+      "fp": 689,
+      "fn": 204,
+      "wrong": 19,
+      "P": 0.0194,
+      "R": 0.0642,
+      "F1": 0.0298
+    },
+    "tol1": {
+      "tp": 114,
+      "fp": 484,
+      "fn": 104,
+      "wrong": 124,
+      "P": 0.1579,
+      "R": 0.5229,
+      "F1": 0.2426
+    },
+    "tol2": {
+      "tp": 117,
+      "fp": 396,
+      "fn": 101,
+      "wrong": 209,
+      "P": 0.162,
+      "R": 0.5367,
+      "F1": 0.2489
+    }
+  },
+  {
+    "score": "Chopin/Scherzos/39/xml_score.musicxml",
+    "performance": "Chopin/Scherzos/39/Bult-ItoS05M.mid",
+    "n_truth": 218,
+    "n_pred": 748,
+    "tol0": {
+      "tp": 14,
+      "fp": 698,
+      "fn": 204,
+      "wrong": 36,
+      "P": 0.0187,
+      "R": 0.0642,
+      "F1": 0.029
+    },
+    "tol1": {
+      "tp": 148,
+      "fp": 418,
+      "fn": 70,
+      "wrong": 182,
+      "P": 0.1979,
+      "R": 0.6789,
+      "F1": 0.3064
+    },
+    "tol2": {
+      "tp": 125,
+      "fp": 327,
+      "fn": 93,
+      "wrong": 296,
+      "P": 0.1671,
+      "R": 0.5734,
+      "F1": 0.2588
+    }
+  },
+  {
+    "score": "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml",
+    "performance": "Chopin/Sonata_2/1st_no_repeat/Giltburg02.mid",
+    "n_truth": 1,
+    "n_pred": 579,
+    "tol0": {
+      "tp": 0,
+      "fp": 579,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 575,
+      "fn": 0,
+      "wrong": 3,
+      "P": 0.0017,
+      "R": 1.0,
+      "F1": 0.0034
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 572,
+      "fn": 0,
+      "wrong": 6,
+      "P": 0.0017,
+      "R": 1.0,
+      "F1": 0.0034
+    }
+  },
+  {
+    "score": "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml",
+    "performance": "Chopin/Sonata_2/1st_no_repeat/Jia03.mid",
+    "n_truth": 1,
+    "n_pred": 775,
+    "tol0": {
+      "tp": 0,
+      "fp": 775,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 771,
+      "fn": 0,
+      "wrong": 3,
+      "P": 0.0013,
+      "R": 1.0,
+      "F1": 0.0026
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 765,
+      "fn": 0,
+      "wrong": 9,
+      "P": 0.0013,
+      "R": 1.0,
+      "F1": 0.0026
+    }
+  },
+  {
+    "score": "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml",
+    "performance": "Chopin/Sonata_2/1st_no_repeat/Knoll10.mid",
+    "n_truth": 1,
+    "n_pred": 694,
+    "tol0": {
+      "tp": 0,
+      "fp": 694,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 690,
+      "fn": 0,
+      "wrong": 3,
+      "P": 0.0014,
+      "R": 1.0,
+      "F1": 0.0029
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 685,
+      "fn": 0,
+      "wrong": 8,
+      "P": 0.0014,
+      "R": 1.0,
+      "F1": 0.0029
+    }
+  },
+  {
+    "score": "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml",
+    "performance": "Chopin/Sonata_2/1st_no_repeat/MATSUM03.mid",
+    "n_truth": 1,
+    "n_pred": 418,
+    "tol0": {
+      "tp": 0,
+      "fp": 418,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 1,
+      "fp": 414,
+      "fn": 0,
+      "wrong": 3,
+      "P": 0.0024,
+      "R": 1.0,
+      "F1": 0.0048
+    },
+    "tol2": {
+      "tp": 1,
+      "fp": 412,
+      "fn": 0,
+      "wrong": 5,
+      "P": 0.0024,
+      "R": 1.0,
+      "F1": 0.0048
+    }
+  },
+  {
+    "score": "Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml",
+    "performance": "Chopin/Sonata_2/2nd_no_repeat/Giltburg02.mid",
+    "n_truth": 1,
+    "n_pred": 653,
+    "tol0": {
+      "tp": 0,
+      "fp": 653,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 0,
+      "fp": 653,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol2": {
+      "tp": 0,
+      "fp": 653,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    }
+  },
+  {
+    "score": "Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml",
+    "performance": "Chopin/Sonata_2/2nd_no_repeat/Knoll10.mid",
+    "n_truth": 1,
+    "n_pred": 723,
+    "tol0": {
+      "tp": 0,
+      "fp": 723,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 0,
+      "fp": 723,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol2": {
+      "tp": 0,
+      "fp": 723,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/2nd/GarritsonL09.mid",
+    "n_truth": 42,
+    "n_pred": 291,
+    "tol0": {
+      "tp": 0,
+      "fp": 291,
+      "fn": 42,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 40,
+      "fp": 201,
+      "fn": 2,
+      "wrong": 50,
+      "P": 0.1375,
+      "R": 0.9524,
+      "F1": 0.2402
+    },
+    "tol2": {
+      "tp": 32,
+      "fp": 189,
+      "fn": 10,
+      "wrong": 70,
+      "P": 0.11,
+      "R": 0.7619,
+      "F1": 0.1922
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/2nd/HONG08.mid",
+    "n_truth": 42,
+    "n_pred": 276,
+    "tol0": {
+      "tp": 0,
+      "fp": 276,
+      "fn": 42,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 28,
+      "fp": 216,
+      "fn": 14,
+      "wrong": 32,
+      "P": 0.1014,
+      "R": 0.6667,
+      "F1": 0.1761
+    },
+    "tol2": {
+      "tp": 27,
+      "fp": 194,
+      "fn": 15,
+      "wrong": 55,
+      "P": 0.0978,
+      "R": 0.6429,
+      "F1": 0.1698
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/2nd/HuangSW04.mid",
+    "n_truth": 42,
+    "n_pred": 329,
+    "tol0": {
+      "tp": 4,
+      "fp": 325,
+      "fn": 38,
+      "wrong": 0,
+      "P": 0.0122,
+      "R": 0.0952,
+      "F1": 0.0216
+    },
+    "tol1": {
+      "tp": 40,
+      "fp": 213,
+      "fn": 2,
+      "wrong": 76,
+      "P": 0.1216,
+      "R": 0.9524,
+      "F1": 0.2156
+    },
+    "tol2": {
+      "tp": 31,
+      "fp": 194,
+      "fn": 11,
+      "wrong": 104,
+      "P": 0.0942,
+      "R": 0.7381,
+      "F1": 0.1671
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/2nd/Huangci06.mid",
+    "n_truth": 42,
+    "n_pred": 290,
+    "tol0": {
+      "tp": 6,
+      "fp": 284,
+      "fn": 36,
+      "wrong": 0,
+      "P": 0.0207,
+      "R": 0.1429,
+      "F1": 0.0361
+    },
+    "tol1": {
+      "tp": 31,
+      "fp": 216,
+      "fn": 11,
+      "wrong": 43,
+      "P": 0.1069,
+      "R": 0.7381,
+      "F1": 0.1867
+    },
+    "tol2": {
+      "tp": 31,
+      "fp": 182,
+      "fn": 11,
+      "wrong": 77,
+      "P": 0.1069,
+      "R": 0.7381,
+      "F1": 0.1867
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/2nd/KimSJ08.mid",
+    "n_truth": 42,
+    "n_pred": 322,
+    "tol0": {
+      "tp": 0,
+      "fp": 322,
+      "fn": 42,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 22,
+      "fp": 279,
+      "fn": 20,
+      "wrong": 21,
+      "P": 0.0683,
+      "R": 0.5238,
+      "F1": 0.1209
+    },
+    "tol2": {
+      "tp": 22,
+      "fp": 262,
+      "fn": 20,
+      "wrong": 38,
+      "P": 0.0683,
+      "R": 0.5238,
+      "F1": 0.1209
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/2nd/KimSY21.mid",
+    "n_truth": 42,
+    "n_pred": 262,
+    "tol0": {
+      "tp": 0,
+      "fp": 262,
+      "fn": 42,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 39,
+      "fp": 182,
+      "fn": 3,
+      "wrong": 41,
+      "P": 0.1489,
+      "R": 0.9286,
+      "F1": 0.2566
+    },
+    "tol2": {
+      "tp": 31,
+      "fp": 162,
+      "fn": 11,
+      "wrong": 69,
+      "P": 0.1183,
+      "R": 0.7381,
+      "F1": 0.2039
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/2nd/SCHU09.mid",
+    "n_truth": 42,
+    "n_pred": 236,
+    "tol0": {
+      "tp": 0,
+      "fp": 236,
+      "fn": 42,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 16,
+      "fp": 200,
+      "fn": 26,
+      "wrong": 20,
+      "P": 0.0678,
+      "R": 0.381,
+      "F1": 0.1151
+    },
+    "tol2": {
+      "tp": 19,
+      "fp": 190,
+      "fn": 23,
+      "wrong": 27,
+      "P": 0.0805,
+      "R": 0.4524,
+      "F1": 0.1367
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/2nd/Shybayeva07.mid",
+    "n_truth": 42,
+    "n_pred": 368,
+    "tol0": {
+      "tp": 0,
+      "fp": 368,
+      "fn": 42,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 37,
+      "fp": 280,
+      "fn": 5,
+      "wrong": 51,
+      "P": 0.1005,
+      "R": 0.881,
+      "F1": 0.1805
+    },
+    "tol2": {
+      "tp": 32,
+      "fp": 247,
+      "fn": 10,
+      "wrong": 89,
+      "P": 0.087,
+      "R": 0.7619,
+      "F1": 0.1561
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/2nd/mikahailoff01.mid",
+    "n_truth": 42,
+    "n_pred": 267,
+    "tol0": {
+      "tp": 0,
+      "fp": 267,
+      "fn": 42,
+      "wrong": 0,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 35,
+      "fp": 194,
+      "fn": 7,
+      "wrong": 38,
+      "P": 0.1311,
+      "R": 0.8333,
+      "F1": 0.2265
+    },
+    "tol2": {
+      "tp": 32,
+      "fp": 177,
+      "fn": 10,
+      "wrong": 58,
+      "P": 0.1199,
+      "R": 0.7619,
+      "F1": 0.2071
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/3rd/GarritsonL10.mid",
+    "n_truth": 20,
+    "n_pred": 650,
+    "tol0": {
+      "tp": 2,
+      "fp": 645,
+      "fn": 18,
+      "wrong": 3,
+      "P": 0.0031,
+      "R": 0.1,
+      "F1": 0.006
+    },
+    "tol1": {
+      "tp": 19,
+      "fp": 476,
+      "fn": 1,
+      "wrong": 155,
+      "P": 0.0292,
+      "R": 0.95,
+      "F1": 0.0567
+    },
+    "tol2": {
+      "tp": 18,
+      "fp": 356,
+      "fn": 2,
+      "wrong": 276,
+      "P": 0.0277,
+      "R": 0.9,
+      "F1": 0.0537
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/3rd/HONG08.mid",
+    "n_truth": 20,
+    "n_pred": 566,
+    "tol0": {
+      "tp": 4,
+      "fp": 558,
+      "fn": 16,
+      "wrong": 4,
+      "P": 0.0071,
+      "R": 0.2,
+      "F1": 0.0137
+    },
+    "tol1": {
+      "tp": 19,
+      "fp": 432,
+      "fn": 1,
+      "wrong": 115,
+      "P": 0.0336,
+      "R": 0.95,
+      "F1": 0.0648
+    },
+    "tol2": {
+      "tp": 19,
+      "fp": 340,
+      "fn": 1,
+      "wrong": 207,
+      "P": 0.0336,
+      "R": 0.95,
+      "F1": 0.0648
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/3rd/HuangSW05.mid",
+    "n_truth": 20,
+    "n_pred": 591,
+    "tol0": {
+      "tp": 8,
+      "fp": 580,
+      "fn": 12,
+      "wrong": 3,
+      "P": 0.0135,
+      "R": 0.4,
+      "F1": 0.0262
+    },
+    "tol1": {
+      "tp": 19,
+      "fp": 450,
+      "fn": 1,
+      "wrong": 122,
+      "P": 0.0321,
+      "R": 0.95,
+      "F1": 0.0622
+    },
+    "tol2": {
+      "tp": 19,
+      "fp": 344,
+      "fn": 1,
+      "wrong": 228,
+      "P": 0.0321,
+      "R": 0.95,
+      "F1": 0.0622
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/3rd/Huangci06.mid",
+    "n_truth": 20,
+    "n_pred": 625,
+    "tol0": {
+      "tp": 6,
+      "fp": 615,
+      "fn": 14,
+      "wrong": 4,
+      "P": 0.0096,
+      "R": 0.3,
+      "F1": 0.0186
+    },
+    "tol1": {
+      "tp": 19,
+      "fp": 478,
+      "fn": 1,
+      "wrong": 128,
+      "P": 0.0304,
+      "R": 0.95,
+      "F1": 0.0589
+    },
+    "tol2": {
+      "tp": 19,
+      "fp": 363,
+      "fn": 1,
+      "wrong": 243,
+      "P": 0.0304,
+      "R": 0.95,
+      "F1": 0.0589
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/3rd/KimSJ09.mid",
+    "n_truth": 20,
+    "n_pred": 551,
+    "tol0": {
+      "tp": 2,
+      "fp": 547,
+      "fn": 18,
+      "wrong": 2,
+      "P": 0.0036,
+      "R": 0.1,
+      "F1": 0.007
+    },
+    "tol1": {
+      "tp": 19,
+      "fp": 412,
+      "fn": 1,
+      "wrong": 120,
+      "P": 0.0345,
+      "R": 0.95,
+      "F1": 0.0665
+    },
+    "tol2": {
+      "tp": 19,
+      "fp": 312,
+      "fn": 1,
+      "wrong": 220,
+      "P": 0.0345,
+      "R": 0.95,
+      "F1": 0.0665
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/3rd/KimSY22.mid",
+    "n_truth": 20,
+    "n_pred": 549,
+    "tol0": {
+      "tp": 3,
+      "fp": 544,
+      "fn": 17,
+      "wrong": 2,
+      "P": 0.0055,
+      "R": 0.15,
+      "F1": 0.0105
+    },
+    "tol1": {
+      "tp": 19,
+      "fp": 402,
+      "fn": 1,
+      "wrong": 128,
+      "P": 0.0346,
+      "R": 0.95,
+      "F1": 0.0668
+    },
+    "tol2": {
+      "tp": 18,
+      "fp": 318,
+      "fn": 2,
+      "wrong": 213,
+      "P": 0.0328,
+      "R": 0.9,
+      "F1": 0.0633
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/3rd/SCHU09.mid",
+    "n_truth": 20,
+    "n_pred": 520,
+    "tol0": {
+      "tp": 3,
+      "fp": 514,
+      "fn": 17,
+      "wrong": 3,
+      "P": 0.0058,
+      "R": 0.15,
+      "F1": 0.0111
+    },
+    "tol1": {
+      "tp": 19,
+      "fp": 392,
+      "fn": 1,
+      "wrong": 109,
+      "P": 0.0365,
+      "R": 0.95,
+      "F1": 0.0704
+    },
+    "tol2": {
+      "tp": 18,
+      "fp": 298,
+      "fn": 2,
+      "wrong": 204,
+      "P": 0.0346,
+      "R": 0.9,
+      "F1": 0.0667
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/3rd/Shybayeva07.mid",
+    "n_truth": 20,
+    "n_pred": 568,
+    "tol0": {
+      "tp": 3,
+      "fp": 563,
+      "fn": 17,
+      "wrong": 2,
+      "P": 0.0053,
+      "R": 0.15,
+      "F1": 0.0102
+    },
+    "tol1": {
+      "tp": 19,
+      "fp": 432,
+      "fn": 1,
+      "wrong": 117,
+      "P": 0.0335,
+      "R": 0.95,
+      "F1": 0.0646
+    },
+    "tol2": {
+      "tp": 19,
+      "fp": 340,
+      "fn": 1,
+      "wrong": 209,
+      "P": 0.0335,
+      "R": 0.95,
+      "F1": 0.0646
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/3rd/mikahailoff01.mid",
+    "n_truth": 20,
+    "n_pred": 546,
+    "tol0": {
+      "tp": 5,
+      "fp": 536,
+      "fn": 15,
+      "wrong": 5,
+      "P": 0.0092,
+      "R": 0.25,
+      "F1": 0.0177
+    },
+    "tol1": {
+      "tp": 19,
+      "fp": 407,
+      "fn": 1,
+      "wrong": 120,
+      "P": 0.0348,
+      "R": 0.95,
+      "F1": 0.0671
+    },
+    "tol2": {
+      "tp": 18,
+      "fp": 319,
+      "fn": 2,
+      "wrong": 209,
+      "P": 0.033,
+      "R": 0.9,
+      "F1": 0.0636
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/4th/GarritsonL11M.mid",
+    "n_truth": 14,
+    "n_pred": 958,
+    "tol0": {
+      "tp": 4,
+      "fp": 953,
+      "fn": 10,
+      "wrong": 1,
+      "P": 0.0042,
+      "R": 0.2857,
+      "F1": 0.0082
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 897,
+      "fn": 2,
+      "wrong": 49,
+      "P": 0.0125,
+      "R": 0.8571,
+      "F1": 0.0247
+    },
+    "tol2": {
+      "tp": 12,
+      "fp": 854,
+      "fn": 2,
+      "wrong": 92,
+      "P": 0.0125,
+      "R": 0.8571,
+      "F1": 0.0247
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/4th/HONG08.mid",
+    "n_truth": 14,
+    "n_pred": 818,
+    "tol0": {
+      "tp": 2,
+      "fp": 816,
+      "fn": 12,
+      "wrong": 0,
+      "P": 0.0024,
+      "R": 0.1429,
+      "F1": 0.0048
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 771,
+      "fn": 2,
+      "wrong": 35,
+      "P": 0.0147,
+      "R": 0.8571,
+      "F1": 0.0288
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 747,
+      "fn": 3,
+      "wrong": 60,
+      "P": 0.0134,
+      "R": 0.7857,
+      "F1": 0.0264
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/4th/HuangSW06M.mid",
+    "n_truth": 14,
+    "n_pred": 896,
+    "tol0": {
+      "tp": 3,
+      "fp": 891,
+      "fn": 11,
+      "wrong": 2,
+      "P": 0.0033,
+      "R": 0.2143,
+      "F1": 0.0066
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 835,
+      "fn": 2,
+      "wrong": 49,
+      "P": 0.0134,
+      "R": 0.8571,
+      "F1": 0.0264
+    },
+    "tol2": {
+      "tp": 12,
+      "fp": 780,
+      "fn": 2,
+      "wrong": 104,
+      "P": 0.0134,
+      "R": 0.8571,
+      "F1": 0.0264
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/4th/Huangci06.mid",
+    "n_truth": 14,
+    "n_pred": 846,
+    "tol0": {
+      "tp": 2,
+      "fp": 842,
+      "fn": 12,
+      "wrong": 2,
+      "P": 0.0024,
+      "R": 0.1429,
+      "F1": 0.0047
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 801,
+      "fn": 2,
+      "wrong": 33,
+      "P": 0.0142,
+      "R": 0.8571,
+      "F1": 0.0279
+    },
+    "tol2": {
+      "tp": 12,
+      "fp": 764,
+      "fn": 2,
+      "wrong": 70,
+      "P": 0.0142,
+      "R": 0.8571,
+      "F1": 0.0279
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/4th/KimSJ10M.mid",
+    "n_truth": 14,
+    "n_pred": 828,
+    "tol0": {
+      "tp": 2,
+      "fp": 825,
+      "fn": 12,
+      "wrong": 1,
+      "P": 0.0024,
+      "R": 0.1429,
+      "F1": 0.0048
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 784,
+      "fn": 2,
+      "wrong": 32,
+      "P": 0.0145,
+      "R": 0.8571,
+      "F1": 0.0285
+    },
+    "tol2": {
+      "tp": 13,
+      "fp": 745,
+      "fn": 1,
+      "wrong": 70,
+      "P": 0.0157,
+      "R": 0.9286,
+      "F1": 0.0309
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/4th/KimSY23M.mid",
+    "n_truth": 14,
+    "n_pred": 926,
+    "tol0": {
+      "tp": 1,
+      "fp": 923,
+      "fn": 13,
+      "wrong": 2,
+      "P": 0.0011,
+      "R": 0.0714,
+      "F1": 0.0021
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 870,
+      "fn": 2,
+      "wrong": 44,
+      "P": 0.013,
+      "R": 0.8571,
+      "F1": 0.0255
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 837,
+      "fn": 3,
+      "wrong": 78,
+      "P": 0.0119,
+      "R": 0.7857,
+      "F1": 0.0234
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/4th/SCHU09.mid",
+    "n_truth": 14,
+    "n_pred": 860,
+    "tol0": {
+      "tp": 2,
+      "fp": 855,
+      "fn": 12,
+      "wrong": 3,
+      "P": 0.0023,
+      "R": 0.1429,
+      "F1": 0.0046
+    },
+    "tol1": {
+      "tp": 11,
+      "fp": 804,
+      "fn": 3,
+      "wrong": 45,
+      "P": 0.0128,
+      "R": 0.7857,
+      "F1": 0.0252
+    },
+    "tol2": {
+      "tp": 13,
+      "fp": 772,
+      "fn": 1,
+      "wrong": 75,
+      "P": 0.0151,
+      "R": 0.9286,
+      "F1": 0.0297
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/4th/Shybayeva07.mid",
+    "n_truth": 14,
+    "n_pred": 1044,
+    "tol0": {
+      "tp": 1,
+      "fp": 1043,
+      "fn": 13,
+      "wrong": 0,
+      "P": 0.001,
+      "R": 0.0714,
+      "F1": 0.0019
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 978,
+      "fn": 2,
+      "wrong": 54,
+      "P": 0.0115,
+      "R": 0.8571,
+      "F1": 0.0227
+    },
+    "tol2": {
+      "tp": 12,
+      "fp": 920,
+      "fn": 2,
+      "wrong": 112,
+      "P": 0.0115,
+      "R": 0.8571,
+      "F1": 0.0227
+    }
+  },
+  {
+    "score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+    "performance": "Chopin/Sonata_3/4th/mikahailoff01.mid",
+    "n_truth": 14,
+    "n_pred": 927,
+    "tol0": {
+      "tp": 1,
+      "fp": 925,
+      "fn": 13,
+      "wrong": 1,
+      "P": 0.0011,
+      "R": 0.0714,
+      "F1": 0.0021
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 866,
+      "fn": 2,
+      "wrong": 49,
+      "P": 0.0129,
+      "R": 0.8571,
+      "F1": 0.0255
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 822,
+      "fn": 3,
+      "wrong": 94,
+      "P": 0.0119,
+      "R": 0.7857,
+      "F1": 0.0234
+    }
+  },
+  {
+    "score": "Debussy/Images_Book_1/1_Reflets_dans_lEau/xml_score.musicxml",
+    "performance": "Debussy/Images_Book_1/1_Reflets_dans_lEau/Kleisen11M.mid",
+    "n_truth": 10,
+    "n_pred": 243,
+    "tol0": {
+      "tp": 2,
+      "fp": 237,
+      "fn": 8,
+      "wrong": 4,
+      "P": 0.0082,
+      "R": 0.2,
+      "F1": 0.0158
+    },
+    "tol1": {
+      "tp": 10,
+      "fp": 211,
+      "fn": 0,
+      "wrong": 22,
+      "P": 0.0412,
+      "R": 1.0,
+      "F1": 0.0791
+    },
+    "tol2": {
+      "tp": 8,
+      "fp": 198,
+      "fn": 2,
+      "wrong": 37,
+      "P": 0.0329,
+      "R": 0.8,
+      "F1": 0.0632
+    }
+  },
+  {
+    "score": "Debussy/Images_Book_1/1_Reflets_dans_lEau/xml_score.musicxml",
+    "performance": "Debussy/Images_Book_1/1_Reflets_dans_lEau/ParkJH13M.mid",
+    "n_truth": 10,
+    "n_pred": 231,
+    "tol0": {
+      "tp": 1,
+      "fp": 228,
+      "fn": 9,
+      "wrong": 2,
+      "P": 0.0043,
+      "R": 0.1,
+      "F1": 0.0083
+    },
+    "tol1": {
+      "tp": 10,
+      "fp": 202,
+      "fn": 0,
+      "wrong": 19,
+      "P": 0.0433,
+      "R": 1.0,
+      "F1": 0.083
+    },
+    "tol2": {
+      "tp": 8,
+      "fp": 191,
+      "fn": 2,
+      "wrong": 32,
+      "P": 0.0346,
+      "R": 0.8,
+      "F1": 0.0664
+    }
+  },
+  {
+    "score": "Liszt/Ballade_2/xml_score.musicxml",
+    "performance": "Liszt/Ballade_2/Broberg03.mid",
+    "n_truth": 34,
+    "n_pred": 934,
+    "tol0": {
+      "tp": 0,
+      "fp": 927,
+      "fn": 34,
+      "wrong": 7,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 34,
+      "fp": 831,
+      "fn": 0,
+      "wrong": 69,
+      "P": 0.0364,
+      "R": 1.0,
+      "F1": 0.0702
+    },
+    "tol2": {
+      "tp": 25,
+      "fp": 799,
+      "fn": 9,
+      "wrong": 110,
+      "P": 0.0268,
+      "R": 0.7353,
+      "F1": 0.0517
+    }
+  },
+  {
+    "score": "Liszt/Ballade_2/xml_score.musicxml",
+    "performance": "Liszt/Ballade_2/GarritsonL04M.mid",
+    "n_truth": 34,
+    "n_pred": 1202,
+    "tol0": {
+      "tp": 3,
+      "fp": 1187,
+      "fn": 31,
+      "wrong": 12,
+      "P": 0.0025,
+      "R": 0.0882,
+      "F1": 0.0049
+    },
+    "tol1": {
+      "tp": 34,
+      "fp": 1047,
+      "fn": 0,
+      "wrong": 121,
+      "P": 0.0283,
+      "R": 1.0,
+      "F1": 0.055
+    },
+    "tol2": {
+      "tp": 24,
+      "fp": 1011,
+      "fn": 10,
+      "wrong": 167,
+      "P": 0.02,
+      "R": 0.7059,
+      "F1": 0.0388
+    }
+  },
+  {
+    "score": "Liszt/Ballade_2/xml_score.musicxml",
+    "performance": "Liszt/Ballade_2/Jin07M.mid",
+    "n_truth": 34,
+    "n_pred": 1087,
+    "tol0": {
+      "tp": 5,
+      "fp": 1070,
+      "fn": 29,
+      "wrong": 12,
+      "P": 0.0046,
+      "R": 0.1471,
+      "F1": 0.0089
+    },
+    "tol1": {
+      "tp": 34,
+      "fp": 988,
+      "fn": 0,
+      "wrong": 65,
+      "P": 0.0313,
+      "R": 1.0,
+      "F1": 0.0607
+    },
+    "tol2": {
+      "tp": 23,
+      "fp": 957,
+      "fn": 11,
+      "wrong": 107,
+      "P": 0.0212,
+      "R": 0.6765,
+      "F1": 0.041
+    }
+  },
+  {
+    "score": "Liszt/Ballade_2/xml_score.musicxml",
+    "performance": "Liszt/Ballade_2/KIM_J04.mid",
+    "n_truth": 34,
+    "n_pred": 1009,
+    "tol0": {
+      "tp": 2,
+      "fp": 999,
+      "fn": 32,
+      "wrong": 8,
+      "P": 0.002,
+      "R": 0.0588,
+      "F1": 0.0038
+    },
+    "tol1": {
+      "tp": 34,
+      "fp": 871,
+      "fn": 0,
+      "wrong": 104,
+      "P": 0.0337,
+      "R": 1.0,
+      "F1": 0.0652
+    },
+    "tol2": {
+      "tp": 25,
+      "fp": 839,
+      "fn": 9,
+      "wrong": 145,
+      "P": 0.0248,
+      "R": 0.7353,
+      "F1": 0.0479
+    }
+  },
+  {
+    "score": "Liszt/Ballade_2/xml_score.musicxml",
+    "performance": "Liszt/Ballade_2/Min06M.mid",
+    "n_truth": 34,
+    "n_pred": 999,
+    "tol0": {
+      "tp": 3,
+      "fp": 991,
+      "fn": 31,
+      "wrong": 5,
+      "P": 0.003,
+      "R": 0.0882,
+      "F1": 0.0058
+    },
+    "tol1": {
+      "tp": 34,
+      "fp": 887,
+      "fn": 0,
+      "wrong": 78,
+      "P": 0.034,
+      "R": 1.0,
+      "F1": 0.0658
+    },
+    "tol2": {
+      "tp": 23,
+      "fp": 853,
+      "fn": 11,
+      "wrong": 123,
+      "P": 0.023,
+      "R": 0.6765,
+      "F1": 0.0445
+    }
+  },
+  {
+    "score": "Liszt/Ballade_2/xml_score.musicxml",
+    "performance": "Liszt/Ballade_2/Sham05.mid",
+    "n_truth": 34,
+    "n_pred": 1163,
+    "tol0": {
+      "tp": 5,
+      "fp": 1153,
+      "fn": 29,
+      "wrong": 5,
+      "P": 0.0043,
+      "R": 0.1471,
+      "F1": 0.0084
+    },
+    "tol1": {
+      "tp": 34,
+      "fp": 1041,
+      "fn": 0,
+      "wrong": 88,
+      "P": 0.0292,
+      "R": 1.0,
+      "F1": 0.0568
+    },
+    "tol2": {
+      "tp": 22,
+      "fp": 1004,
+      "fn": 12,
+      "wrong": 137,
+      "P": 0.0189,
+      "R": 0.6471,
+      "F1": 0.0368
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Albright04.mid",
+    "n_truth": 14,
+    "n_pred": 490,
+    "tol0": {
+      "tp": 1,
+      "fp": 483,
+      "fn": 13,
+      "wrong": 6,
+      "P": 0.002,
+      "R": 0.0714,
+      "F1": 0.004
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 448,
+      "fn": 1,
+      "wrong": 29,
+      "P": 0.0265,
+      "R": 0.9286,
+      "F1": 0.0516
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 430,
+      "fn": 3,
+      "wrong": 49,
+      "P": 0.0224,
+      "R": 0.7857,
+      "F1": 0.0437
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Ali03.mid",
+    "n_truth": 14,
+    "n_pred": 346,
+    "tol0": {
+      "tp": 4,
+      "fp": 338,
+      "fn": 10,
+      "wrong": 4,
+      "P": 0.0116,
+      "R": 0.2857,
+      "F1": 0.0222
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 319,
+      "fn": 2,
+      "wrong": 15,
+      "P": 0.0347,
+      "R": 0.8571,
+      "F1": 0.0667
+    },
+    "tol2": {
+      "tp": 9,
+      "fp": 306,
+      "fn": 5,
+      "wrong": 31,
+      "P": 0.026,
+      "R": 0.6429,
+      "F1": 0.05
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Bogdanovitch02.mid",
+    "n_truth": 14,
+    "n_pred": 399,
+    "tol0": {
+      "tp": 3,
+      "fp": 395,
+      "fn": 11,
+      "wrong": 1,
+      "P": 0.0075,
+      "R": 0.2143,
+      "F1": 0.0145
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 360,
+      "fn": 1,
+      "wrong": 26,
+      "P": 0.0326,
+      "R": 0.9286,
+      "F1": 0.063
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 341,
+      "fn": 3,
+      "wrong": 47,
+      "P": 0.0276,
+      "R": 0.7857,
+      "F1": 0.0533
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/BuiJL03M.mid",
+    "n_truth": 14,
+    "n_pred": 444,
+    "tol0": {
+      "tp": 4,
+      "fp": 438,
+      "fn": 10,
+      "wrong": 2,
+      "P": 0.009,
+      "R": 0.2857,
+      "F1": 0.0175
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 405,
+      "fn": 1,
+      "wrong": 26,
+      "P": 0.0293,
+      "R": 0.9286,
+      "F1": 0.0568
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 383,
+      "fn": 3,
+      "wrong": 50,
+      "P": 0.0248,
+      "R": 0.7857,
+      "F1": 0.048
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/FALIKS02_2004.mid",
+    "n_truth": 14,
+    "n_pred": 409,
+    "tol0": {
+      "tp": 2,
+      "fp": 404,
+      "fn": 12,
+      "wrong": 3,
+      "P": 0.0049,
+      "R": 0.1429,
+      "F1": 0.0095
+    },
+    "tol1": {
+      "tp": 11,
+      "fp": 381,
+      "fn": 3,
+      "wrong": 17,
+      "P": 0.0269,
+      "R": 0.7857,
+      "F1": 0.052
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 365,
+      "fn": 3,
+      "wrong": 33,
+      "P": 0.0269,
+      "R": 0.7857,
+      "F1": 0.052
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Faliks02.mid",
+    "n_truth": 14,
+    "n_pred": 426,
+    "tol0": {
+      "tp": 2,
+      "fp": 422,
+      "fn": 12,
+      "wrong": 2,
+      "P": 0.0047,
+      "R": 0.1429,
+      "F1": 0.0091
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 396,
+      "fn": 2,
+      "wrong": 18,
+      "P": 0.0282,
+      "R": 0.8571,
+      "F1": 0.0545
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 382,
+      "fn": 3,
+      "wrong": 33,
+      "P": 0.0258,
+      "R": 0.7857,
+      "F1": 0.05
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Faliks03.mid",
+    "n_truth": 14,
+    "n_pred": 449,
+    "tol0": {
+      "tp": 0,
+      "fp": 445,
+      "fn": 14,
+      "wrong": 4,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 421,
+      "fn": 2,
+      "wrong": 16,
+      "P": 0.0267,
+      "R": 0.8571,
+      "F1": 0.0518
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 409,
+      "fn": 3,
+      "wrong": 29,
+      "P": 0.0245,
+      "R": 0.7857,
+      "F1": 0.0475
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Gasanov02.mid",
+    "n_truth": 14,
+    "n_pred": 433,
+    "tol0": {
+      "tp": 5,
+      "fp": 428,
+      "fn": 9,
+      "wrong": 0,
+      "P": 0.0115,
+      "R": 0.3571,
+      "F1": 0.0224
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 396,
+      "fn": 2,
+      "wrong": 25,
+      "P": 0.0277,
+      "R": 0.8571,
+      "F1": 0.0537
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 377,
+      "fn": 3,
+      "wrong": 45,
+      "P": 0.0254,
+      "R": 0.7857,
+      "F1": 0.0492
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/HUAN_J03.mid",
+    "n_truth": 14,
+    "n_pred": 460,
+    "tol0": {
+      "tp": 2,
+      "fp": 453,
+      "fn": 12,
+      "wrong": 5,
+      "P": 0.0043,
+      "R": 0.1429,
+      "F1": 0.0084
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 411,
+      "fn": 1,
+      "wrong": 36,
+      "P": 0.0283,
+      "R": 0.9286,
+      "F1": 0.0549
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 392,
+      "fn": 3,
+      "wrong": 57,
+      "P": 0.0239,
+      "R": 0.7857,
+      "F1": 0.0464
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Hao03.mid",
+    "n_truth": 14,
+    "n_pred": 438,
+    "tol0": {
+      "tp": 1,
+      "fp": 437,
+      "fn": 13,
+      "wrong": 0,
+      "P": 0.0023,
+      "R": 0.0714,
+      "F1": 0.0044
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 395,
+      "fn": 1,
+      "wrong": 30,
+      "P": 0.0297,
+      "R": 0.9286,
+      "F1": 0.0575
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 375,
+      "fn": 3,
+      "wrong": 52,
+      "P": 0.0251,
+      "R": 0.7857,
+      "F1": 0.0487
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/KanM06.mid",
+    "n_truth": 14,
+    "n_pred": 455,
+    "tol0": {
+      "tp": 2,
+      "fp": 448,
+      "fn": 12,
+      "wrong": 5,
+      "P": 0.0044,
+      "R": 0.1429,
+      "F1": 0.0085
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 408,
+      "fn": 1,
+      "wrong": 34,
+      "P": 0.0286,
+      "R": 0.9286,
+      "F1": 0.0554
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 389,
+      "fn": 3,
+      "wrong": 55,
+      "P": 0.0242,
+      "R": 0.7857,
+      "F1": 0.0469
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Kolessova07.mid",
+    "n_truth": 14,
+    "n_pred": 322,
+    "tol0": {
+      "tp": 1,
+      "fp": 320,
+      "fn": 13,
+      "wrong": 1,
+      "P": 0.0031,
+      "R": 0.0714,
+      "F1": 0.006
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 294,
+      "fn": 2,
+      "wrong": 16,
+      "P": 0.0373,
+      "R": 0.8571,
+      "F1": 0.0714
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 283,
+      "fn": 3,
+      "wrong": 28,
+      "P": 0.0342,
+      "R": 0.7857,
+      "F1": 0.0655
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/LeungR04M.mid",
+    "n_truth": 14,
+    "n_pred": 466,
+    "tol0": {
+      "tp": 6,
+      "fp": 460,
+      "fn": 8,
+      "wrong": 0,
+      "P": 0.0129,
+      "R": 0.4286,
+      "F1": 0.025
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 427,
+      "fn": 2,
+      "wrong": 27,
+      "P": 0.0258,
+      "R": 0.8571,
+      "F1": 0.05
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 409,
+      "fn": 3,
+      "wrong": 46,
+      "P": 0.0236,
+      "R": 0.7857,
+      "F1": 0.0458
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Levitsky02.mid",
+    "n_truth": 14,
+    "n_pred": 318,
+    "tol0": {
+      "tp": 2,
+      "fp": 313,
+      "fn": 12,
+      "wrong": 3,
+      "P": 0.0063,
+      "R": 0.1429,
+      "F1": 0.012
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 296,
+      "fn": 5,
+      "wrong": 13,
+      "P": 0.0283,
+      "R": 0.6429,
+      "F1": 0.0542
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 282,
+      "fn": 3,
+      "wrong": 25,
+      "P": 0.0346,
+      "R": 0.7857,
+      "F1": 0.0663
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Levitsky06M.mid",
+    "n_truth": 14,
+    "n_pred": 299,
+    "tol0": {
+      "tp": 4,
+      "fp": 293,
+      "fn": 10,
+      "wrong": 2,
+      "P": 0.0134,
+      "R": 0.2857,
+      "F1": 0.0256
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 272,
+      "fn": 1,
+      "wrong": 14,
+      "P": 0.0435,
+      "R": 0.9286,
+      "F1": 0.0831
+    },
+    "tol2": {
+      "tp": 12,
+      "fp": 259,
+      "fn": 2,
+      "wrong": 28,
+      "P": 0.0401,
+      "R": 0.8571,
+      "F1": 0.0767
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Lin02.mid",
+    "n_truth": 14,
+    "n_pred": 487,
+    "tol0": {
+      "tp": 5,
+      "fp": 482,
+      "fn": 9,
+      "wrong": 0,
+      "P": 0.0103,
+      "R": 0.3571,
+      "F1": 0.02
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 450,
+      "fn": 2,
+      "wrong": 25,
+      "P": 0.0246,
+      "R": 0.8571,
+      "F1": 0.0479
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 431,
+      "fn": 3,
+      "wrong": 45,
+      "P": 0.0226,
+      "R": 0.7857,
+      "F1": 0.0439
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Lin07M.mid",
+    "n_truth": 14,
+    "n_pred": 505,
+    "tol0": {
+      "tp": 7,
+      "fp": 498,
+      "fn": 7,
+      "wrong": 0,
+      "P": 0.0139,
+      "R": 0.5,
+      "F1": 0.027
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 469,
+      "fn": 2,
+      "wrong": 24,
+      "P": 0.0238,
+      "R": 0.8571,
+      "F1": 0.0462
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 452,
+      "fn": 3,
+      "wrong": 42,
+      "P": 0.0218,
+      "R": 0.7857,
+      "F1": 0.0424
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/LiuC05M.mid",
+    "n_truth": 14,
+    "n_pred": 466,
+    "tol0": {
+      "tp": 3,
+      "fp": 463,
+      "fn": 11,
+      "wrong": 0,
+      "P": 0.0064,
+      "R": 0.2143,
+      "F1": 0.0125
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 432,
+      "fn": 2,
+      "wrong": 22,
+      "P": 0.0258,
+      "R": 0.8571,
+      "F1": 0.05
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 414,
+      "fn": 3,
+      "wrong": 41,
+      "P": 0.0236,
+      "R": 0.7857,
+      "F1": 0.0458
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/LiuY03M.mid",
+    "n_truth": 14,
+    "n_pred": 419,
+    "tol0": {
+      "tp": 1,
+      "fp": 414,
+      "fn": 13,
+      "wrong": 4,
+      "P": 0.0024,
+      "R": 0.0714,
+      "F1": 0.0046
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 376,
+      "fn": 1,
+      "wrong": 30,
+      "P": 0.031,
+      "R": 0.9286,
+      "F1": 0.06
+    },
+    "tol2": {
+      "tp": 12,
+      "fp": 360,
+      "fn": 2,
+      "wrong": 47,
+      "P": 0.0286,
+      "R": 0.8571,
+      "F1": 0.0554
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/MunA08M.mid",
+    "n_truth": 14,
+    "n_pred": 413,
+    "tol0": {
+      "tp": 5,
+      "fp": 408,
+      "fn": 9,
+      "wrong": 0,
+      "P": 0.0121,
+      "R": 0.3571,
+      "F1": 0.0234
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 373,
+      "fn": 2,
+      "wrong": 28,
+      "P": 0.0291,
+      "R": 0.8571,
+      "F1": 0.0562
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 355,
+      "fn": 3,
+      "wrong": 47,
+      "P": 0.0266,
+      "R": 0.7857,
+      "F1": 0.0515
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/SEBAST02.mid",
+    "n_truth": 14,
+    "n_pred": 361,
+    "tol0": {
+      "tp": 2,
+      "fp": 356,
+      "fn": 12,
+      "wrong": 3,
+      "P": 0.0055,
+      "R": 0.1429,
+      "F1": 0.0107
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 311,
+      "fn": 1,
+      "wrong": 37,
+      "P": 0.036,
+      "R": 0.9286,
+      "F1": 0.0693
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 289,
+      "fn": 3,
+      "wrong": 61,
+      "P": 0.0305,
+      "R": 0.7857,
+      "F1": 0.0587
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Seredenko02.mid",
+    "n_truth": 14,
+    "n_pred": 580,
+    "tol0": {
+      "tp": 4,
+      "fp": 571,
+      "fn": 10,
+      "wrong": 5,
+      "P": 0.0069,
+      "R": 0.2857,
+      "F1": 0.0135
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 515,
+      "fn": 1,
+      "wrong": 52,
+      "P": 0.0224,
+      "R": 0.9286,
+      "F1": 0.0438
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 498,
+      "fn": 3,
+      "wrong": 71,
+      "P": 0.019,
+      "R": 0.7857,
+      "F1": 0.037
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Sychev03.mid",
+    "n_truth": 14,
+    "n_pred": 383,
+    "tol0": {
+      "tp": 5,
+      "fp": 378,
+      "fn": 9,
+      "wrong": 0,
+      "P": 0.0131,
+      "R": 0.3571,
+      "F1": 0.0252
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 355,
+      "fn": 1,
+      "wrong": 15,
+      "P": 0.0339,
+      "R": 0.9286,
+      "F1": 0.0655
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 337,
+      "fn": 3,
+      "wrong": 35,
+      "P": 0.0287,
+      "R": 0.7857,
+      "F1": 0.0554
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/TET03.mid",
+    "n_truth": 14,
+    "n_pred": 511,
+    "tol0": {
+      "tp": 7,
+      "fp": 501,
+      "fn": 7,
+      "wrong": 3,
+      "P": 0.0137,
+      "R": 0.5,
+      "F1": 0.0267
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 464,
+      "fn": 1,
+      "wrong": 34,
+      "P": 0.0254,
+      "R": 0.9286,
+      "F1": 0.0495
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 444,
+      "fn": 3,
+      "wrong": 56,
+      "P": 0.0215,
+      "R": 0.7857,
+      "F1": 0.0419
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/VuV06M.mid",
+    "n_truth": 14,
+    "n_pred": 455,
+    "tol0": {
+      "tp": 5,
+      "fp": 447,
+      "fn": 9,
+      "wrong": 3,
+      "P": 0.011,
+      "R": 0.3571,
+      "F1": 0.0213
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 409,
+      "fn": 1,
+      "wrong": 33,
+      "P": 0.0286,
+      "R": 0.9286,
+      "F1": 0.0554
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 389,
+      "fn": 3,
+      "wrong": 55,
+      "P": 0.0242,
+      "R": 0.7857,
+      "F1": 0.0469
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Yang05M.mid",
+    "n_truth": 14,
+    "n_pred": 372,
+    "tol0": {
+      "tp": 4,
+      "fp": 362,
+      "fn": 10,
+      "wrong": 6,
+      "P": 0.0108,
+      "R": 0.2857,
+      "F1": 0.0207
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 335,
+      "fn": 1,
+      "wrong": 24,
+      "P": 0.0349,
+      "R": 0.9286,
+      "F1": 0.0674
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 314,
+      "fn": 3,
+      "wrong": 47,
+      "P": 0.0296,
+      "R": 0.7857,
+      "F1": 0.057
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/Yoon02.mid",
+    "n_truth": 14,
+    "n_pred": 446,
+    "tol0": {
+      "tp": 5,
+      "fp": 438,
+      "fn": 9,
+      "wrong": 3,
+      "P": 0.0112,
+      "R": 0.3571,
+      "F1": 0.0217
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 405,
+      "fn": 2,
+      "wrong": 29,
+      "P": 0.0269,
+      "R": 0.8571,
+      "F1": 0.0522
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 388,
+      "fn": 3,
+      "wrong": 47,
+      "P": 0.0247,
+      "R": 0.7857,
+      "F1": 0.0478
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/ZhangH02.mid",
+    "n_truth": 14,
+    "n_pred": 338,
+    "tol0": {
+      "tp": 3,
+      "fp": 332,
+      "fn": 11,
+      "wrong": 3,
+      "P": 0.0089,
+      "R": 0.2143,
+      "F1": 0.017
+    },
+    "tol1": {
+      "tp": 12,
+      "fp": 300,
+      "fn": 2,
+      "wrong": 26,
+      "P": 0.0355,
+      "R": 0.8571,
+      "F1": 0.0682
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 282,
+      "fn": 3,
+      "wrong": 45,
+      "P": 0.0325,
+      "R": 0.7857,
+      "F1": 0.0625
+    }
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "performance": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/ZhangH07M.mid",
+    "n_truth": 14,
+    "n_pred": 310,
+    "tol0": {
+      "tp": 3,
+      "fp": 305,
+      "fn": 11,
+      "wrong": 2,
+      "P": 0.0097,
+      "R": 0.2143,
+      "F1": 0.0185
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 270,
+      "fn": 1,
+      "wrong": 27,
+      "P": 0.0419,
+      "R": 0.9286,
+      "F1": 0.0802
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 258,
+      "fn": 3,
+      "wrong": 41,
+      "P": 0.0355,
+      "R": 0.7857,
+      "F1": 0.0679
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/CaoJ03M.mid",
+    "n_truth": 10,
+    "n_pred": 623,
+    "tol0": {
+      "tp": 2,
+      "fp": 620,
+      "fn": 8,
+      "wrong": 1,
+      "P": 0.0032,
+      "R": 0.2,
+      "F1": 0.0063
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 608,
+      "fn": 3,
+      "wrong": 8,
+      "P": 0.0112,
+      "R": 0.7,
+      "F1": 0.0221
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 599,
+      "fn": 4,
+      "wrong": 18,
+      "P": 0.0096,
+      "R": 0.6,
+      "F1": 0.019
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/Goldberg02.mid",
+    "n_truth": 10,
+    "n_pred": 619,
+    "tol0": {
+      "tp": 3,
+      "fp": 612,
+      "fn": 7,
+      "wrong": 4,
+      "P": 0.0048,
+      "R": 0.3,
+      "F1": 0.0095
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 604,
+      "fn": 3,
+      "wrong": 8,
+      "P": 0.0113,
+      "R": 0.7,
+      "F1": 0.0223
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 595,
+      "fn": 4,
+      "wrong": 18,
+      "P": 0.0097,
+      "R": 0.6,
+      "F1": 0.0191
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/HAGINO03.mid",
+    "n_truth": 10,
+    "n_pred": 610,
+    "tol0": {
+      "tp": 1,
+      "fp": 606,
+      "fn": 9,
+      "wrong": 3,
+      "P": 0.0016,
+      "R": 0.1,
+      "F1": 0.0032
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 595,
+      "fn": 3,
+      "wrong": 8,
+      "P": 0.0115,
+      "R": 0.7,
+      "F1": 0.0226
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 586,
+      "fn": 4,
+      "wrong": 18,
+      "P": 0.0098,
+      "R": 0.6,
+      "F1": 0.0194
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/Huang17M.mid",
+    "n_truth": 10,
+    "n_pred": 567,
+    "tol0": {
+      "tp": 4,
+      "fp": 560,
+      "fn": 6,
+      "wrong": 3,
+      "P": 0.0071,
+      "R": 0.4,
+      "F1": 0.0139
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 547,
+      "fn": 3,
+      "wrong": 13,
+      "P": 0.0123,
+      "R": 0.7,
+      "F1": 0.0243
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 540,
+      "fn": 4,
+      "wrong": 21,
+      "P": 0.0106,
+      "R": 0.6,
+      "F1": 0.0208
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/Hwang03.mid",
+    "n_truth": 10,
+    "n_pred": 523,
+    "tol0": {
+      "tp": 4,
+      "fp": 517,
+      "fn": 6,
+      "wrong": 2,
+      "P": 0.0076,
+      "R": 0.4,
+      "F1": 0.015
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 508,
+      "fn": 3,
+      "wrong": 8,
+      "P": 0.0134,
+      "R": 0.7,
+      "F1": 0.0263
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 499,
+      "fn": 4,
+      "wrong": 18,
+      "P": 0.0115,
+      "R": 0.6,
+      "F1": 0.0225
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/Kim02.mid",
+    "n_truth": 10,
+    "n_pred": 512,
+    "tol0": {
+      "tp": 2,
+      "fp": 508,
+      "fn": 8,
+      "wrong": 2,
+      "P": 0.0039,
+      "R": 0.2,
+      "F1": 0.0077
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 498,
+      "fn": 3,
+      "wrong": 7,
+      "P": 0.0137,
+      "R": 0.7,
+      "F1": 0.0268
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 491,
+      "fn": 4,
+      "wrong": 15,
+      "P": 0.0117,
+      "R": 0.6,
+      "F1": 0.023
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/Ladid02.mid",
+    "n_truth": 10,
+    "n_pred": 554,
+    "tol0": {
+      "tp": 4,
+      "fp": 546,
+      "fn": 6,
+      "wrong": 4,
+      "P": 0.0072,
+      "R": 0.4,
+      "F1": 0.0142
+    },
+    "tol1": {
+      "tp": 6,
+      "fp": 538,
+      "fn": 4,
+      "wrong": 10,
+      "P": 0.0108,
+      "R": 0.6,
+      "F1": 0.0213
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 532,
+      "fn": 4,
+      "wrong": 16,
+      "P": 0.0108,
+      "R": 0.6,
+      "F1": 0.0213
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/LeungM06M.mid",
+    "n_truth": 10,
+    "n_pred": 622,
+    "tol0": {
+      "tp": 1,
+      "fp": 616,
+      "fn": 9,
+      "wrong": 5,
+      "P": 0.0016,
+      "R": 0.1,
+      "F1": 0.0032
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 607,
+      "fn": 3,
+      "wrong": 8,
+      "P": 0.0113,
+      "R": 0.7,
+      "F1": 0.0222
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 598,
+      "fn": 4,
+      "wrong": 18,
+      "P": 0.0096,
+      "R": 0.6,
+      "F1": 0.019
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/MCVEY02.mid",
+    "n_truth": 10,
+    "n_pred": 623,
+    "tol0": {
+      "tp": 2,
+      "fp": 617,
+      "fn": 8,
+      "wrong": 4,
+      "P": 0.0032,
+      "R": 0.2,
+      "F1": 0.0063
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 607,
+      "fn": 3,
+      "wrong": 9,
+      "P": 0.0112,
+      "R": 0.7,
+      "F1": 0.0221
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 599,
+      "fn": 4,
+      "wrong": 18,
+      "P": 0.0096,
+      "R": 0.6,
+      "F1": 0.019
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/MorozovY03.mid",
+    "n_truth": 10,
+    "n_pred": 610,
+    "tol0": {
+      "tp": 1,
+      "fp": 605,
+      "fn": 9,
+      "wrong": 4,
+      "P": 0.0016,
+      "R": 0.1,
+      "F1": 0.0032
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 594,
+      "fn": 3,
+      "wrong": 9,
+      "P": 0.0115,
+      "R": 0.7,
+      "F1": 0.0226
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 587,
+      "fn": 4,
+      "wrong": 17,
+      "P": 0.0098,
+      "R": 0.6,
+      "F1": 0.0194
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/Qin03.mid",
+    "n_truth": 10,
+    "n_pred": 492,
+    "tol0": {
+      "tp": 2,
+      "fp": 488,
+      "fn": 8,
+      "wrong": 2,
+      "P": 0.0041,
+      "R": 0.2,
+      "F1": 0.008
+    },
+    "tol1": {
+      "tp": 6,
+      "fp": 476,
+      "fn": 4,
+      "wrong": 10,
+      "P": 0.0122,
+      "R": 0.6,
+      "F1": 0.0239
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 468,
+      "fn": 4,
+      "wrong": 18,
+      "P": 0.0122,
+      "R": 0.6,
+      "F1": 0.0239
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/SUDBIN02.mid",
+    "n_truth": 10,
+    "n_pred": 523,
+    "tol0": {
+      "tp": 0,
+      "fp": 520,
+      "fn": 10,
+      "wrong": 3,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 507,
+      "fn": 3,
+      "wrong": 9,
+      "P": 0.0134,
+      "R": 0.7,
+      "F1": 0.0263
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 500,
+      "fn": 4,
+      "wrong": 17,
+      "P": 0.0115,
+      "R": 0.6,
+      "F1": 0.0225
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/Shamray02.mid",
+    "n_truth": 10,
+    "n_pred": 593,
+    "tol0": {
+      "tp": 1,
+      "fp": 587,
+      "fn": 9,
+      "wrong": 5,
+      "P": 0.0017,
+      "R": 0.1,
+      "F1": 0.0033
+    },
+    "tol1": {
+      "tp": 6,
+      "fp": 577,
+      "fn": 4,
+      "wrong": 10,
+      "P": 0.0101,
+      "R": 0.6,
+      "F1": 0.0199
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 569,
+      "fn": 4,
+      "wrong": 18,
+      "P": 0.0101,
+      "R": 0.6,
+      "F1": 0.0199
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/Tran02.mid",
+    "n_truth": 10,
+    "n_pred": 565,
+    "tol0": {
+      "tp": 0,
+      "fp": 561,
+      "fn": 10,
+      "wrong": 4,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 550,
+      "fn": 3,
+      "wrong": 8,
+      "P": 0.0124,
+      "R": 0.7,
+      "F1": 0.0243
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 541,
+      "fn": 4,
+      "wrong": 18,
+      "P": 0.0106,
+      "R": 0.6,
+      "F1": 0.0209
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/Uiasiuk03.mid",
+    "n_truth": 10,
+    "n_pred": 575,
+    "tol0": {
+      "tp": 2,
+      "fp": 568,
+      "fn": 8,
+      "wrong": 5,
+      "P": 0.0035,
+      "R": 0.2,
+      "F1": 0.0068
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 560,
+      "fn": 3,
+      "wrong": 8,
+      "P": 0.0122,
+      "R": 0.7,
+      "F1": 0.0239
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 552,
+      "fn": 4,
+      "wrong": 17,
+      "P": 0.0104,
+      "R": 0.6,
+      "F1": 0.0205
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/10/Yeletskiy03.mid",
+    "n_truth": 10,
+    "n_pred": 527,
+    "tol0": {
+      "tp": 2,
+      "fp": 521,
+      "fn": 8,
+      "wrong": 4,
+      "P": 0.0038,
+      "R": 0.2,
+      "F1": 0.0074
+    },
+    "tol1": {
+      "tp": 6,
+      "fp": 512,
+      "fn": 4,
+      "wrong": 9,
+      "P": 0.0114,
+      "R": 0.6,
+      "F1": 0.0223
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 504,
+      "fn": 4,
+      "wrong": 17,
+      "P": 0.0114,
+      "R": 0.6,
+      "F1": 0.0223
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/5/Gryaznov02.mid",
+    "n_truth": 10,
+    "n_pred": 233,
+    "tol0": {
+      "tp": 2,
+      "fp": 230,
+      "fn": 8,
+      "wrong": 1,
+      "P": 0.0086,
+      "R": 0.2,
+      "F1": 0.0165
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 202,
+      "fn": 1,
+      "wrong": 22,
+      "P": 0.0386,
+      "R": 0.9,
+      "F1": 0.0741
+    },
+    "tol2": {
+      "tp": 8,
+      "fp": 184,
+      "fn": 2,
+      "wrong": 41,
+      "P": 0.0343,
+      "R": 0.8,
+      "F1": 0.0658
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/5/HUAN_B03.mid",
+    "n_truth": 10,
+    "n_pred": 337,
+    "tol0": {
+      "tp": 3,
+      "fp": 333,
+      "fn": 7,
+      "wrong": 1,
+      "P": 0.0089,
+      "R": 0.3,
+      "F1": 0.0173
+    },
+    "tol1": {
+      "tp": 8,
+      "fp": 309,
+      "fn": 2,
+      "wrong": 20,
+      "P": 0.0237,
+      "R": 0.8,
+      "F1": 0.0461
+    },
+    "tol2": {
+      "tp": 9,
+      "fp": 286,
+      "fn": 1,
+      "wrong": 42,
+      "P": 0.0267,
+      "R": 0.9,
+      "F1": 0.0519
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/5/Huang16M.mid",
+    "n_truth": 10,
+    "n_pred": 283,
+    "tol0": {
+      "tp": 3,
+      "fp": 279,
+      "fn": 7,
+      "wrong": 1,
+      "P": 0.0106,
+      "R": 0.3,
+      "F1": 0.0205
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 249,
+      "fn": 1,
+      "wrong": 25,
+      "P": 0.0318,
+      "R": 0.9,
+      "F1": 0.0614
+    },
+    "tol2": {
+      "tp": 9,
+      "fp": 225,
+      "fn": 1,
+      "wrong": 49,
+      "P": 0.0318,
+      "R": 0.9,
+      "F1": 0.0614
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/5/Huangci01.mid",
+    "n_truth": 10,
+    "n_pred": 395,
+    "tol0": {
+      "tp": 5,
+      "fp": 388,
+      "fn": 5,
+      "wrong": 2,
+      "P": 0.0127,
+      "R": 0.5,
+      "F1": 0.0247
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 354,
+      "fn": 1,
+      "wrong": 32,
+      "P": 0.0228,
+      "R": 0.9,
+      "F1": 0.0444
+    },
+    "tol2": {
+      "tp": 9,
+      "fp": 330,
+      "fn": 1,
+      "wrong": 56,
+      "P": 0.0228,
+      "R": 0.9,
+      "F1": 0.0444
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/5/KIM_W02.mid",
+    "n_truth": 10,
+    "n_pred": 416,
+    "tol0": {
+      "tp": 6,
+      "fp": 407,
+      "fn": 4,
+      "wrong": 3,
+      "P": 0.0144,
+      "R": 0.6,
+      "F1": 0.0282
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 370,
+      "fn": 1,
+      "wrong": 37,
+      "P": 0.0216,
+      "R": 0.9,
+      "F1": 0.0423
+    },
+    "tol2": {
+      "tp": 9,
+      "fp": 345,
+      "fn": 1,
+      "wrong": 62,
+      "P": 0.0216,
+      "R": 0.9,
+      "F1": 0.0423
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/5/LiuY06M.mid",
+    "n_truth": 10,
+    "n_pred": 576,
+    "tol0": {
+      "tp": 7,
+      "fp": 566,
+      "fn": 3,
+      "wrong": 3,
+      "P": 0.0122,
+      "R": 0.7,
+      "F1": 0.0239
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 532,
+      "fn": 1,
+      "wrong": 35,
+      "P": 0.0156,
+      "R": 0.9,
+      "F1": 0.0307
+    },
+    "tol2": {
+      "tp": 9,
+      "fp": 503,
+      "fn": 1,
+      "wrong": 64,
+      "P": 0.0156,
+      "R": 0.9,
+      "F1": 0.0307
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/5/Min03M.mid",
+    "n_truth": 10,
+    "n_pred": 344,
+    "tol0": {
+      "tp": 5,
+      "fp": 337,
+      "fn": 5,
+      "wrong": 2,
+      "P": 0.0145,
+      "R": 0.5,
+      "F1": 0.0282
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 304,
+      "fn": 1,
+      "wrong": 31,
+      "P": 0.0262,
+      "R": 0.9,
+      "F1": 0.0508
+    },
+    "tol2": {
+      "tp": 9,
+      "fp": 282,
+      "fn": 1,
+      "wrong": 53,
+      "P": 0.0262,
+      "R": 0.9,
+      "F1": 0.0508
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/5/Park03M.mid",
+    "n_truth": 10,
+    "n_pred": 353,
+    "tol0": {
+      "tp": 5,
+      "fp": 348,
+      "fn": 5,
+      "wrong": 0,
+      "P": 0.0142,
+      "R": 0.5,
+      "F1": 0.0275
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 327,
+      "fn": 1,
+      "wrong": 17,
+      "P": 0.0255,
+      "R": 0.9,
+      "F1": 0.0496
+    },
+    "tol2": {
+      "tp": 8,
+      "fp": 310,
+      "fn": 2,
+      "wrong": 35,
+      "P": 0.0227,
+      "R": 0.8,
+      "F1": 0.0441
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/5/Sun09.mid",
+    "n_truth": 10,
+    "n_pred": 448,
+    "tol0": {
+      "tp": 4,
+      "fp": 442,
+      "fn": 6,
+      "wrong": 2,
+      "P": 0.0089,
+      "R": 0.4,
+      "F1": 0.0175
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 405,
+      "fn": 1,
+      "wrong": 34,
+      "P": 0.0201,
+      "R": 0.9,
+      "F1": 0.0393
+    },
+    "tol2": {
+      "tp": 9,
+      "fp": 373,
+      "fn": 1,
+      "wrong": 66,
+      "P": 0.0201,
+      "R": 0.9,
+      "F1": 0.0393
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/5/Wang06M.mid",
+    "n_truth": 10,
+    "n_pred": 372,
+    "tol0": {
+      "tp": 4,
+      "fp": 366,
+      "fn": 6,
+      "wrong": 2,
+      "P": 0.0108,
+      "R": 0.4,
+      "F1": 0.0209
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 342,
+      "fn": 1,
+      "wrong": 21,
+      "P": 0.0242,
+      "R": 0.9,
+      "F1": 0.0471
+    },
+    "tol2": {
+      "tp": 8,
+      "fp": 322,
+      "fn": 2,
+      "wrong": 42,
+      "P": 0.0215,
+      "R": 0.8,
+      "F1": 0.0419
+    }
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "performance": "Liszt/Transcendental_Etudes/5/WangY02M.mid",
+    "n_truth": 10,
+    "n_pred": 504,
+    "tol0": {
+      "tp": 5,
+      "fp": 499,
+      "fn": 5,
+      "wrong": 0,
+      "P": 0.0099,
+      "R": 0.5,
+      "F1": 0.0195
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 472,
+      "fn": 1,
+      "wrong": 23,
+      "P": 0.0179,
+      "R": 0.9,
+      "F1": 0.035
+    },
+    "tol2": {
+      "tp": 9,
+      "fp": 452,
+      "fn": 1,
+      "wrong": 43,
+      "P": 0.0179,
+      "R": 0.9,
+      "F1": 0.035
+    }
+  },
+  {
+    "score": "Ravel/Pavane/xml_score.musicxml",
+    "performance": "Ravel/Pavane/ChenS03.mid",
+    "n_truth": 4,
+    "n_pred": 298,
+    "tol0": {
+      "tp": 2,
+      "fp": 295,
+      "fn": 2,
+      "wrong": 1,
+      "P": 0.0067,
+      "R": 0.5,
+      "F1": 0.0132
+    },
+    "tol1": {
+      "tp": 4,
+      "fp": 285,
+      "fn": 0,
+      "wrong": 9,
+      "P": 0.0134,
+      "R": 1.0,
+      "F1": 0.0265
+    },
+    "tol2": {
+      "tp": 3,
+      "fp": 283,
+      "fn": 1,
+      "wrong": 12,
+      "P": 0.0101,
+      "R": 0.75,
+      "F1": 0.0199
+    }
+  },
+  {
+    "score": "Ravel/Pavane/xml_score.musicxml",
+    "performance": "Ravel/Pavane/Zhdanov08.mid",
+    "n_truth": 4,
+    "n_pred": 252,
+    "tol0": {
+      "tp": 1,
+      "fp": 251,
+      "fn": 3,
+      "wrong": 0,
+      "P": 0.004,
+      "R": 0.25,
+      "F1": 0.0078
+    },
+    "tol1": {
+      "tp": 3,
+      "fp": 238,
+      "fn": 1,
+      "wrong": 11,
+      "P": 0.0119,
+      "R": 0.75,
+      "F1": 0.0234
+    },
+    "tol2": {
+      "tp": 3,
+      "fp": 238,
+      "fn": 1,
+      "wrong": 11,
+      "P": 0.0119,
+      "R": 0.75,
+      "F1": 0.0234
+    }
+  },
+  {
+    "score": "Schumann/Kreisleriana/4/xml_score.musicxml",
+    "performance": "Schumann/Kreisleriana/4/ParkJH07.mid",
+    "n_truth": 6,
+    "n_pred": 239,
+    "tol0": {
+      "tp": 2,
+      "fp": 234,
+      "fn": 4,
+      "wrong": 3,
+      "P": 0.0084,
+      "R": 0.3333,
+      "F1": 0.0163
+    },
+    "tol1": {
+      "tp": 6,
+      "fp": 174,
+      "fn": 0,
+      "wrong": 59,
+      "P": 0.0251,
+      "R": 1.0,
+      "F1": 0.049
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 114,
+      "fn": 0,
+      "wrong": 119,
+      "P": 0.0251,
+      "R": 1.0,
+      "F1": 0.049
+    }
+  },
+  {
+    "score": "Schumann/Kreisleriana/4/xml_score.musicxml",
+    "performance": "Schumann/Kreisleriana/4/Yarden09.mid",
+    "n_truth": 6,
+    "n_pred": 234,
+    "tol0": {
+      "tp": 2,
+      "fp": 230,
+      "fn": 4,
+      "wrong": 2,
+      "P": 0.0085,
+      "R": 0.3333,
+      "F1": 0.0167
+    },
+    "tol1": {
+      "tp": 6,
+      "fp": 167,
+      "fn": 0,
+      "wrong": 61,
+      "P": 0.0256,
+      "R": 1.0,
+      "F1": 0.05
+    },
+    "tol2": {
+      "tp": 6,
+      "fp": 113,
+      "fn": 0,
+      "wrong": 115,
+      "P": 0.0256,
+      "R": 1.0,
+      "F1": 0.05
+    }
+  },
+  {
+    "score": "Schumann/Kreisleriana/6/xml_score.musicxml",
+    "performance": "Schumann/Kreisleriana/6/JohannsonP07.mid",
+    "n_truth": 12,
+    "n_pred": 241,
+    "tol0": {
+      "tp": 9,
+      "fp": 222,
+      "fn": 3,
+      "wrong": 10,
+      "P": 0.0373,
+      "R": 0.75,
+      "F1": 0.0711
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 170,
+      "fn": 5,
+      "wrong": 64,
+      "P": 0.029,
+      "R": 0.5833,
+      "F1": 0.0553
+    },
+    "tol2": {
+      "tp": 7,
+      "fp": 121,
+      "fn": 5,
+      "wrong": 113,
+      "P": 0.029,
+      "R": 0.5833,
+      "F1": 0.0553
+    }
+  },
+  {
+    "score": "Schumann/Kreisleriana/6/xml_score.musicxml",
+    "performance": "Schumann/Kreisleriana/6/ParkJH09.mid",
+    "n_truth": 12,
+    "n_pred": 256,
+    "tol0": {
+      "tp": 5,
+      "fp": 242,
+      "fn": 7,
+      "wrong": 9,
+      "P": 0.0195,
+      "R": 0.4167,
+      "F1": 0.0373
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 169,
+      "fn": 5,
+      "wrong": 80,
+      "P": 0.0273,
+      "R": 0.5833,
+      "F1": 0.0522
+    },
+    "tol2": {
+      "tp": 7,
+      "fp": 122,
+      "fn": 5,
+      "wrong": 127,
+      "P": 0.0273,
+      "R": 0.5833,
+      "F1": 0.0522
+    }
+  },
+  {
+    "score": "Schumann/Kreisleriana/6/xml_score.musicxml",
+    "performance": "Schumann/Kreisleriana/6/Yarden09.mid",
+    "n_truth": 12,
+    "n_pred": 249,
+    "tol0": {
+      "tp": 6,
+      "fp": 236,
+      "fn": 6,
+      "wrong": 7,
+      "P": 0.0241,
+      "R": 0.5,
+      "F1": 0.046
+    },
+    "tol1": {
+      "tp": 7,
+      "fp": 172,
+      "fn": 5,
+      "wrong": 70,
+      "P": 0.0281,
+      "R": 0.5833,
+      "F1": 0.0536
+    },
+    "tol2": {
+      "tp": 7,
+      "fp": 126,
+      "fn": 5,
+      "wrong": 116,
+      "P": 0.0281,
+      "R": 0.5833,
+      "F1": 0.0536
+    }
+  },
+  {
+    "score": "Scriabin/Etudes_op_8/11/xml_score.musicxml",
+    "performance": "Scriabin/Etudes_op_8/11/Shi03.mid",
+    "n_truth": 2,
+    "n_pred": 252,
+    "tol0": {
+      "tp": 2,
+      "fp": 248,
+      "fn": 0,
+      "wrong": 2,
+      "P": 0.0079,
+      "R": 1.0,
+      "F1": 0.0157
+    },
+    "tol1": {
+      "tp": 2,
+      "fp": 236,
+      "fn": 0,
+      "wrong": 14,
+      "P": 0.0079,
+      "R": 1.0,
+      "F1": 0.0157
+    },
+    "tol2": {
+      "tp": 2,
+      "fp": 221,
+      "fn": 0,
+      "wrong": 29,
+      "P": 0.0079,
+      "R": 1.0,
+      "F1": 0.0157
+    }
+  },
+  {
+    "score": "Scriabin/Etudes_op_8/11/xml_score.musicxml",
+    "performance": "Scriabin/Etudes_op_8/11/Shi08M.mid",
+    "n_truth": 2,
+    "n_pred": 251,
+    "tol0": {
+      "tp": 1,
+      "fp": 250,
+      "fn": 1,
+      "wrong": 0,
+      "P": 0.004,
+      "R": 0.5,
+      "F1": 0.0079
+    },
+    "tol1": {
+      "tp": 2,
+      "fp": 239,
+      "fn": 0,
+      "wrong": 10,
+      "P": 0.008,
+      "R": 1.0,
+      "F1": 0.0158
+    },
+    "tol2": {
+      "tp": 2,
+      "fp": 227,
+      "fn": 0,
+      "wrong": 22,
+      "P": 0.008,
+      "R": 1.0,
+      "F1": 0.0158
+    }
+  },
+  {
+    "score": "Scriabin/Etudes_op_8/11/xml_score.musicxml",
+    "performance": "Scriabin/Etudes_op_8/11/YeF09.mid",
+    "n_truth": 2,
+    "n_pred": 312,
+    "tol0": {
+      "tp": 1,
+      "fp": 310,
+      "fn": 1,
+      "wrong": 1,
+      "P": 0.0032,
+      "R": 0.5,
+      "F1": 0.0064
+    },
+    "tol1": {
+      "tp": 2,
+      "fp": 297,
+      "fn": 0,
+      "wrong": 13,
+      "P": 0.0064,
+      "R": 1.0,
+      "F1": 0.0127
+    },
+    "tol2": {
+      "tp": 2,
+      "fp": 282,
+      "fn": 0,
+      "wrong": 28,
+      "P": 0.0064,
+      "R": 1.0,
+      "F1": 0.0127
+    }
+  },
+  {
+    "score": "Scriabin/Sonatas/5/xml_score.musicxml",
+    "performance": "Scriabin/Sonatas/5/ChernovA06M.mid",
+    "n_truth": 17,
+    "n_pred": 699,
+    "tol0": {
+      "tp": 0,
+      "fp": 698,
+      "fn": 17,
+      "wrong": 1,
+      "P": 0.0,
+      "R": 0.0,
+      "F1": 0.0
+    },
+    "tol1": {
+      "tp": 9,
+      "fp": 671,
+      "fn": 8,
+      "wrong": 19,
+      "P": 0.0129,
+      "R": 0.5294,
+      "F1": 0.0251
+    },
+    "tol2": {
+      "tp": 11,
+      "fp": 654,
+      "fn": 6,
+      "wrong": 34,
+      "P": 0.0157,
+      "R": 0.6471,
+      "F1": 0.0307
+    }
+  },
+  {
+    "score": "Scriabin/Sonatas/5/xml_score.musicxml",
+    "performance": "Scriabin/Sonatas/5/FALIKS06.mid",
+    "n_truth": 17,
+    "n_pred": 643,
+    "tol0": {
+      "tp": 1,
+      "fp": 639,
+      "fn": 16,
+      "wrong": 3,
+      "P": 0.0016,
+      "R": 0.0588,
+      "F1": 0.003
+    },
+    "tol1": {
+      "tp": 16,
+      "fp": 608,
+      "fn": 1,
+      "wrong": 19,
+      "P": 0.0249,
+      "R": 0.9412,
+      "F1": 0.0485
+    },
+    "tol2": {
+      "tp": 16,
+      "fp": 588,
+      "fn": 1,
+      "wrong": 39,
+      "P": 0.0249,
+      "R": 0.9412,
+      "F1": 0.0485
+    }
+  },
+  {
+    "score": "Scriabin/Sonatas/5/xml_score.musicxml",
+    "performance": "Scriabin/Sonatas/5/FaB05M.mid",
+    "n_truth": 17,
+    "n_pred": 520,
+    "tol0": {
+      "tp": 3,
+      "fp": 516,
+      "fn": 14,
+      "wrong": 1,
+      "P": 0.0058,
+      "R": 0.1765,
+      "F1": 0.0112
+    },
+    "tol1": {
+      "tp": 16,
+      "fp": 485,
+      "fn": 1,
+      "wrong": 19,
+      "P": 0.0308,
+      "R": 0.9412,
+      "F1": 0.0596
+    },
+    "tol2": {
+      "tp": 15,
+      "fp": 466,
+      "fn": 2,
+      "wrong": 39,
+      "P": 0.0288,
+      "R": 0.8824,
+      "F1": 0.0559
+    }
+  },
+  {
+    "score": "Scriabin/Sonatas/5/xml_score.musicxml",
+    "performance": "Scriabin/Sonatas/5/GarritsonL06M.mid",
+    "n_truth": 17,
+    "n_pred": 827,
+    "tol0": {
+      "tp": 4,
+      "fp": 821,
+      "fn": 13,
+      "wrong": 2,
+      "P": 0.0048,
+      "R": 0.2353,
+      "F1": 0.0095
+    },
+    "tol1": {
+      "tp": 16,
+      "fp": 788,
+      "fn": 1,
+      "wrong": 23,
+      "P": 0.0193,
+      "R": 0.9412,
+      "F1": 0.0379
+    },
+    "tol2": {
+      "tp": 15,
+      "fp": 757,
+      "fn": 2,
+      "wrong": 55,
+      "P": 0.0181,
+      "R": 0.8824,
+      "F1": 0.0355
+    }
+  },
+  {
+    "score": "Scriabin/Sonatas/5/xml_score.musicxml",
+    "performance": "Scriabin/Sonatas/5/Ko07M.mid",
+    "n_truth": 17,
+    "n_pred": 855,
+    "tol0": {
+      "tp": 1,
+      "fp": 853,
+      "fn": 16,
+      "wrong": 1,
+      "P": 0.0012,
+      "R": 0.0588,
+      "F1": 0.0023
+    },
+    "tol1": {
+      "tp": 15,
+      "fp": 817,
+      "fn": 2,
+      "wrong": 23,
+      "P": 0.0175,
+      "R": 0.8824,
+      "F1": 0.0344
+    },
+    "tol2": {
+      "tp": 16,
+      "fp": 801,
+      "fn": 1,
+      "wrong": 38,
+      "P": 0.0187,
+      "R": 0.9412,
+      "F1": 0.0367
+    }
+  },
+  {
+    "score": "Scriabin/Sonatas/5/xml_score.musicxml",
+    "performance": "Scriabin/Sonatas/5/Na03.mid",
+    "n_truth": 17,
+    "n_pred": 791,
+    "tol0": {
+      "tp": 4,
+      "fp": 785,
+      "fn": 13,
+      "wrong": 2,
+      "P": 0.0051,
+      "R": 0.2353,
+      "F1": 0.0099
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 760,
+      "fn": 4,
+      "wrong": 18,
+      "P": 0.0164,
+      "R": 0.7647,
+      "F1": 0.0322
+    },
+    "tol2": {
+      "tp": 14,
+      "fp": 742,
+      "fn": 3,
+      "wrong": 35,
+      "P": 0.0177,
+      "R": 0.8235,
+      "F1": 0.0347
+    }
+  },
+  {
+    "score": "Scriabin/Sonatas/5/xml_score.musicxml",
+    "performance": "Scriabin/Sonatas/5/Na07M.mid",
+    "n_truth": 17,
+    "n_pred": 809,
+    "tol0": {
+      "tp": 3,
+      "fp": 805,
+      "fn": 14,
+      "wrong": 1,
+      "P": 0.0037,
+      "R": 0.1765,
+      "F1": 0.0073
+    },
+    "tol1": {
+      "tp": 13,
+      "fp": 772,
+      "fn": 4,
+      "wrong": 24,
+      "P": 0.0161,
+      "R": 0.7647,
+      "F1": 0.0315
+    },
+    "tol2": {
+      "tp": 14,
+      "fp": 749,
+      "fn": 3,
+      "wrong": 46,
+      "P": 0.0173,
+      "R": 0.8235,
+      "F1": 0.0339
+    }
+  },
+  {
+    "score": "Scriabin/Sonatas/5/xml_score.musicxml",
+    "performance": "Scriabin/Sonatas/5/TET02.mid",
+    "n_truth": 17,
+    "n_pred": 830,
+    "tol0": {
+      "tp": 3,
+      "fp": 825,
+      "fn": 14,
+      "wrong": 2,
+      "P": 0.0036,
+      "R": 0.1765,
+      "F1": 0.0071
+    },
+    "tol1": {
+      "tp": 15,
+      "fp": 793,
+      "fn": 2,
+      "wrong": 22,
+      "P": 0.0181,
+      "R": 0.8824,
+      "F1": 0.0354
+    },
+    "tol2": {
+      "tp": 14,
+      "fp": 774,
+      "fn": 3,
+      "wrong": 42,
+      "P": 0.0169,
+      "R": 0.8235,
+      "F1": 0.0331
+    }
+  },
+  {
+    "score": "Scriabin/Sonatas/5/xml_score.musicxml",
+    "performance": "Scriabin/Sonatas/5/Yeletskiy02.mid",
+    "n_truth": 17,
+    "n_pred": 606,
+    "tol0": {
+      "tp": 3,
+      "fp": 603,
+      "fn": 14,
+      "wrong": 0,
+      "P": 0.005,
+      "R": 0.1765,
+      "F1": 0.0096
+    },
+    "tol1": {
+      "tp": 17,
+      "fp": 561,
+      "fn": 0,
+      "wrong": 28,
+      "P": 0.0281,
+      "R": 1.0,
+      "F1": 0.0546
+    },
+    "tol2": {
+      "tp": 15,
+      "fp": 541,
+      "fn": 2,
+      "wrong": 50,
+      "P": 0.0248,
+      "R": 0.8824,
+      "F1": 0.0482
+    }
+  },
+  {
+    "score": "Scriabin/Sonatas/5/xml_score.musicxml",
+    "performance": "Scriabin/Sonatas/5/Yeletskiy07M.mid",
+    "n_truth": 17,
+    "n_pred": 513,
+    "tol0": {
+      "tp": 3,
+      "fp": 505,
+      "fn": 14,
+      "wrong": 5,
+      "P": 0.0058,
+      "R": 0.1765,
+      "F1": 0.0113
+    },
+    "tol1": {
+      "tp": 17,
+      "fp": 478,
+      "fn": 0,
+      "wrong": 18,
+      "P": 0.0331,
+      "R": 1.0,
+      "F1": 0.0642
+    },
+    "tol2": {
+      "tp": 15,
+      "fp": 460,
+      "fn": 2,
+      "wrong": 38,
+      "P": 0.0292,
+      "R": 0.8824,
+      "F1": 0.0566
+    }
+  }
+]
