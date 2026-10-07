@@ -9,7 +9,7 @@
 - **当前阶段**：阶段 1 —— 项目规则与科研任务文件
 - **阶段状态**：交付物已完成、文档级校验 PASS、**阶段 1 已提交（单一干净提交）**；等待用户确认后进入阶段 2
 - **活动任务**：`PHASE-1`
-- **分支**：`main`（本地仓库，尚无远程）
+- **分支**：`main` → `origin/main`（https://github.com/nx137/midi2score.git，已推送）
 - **thread_id 约定**（阶段 2 实现）：`research:midi2score:<task_id>`，稳定可推导，禁止每次随机生成
 
 ## 阶段 1 交付物
@@ -45,7 +45,7 @@
 ## 阻塞 / 待确认
 
 - **阶段 1 提交**：已完成（提交前已展示 `git diff --cached --stat`；完整 diff 用 `git show HEAD` 查看）。
-- **Git 身份 / 远程**：当前使用本地占位身份 `codex <codex@midi2score.local>`；未配置 remote、未 push，待用户提供 GitHub 账号后再设置。
+- **Git 身份 / 远程**：已完成 —— 提交身份 `nx137 <nx137@users.noreply.github.com>`；remote `origin` 已配置并推送 `main`。
 - 阶段 2–4 代码与 6 项测试：**未开始**。
 
 ## 下一步（确认后）
