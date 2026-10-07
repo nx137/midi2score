@@ -31,6 +31,10 @@ def find1(el, tag):
 
 
 def parse_score(xml_path: Path) -> tuple[dict[str, tuple[int, float]], list[tuple[int, float, str]]]:
+    """返回 notes[id] = (measure_idx, 全局位置/四分音符) 与 pedals [(measure_idx, 全局位置, type)]。
+
+    全局位置 = 前面所有小节的实测长度之和 + 小节内偏移（不使用 4/4 假设）。
+    """
     root = etree.parse(str(xml_path)).getroot()
     divisions = 1.0
     notes: dict[str, tuple[int, float]] = {}
@@ -51,17 +55,20 @@ def parse_score(xml_path: Path) -> tuple[dict[str, tuple[int, float]], list[tupl
                 d = find1(el, "duration")
                 if d is not None and d.text:
                     pos += float(d.text) / divisions
+                    max_pos = max(max_pos, pos)
             elif tag == "note":
                 nid = el.get("id")
                 dur = find1(el, "duration")
                 if nid:
-                    notes[nid] = (mi, pos)
+                    notes[nid] = (mi, measure_start + pos)
                 if find1(el, "chord") is None and dur is not None and dur.text:
                     pos += float(dur.text) / divisions
+                    max_pos = max(max_pos, pos)
             elif tag == "direction":
                 p = find1(el, "pedal")
                 if p is not None and p.get("type") in ("start", "stop"):
-                    pedals.append((mi, pos, p.get("type")))
+                    pedals.append((mi, measure_start + pos, p.get("type")))
+        measure_start += max_pos if max_pos > 0 else 0.0
     return notes, pedals
 
 
