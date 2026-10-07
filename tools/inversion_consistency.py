@@ -162,35 +162,55 @@ def main() -> int:
         notes, pedals = score_notes[xml], score_pedals[xml]
         al = parse_alignment(align)
         seq = sorted((onset, notes[base]) for base, rep, onset in al if base in notes)
-        seq = [(t, pos[0] * 4.0 + pos[1]) for t, pos in seq]  # measure*4 + offset (四分音符)
+        seq = [(t, pos[1]) for t, pos in seq]  # notes[base] = (measure, global_pos) -> 取 global_pos
         if len(seq) < 2:
             continue
         # 印刷记号（书写坐标 × 出现的 playthrough）
         reps = sorted({rep for _, rep, _ in al})
-        truth = {(snap(m * 4.0 + o), ("DOWN" if k == "start" else "UP"), rep)
-                 for (m, o, k) in pedals for rep in reps}
+        truth = {(snap(o), ("DOWN" if k == "start" else "UP")) for (m, o, k) in pedals}
         pred = set()
         for t, kind in cc64_transitions(midi):
             got = to_anchor(t, seq, [])
             if got is None:
                 continue
             pos, _ = got
-            pred.add((snap(pos - (seq[0][1] if False else 0.0)), "DOWN" if kind == "start" else "UP", 1))
+            pred.add((snap(pos), "DOWN" if kind == "start" else "UP"))
         row = {"score": xml, "performance": p["midi_performance"],
                "n_truth": len(truth), "n_pred": len(pred)}
+        pred_l, truth_l = sorted(pred), sorted(truth)
         for tol in tols:
-            tp = fp = fn = wrong = 0
-            used = set()
-            for (pos, lab, rep) in pred:
-                hit = [x for x in truth if abs(x[0] - pos) <= tol and x[2] == rep]
-                same = [x for x in hit if x[1] == lab]
-                if same and same[0] not in used:
-                    used.add(same[0]); tp += 1
-                elif hit:
-                    wrong += 1
-                else:
-                    fp += 1
-            fn = len(truth) - len([x for x in truth if x in used])
+            tp = 0
+            matched_pred, matched_truth = set(), set()
+            for lab in ("DOWN", "UP"):
+                pi = [i for i, x in enumerate(pred_l) if x[1] == lab]
+                ti = [j for j, x in enumerate(truth_l) if x[1] == lab]
+                if not pi or not ti:
+                    continue
+                cost = np.full((len(pi), len(ti)), 1e6)
+                for a, i in enumerate(pi):
+                    for b, j in enumerate(ti):
+                        d = abs(pred_l[i][0] - truth_l[j][0])
+                        if d <= tol:
+                            cost[a, b] = d
+                ra, cb = linear_sum_assignment(cost)
+                for a, b in zip(ra, cb):
+                    if cost[a, b] <= tol:
+                        tp += 1
+                        matched_pred.add(pi[a])
+                        matched_truth.add(ti[b])
+            wrong = 0
+            if tol > 0:
+                for i, (pos, lab) in enumerate(pred_l):
+                    if i in matched_pred:
+                        continue
+                    for j, (tpos, tlab) in enumerate(truth_l):
+                        if j in matched_truth or tlab == lab:
+                            continue
+                        if abs(pos - tpos) <= tol:
+                            wrong += 1
+                            break
+            fp = len(pred_l) - len(matched_pred)
+            fn = len(truth_l) - len(matched_truth)
             prec = tp / (tp + fp + wrong) if (tp + fp + wrong) else 0.0
             rec = tp / (tp + fn) if (tp + fn) else 0.0
             f1 = 2 * prec * rec / (prec + rec) if (prec + rec) else 0.0

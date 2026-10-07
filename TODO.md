@@ -63,7 +63,9 @@
 | R1-3j | 分位点估计量 → 已裁定（D-0035 A+：estimator-free 主描述 + R-7 次描述；P5 不得进摘要/判据） | — | done |
 | R1-4a-0 | 交付 5 第 0 步：通道自检 | — | todo |
 | R1-4a-b | ①b 锚点还原 | — | done（解析验证通过；36 首 / 271 对） |
-| R1-4a-c | 修匹配：贪心 → 最优指派（保证 F1 对容差单调） | — | todo（**当前数字不得引用**） |
+| R1-4a-c | 修匹配：贪心 → 最优指派 | — | done（F1 单调、错向=0） |
+| R1-4a-d | ④ 基线 + bootstrap 10,000 + macro/逐作曲家 | — | todo |
+| R1-4a-e | 第 0 步通道自检（含 repeat 谱） | — | todo |
 | R1-4a-b | ①b 锚点还原（复用分段线性规则，展开坐标由 nASAP 给出） | R1-4a-0 | todo |
 | R1-4a | 交付 5：0/±1/±2 拍曲线 + micro/macro + 逐作曲家 + 绝对计数混淆 | R1-4a-b | todo |
 | R1-4c | bootstrap 10,000 对 always_down / beat_periodic_N | R1-4a | todo |
