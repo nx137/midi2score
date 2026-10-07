@@ -46,7 +46,7 @@
 - 仓库勘察（命令实际执行）：确认 `E:\midi2score` 非 git 仓库、无 README/依赖/测试；`E:\PedNotate` 按用户指示视为**已废弃，不参与**。
 - `git init -b main`（本地，无远程）。
 - 通读 `PedNotate_Plan_v3.0.md` 全文（§0–§13 + 附录 A/B/C），据此固化章程、研究问题、决策、假设、证据、待办、验收。
-- 源文件哈希留痕：计划书 `ED95FA15…`、章程 `4762A7ED…`（见 `EVIDENCE.md` EV-S1/EV-S2）。
+- 源文件哈希留痕：计划书 `ED95FA15…`、章程 v1.1 `CC24794F…`（v1.0 曾为 `4762A7ED…`；见 `EVIDENCE.md` EV-S1/EV-S2）。
 
 ## 阻塞 / 待确认
 
