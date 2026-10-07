@@ -7,7 +7,7 @@
 
 - **更新时间**：2026-10-07（阶段 1–4 + 语料 / 渲染器 / manifest 核验）
 - **当前阶段**：G1' —— 交付 1–4、(a)–(d)、交付 6（**已收讫**）完成；**D-0042 两门不过 → 坐标系停机上报，交付 5 暂停**
-- **阶段状态**：系统侧 18/18 PASS；科研侧 T1=0/T4=0、裁定5 71/71、Main 谓词冻结（43/291/3840）、`assignment_sha256` 冻结；**4a(i)/4a(ii) 两门均不过 → 停机待裁定展开坐标下的 S/T 计数口径**
+- **阶段状态**：系统侧 18/18 PASS；科研侧 T1=0/T4=0、裁定5 71/71、Main 谓词冻结、`assignment_sha256` 冻结、欠账 #4 的 as-written 半边已报（8/13 在主轴、69/3840 元素）；**4a(i)/4a(ii) 两门仍不过 → 停机待裁定（属 D-0044「必须上报」四类）**
 - **活动任务**：`R1`（科研侧推进）
 - **分支**：`main` → `origin/main`（https://github.com/nx137/midi2score.git，已推送）
 - **thread_id 约定**（阶段 2 实现）：`research:midi2score:<task_id>`，稳定可推导，禁止每次随机生成
@@ -130,3 +130,8 @@
 - 逐折×逐作曲家（乐谱数）：train {Beethoven 7, Chopin 13, Liszt 2, Ravel 1, Schumann 2, Scriabin 2}；val {Beethoven 1, Chopin 2, Debussy 1, Liszt 1, Schumann 1}；test {Beethoven 2, Brahms 1, Chopin 5, Liszt 1, Schumann 1}
 - 291 中 7 条不满足谓词已逐条列名（6 条 aligned=False 且 robust∈{0.0,空}，1 条 `LuM02M` robust=1.0 但 aligned=False）
 - 比例偏离说明：分层内取整 + 每折至少 1 组的约束；70/10/20 为目标而非配额（待补入 §4.1/§4.4）
+## 决策权限（D-0044）
+
+- **可自定**：工具参数、临时文件命名与路径、日志格式、中间产物 schema、脚本内部实现、`evidence/` 目录结构。
+- **必须上报**：论文数字 / 冻结量定义 / 跨模态比较口径 / 坐标系相关。
+- 据此，**D-0042 的两项（展开坐标 S/T 计数口径、4a(ii) 通过带宽）仍属"必须上报"**，本规则不解除该停机。

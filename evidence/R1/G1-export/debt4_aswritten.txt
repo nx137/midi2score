@@ -1,0 +1,20 @@
+�� CC64 �������� = 13
+�������� 43 ���� = 8 / �������� = 5
+
+score                                                 S    T  min  inMain   fold
+Beethoven/Piano_Sonatas/21-3/xml_score.musicxml       0    7    0    True    val
+Beethoven/Piano_Sonatas/24-2/xml_score.musicxml       0    2    0   False      -
+Beethoven/Piano_Sonatas/28-1/xml_score.musicxml       0    2    0    True   test
+Chopin/Etudes_op_25/12/xml_score.musicxml             0    1    0    True  train
+Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml      0    1    0    True  train
+Chopin/Sonata_2/2nd/xml_score.musicxml                0    1    0    True   test
+Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml      0    1    0    True   test
+Chopin/Sonata_3/2nd/xml_score.musicxml                0   42    0    True  train
+Chopin/Sonata_3/4th/xml_score.musicxml                0   14    0    True  train
+Prokofiev/Toccata/xml_score.musicxml                  1    0    0   False      -
+Schubert/Impromptu_op.90_D.899/3/xml_score.musicxml    1    0    0   False      -
+Schumann/Kreisleriana/3/xml_score.musicxml            0    1    0   False      -
+Schumann/Kreisleriana/3_no_repeat/xml_score.musicxml    0    1    0   False      -
+
+�������� CC64 ���۷ֲ�: {'val': 1, 'test': 3, 'train': 4}
+�������� CC64 �� pedal Ԫ�غϼ�: 69 / 3840

@@ -65,7 +65,8 @@
 | R1-3k | Main 口径 → 已裁定（D-0039：以谓词为准，§4.4 已勘误） | — | done |
 | R1-3l | 坐标系 = 展开 → 已裁定（D-0042 A）；**4a(i)/(ii) 两门不过，停机待裁定 S/T 计数口径** | controller 裁定 | blocked |
 | R1-3m | 交付 6 收讫 + `assignment_sha256` 冻结标识 | — | done（EV-S34） |
-| R1-3n | 欠账 #4：13 首零 CC64 在 43 主轴/三折的分布（as-written 与 unfolded 两版对照） | R1-3l 重算 | blocked |
+| R1-3n | 欠账 #4：as-written 半边**已报**（13 首中 8 首在主轴、train4/test3/val1、69/3840 元素）；**unfolded 半边**待 S/T 口径 | R1-3l | blocked |
+| R1-3o | 决策权限边界规则入库（D-0044） | — | done |
 | R1-4b | G1' 交付 6：主表划分冻结 | — | done（EV-S26；hash `52ae1314…`） |
 
 ## 明确不做（YAGNI）
