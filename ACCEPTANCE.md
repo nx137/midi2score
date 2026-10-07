@@ -52,5 +52,7 @@
 | AC-E7 | 导出链路可用：含 pedal 乐谱导出 MIDI 确实产生 CC64，负对照为 0 | `tools/musescore_export_probe.py --force`（20+2 样本） | pass（20/20 成功，0 真否决；EV-S15） |
 | AC-E8 | R1-3b/G0 判据口径已裁定并生效（D-0025：唯一否决条件 + 恒等式诊断量 + 作废带宽 + Tier 分类） | 对照 D-0025 逐条 | pass（2026-10-07） |
 | AC-E9 | 全量导出 Tier 表与分位点已产出（逐首列名，含 T2 七字段） | `evidence/R1/G1-tiers/tiers.csv` | pass（68 首；EV-S17） |
-| AC-E10 | 唯一否决条件（T1）判定 | 待 T1/T3 互斥化裁定（D-0027） | blocked |
+| AC-E10 | 唯一否决条件（T1）与 T4 判定 | 五格谓词（D-0029）逐首判定 | pass（T1=0、T4=0，2026-10-07；EV-S20） |
+| AC-E12 | 导出侧交付 1–4（导出复现 / Tier 表 / 分位点 / 裁定5 逐值一致） | `evidence/R1/G1-export/` | pass（2026-10-07；EV-S19–S22） |
+| AC-E13 | 分位点估计量冻结（D-0035） | 待 controller 裁定 | blocked |
 | AC-E11 | 划分冻结（§4.1：70/10/20、seed 20260101、曲目为不可分单位、SHA256） | G1' 产出 | not_run |

@@ -1,0 +1,13 @@
+{
+  "task_id": "PN-20261006-003",
+  "musescore_executable": "D:\\MuseScore 4\\bin\\MuseScore4.exe",
+  "musescore_version_stdout": "MuseScore4 4.7.5",
+  "musescore_version_stderr": "",
+  "selected_pedal_scores": 68,
+  "selected_negative_controls": 3,
+  "successful_exports": 71,
+  "failed_exports": 0,
+  "force_retry": true,
+  "control_selection_rule": "First three non-repeat MusicXML 3.1 scores with zero pedal elements in sorted repository-relative order.",
+  "script_sha256": "b2f42f5c50e7a2c63b14091f3b2a37b500f388f7efe9bbd687cb4d70b32f92d8"
+}

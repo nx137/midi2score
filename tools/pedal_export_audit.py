@@ -1,18 +1,21 @@
 #!/usr/bin/env python
-"""按 D-0025（controller 裁定）对导出探针结果做 Tier 分级与分布统计。
+"""导出侧审计：按 D-0027/D-0028 的五格谓词（互斥且穷尽）+ T2 七字段 + 分位点 + 逐值一致。
 
-裁定要点：
-  1. 唯一否决条件 = start > 0 且 CC64 == 0（T1）
-  2. 主结构诊断量 = CC64 == 2 × min(start, stop)（不否决，但必须逐首列名）
-  3. 作废 [0.80, 1.05] 带宽；改报 P5/P50/P95（分母 = 2 × min(start, stop)），不设阈值
-  4. Tier: T1 否决 / T2 恒等式不成立且 min>0（T2b: 缺口>10%）/ T3 min==0 且 CC64==0
-  5. 与既有导出记录重叠的乐谱，CC64 必须逐值一致
+谓词（见 FIELD_DEFINITIONS.md）：
+  S/T/C = 记谱 start / stop 数、导出 MIDI 的 CC#64 条数
+  I = 2*min(S,T);  g = |C-I|/I  (仅 I>0)
+  格1 min>0 且 C==I          -> OK
+  格2 min>0 且 C==0          -> T1 否决停机
+  格3 min>0 且 C>0 且 C!=I   -> T2 (g>0.10 -> T2b，计入 T2 总数)
+  格4 min==0 且 C==0         -> T3 构造上正确
+  格5 min==0 且 C>0          -> T4 预期 0，非零即停机
 """
 
 from __future__ import annotations
 
 import argparse
 import csv
+import hashlib
 import json
 from pathlib import Path
 
@@ -20,131 +23,172 @@ import numpy as np
 from lxml import etree
 
 PEDAL_XPATH = ".//*[local-name()='pedal']"
-T2B_GAP = 0.10  # 报告阈值，非闸门（G1' 后按实测分布重设）
-BASELINES = {
-    "Chopin/Ballades/1/xml_score.musicxml": 432,
-    "Chopin/Ballades/3/xml_score.musicxml": 478,
-}
+T2B_GAP = 0.10  # 报告阈值（非闸门），本轮冻结
 
 
-def pedal_sequence(xml_path: Path) -> dict:
+def scan_pedal(xml_path: Path) -> dict:
+    """文档顺序扫描。未闭合/孤立 stop 为全局口径；倒置对为局部 balance 跌破 0（不钳位）。"""
     elems = etree.parse(str(xml_path)).getroot().xpath(PEDAL_XPATH)
     kinds = [e.get("type") for e in elems]
-    depth = 0
-    orphan_stop = 0
-    unclosed = 0
-    changes = 0
-    for prev, cur in zip(kinds, kinds[1:]):
-        if prev == "stop" and cur == "start":
-            changes += 1
+    S, T = kinds.count("start"), kinds.count("stop")
+    balance = 0
+    inverted = 0
     for k in kinds:
         if k == "start":
-            depth += 1
+            balance += 1
         elif k == "stop":
-            if depth > 0:
-                depth -= 1
-            else:
-                orphan_stop += 1
-    unclosed = depth
+            balance -= 1
+            if balance < 0:
+                inverted += 1  # 不钳位：保留负值，后续 start 先还账
+    first_is_stop_staves = 0  # 一次性交叉核对 (i)
+    per_staff: dict[str, list[str]] = {}
+    for e in elems:
+        per_staff.setdefault(e.get("staff") or "_", []).append(e.get("type"))
+    first_is_stop_staves = sum(1 for v in per_staff.values() if v and v[0] == "stop")
     return {
         "pedal_elements": len(elems),
-        "pedal_start": kinds.count("start"),
-        "pedal_stop": kinds.count("stop"),
-        "unclosed_start": unclosed,
-        "orphan_stop": orphan_stop,
-        # 定义待 controller 确认：本实现取「stop 紧跟 start」的换踩(changed)次数
-        "inverted_pairs_PROVISIONAL": changes,
+        "pedal_start": S,
+        "pedal_stop": T,
+        "unclosed_start": max(S - T, 0),
+        "orphan_stop": max(T - S, 0),
+        "inverted_pairs": inverted,
+        "staves_first_pedal_is_stop": first_is_stop_staves,
+        "balance_final": balance,
     }
 
 
-def classify(row: dict) -> tuple[str, float | None]:
-    start, stop, cc64 = row["pedal_start"], row["pedal_stop"], row["cc64_messages"]
-    expected = 2 * min(start, stop)
-    gap = round(abs(cc64 - expected) / expected, 4) if expected > 0 else None
-    if start > 0 and cc64 == 0:
-        tier = "T1"
-    elif min(start, stop) == 0 and cc64 == 0:
-        tier = "T3"
-    elif cc64 != expected:
-        tier = "T2b" if (gap or 0) > T2B_GAP else "T2"
-    else:
-        tier = "OK"
-    return tier, gap
+def classify(S: int, T: int, C: int) -> tuple[str, int, float | None, float | None]:
+    I = 2 * min(S, T)
+    g = round(abs(C - I) / I, 6) if I > 0 else None
+    if min(S, T) > 0:
+        if C == I:
+            return "OK", I, g, None
+        if C == 0:
+            return "T1", I, g, None
+        tier = "T2b" if (g or 0) > T2B_GAP else "T2"
+        return tier, I, g, g
+    return ("T3" if C == 0 else "T4"), I, g, None
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--dataset", type=Path, default=Path("data/asap-dataset"))
-    parser.add_argument("--probe", type=Path, default=Path("evidence/R1/full68/export_probe.json"))
-    parser.add_argument("--out-dir", type=Path, default=Path("evidence/R1/G1-tiers"))
-    args = parser.parse_args()
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--dataset", type=Path, default=Path("data/asap-dataset"))
+    ap.add_argument("--probe", type=Path, default=Path("evidence/R1/full68v2/export_probe.json"))
+    ap.add_argument("--reference", type=Path, default=Path("evidence/R1/reference/prior_cc64_details.csv"))
+    ap.add_argument("--out-dir", type=Path, default=Path("evidence/R1/G1-export"))
+    args = ap.parse_args()
 
     probe = json.loads(args.probe.read_text(encoding="utf-8"))
     rows = []
     for r in probe["rows"]:
-        if r["kind"] != "positive":
-            continue
-        seq = pedal_sequence(args.dataset / r["relative_path"])
-        merged = {**r, **seq}
-        merged["cc64_over_identity"] = (
-            round(merged["cc64_messages"] / (2 * min(merged["pedal_start"], merged["pedal_stop"])), 4)
-            if min(merged["pedal_start"], merged["pedal_stop"]) > 0 else None
-        )
-        tier, gap = classify(merged)
-        merged["tier"] = tier
-        merged["t1_t3_overlap"] = bool(merged["pedal_start"] > 0 and merged["pedal_stop"] == 0 and merged["cc64_messages"] == 0)
-        merged["gap_pct"] = None if gap is None else round(gap * 100, 2)
-        rows.append(merged)
+        seq = scan_pedal(args.dataset / r["relative_path"])
+        S, T, C = seq["pedal_start"], seq["pedal_stop"], r["cc64_messages"] if r["cc64_messages"] is not None else 0
+        tier, I, g, gap = classify(S, T, C)
+        residual = (I - C) - 2 * (seq["unclosed_start"] + seq["orphan_stop"] + seq["inverted_pairs"]) if tier in ("T2", "T2b") else None
+        rows.append({
+            **r, **seq, "C": C, "I": I, "g": g, "tier": tier,
+            "cc64_over_identity": (round(C / I, 4) if I > 0 else None),
+            "gap_pct": (round(gap * 100, 2) if gap is not None else None),
+            "explanatory_residual": residual,
+            "source_xml_sha256": hashlib.sha256((args.dataset / r["relative_path"]).read_bytes()).hexdigest(),
+        })
 
-    ratios = [r["cc64_over_identity"] for r in rows if r["cc64_over_identity"] is not None]
-    p5, p50, p95 = (np.percentile(ratios, [5, 50, 95]).round(4).tolist() if ratios else [None] * 3)
+    positives = [r for r in rows if r["kind"] == "positive"]
+    negatives = [r for r in rows if r["kind"] == "negative"]
 
-    by_tier: dict[str, list[str]] = {}
+    # ---- 裁定 5：与既有记录逐值一致（全部重叠乐谱）----
+    ref = {}
+    with args.reference.open(encoding="utf-8-sig", newline="") as fh:
+        for row in csv.DictReader(fh):
+            ref[row["relative_xml"]] = row
+    overlap = []
     for r in rows:
-        by_tier.setdefault(r["tier"], []).append(r["relative_path"])
+        old = ref.get(r["relative_path"])
+        if old is None:
+            continue
+        old_c = int(old["cc64_event_count"] or 0)
+        overlap.append({
+            "relative_path": r["relative_path"],
+            "old_cc64": old_c, "new_cc64": r["C"],
+            "match": old_c == r["C"],
+            "old_output_bytes": int(old["output_bytes"]) if old.get("output_bytes") else None,
+            "new_output_bytes": r["output_bytes"],
+        })
+    overlap_all_match = all(o["match"] for o in overlap) if overlap else False
 
-    baseline_check = {
-        rel: {"expected": exp, "observed": next((r["cc64_messages"] for r in rows if r["relative_path"] == rel), None)}
-        for rel, exp in BASELINES.items()
-    }
-    baseline_ok = all(v["expected"] == v["observed"] for v in baseline_check.values())
+    # ---- 分位点（定义域：min(S,T) > 0）----
+    ratios = sorted(r["cc64_over_identity"] for r in positives if r["cc64_over_identity"] is not None)
+    pct = {}
+    if ratios:
+        arr = np.array(ratios)
+        for method in ("linear", "lower", "nearest_rank"):
+            if method == "nearest_rank":
+                # 最近秩法：ceil(p*n)-1
+                vals = [arr[max(0, int(np.ceil(p / 100 * len(arr))) - 1)] for p in (5, 50, 95)]
+            else:
+                vals = np.percentile(arr, [5, 50, 95], method=method).round(6).tolist()
+            pct[method] = {"P5": vals[0], "P50": vals[1], "P95": vals[2]}
 
+    buckets = {"gap==0": 0, "0<g<=0.01": 0, "0.01<g<=0.05": 0, "0.05<g<=0.10": 0, "g>0.10": 0}
+    for r in positives:
+        g = r["g"]
+        if r["I"] == 0:
+            continue
+        if g == 0:
+            buckets["gap==0"] += 1
+        elif g <= 0.01:
+            buckets["0<g<=0.01"] += 1
+        elif g <= 0.05:
+            buckets["0.01<g<=0.05"] += 1
+        elif g <= 0.10:
+            buckets["0.05<g<=0.10"] += 1
+        else:
+            buckets["g>0.10"] += 1
+
+    tiers: dict[str, list[str]] = {}
+    for r in positives:
+        key = "T2(含T2b)" if r["tier"] in ("T2", "T2b") else r["tier"]
+        tiers.setdefault(key, []).append(r["relative_path"])
+
+    unexplained = sorted(r["relative_path"] for r in positives if r["tier"] in ("T2", "T2b") and r["explanatory_residual"] not in (0, None))
     summary = {
-        "controller_ruling": "D-0025 (T1/T2/T2b/T3, identity diagnostic, no bandwidth)",
-        "n_scores": len(rows),
-        "tier_counts": {k: len(v) for k, v in sorted(by_tier.items())},
-        "tier_members": {k: sorted(v) for k, v in sorted(by_tier.items())},
-        "cc64_over_identity_percentiles": {"P5": p5, "P50": p50, "P95": p95, "n": len(ratios)},
+        "ruling": "D-0027/D-0028 五格谓词",
+        "n_positive": len(positives), "n_negative": len(negatives),
+        "negative_with_zero_cc64": sum(1 for r in negatives if r["C"] == 0),
+        "negative_files": [r["relative_path"] for r in negatives],
+        "tier_counts": {k: len(v) for k, v in sorted(tiers.items())},
+        "tier_members": {k: sorted(v) for k, v in sorted(tiers.items())},
+        "percentiles_over_min_gt_0": pct,
+        "n_ratio_defined": len(ratios),
+        "gap_histogram": buckets,
+        "sorted_ratios": ratios,
+        "baseline_overlap_n": len(overlap),
+        "baseline_overlap_all_match": overlap_all_match,
+        "unexplained_gap_members": unexplained,
         "t2b_gap_threshold_pct": T2B_GAP * 100,
-        "t1_t3_overlap_count": sum(1 for r in rows if r.get("t1_t3_overlap")),
-        "t1_t3_overlap_members": sorted(r["relative_path"] for r in rows if r.get("t1_t3_overlap")),
-        "strict_t1_min_gt_0_and_cc64_eq_0": sorted(r["relative_path"] for r in rows
-            if min(r["pedal_start"], r["pedal_stop"]) > 0 and r["cc64_messages"] == 0),
-        "t2_required_fields": ["pedal_start", "pedal_stop", "unclosed_start", "orphan_stop",
-                               "inverted_pairs_PROVISIONAL", "cc64_messages", "gap_pct"],
-        "baseline_check": baseline_check,
-        "baseline_all_match": baseline_ok,
-        "inverted_pairs_definition": "PROVISIONAL: stop 紧跟 start 的次数（待 controller 确认）",
     }
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
-    (args.out_dir / "tiers.json").write_text(json.dumps({"summary": summary, "rows": rows}, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    with (args.out_dir / "tiers.csv").open("w", encoding="utf-8", newline="") as handle:
-        fields = ["tier", "t1_t3_overlap", "relative_path", "pedal_elements", "pedal_start", "pedal_stop", "unclosed_start",
-                  "orphan_stop", "inverted_pairs_PROVISIONAL", "cc64_messages", "cc64_over_identity",
-                  "gap_pct", "exit_code", "output_exists"]
-        writer = csv.DictWriter(handle, fieldnames=fields, extrasaction="ignore")
-        writer.writeheader()
-        writer.writerows(rows)
+    (args.out_dir / "tiers.json").write_text(json.dumps({"summary": summary, "rows": rows, "baseline_overlap": overlap}, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    fields = ["tier", "relative_path", "pedal_start", "pedal_stop", "unclosed_start", "orphan_stop",
+              "inverted_pairs", "C", "I", "g", "gap_pct", "explanatory_residual", "cc64_over_identity",
+              "exit_code", "output_bytes", "output_sha256", "source_xml_sha256"]
+    with (args.out_dir / "tiers.csv").open("w", encoding="utf-8", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")
+        w.writeheader()
+        w.writerows(positives)
+    with (args.out_dir / "baseline_overlap.csv").open("w", encoding="utf-8", newline="") as fh:
+        w = csv.DictWriter(fh, fieldnames=["relative_path", "old_cc64", "new_cc64", "match", "old_output_bytes", "new_output_bytes"], extrasaction="ignore")
+        w.writeheader()
+        w.writerows(overlap)
 
     print(json.dumps(summary, indent=2, ensure_ascii=False))
-    print("\n=== T2 / T2b 逐首（七字段） ===")
-    for r in rows:
-        if r["tier"] in ("T2", "T2b"):
-            print(f"  [{r['tier']}] {r['relative_path']} | start={r['pedal_start']} stop={r['pedal_stop']} "
-                  f"unclosed={r['unclosed_start']} orphan={r['orphan_stop']} inverted={r['inverted_pairs_PROVISIONAL']} "
-                  f"cc64={r['cc64_messages']} gap={r['gap_pct']}%")
-    return 0 if baseline_ok else 1
+    bad = tiers.get("T1", []) + tiers.get("T4", [])
+    if bad:
+        print(f"\n!! STOP: T1/T4 非空 = {bad}")
+    if not overlap_all_match:
+        print("\n!! STOP: 裁定 5 逐值一致未全中")
+    return 1 if bad or not overlap_all_match else 0
 
 
 if __name__ == "__main__":

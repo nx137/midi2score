@@ -15,6 +15,7 @@ from __future__ import annotations
 import argparse
 import csv
 import json
+import hashlib
 import subprocess
 import time
 from collections import Counter
@@ -91,6 +92,8 @@ def export_one(xml: Path, out_mid: Path, exe: Path, force: bool, timeout: int) -
         "timed_out": timed_out,
         "wall_seconds": round(time.perf_counter() - started, 3),
         "output_exists": out_mid.is_file(),
+        "output_bytes": out_mid.stat().st_size if out_mid.is_file() else None,
+        "output_sha256": hashlib.sha256(out_mid.read_bytes()).hexdigest() if out_mid.is_file() else None,
         "stdout_head": stdout.strip()[:200],
         "stderr_head": stderr.strip()[:200],
     }
@@ -166,7 +169,7 @@ def main() -> int:
     print(f"identity  CC64 == 2*min(start,stop): {identity_ok}/{len(positives)}")
     print(f"failures: {failures}")
     print(f"positive with ZERO cc64 (informational): {no_cc64}")
-    print(f"G0 VETO (start>0 but cc64==0): {vetoes}")
+    print(f"[legacy literal check, SUPERSEDED by D-0027 five-cell predicates] start>0 & cc64==0: {vetoes}")
     return 0
 
 

@@ -6,8 +6,8 @@
 ## 当前
 
 - **更新时间**：2026-10-07（阶段 1–4 + 语料 / 渲染器 / manifest 核验）
-- **当前阶段**：科研侧 R1；R1-1/R1-2/R1-3/R1-3b/R1-3c/R1-3f 完成（全量 68 首 Tier 表已出），**G1' 停机：T1/T3 定义重叠待裁定（D-0027）+ 三项取值待裁定（D-0028）**
-- **阶段状态**：系统侧 18/18 PASS；科研侧全量 68/68 导出成功、裁定 5 逐值一致命中；**按 D-0025 裁定 1 触发 T1 停机上报（D-0027）——等待 controller 裁定后恢复**
+- **当前阶段**：G1' 中检停机点 —— 导出侧交付 1–4 已完成（68+3 导出 / 五格 Tier / 分位点 / 逐值一致），**停机对齐分位点估计量（D-0035）**；交付 5–6（反演一致度、划分冻结）待恢复
+- **阶段状态**：系统侧 18/18 PASS；科研侧 T1=0、T4=0（不触发路线作废）、裁定5 **71/71 逐值一致**；**停机待 controller 裁定分位点估计量（D-0035）后继续交付 5–6**
 - **活动任务**：`R1`（科研侧推进）
 - **分支**：`main` → `origin/main`（https://github.com/nx137/midi2score.git，已推送）
 - **thread_id 约定**（阶段 2 实现）：`research:midi2score:<task_id>`，稳定可推导，禁止每次随机生成
@@ -31,6 +31,7 @@
 |:--|:--|:--|:--|
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
 | 2026-10-07 | 语料 manifest 口径 | `python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv` | **PASS**：复现出计划书哈希 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa`（1,305 条 / 465,861,631 B；EV-S6、EV-S10、D-0020） |
+| 2026-10-07 | R1-3i 导出侧交付 1–4 | `musescore_export_probe.py --positive 68 --negative 3 --force` + `pedal_export_audit.py` | **68/68 导出成功；负对照 3/3 为 0 CC64**；五格 Tier = OK 42 / T1 0 / T2(含T2b) 13 / T3 13 / T4 0；**裁定5 = 71/71 逐值一致**；P5 = 0.91485(R-7) / 0.8837(nearest_rank)（EV-S19–S22） |
 | 2026-10-07 | R1-3f 全量 Tier 分级 | `musescore_export_probe.py --positive 68 --force` + `pedal_export_audit.py` | **68/68 导出成功**；负对照 2/2；恒等式 55/68；Tier = OK 42 / T2 10 / T2b 3 / T3 11 / T1 2（字面）；P5/P50/P95 = 0.9148/1.0/1.0（n=55）；裁定 5 命中（432/478）（EV-S17） |
 | 2026-10-07 | R1-3g T1 取证（停机上报） | `tools/t1_diagnostic.py` | **T1 命题**：字面 T1 = 2 首，均为 `start=1, stop=0` → 与 T3 定义重叠（T1∩T3=2）；重跑两次一致；**加 `min>0` 后 T1 = 0/68**（EV-S18） |
 | 2026-10-07 | R1-1 环境 | `python -m venv .venv-research` + `pip install -r requirements-research.txt` | **PASS**：Python 3.14.6；partitura 1.9.0 / mido 1.3.3 / music21 10.5.0 / parangonar 3.3.3 / lxml 6.1.3 / numpy 2.5.3 / pandas 3.0.6 全部命中（EV-S14） |
@@ -107,3 +108,9 @@
 | 导出 | exit 0、产物存在、**CC64=0**；重跑 2 次结果完全一致（确定性） |
 | 冲突 | 同时满足 T3（`min==0` 且 `CC64==0`）→ **T1 与 T3 定义重叠**，字面口径下 T1=2、加 `min>0` 后 **T1=0/68** |
 | 处置 | **已停止 G1'**，等待 controller 对 D-0027（互斥化）与 D-0028（三项取值）裁定 |
+## 中检停机点（按主控指令）
+
+**已完成**：交付 1 全量导出复现（68+3，含产物 SHA256）、2 五格 Tier 表、3 分位点、4 裁定 5 逐值一致（71/71）。
+**未做（按指令不得越过停机点）**：交付 5 反演一致度、6 划分冻结。
+**停机原因**：主控预期「重算后 P5 应显著低于 0.9148，若仍相同则停下对齐」——重算后 `linear`(R-7) 仍为 **0.91485**（样本已核对无误，13 首违反者确在域内），差异来自**估计量**：`nearest_rank`/`lower` 为 **0.8837**。待 controller 裁定 D-0035。
+**安全门**：T1 = 0、T4 = 0，未触发否决。
