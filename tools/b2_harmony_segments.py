@@ -11,6 +11,21 @@ from inversion_consistency import GRID, cc64_transitions, parse_alignment, parse
 from inversion_baselines import f1_of  # noqa: E402
 
 TOLS = [0.0, 1.0, 2.0]
+
+# 缓存：仅在 B2 脚本内（D-0066「只能新增」；不给既有 parse_score 挂装饰器）
+# 键 = XML 的规范化绝对路径；同一对象被多 run / 多 K 复用
+_PARSE_CACHE: dict[str, dict] = {}
+_CACHE_MISS = 0
+
+
+def cached_parse(xml_path: Path) -> dict:
+    global _CACHE_MISS
+    key = str(Path(xml_path).resolve())
+    if key not in _PARSE_CACHE:
+        notes_pos, pedals = parse_score(xml_path)
+        _PARSE_CACHE[key] = {"notes_pos": notes_pos, "pedals": pedals}
+        _CACHE_MISS += 1
+    return _PARSE_CACHE[key]
 K_GRID = [1, 2, 3]
 
 
@@ -125,7 +140,8 @@ def main() -> int:
             if F is None:
                 continue
             anchors, feats, truth, span, dpcs, bass_chg, meas = F
-            seq = sorted((o, parse_score(r["xml"])[0][b][1]) for b, rr, o in parse_alignment(r["al"]) if b in parse_score(r["xml"])[0])
+            _c = cached_parse(r["xml"])
+            seq = sorted((o, _c["notes_pos"][b][1]) for b, rr, o in parse_alignment(r["al"]) if b in _c["notes_pos"])
             if len(seq) < 2:
                 continue
             starts = []
@@ -151,7 +167,7 @@ def main() -> int:
         p = tp / (tp + fp) if (tp + fp) else 0; rr = tp / (tp + fn) if (tp + fn) else 0
         return {"tp": tp, "fp": fp, "fn": fn, "wrong": wr, "P": p, "R": rr,
                 "F1": 2 * p * rr / (p + rr) if (p + rr) else 0,
-                "n_pred": sum(x[f"tol{tol}"]["n_pred"] for x in sel)}
+                "n_pred": tp + fp}   # f1_of 不返回 n_pred（D-0063 口径），此处由 tp+fp 导出
 
     def per_label(sel, tol):
         out = {}
@@ -227,6 +243,8 @@ def main() -> int:
                     m = x[f"tol{tol}"]
                     w.writerow([K, x["fold"], x["score"], x["perf"], tol, m["n_pred"], m["tp"], m["fp"], m["fn"], m["wrong"],
                                 round(m["P"], 6), round(m["R"], 6), round(m["F1"], 6)])
+    print(f"parse_cache: miss={_CACHE_MISS} (期望 36)")
+    summary["cache_miss"] = _CACHE_MISS
     (out / "B2_summary.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return 0
 
