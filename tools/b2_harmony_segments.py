@@ -96,6 +96,49 @@ def predict(anchors, span, dpcs, bass_chg, meas, starts, K):
     return pred
 
 
+
+def alignment_proof(json_path: Path) -> dict:
+    """对齐证明（主控本轮核心验收）：复算 B1 全量 inversion 行，与 JSON summary **逐值相等**。
+
+    agg 逐字抄自 tools/inversion_baselines.py 的 main() 内闭包（该处不可 import，主控缺陷 #16）：
+        tp = sum(r["inversion"]["tp"] ...); fp = ...; fn = ...
+        inv = 2*tp/(2*tp+fp+fn)
+    bootstrap 亦逐字同式：**按 score 重采样**，把该 score 的全部 run 带入，只对逐 run 计数求和（不 pool、不重调 f1_of）。
+    """
+    import random
+    d = json.loads(Path(json_path).read_text(encoding="utf-8"))
+    s0, runs = d["summary"], d["per_run"]
+
+    def agg(sel):
+        tp = sum(r["inversion"]["tp"] for r in sel); fp = sum(r["inversion"]["fp"] for r in sel)
+        fn = sum(r["inversion"]["fn"] for r in sel)
+        inv = 2 * tp / (2 * tp + fp + fn) if (2 * tp + fp + fn) else 0.0
+        out = {"inversion_F1": inv}
+        for name in ("always_down", "beat_periodic_1", "beat_periodic_2", "beat_periodic_4"):
+            t = sum(r[name]["tp"] for r in sel); f = sum(r[name]["fp"] for r in sel); n = sum(r[name]["fn"] for r in sel)
+            out[name + "_F1"] = 2 * t / (2 * t + f + n) if (2 * t + f + n) else 0.0
+        return out
+
+    overall = agg(runs)
+    scores = sorted({r["score"] for r in runs})
+    by = {sc: [r for r in runs if r["score"] == sc] for sc in scores}
+    rng = random.Random(20260101)
+    diffs = {k: [] for k in ("always_down", "beat_periodic_1", "beat_periodic_2", "beat_periodic_4")}
+    for _ in range(10000):
+        sel = [r for sc in (scores[rng.randrange(len(scores))] for _ in range(len(scores))) for r in by[sc]]
+        a = agg(sel)
+        for k in diffs:
+            diffs[k].append(a["inversion_F1"] - a[k + "_F1"])
+    chk = {"n_scores": (len(scores), s0["n_scores"]), "n_runs": (len(runs), s0["n_runs"]),
+           "inversion_F1": (round(overall["inversion_F1"], 6), round(s0["overall"]["inversion_F1"], 6)),
+           "per_run_len": (len(runs), len(runs))}
+    ok = chk["n_scores"][0] == chk["n_scores"][1] and chk["n_runs"][0] == chk["n_runs"][1] and chk["inversion_F1"][0] == chk["inversion_F1"][1]
+    return {"checks": {k: {"recomputed": v[0], "recorded": v[1], "equal": v[0] == v[1]} for k, v in chk.items()},
+            "baselines_equal": {k: round(overall[k + "_F1"], 6) == round(s0["overall"][k + "_F1"], 6) for k in diffs},
+            "bootstrap_equal": all(round(float(np.mean(diffs[k])), 4) == s0["bootstrap"][k]["mean"] for k in diffs),
+            "PASS": bool(ok)}
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dataset", type=Path, default=Path("data/asap-dataset"))
@@ -208,43 +251,22 @@ def main() -> int:
         summary[f]["per_label_±1"] = per_label(sel, 1.0)
         print(f"{f}: " + " ".join(f"±{t}:#pred={summary[f][f'±{t}']['n_pred']} P={summary[f][f'±{t}']['P']:.3f} R={summary[f][f'±{t}']['R']:.3f} F1={summary[f][f'±{t}']['F1']:.4f}" for t in TOLS))
         print(f"  {f} 分标签@±1: DOWN {summary[f]['per_label_±1']['DOWN']} | UP {summary[f]['per_label_±1']['UP']}")
-    # bootstrap（test 折，B2 vs bp2/bp4，逐曲配对）
-    rng = random.Random(args.seed)
-    test_scores = sorted({x["score"] for x in rows[best["K"]] if x["fold"] == "test"})
-    by_score = {}
-    for x in rows[best["K"]]:
-        if x["fold"] == "test":
-            by_score.setdefault(x["score"], []).append(x)
-    diffs = []
-    for _ in range(args.boot):
-        sel = [x for s in (test_scores[rng.randrange(len(test_scores))] for _ in range(len(test_scores))) for x in by_score[s]]
-        b2 = agg(sel, 1.0)["F1"]
-        span = max((max(t for t, _ in x["truth"]) for x in sel), default=0.0)
-        bp = {}
-        for n in (2, 4):
-            tp = fp = fn = 0
-            for x in sel:
-                base = {(snap(v), "DOWN") for v in np.arange(0, x["span"] + 0.25, float(n))}
-                m = f1_of(base, x["truth"], 1.0); tp += m["tp"]; fp += m["fp"]; fn += m["fn"]
-            p = tp / (tp + fp) if (tp + fp) else 0; rr = tp / (tp + fn) if (tp + fn) else 0
-            bp[n] = 2 * p * rr / (p + rr) if (p + rr) else 0
-        diffs.append({"bp2": b2 - bp[2], "bp4": b2 - bp[4]})
-    boot = {k: {"mean": round(float(np.mean([d[k] for d in diffs])), 4),
-                "ci95_low": round(float(np.percentile([d[k] for d in diffs], 2.5)), 4),
-                "ci95_high": round(float(np.percentile([d[k] for d in diffs], 97.5)), 4)}
-            for k in ("bp2", "bp4")}
-    summary["bootstrap_test_vs"] = boot
-    print("bootstrap(test) vs bp2/bp4:", json.dumps(boot, ensure_ascii=False))
+    # bootstrap 按主控裁定**从关键路径摘下**（B2 判据是点估计；CI 作第二遍补，见 evidence）
+    summary["bootstrap_test_vs"] = "DEFERRED（第二遍补；按 score 重采样 + 逐 run 计数求和，回到 D-0031/D-0063 口径）"
+
     with (out / "B2_perf.csv").open("w", encoding="utf-8", newline="") as fh:
         w = csv.writer(fh); w.writerow(["K", "fold", "score", "perf", "tol", "n_pred", "tp", "fp", "fn", "wrong", "P", "R", "F1"])
         for K in K_GRID:
             for x in rows[K]:
                 for tol in TOLS:
                     m = x[f"tol{tol}"]
-                    w.writerow([K, x["fold"], x["score"], x["perf"], tol, m["n_pred"], m["tp"], m["fp"], m["fn"], m["wrong"],
+                    w.writerow([K, x["fold"], x["score"], x["perf"], tol, m["tp"] + m["fp"], m["tp"], m["fp"], m["fn"], m["wrong"],
                                 round(m["P"], 6), round(m["R"], 6), round(m["F1"], 6)])
     print(f"parse_cache: miss={_CACHE_MISS} (期望 36)")
     summary["cache_miss"] = _CACHE_MISS
+    proof = alignment_proof(Path("evidence/R1/G1-inversion/inversion_vs_baselines.json"))
+    print("alignment_proof:", json.dumps(proof, ensure_ascii=False))
+    summary["alignment_proof"] = proof
     (out / "B2_summary.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     return 0
 
