@@ -175,14 +175,14 @@ def main() -> int:
         "sorted_ratios": ratios,
         "baseline_overlap_n": len(overlap),
         "baseline_overlap_all_match": overlap_all_match,
-        "unexplained_gap_members": unexplained,
+        "unexplained_gap_members": unexplained,  # 空：该字段已作废(D-0036)
         "t2b_gap_threshold_pct": T2B_GAP * 100,
     }
 
     args.out_dir.mkdir(parents=True, exist_ok=True)
     (args.out_dir / "tiers.json").write_text(json.dumps({"summary": summary, "rows": rows, "baseline_overlap": overlap}, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     fields = ["tier", "relative_path", "pedal_start", "pedal_stop", "unclosed_start", "orphan_stop",
-              "inverted_pairs", "C", "I", "g", "gap_pct", "explanatory_residual", "cc64_over_identity",
+              "inverted_pairs", "C", "I", "g", "gap_pct", "cc64_over_identity",
               "exit_code", "output_bytes", "output_sha256", "source_xml_sha256"]
     with (args.out_dir / "tiers.csv").open("w", encoding="utf-8", newline="") as fh:
         w = csv.DictWriter(fh, fieldnames=fields, extrasaction="ignore")

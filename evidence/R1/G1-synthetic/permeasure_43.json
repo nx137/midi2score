@@ -1,0 +1,432 @@
+[
+  {
+    "score": "Beethoven/Piano_Sonatas/11-2/xml_score.musicxml",
+    "n_measures": 77,
+    "n_on": 77,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 3.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 21
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml",
+    "n_measures": 543,
+    "n_on": 543,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 0
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
+    "n_measures": 42,
+    "n_on": 42,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 1.2521,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 23
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
+    "n_measures": 102,
+    "n_on": 102,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 22
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/29-2/xml_score.musicxml",
+    "n_measures": 177,
+    "n_on": 177,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 16.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 7
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/29-3/xml_score.musicxml",
+    "n_measures": 187,
+    "n_on": 187,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.7521,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 37
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/29-4/xml_score.musicxml",
+    "n_measures": 406,
+    "n_on": 406,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 3.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 0
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml",
+    "n_measures": 162,
+    "n_on": 162,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 1.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 47
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/31-2_no_repeat/xml_score.musicxml",
+    "n_measures": 160,
+    "n_on": 160,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 1.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 47
+  },
+  {
+    "score": "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml",
+    "n_measures": 160,
+    "n_on": 160,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 3.7521,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 3
+  },
+  {
+    "score": "Brahms/Six_Pieces_op_118/2/xml_score.musicxml",
+    "n_measures": 117,
+    "n_on": 117,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 0.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": null
+  },
+  {
+    "score": "Chopin/Ballades/1/xml_score.musicxml",
+    "n_measures": 264,
+    "n_on": 264,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 4.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 1
+  },
+  {
+    "score": "Chopin/Ballades/3/xml_score.musicxml",
+    "n_measures": 241,
+    "n_on": 241,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 8
+  },
+  {
+    "score": "Chopin/Barcarolle/xml_score.musicxml",
+    "n_measures": 116,
+    "n_on": 116,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 5.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 0
+  },
+  {
+    "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
+    "n_measures": 79,
+    "n_on": 79,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 0.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": null
+  },
+  {
+    "score": "Chopin/Etudes_op_10/10/xml_score.musicxml",
+    "n_measures": 78,
+    "n_on": 78,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 3.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 7
+  },
+  {
+    "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
+    "n_measures": 85,
+    "n_on": 85,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 1.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 7
+  },
+  {
+    "score": "Chopin/Etudes_op_10/7/xml_score.musicxml",
+    "n_measures": 60,
+    "n_on": 60,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 1.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 8
+  },
+  {
+    "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
+    "n_measures": 96,
+    "n_on": 96,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.9979,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 37
+  },
+  {
+    "score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
+    "n_measures": 50,
+    "n_on": 50,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 1.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 44
+  },
+  {
+    "score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
+    "n_measures": 83,
+    "n_on": 83,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 14
+  },
+  {
+    "score": "Chopin/Etudes_op_25/8/xml_score.musicxml",
+    "n_measures": 36,
+    "n_on": 36,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 3.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 6
+  },
+  {
+    "score": "Chopin/Scherzos/20/xml_score.musicxml",
+    "n_measures": 625,
+    "n_on": 625,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 1.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 10
+  },
+  {
+    "score": "Chopin/Scherzos/31/xml_score.musicxml",
+    "n_measures": 780,
+    "n_on": 780,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 8
+  },
+  {
+    "score": "Chopin/Scherzos/39/xml_score.musicxml",
+    "n_measures": 649,
+    "n_on": 649,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 158
+  },
+  {
+    "score": "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml",
+    "n_measures": 241,
+    "n_on": 241,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 3.6688,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 68
+  },
+  {
+    "score": "Chopin/Sonata_2/2nd/xml_score.musicxml",
+    "n_measures": 290,
+    "n_on": 290,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 2
+  },
+  {
+    "score": "Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml",
+    "n_measures": 287,
+    "n_on": 287,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 2
+  },
+  {
+    "score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
+    "n_measures": 217,
+    "n_on": 217,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 3
+  },
+  {
+    "score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
+    "n_measures": 120,
+    "n_on": 120,
+    "median_dev_qn": 2.0646,
+    "max_dev_qn": 11.7812,
+    "grid_qn": 0.00417,
+    "median_in_grid": false,
+    "first_bad_measure": 2
+  },
+  {
+    "score": "Chopin/Sonata_3/4th/xml_score.musicxml",
+    "n_measures": 288,
+    "n_on": 288,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 22
+  },
+  {
+    "score": "Debussy/Images_Book_1/1_Reflets_dans_lEau/xml_score.musicxml",
+    "n_measures": 95,
+    "n_on": 95,
+    "median_dev_qn": 0.0919,
+    "max_dev_qn": 1.5919,
+    "grid_qn": 0.00417,
+    "median_in_grid": false,
+    "first_bad_measure": 11
+  },
+  {
+    "score": "Liszt/Ballade_2/xml_score.musicxml",
+    "n_measures": 317,
+    "n_on": 317,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 5.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 20
+  },
+  {
+    "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
+    "n_measures": 145,
+    "n_on": 145,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 13
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
+    "n_measures": 182,
+    "n_on": 182,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 1.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 0
+  },
+  {
+    "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
+    "n_measures": 134,
+    "n_on": 134,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 1.7521,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 11
+  },
+  {
+    "score": "Ravel/Pavane/xml_score.musicxml",
+    "n_measures": 72,
+    "n_on": 72,
+    "median_dev_qn": 0.0333,
+    "max_dev_qn": 3.0333,
+    "grid_qn": 0.00417,
+    "median_in_grid": false,
+    "first_bad_measure": 29
+  },
+  {
+    "score": "Schumann/Arabeske/xml_score.musicxml",
+    "n_measures": 231,
+    "n_on": 231,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 229
+  },
+  {
+    "score": "Schumann/Kreisleriana/4/xml_score.musicxml",
+    "n_measures": 28,
+    "n_on": 28,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 1
+  },
+  {
+    "score": "Schumann/Kreisleriana/6/xml_score.musicxml",
+    "n_measures": 40,
+    "n_on": 40,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 0.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": null
+  },
+  {
+    "score": "Schumann/Kreisleriana/7/xml_score.musicxml",
+    "n_measures": 120,
+    "n_on": 120,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 0.5021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 71
+  },
+  {
+    "score": "Scriabin/Etudes_op_8/11/xml_score.musicxml",
+    "n_measures": 54,
+    "n_on": 54,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 0.0021,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": null
+  },
+  {
+    "score": "Scriabin/Sonatas/5/xml_score.musicxml",
+    "n_measures": 456,
+    "n_on": 456,
+    "median_dev_qn": 0.0021,
+    "max_dev_qn": 2.7521,
+    "grid_qn": 0.00417,
+    "median_in_grid": true,
+    "first_bad_measure": 7
+  }
+]

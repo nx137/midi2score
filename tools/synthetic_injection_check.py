@@ -25,6 +25,9 @@ MS = Path(r"D:\MuseScore 4\bin\MuseScore4.exe")
 def inject(xml_path: Path, out_path: Path) -> int:
     tree = etree.parse(str(xml_path))
     root = tree.getroot()
+    # 剥离乐谱自身的 pedal 记号（D-0050：先剥离再注入）
+    for pe in root.xpath(".//*[local-name()='pedal']"):
+        pe.getparent().remove(pe)
     n = 0
     parts = root.xpath(".//*[local-name()='part']")
     scope = parts[0] if parts else root
