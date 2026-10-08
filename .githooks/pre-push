@@ -1,0 +1,4 @@
+#!/bin/sh
+# 版本化的 pre-push 闸门（D-0052）
+powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$(dirname "$0")/../tools/prepush_check.ps1" || exit 1
+exit 0
