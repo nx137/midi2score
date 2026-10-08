@@ -81,3 +81,38 @@ def anchor_features(notes: dict[str, dict], t: float, grid: float = GRID) -> dic
         return {"n_notes": 0, "bass": None, "bass_pc": None, "pcs": frozenset()}
     bass = min(sel)
     return {"n_notes": len(sel), "bass": bass, "bass_pc": bass % 12, "pcs": frozenset(p % 12 for p in sel)}
+
+
+def measure_starts(xml_path: Path) -> list[float]:
+    """小节起始全局位置（四分音符）。累加规则与 parse_score 逐字相同：
+    measure_start += max_pos if max_pos > 0 else 0.0（零长度小节与其后小节共享起点）。
+    纯新增函数，不改变任何既有路径（D-0067 ①）。
+    """
+    root = etree.parse(str(xml_path)).getroot()
+    divisions = 1.0
+    starts: list[float] = []
+    measure_start = 0.0
+    for measure in root.xpath(".//*[local-name()='measure']"):
+        starts.append(measure_start)
+        pos = 0.0
+        max_pos = 0.0
+        for el in measure.iter():
+            tag = etree.QName(el).localname
+            if tag == "divisions":
+                divisions = float(el.text or 1)
+            elif tag == "backup":
+                d = _text(el, "duration")
+                if d: pos -= float(d) / divisions
+            elif tag == "forward":
+                d = _text(el, "duration")
+                if d:
+                    pos += float(d) / divisions
+                    max_pos = max(max_pos, pos)
+            elif tag == "note":
+                if _first(el, "chord") is None:
+                    d = _text(el, "duration")
+                    if d:
+                        pos += float(d) / divisions
+                        max_pos = max(max_pos, pos)
+        measure_start += max_pos if max_pos > 0 else 0.0
+    return starts
