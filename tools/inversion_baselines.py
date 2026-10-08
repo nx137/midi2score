@@ -43,9 +43,22 @@ def f1_of(pred: set, truth: set, tol: float) -> dict:
                 mp.add(pi[a]); mt.add(ti[b])
     fp = len(pred_l) - len(mp)
     fn = len(truth_l) - len(mt)
+    # 错向（绝对计数，单列；**不进任何分母**，D-0063）
+    wrong = 0
+    if tol > 0:
+        for i, (pos, lab) in enumerate(pred_l):
+            if i in mp:
+                continue
+            for j, (tpos, tlab) in enumerate(truth_l):
+                if j in mt or tlab == lab:
+                    continue
+                if abs(pos - tpos) <= tol:
+                    wrong += 1
+                    break
     p = tp / (tp + fp) if (tp + fp) else 0.0
     r = tp / (tp + fn) if (tp + fn) else 0.0
-    return {"tp": tp, "fp": fp, "fn": fn, "P": p, "R": r, "F1": 2 * p * r / (p + r) if (p + r) else 0.0}
+    return {"tp": tp, "fp": fp, "fn": fn, "wrong": wrong, "P": p, "R": r,
+            "F1": 2 * p * r / (p + r) if (p + r) else 0.0}
 
 
 def main() -> int:

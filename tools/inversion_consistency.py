@@ -218,7 +218,7 @@ def main() -> int:
                             break
             fp = len(pred_l) - len(matched_pred)
             fn = len(truth_l) - len(matched_truth)
-            prec = tp / (tp + fp + wrong) if (tp + fp + wrong) else 0.0
+            prec = tp / (tp + fp) if (tp + fp) else 0.0   # 修正：wrong 已含在 fp 内，不得再加一次（D-0063）
             rec = tp / (tp + fn) if (tp + fn) else 0.0
             f1 = 2 * prec * rec / (prec + rec) if (prec + rec) else 0.0
             row[f"tol{tol}"] = {"tp": tp, "fp": fp, "fn": fn, "wrong": wrong,
@@ -229,7 +229,12 @@ def main() -> int:
     (args.out_dir / "inversion_runs.json").write_text(json.dumps(results, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     for tol in tols:
         vals = [r[f"tol{tol}"]["F1"] for r in results]
-        print(f"tol ±{tol}拍: n={len(vals)} microF1={sum(vals)/len(vals) if vals else 0:.4f}")
+        tp = sum(r[f"tol{tol}"]["tp"] for r in results); fp = sum(r[f"tol{tol}"]["fp"] for r in results)
+        fn = sum(r[f"tol{tol}"]["fn"] for r in results)
+        micro = 2*tp/(2*tp+fp+fn) if (2*tp+fp+fn) else 0.0
+        macro = sum(vals)/len(vals) if vals else 0.0
+        wrong = sum(r[f"tol{tol}"]["wrong"] for r in results)
+        print(f"tol ±{tol}拍: n={len(vals)} microF1={micro:.4f} macroF1={macro:.4f} wrong={wrong}")
     return 0
 
 
