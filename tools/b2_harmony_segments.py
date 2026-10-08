@@ -14,7 +14,13 @@ TOLS = [0.0, 1.0, 2.0]
 K_GRID = [1, 2, 3]
 
 
-def build(xml: Path, perf: Path, al: Path, K: int):
+def features_once(xml: Path):
+    """每 run 只算一次（K 无关）：锚点 / 特征序列 / 真值 / span / 小节首集合。
+
+    分桶用**单遍双指针**，比较式与 anchor_features 的选择谓词逐字相同（半开区间 [t, t+GRID)）：
+        sel = [n["pitch"] for n in notes.values() if n["pitch"] is not None and t <= n["pos"] < t + grid]
+    冒烟已验证：6165/6165 锚点字典全等（tools/b2_smoke.py）。
+    """
     notes_ext = parse_score_extended(xml)
     notes_pos, pedals = parse_score(xml)
     ms = {snap(m) for m in measure_starts(xml)}
@@ -23,43 +29,48 @@ def build(xml: Path, perf: Path, al: Path, K: int):
         return None
     span = max(t for t, _ in truth)
     anchors = [round(i * GRID, 6) for i in range(int(round(span / GRID)) + 1)]
-    # 空锚点 zero-order hold（D-0066 + D-0067）
-    feats, last = [], None
+    items = sorted(((n["pos"], i, n) for i, n in notes_ext.items() if n["pitch"] is not None), key=lambda x: x[0])
+    onsets = [x[0] for x in items]
+    raw, lo, hi = [], 0, 0
     for t in anchors:
-        f = anchor_features(notes_ext, t)
-        if f["n_notes"] == 0 and last is not None:
-            f = {"n_notes": 0, "bass_pc": last["bass_pc"], "pcs": last["pcs"]}
-        feats.append(f)
+        while lo < len(onsets) and onsets[lo] < t:
+            lo += 1
+        if hi < lo:
+            hi = lo
+        while hi < len(onsets) and onsets[hi] < t + GRID:
+            hi += 1
+        raw.append(anchor_features({items[k][1]: items[k][2] for k in range(lo, hi)}, t))
+    # 空锚点 zero-order hold（首锚点空则继承其后首个非空）
+    feats = list(raw); last = None
+    for i, f in enumerate(raw):
         if f["n_notes"] > 0:
             last = f
+        elif last is not None:
+            feats[i] = {"n_notes": 0, "bass_pc": last["bass_pc"], "pcs": last["pcs"]}
     nxt = None
-    for i in range(len(feats) - 1, -1, -1):
-        if feats[i]["n_notes"] > 0:
-            nxt = feats[i]
+    for i in range(len(raw) - 1, -1, -1):
+        if raw[i]["n_notes"] > 0:
+            nxt = raw[i]
         elif nxt is not None and feats[i]["bass_pc"] is None:
             feats[i] = {"n_notes": 0, "bass_pc": nxt["bass_pc"], "pcs": nxt["pcs"]}
-    # Step 1 边界（三要素取或）
-    bnd = [anchors[0]]
+    # K 无关的整数增量：|pcs(t) Δ pcs(t-1)|
+    dpcs = [0] * len(anchors)
+    bass_chg = [False] * len(anchors)
+    meas = [snap(t) in ms for t in anchors]
     for i in range(1, len(anchors)):
         a, b = feats[i - 1], feats[i]
-        chg_bass = a["bass_pc"] is not None and b["bass_pc"] is not None and a["bass_pc"] != b["bass_pc"]
-        chg_pcs = a["pcs"] is not None and len(b["pcs"] ^ a["pcs"]) >= K
-        if chg_bass or chg_pcs or snap(anchors[i]) in ms:
+        bass_chg[i] = a["bass_pc"] is not None and b["bass_pc"] is not None and a["bass_pc"] != b["bass_pc"]
+        dpcs[i] = len(b["pcs"] ^ a["pcs"]) if (a["pcs"] is not None and b["pcs"] is not None) else 0
+    return anchors, feats, truth, span, dpcs, bass_chg, meas
+
+
+def predict(anchors, span, dpcs, bass_chg, meas, starts, K):
+    bnd = [anchors[0]]
+    for i in range(1, len(anchors)):
+        if bass_chg[i] or dpcs[i] >= K or meas[i]:
             bnd.append(anchors[i])
     if bnd[-1] != span:
-        bnd.append(span)
-    # CC64 start 事件的位置（事件制，D-0067）
-    seq = sorted((o, notes_pos[b][1]) for b, r, o in parse_alignment(al) if b in notes_pos)
-    if len(seq) < 2:
-        return None
-    starts = []
-    for t, kind in cc64_transitions(perf):
-        if kind != "start":
-            continue
-        got = to_anchor(t, seq, [])
-        if got:
-            starts.append(snap(got[0]))
-    # Step 2/3：段激活 → (ta,DOWN)+(tb,UP)
+        bnd.append(span)          # 末段右端 = 序列末锚点（授权自行取值，见 evidence）
     pred = set()
     for ta, tb in zip(bnd, bnd[1:]):
         if not (0 <= ta <= span and 0 <= tb <= span):
@@ -67,7 +78,7 @@ def build(xml: Path, perf: Path, al: Path, K: int):
         if any(ta <= p < tb for p in starts):
             pred.add((ta, "DOWN"))
             pred.add((tb, "UP"))
-    return truth, pred, span
+    return pred
 
 
 def main() -> int:
@@ -98,13 +109,33 @@ def main() -> int:
                      "group": group_of.get(xml), "xml": D / xml, "perf_path": perf, "al": al})
     print(f"可用 runs = {len(runs)}")
 
+    feats_cache = {}
+    def get_feats(r):
+        key = r["score"]
+        if key not in feats_cache:
+            t0 = __import__("time").perf_counter()
+            feats_cache[key] = features_once(r["xml"])
+            print(f"  features_once {key}: {__import__("time").perf_counter()-t0:.2f}s")
+        return feats_cache[key]
+
     def per_run(K):
         out = []
         for r in runs:
-            b = build(r["xml"], r["perf_path"], r["al"], K)
-            if b is None:
+            F = get_feats(r)
+            if F is None:
                 continue
-            truth, pred, span = b
+            anchors, feats, truth, span, dpcs, bass_chg, meas = F
+            seq = sorted((o, parse_score(r["xml"])[0][b][1]) for b, rr, o in parse_alignment(r["al"]) if b in parse_score(r["xml"])[0])
+            if len(seq) < 2:
+                continue
+            starts = []
+            for t, kind in cc64_transitions(r["perf_path"]):
+                if kind != "start":
+                    continue
+                got = to_anchor(t, seq, [])
+                if got:
+                    starts.append(snap(got[0]))
+            pred = predict(anchors, span, dpcs, bass_chg, meas, starts, K)
             rec = {k: r[k] for k in ("score", "perf", "fold", "group")}
             rec["span"] = span
             for tol in TOLS:
