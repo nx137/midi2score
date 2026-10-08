@@ -38,7 +38,10 @@
         "p_gt_0": 0.6144
       }
     },
-    "pass_criterion": "inversion 显著优于基线 = bootstrap CI 下界 > 0"
+    "pass_criterion": "inversion 显著优于基线 = bootstrap CI 下界 > 0",
+    "boot": 10000,
+    "seed": 20260101,
+    "generator": "tools/inversion_baselines.py"
   },
   "per_run": [
     {
