@@ -2,6 +2,7 @@
   {
     "score": "Beethoven/Piano_Sonatas/11-2/xml_score.musicxml",
     "n_measures": 77,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 320,
@@ -16,6 +17,7 @@
   {
     "score": "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml",
     "n_measures": 543,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 1086,
@@ -30,6 +32,7 @@
   {
     "score": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml",
     "n_measures": 42,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 86,
@@ -44,6 +47,7 @@
   {
     "score": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml",
     "n_measures": 102,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 204,
@@ -58,6 +62,7 @@
   {
     "score": "Beethoven/Piano_Sonatas/29-2/xml_score.musicxml",
     "n_measures": 177,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 356,
@@ -72,6 +77,7 @@
   {
     "score": "Beethoven/Piano_Sonatas/29-3/xml_score.musicxml",
     "n_measures": 187,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 376,
@@ -86,6 +92,7 @@
   {
     "score": "Beethoven/Piano_Sonatas/29-4/xml_score.musicxml",
     "n_measures": 406,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 822,
@@ -100,6 +107,7 @@
   {
     "score": "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml",
     "n_measures": 162,
+    "n_repeat_marks": 6,
     "exit": 0,
     "exists": true,
     "n_cc64": 328,
@@ -114,6 +122,7 @@
   {
     "score": "Beethoven/Piano_Sonatas/31-2_no_repeat/xml_score.musicxml",
     "n_measures": 160,
+    "n_repeat_marks": 4,
     "exit": 0,
     "exists": true,
     "n_cc64": 324,
@@ -128,6 +137,7 @@
   {
     "score": "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml",
     "n_measures": 160,
+    "n_repeat_marks": 2,
     "exit": 0,
     "exists": true,
     "n_cc64": 326,
@@ -142,6 +152,7 @@
   {
     "score": "Brahms/Six_Pieces_op_118/2/xml_score.musicxml",
     "n_measures": 117,
+    "n_repeat_marks": 2,
     "exit": 0,
     "exists": true,
     "n_cc64": 236,
@@ -156,6 +167,7 @@
   {
     "score": "Chopin/Ballades/1/xml_score.musicxml",
     "n_measures": 264,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 952,
@@ -170,6 +182,7 @@
   {
     "score": "Chopin/Ballades/3/xml_score.musicxml",
     "n_measures": 241,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 960,
@@ -184,6 +197,7 @@
   {
     "score": "Chopin/Barcarolle/xml_score.musicxml",
     "n_measures": 116,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 610,
@@ -198,6 +212,7 @@
   {
     "score": "Chopin/Etudes_op_10/1/xml_score.musicxml",
     "n_measures": 79,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 160,
@@ -212,6 +227,7 @@
   {
     "score": "Chopin/Etudes_op_10/10/xml_score.musicxml",
     "n_measures": 78,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 440,
@@ -226,6 +242,7 @@
   {
     "score": "Chopin/Etudes_op_10/5/xml_score.musicxml",
     "n_measures": 85,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 174,
@@ -240,6 +257,7 @@
   {
     "score": "Chopin/Etudes_op_10/7/xml_score.musicxml",
     "n_measures": 60,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 136,
@@ -254,6 +272,7 @@
   {
     "score": "Chopin/Etudes_op_10/8/xml_score.musicxml",
     "n_measures": 96,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 256,
@@ -268,6 +287,7 @@
   {
     "score": "Chopin/Etudes_op_25/1/xml_score.musicxml",
     "n_measures": 50,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 250,
@@ -282,6 +302,7 @@
   {
     "score": "Chopin/Etudes_op_25/12/xml_score.musicxml",
     "n_measures": 83,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 166,
@@ -296,6 +317,7 @@
   {
     "score": "Chopin/Etudes_op_25/8/xml_score.musicxml",
     "n_measures": 36,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 166,
@@ -310,6 +332,7 @@
   {
     "score": "Chopin/Scherzos/20/xml_score.musicxml",
     "n_measures": 625,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 1668,
@@ -324,6 +347,7 @@
   {
     "score": "Chopin/Scherzos/31/xml_score.musicxml",
     "n_measures": 780,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 2008,
@@ -338,6 +362,7 @@
   {
     "score": "Chopin/Scherzos/39/xml_score.musicxml",
     "n_measures": 649,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 1522,
@@ -352,6 +377,7 @@
   {
     "score": "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml",
     "n_measures": 241,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 482,
@@ -366,6 +392,7 @@
   {
     "score": "Chopin/Sonata_2/2nd/xml_score.musicxml",
     "n_measures": 290,
+    "n_repeat_marks": 2,
     "exit": 0,
     "exists": true,
     "n_cc64": 580,
@@ -380,6 +407,7 @@
   {
     "score": "Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml",
     "n_measures": 287,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 574,
@@ -394,6 +422,7 @@
   {
     "score": "Chopin/Sonata_3/2nd/xml_score.musicxml",
     "n_measures": 217,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 434,
@@ -408,7 +437,8 @@
   {
     "score": "Chopin/Sonata_3/3rd/xml_score.musicxml",
     "n_measures": 120,
-    "exit": 3221225477,
+    "n_repeat_marks": 0,
+    "exit": 0,
     "exists": true,
     "n_cc64": 248,
     "expected_cc64": 240,
@@ -422,6 +452,7 @@
   {
     "score": "Chopin/Sonata_3/4th/xml_score.musicxml",
     "n_measures": 288,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 576,
@@ -436,6 +467,7 @@
   {
     "score": "Debussy/Images_Book_1/1_Reflets_dans_lEau/xml_score.musicxml",
     "n_measures": 95,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 198,
@@ -450,6 +482,7 @@
   {
     "score": "Liszt/Ballade_2/xml_score.musicxml",
     "n_measures": 317,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 666,
@@ -464,6 +497,7 @@
   {
     "score": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml",
     "n_measures": 145,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 302,
@@ -478,6 +512,7 @@
   {
     "score": "Liszt/Transcendental_Etudes/10/xml_score.musicxml",
     "n_measures": 182,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 374,
@@ -492,6 +527,7 @@
   {
     "score": "Liszt/Transcendental_Etudes/5/xml_score.musicxml",
     "n_measures": 134,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 276,
@@ -506,6 +542,7 @@
   {
     "score": "Ravel/Pavane/xml_score.musicxml",
     "n_measures": 72,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 146,
@@ -520,6 +557,7 @@
   {
     "score": "Schumann/Arabeske/xml_score.musicxml",
     "n_measures": 231,
+    "n_repeat_marks": 6,
     "exit": 0,
     "exists": true,
     "n_cc64": 582,
@@ -534,6 +572,7 @@
   {
     "score": "Schumann/Kreisleriana/4/xml_score.musicxml",
     "n_measures": 28,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 58,
@@ -548,6 +587,7 @@
   {
     "score": "Schumann/Kreisleriana/6/xml_score.musicxml",
     "n_measures": 40,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 80,
@@ -562,6 +602,7 @@
   {
     "score": "Schumann/Kreisleriana/7/xml_score.musicxml",
     "n_measures": 120,
+    "n_repeat_marks": 4,
     "exit": 0,
     "exists": true,
     "n_cc64": 240,
@@ -576,6 +617,7 @@
   {
     "score": "Scriabin/Etudes_op_8/11/xml_score.musicxml",
     "n_measures": 54,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
     "n_cc64": 110,
@@ -589,11 +631,12 @@
   },
   {
     "score": "Scriabin/Sonatas/5/xml_score.musicxml",
-    "n_measures": 912,
+    "n_measures": 456,
+    "n_repeat_marks": 0,
     "exit": 0,
     "exists": true,
-    "n_cc64": 1836,
-    "expected_cc64": 1824,
+    "n_cc64": 924,
+    "expected_cc64": 912,
     "count_ok": false,
     "strictly_increasing": true,
     "ppq": 480,

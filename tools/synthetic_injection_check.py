@@ -26,7 +26,9 @@ def inject(xml_path: Path, out_path: Path) -> int:
     tree = etree.parse(str(xml_path))
     root = tree.getroot()
     n = 0
-    for m in root.xpath(".//*[local-name()='measure']"):
+    parts = root.xpath(".//*[local-name()='part']")
+    scope = parts[0] if parts else root
+    for m in scope.xpath(".//*[local-name()='measure']"):
         idx = 0
         for i, ch in enumerate(m):
             if etree.QName(ch).localname == "attributes":
@@ -88,7 +90,8 @@ def main() -> int:
         inj_mid = args.out_dir / "mid" / f"{stem}.mid"
         n_meas = inject(xml, inj_xml)
         r = render(inj_xml, inj_mid)
-        rec = {"score": rel, "n_measures": n_meas, **r}
+        n_rep = len(etree.parse(str(xml)).getroot().xpath(".//*[local-name()='repeat']"))
+        rec = {"score": rel, "n_measures": n_meas, "n_repeat_marks": n_rep, **r}
         if r["exists"]:
             pos, ppq = cc64_positions(inj_mid)
             rec["n_cc64"] = len(pos)
