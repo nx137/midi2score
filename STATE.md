@@ -3,6 +3,16 @@
 > 每阶段更新。保持简短：当前在哪、卡在哪、下一步做什么。详细证据放 `EVIDENCE.md`。
 > **本文件不是实验日志，也不是记忆摘要。**
 
+## 远端身份（每次 handoff 必附）
+
+- 约定：`main` SHA = **写入本块时的 HEAD**（包含本块的提交会使其 +1；以 `git log` 为准）；四个文件哈希 = 写入时的内容
+- 记录时间：`2026-10-08 22:10 +0800`
+- `main` SHA：`f04117e227af6ea042b9e8e8d02ef38d1601cb60`
+- `PedNotate_Plan_v3.0.md` sha256：`b65b1fa6cfaa73caefccd9292ed460d5c2aac98ef56be64566a6574e98567c1b`
+- `TASK_CHARTER.md` sha256：`8c24d88707385b8104505b28b898569ad6bc207f320d2b79960cd320cfd769cf`
+- `DECISIONS.md` sha256：`6ee901829bc5d5e8280725b3f3d2eab6cf2e1c68d9899eafdfd6fc85c15beaa7`
+- `FIELD_DEFINITIONS.md` sha256：`db11600aa6b71a40f00f09fba8181b7e0393cabd831aec1bc8188c5419377d35`
+
 ## 当前
 
 - **更新时间**：2026-10-07（阶段 1–4 + 语料 / 渲染器 / manifest 核验）
