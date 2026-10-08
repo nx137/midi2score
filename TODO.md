@@ -93,3 +93,13 @@
 ## 明确不做（YAGNI）
 
 - `conversation_summary.md`、向量库 / 语义检索、Web API / UI、多智能体 supervisor、Postgres、LLM 供应商抽象层、未来需求脚手架。
+
+## R1 当前窗口（2026-10-09，B2 Round A 后）
+
+| ID | 待办 | blocking | 状态 |
+|:--|:--|:--|:--|
+| R1-B2-A1 | B2 分标签绝对计数 + `B2_perf.csv` 分标签列 + 逐值自校 | — | done（test ±1 合计 11006/32012/5272/352） |
+| R1-B2-A2 | B2 全量 36 首列 + 两域 micro/bootstrap + 两域分标签 bootstrap | — | done（`B2_summary.*`、`B2_bootstrap_perlabel.json`） |
+| R1-B2-A3 | floor 表 notation_reference 恒等行、回放轴独立表、注记 1 的 36 域分母更正、test 7 首清点 | — | done（`floor_reference_test.md`、`replay_fidelity_reference.md`、`fold_test_inventory.md`） |
+| R1-B3-B | 轮 B：锚点级训练表（标签 + A/B/C 特征 + 命名空间检查；CHANGE 关闭并报合并对数） | R1-B2-A3 | todo |
+| R1-B3-C | 轮 C：HistGradientBoosting 两独立二分类训练 + 两域评估 + 消融 | R1-B3-B | todo |

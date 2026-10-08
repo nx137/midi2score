@@ -1,0 +1,87 @@
+{
+  "tol": 1.0,
+  "boot": 10000,
+  "seed": 20260101,
+  "domains": {
+    "test": {
+      "n_scores": 7,
+      "n_runs": 77,
+      "DOWN_B2_minus_beat_periodic_4": {
+        "label": "DOWN",
+        "n_scores": 7,
+        "n_runs": 77,
+        "mean_diff": 0.029279024802185406,
+        "ci95_low": -0.10207597220445398,
+        "ci95_high": 0.11867159823934925,
+        "p_gt_0": 0.6976
+      },
+      "UP_B2_minus_inversion": {
+        "label": "UP",
+        "n_scores": 7,
+        "n_runs": 77,
+        "mean_diff": -0.07612427139230524,
+        "ci95_low": -0.15375012200710556,
+        "ci95_high": 0.012180098783265453,
+        "p_gt_0": 0.0798
+      },
+      "micro_B2_minus_inversion": {
+        "label": "micro",
+        "n_scores": 7,
+        "n_runs": 77,
+        "mean_diff": -0.020197142446698582,
+        "ci95_low": -0.05557416084438238,
+        "ci95_high": 0.011420602652262163,
+        "p_gt_0": 0.1807
+      },
+      "micro_B2_minus_beat_periodic_4": {
+        "label": "micro",
+        "n_scores": 7,
+        "n_runs": 77,
+        "mean_diff": 0.019169752694165598,
+        "ci95_low": -0.074321812518538,
+        "ci95_high": 0.09962218971228115,
+        "p_gt_0": 0.6728
+      }
+    },
+    "full": {
+      "n_scores": 36,
+      "n_runs": 271,
+      "DOWN_B2_minus_beat_periodic_4": {
+        "label": "DOWN",
+        "n_scores": 36,
+        "n_runs": 271,
+        "mean_diff": 0.018750977498162513,
+        "ci95_low": -0.028466268720484363,
+        "ci95_high": 0.07335187074566323,
+        "p_gt_0": 0.7522
+      },
+      "UP_B2_minus_inversion": {
+        "label": "UP",
+        "n_scores": 36,
+        "n_runs": 271,
+        "mean_diff": -0.01250330904236275,
+        "ci95_low": -0.062267884190162694,
+        "ci95_high": 0.03659376418618626,
+        "p_gt_0": 0.3126
+      },
+      "micro_B2_minus_inversion": {
+        "label": "micro",
+        "n_scores": 36,
+        "n_runs": 271,
+        "mean_diff": 0.020617896983720505,
+        "ci95_low": -0.01060028948475678,
+        "ci95_high": 0.060320370145126055,
+        "p_gt_0": 0.8849
+      },
+      "micro_B2_minus_beat_periodic_4": {
+        "label": "micro",
+        "n_scores": 36,
+        "n_runs": 271,
+        "mean_diff": 0.03171305492545506,
+        "ci95_low": -0.020609320148291897,
+        "ci95_high": 0.09391510523898815,
+        "p_gt_0": 0.8577
+      }
+    }
+  }
+}

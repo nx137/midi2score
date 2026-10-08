@@ -65,7 +65,8 @@ def main() -> int:
     lines = [f"# 地板与参照（{args.fold} 折，与 E1 主表同域）\n",
              f"runs = {len(recs)}（域：Main 43 首中不含 repeat 者，fold={args.fold}）\n",
              "## micro（P=tp/(tp+fp)，wrong 不进分母；D-0063）\n",
-             "| 方法 | ±0 F1 | ±1 F1 | ±2 F1 |", "|:--|--:|--:|--:|"]
+             "| 方法 | ±0 F1 | ±1 F1 | ±2 F1 |", "|:--|--:|--:|--:|",
+             "| notation_reference | 1.0000 | 1.0000 | 1.0000 |"]
     for name in ("inversion", "always_down", "beat_periodic_1", "beat_periodic_2", "beat_periodic_4"):
         cells = []
         for tol in TOLS:
@@ -90,6 +91,16 @@ def main() -> int:
             p = tp/(tp+fp) if (tp+fp) else 0; rr = tp/(tp+fn) if (tp+fn) else 0
             cells += [f"{p:.3f}", f"{rr:.3f}", f"{2*p*rr/(p+rr) if (p+rr) else 0:.4f}"]
         lines.append(f"| {name} | " + " | ".join(cells) + " |")
+    lines += ["",
+              "> notation_reference 在回放轴上输给地板（0.2434 < beat_periodic_2 0.4640），在谱面轴上退化为恒等（构造上 F1 ≡ 1.0，无判别力）。两轴上均不可作判据参照——这就是 HC-17 的举证形式。",
+              "> 回放轴数字不得并入本表；见 `results/E1/replay_fidelity_reference.md`（引 `evidence/R1/G1-replay/MAIN_METRIC_round1.md`）。"]
+    lines += [
+        "",
+        "## 注记 1：域与 #pred（D-0071 更正）",
+        "- 36 评测域折内规模：train 166 runs / 2423 pedal elements；val 28 runs / 141；test 78 runs / 1051（78 中 1 条无对齐，可评估 77）。",
+        "- B1 CV d_min=0 档 #pred = 74,570，已按 `B1_perf.csv` 核为 train 折 166 runs 的合计；B1 CV 与 B2 CV 均使用同一 36 评测域。",
+        "- test pedal elements 占比 = 1051 / 3615 = 29.1%（不是用 271 runs 的 33.8%）。",
+    ]
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text("\n".join(lines) + "\n", encoding="utf-8")
     print("\n".join(lines))

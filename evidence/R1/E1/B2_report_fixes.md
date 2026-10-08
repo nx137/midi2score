@@ -35,3 +35,10 @@
 
 train 真值 11,686（40.9%）／val 639（2.2%）／test 16,278（56.9%），合计 28,603 ✓
 ⇒ val「健全性检查」强度弱；E1 主表由少数高密度曲目主导。**不得重划分**，只进 Limitations。
+
+## Round A 完成注记（2026-10-09）
+
+- ② **已补**：`B2_perf.csv` 现有 DOWN/UP 分标签 `n_pred/n_truth/tp/fp/fn/wrong` 列；test ±1 分标签合计逐值回到聚合计数（11006/32012/5272/352），见 `results/E1/B2_summary.md` §3.2。
+- B2 全量 36 首列、两域 micro bootstrap、两域分标签 bootstrap 已出数；见 `results/E1/B2_summary.md` §4–§5.1、`results/E1/B2_bootstrap_perlabel.json`。
+- ⑥⑦ 已收口：test 折 7 首逐曲清点见 `evidence/R1/E1/fold_test_inventory.md`；元素占比 1051/3615=29.1%，标签占比 56.9% 分列。
+- 本文件上方“未补/待办”文字保留为当时状态，Round A 以本注记及 `B2_roundA_completion.md` 为准。

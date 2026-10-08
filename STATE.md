@@ -6,18 +6,22 @@
 ## 远端身份（每次 handoff 必附）
 
 - 约定：`main` SHA = **写入本块时的 HEAD**（包含本块的提交会使其 +1；以 `git log` 为准）；四个文件哈希 = 写入时的内容
-- 记录时间：`2026-10-08 22:10 +0800`
-- `main` SHA：`f04117e227af6ea042b9e8e8d02ef38d1601cb60`
+- 记录时间：`2026-10-09 +0800`
+- `main` SHA：`174d8bb4193a474c814c4211bd2328d012e96da1`
 - `PedNotate_Plan_v3.0.md` sha256：`b65b1fa6cfaa73caefccd9292ed460d5c2aac98ef56be64566a6574e98567c1b`
 - `TASK_CHARTER.md` sha256：`8c24d88707385b8104505b28b898569ad6bc207f320d2b79960cd320cfd769cf`
-- `DECISIONS.md` sha256：`6ee901829bc5d5e8280725b3f3d2eab6cf2e1c68d9899eafdfd6fc85c15beaa7`
-- `FIELD_DEFINITIONS.md` sha256：`db11600aa6b71a40f00f09fba8181b7e0393cabd831aec1bc8188c5419377d35`
+- `DECISIONS.md` sha256：`29a697759ae30fe595d36cd61e4ed37a49524f0516813fae78c014f5c097f592`
+- `FIELD_DEFINITIONS.md` sha256：`ebd19f068c4382a4a75f43422bdc3e1c3defaf0b54bc851edd51243033fe7c3a`
+- tracked 文件数：`133`
+- `git status --porcelain`：本轮写入后为 dirty（待提交；提交后由下一次身份块刷新）
 
 ## 当前
 
-- **更新时间**：2026-10-07（阶段 1–4 + 语料 / 渲染器 / manifest 核验）
-- **当前阶段**：G1' 完成、进入模型线。通道自检通过；notation reference 出数（回放轴 F1@±1=0.2434）；**主指标轴已切换为「谱面一致度」（D-0056）**，回放保真度降为副/诊断；下一步 **B1**（§5.2 阶梯第一级）
-- **阶段状态**：系统侧 18/18 PASS；导出侧已冻结（58 有效 + 10 coordinate_ambiguous、T1=0/T4=0 坐标不变、裁定5 71/71、欠账#4 结清）；**交付 5 待执行：第 0 步通道自检 → ①b 锚点还原 → 指标 → bootstrap**
+- **更新时间**：2026-10-09（R1 模型线，B2 Round A 收尾）
+- **当前阶段**：B1 与 B2 均已出数；B2 已完成 36 首全量列、分标签绝对计数、两域 micro/bootstrap 与分标签 bootstrap；`notation_reference` 回归谱面轴恒等行、回放轴副指标独立表已落库。
+- **阶段状态**：B2 test ±1 micro = 0.3712；test DOWN = 0.4850、UP = 0.2550；全量 36 域 ±1 micro = 0.2971。B2 分标签 bootstrap：test DOWN(B2−bp4) 0.0293 [−0.1021, 0.1187]，test UP(B2−inversion) −0.0761 [−0.1538, 0.0122]；全量 DOWN(B2−bp4) 0.0188 [−0.0285, 0.0734]，UP(B2−inversion) −0.0125 [−0.0623, 0.0366]；完整见 `results/E1/B2_bootstrap_perlabel.json`。
+- **评测域**：36 首 / 271 runs；train 166 / val 28 / test 78（test 可评估 77）；test pedal elements=1051/3615=29.1%，不是 33.8%。
+- **下一步**：按控制器顺序进入 B3（轮 B：锚点级训练表；轮 C：HistGradientBoosting 训练与两域评估）；本轮不自行启动 B3。
 - **活动任务**：`R1`（科研侧推进）
 - **分支**：`main` → `origin/main`（https://github.com/nx137/midi2score.git，已推送）
 - **thread_id 约定**（阶段 2 实现）：`research:midi2score:<task_id>`，稳定可推导，禁止每次随机生成

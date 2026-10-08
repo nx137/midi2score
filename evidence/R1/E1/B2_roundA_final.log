@@ -1,0 +1,60 @@
+���� runs = 271
+  features_once Beethoven/Piano_Sonatas/11-2/xml_score.musicxml: 0.48s
+  features_once Beethoven/Piano_Sonatas/21-3/xml_score.musicxml: 1.71s
+  features_once Beethoven/Piano_Sonatas/26-2/xml_score.musicxml: 0.19s
+  features_once Beethoven/Piano_Sonatas/28-1/xml_score.musicxml: 0.32s
+  features_once Beethoven/Piano_Sonatas/29-2/xml_score.musicxml: 0.47s
+  features_once Beethoven/Piano_Sonatas/29-3/xml_score.musicxml: 1.12s
+  features_once Beethoven/Piano_Sonatas/29-4/xml_score.musicxml: 1.93s
+  features_once Chopin/Ballades/1/xml_score.musicxml: 1.07s
+  features_once Chopin/Ballades/3/xml_score.musicxml: 0.99s
+  features_once Chopin/Barcarolle/xml_score.musicxml: 1.03s
+  features_once Chopin/Etudes_op_10/1/xml_score.musicxml: 0.32s
+  features_once Chopin/Etudes_op_10/10/xml_score.musicxml: 0.45s
+  features_once Chopin/Etudes_op_10/5/xml_score.musicxml: 0.37s
+  features_once Chopin/Etudes_op_10/7/xml_score.musicxml: 0.31s
+  features_once Chopin/Etudes_op_10/8/xml_score.musicxml: 0.44s
+  features_once Chopin/Etudes_op_25/1/xml_score.musicxml: 0.51s
+  features_once Chopin/Etudes_op_25/12/xml_score.musicxml: 0.50s
+  features_once Chopin/Etudes_op_25/8/xml_score.musicxml: 0.32s
+  features_once Chopin/Scherzos/20/xml_score.musicxml: 1.18s
+  features_once Chopin/Scherzos/31/xml_score.musicxml: 1.51s
+  features_once Chopin/Scherzos/39/xml_score.musicxml: 1.07s
+  features_once Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml: 0.94s
+  features_once Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml: 0.79s
+  features_once Chopin/Sonata_3/2nd/xml_score.musicxml: 0.32s
+  features_once Chopin/Sonata_3/3rd/xml_score.musicxml: 0.48s
+  features_once Chopin/Sonata_3/4th/xml_score.musicxml: 0.94s
+  features_once Debussy/Images_Book_1/1_Reflets_dans_lEau/xml_score.musicxml: 0.49s
+  features_once Liszt/Ballade_2/xml_score.musicxml: 1.65s
+  features_once Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml: 0.91s
+  features_once Liszt/Transcendental_Etudes/10/xml_score.musicxml: 0.91s
+  features_once Liszt/Transcendental_Etudes/5/xml_score.musicxml: 0.90s
+  features_once Ravel/Pavane/xml_score.musicxml: 0.42s
+  features_once Schumann/Kreisleriana/4/xml_score.musicxml: 0.16s
+  features_once Schumann/Kreisleriana/6/xml_score.musicxml: 0.18s
+  features_once Scriabin/Etudes_op_8/11/xml_score.musicxml: 0.26s
+  features_once Scriabin/Sonatas/5/xml_score.musicxml: 1.87s
+CV K=1: ��0.0:#pred=63884 P=0.047 R=0.256 F1=0.0792 ��1.0:#pred=63884 P=0.145 R=0.792 F1=0.2448 ��2.0:#pred=63884 P=0.159 R=0.868 F1=0.2686 | meanfoldF1@1=0.3086
+CV K=2: ��0.0:#pred=63594 P=0.050 R=0.271 F1=0.0843 ��1.0:#pred=63594 P=0.145 R=0.789 F1=0.2449 ��2.0:#pred=63594 P=0.160 R=0.869 F1=0.2699 | meanfoldF1@1=0.3085
+CV K=3: ��0.0:#pred=63108 P=0.052 R=0.282 F1=0.0881 ��1.0:#pred=63108 P=0.146 R=0.786 F1=0.2458 ��2.0:#pred=63108 P=0.161 R=0.868 F1=0.2712 | meanfoldF1@1=0.3092
+
+ѡ�� K = 3���������ſ�� = 1 ����
+val: ��0.0:#pred=5088 P=0.028 R=0.221 F1=0.0492 ��1.0:#pred=5088 P=0.112 R=0.892 F1=0.1991 ��2.0:#pred=5088 P=0.124 R=0.987 F1=0.2204
+  val �ֱ�ǩ@��1: DOWN {'n_pred': 2544, 'n_truth': 309, 'tp': 295, 'fp': 2249, 'fn': 14, 'wrong': 14, 'P': 0.11595911949685535, 'R': 0.9546925566343042, 'F1': 0.20679985979670523} | UP {'n_pred': 2544, 'n_truth': 330, 'tp': 275, 'fp': 2269, 'fn': 55, 'wrong': 1, 'P': 0.10809748427672956, 'R': 0.8333333333333334, 'F1': 0.19137091162143355}
+test: ��0.0:#pred=43018 P=0.101 R=0.267 F1=0.1465 ��1.0:#pred=43018 P=0.256 R=0.676 F1=0.3712 ��2.0:#pred=43018 P=0.330 R=0.873 F1=0.4795
+  test �ֱ�ǩ@��1: DOWN {'n_pred': 21509, 'n_truth': 8457, 'tp': 7267, 'fp': 14242, 'fn': 1190, 'wrong': 228, 'P': 0.337858570830815, 'R': 0.859288163651413, 'F1': 0.48501635186544756} | UP {'n_pred': 21509, 'n_truth': 7821, 'tp': 3739, 'fp': 17770, 'fn': 4082, 'wrong': 124, 'P': 0.17383420893579432, 'R': 0.47807185781869327, 'F1': 0.2549607909989771}
+full: ��0.0:#pred=111214 P=0.070 R=0.272 F1=0.1113 ��1.0:#pred=111214 P=0.187 R=0.726 F1=0.2971 ��2.0:#pred=111214 P=0.225 R=0.874 F1=0.3575
+  full �ֱ�ǩ@��1: DOWN {'n_pred': 55607, 'n_truth': 14470, 'tp': 12454, 'fp': 43153, 'fn': 2016, 'wrong': 344, 'P': 0.22396460877227686, 'R': 0.8606772633033863, 'F1': 0.355437590079484} | UP {'n_pred': 55607, 'n_truth': 14133, 'tp': 8313, 'fp': 47294, 'fn': 5820, 'wrong': 182, 'P': 0.1494955671048609, 'R': 0.5881978348545956, 'F1': 0.23839977057642672}
+bootstrap test inversion: mean=-0.0202 CI=[-0.0556,0.0114] pgt0=0.1807
+bootstrap test always_down: mean=0.2942 CI=[0.1071,0.4036] pgt0=1.0000
+bootstrap test beat_periodic_1: mean=0.1649 CI=[0.0359,0.2420] pgt0=1.0000
+bootstrap test beat_periodic_2: mean=0.0392 CI=[-0.0397,0.1000] pgt0=0.8407
+bootstrap test beat_periodic_4: mean=0.0192 CI=[-0.0743,0.0996] pgt0=0.6728
+bootstrap full inversion: mean=0.0206 CI=[-0.0106,0.0603] pgt0=0.8849
+bootstrap full always_down: mean=0.2486 CI=[0.1405,0.3458] pgt0=1.0000
+bootstrap full beat_periodic_1: mean=0.1402 CI=[0.0761,0.2029] pgt0=1.0000
+bootstrap full beat_periodic_2: mean=0.0394 CI=[0.0034,0.0813] pgt0=0.9880
+bootstrap full beat_periodic_4: mean=0.0317 CI=[-0.0206,0.0939] pgt0=0.8577
+parse_cache: miss=36 (���� 36)
+alignment_proof: {"checks": {"n_scores": {"recomputed": 36, "recorded": 36, "equal": true}, "n_runs": {"recomputed": 271, "recorded": 271, "equal": true}, "inversion_F1": {"recomputed": 0.276557, "recorded": 0.276557, "equal": true}, "per_run_len": {"recomputed": 271, "recorded": 271, "equal": true}}, "baselines_equal": {"always_down": true, "beat_periodic_1": true, "beat_periodic_2": true, "beat_periodic_4": true}, "bootstrap_equal": true, "PASS": true}

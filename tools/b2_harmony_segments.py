@@ -9,6 +9,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from score_features import anchor_features, measure_starts, parse_score_extended  # noqa: E402
 from inversion_consistency import GRID, cc64_transitions, parse_alignment, parse_score, snap, to_anchor  # noqa: E402
 from inversion_baselines import f1_of  # noqa: E402
+from scipy.optimize import linear_sum_assignment  # noqa: E402
 
 TOLS = [0.0, 1.0, 2.0]
 
@@ -139,6 +140,21 @@ def alignment_proof(json_path: Path) -> dict:
             "PASS": bool(ok)}
 
 
+
+def baseline_predictions(r, seq, span):
+    """与 e1_test_domain.py 逐字同域的地板/参照臂（inversion 不过 span 截断）。"""
+    inv = set()
+    for t, kind in cc64_transitions(r["perf_path"]):
+        got = to_anchor(t, seq, [])
+        if got:
+            inv.add((snap(got[0]), "DOWN" if kind == "start" else "UP"))
+    out = {"inversion": inv}
+    out["always_down"] = {(snap(x), "DOWN") for x in np.arange(0, span + GRID, GRID)}
+    for n in (1, 2, 4):
+        out[f"beat_periodic_{n}"] = {(snap(x), "DOWN") for x in np.arange(0, span + GRID, float(n))}
+    return out
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--dataset", type=Path, default=Path("data/asap-dataset"))
@@ -168,13 +184,73 @@ def main() -> int:
     print(f"可用 runs = {len(runs)}")
 
     feats_cache = {}
+    baseline_cache = {}
     def get_feats(r):
         key = r["score"]
         if key not in feats_cache:
             t0 = __import__("time").perf_counter()
             feats_cache[key] = features_once(r["xml"])
-            print(f"  features_once {key}: {__import__("time").perf_counter()-t0:.2f}s")
+            print(f"  features_once {key}: {__import__('time').perf_counter()-t0:.2f}s")
         return feats_cache[key]
+
+    def get_baselines(r, seq, span):
+        key = (r["score"], r["perf"])
+        if key not in baseline_cache:
+            baseline_cache[key] = baseline_predictions(r, seq, span)
+        return baseline_cache[key]
+
+    def per_label_counts(pred, truth, tol):
+        """按标签拆绝对计数；wrong 的定义逐字保持 f1_of：未匹配预测可命中未匹配反向真值。"""
+        pl, tl = sorted(pred), sorted(truth)
+        out = {lab: {"n_pred": 0, "n_truth": 0, "tp": 0, "fp": 0, "fn": 0, "wrong": 0} for lab in ("DOWN", "UP")}
+        matched_pred, matched_truth = set(), set()
+        for lab in ("DOWN", "UP"):
+            pi = [i for i, x in enumerate(pl) if x[1] == lab]
+            ti = [j for j, x in enumerate(tl) if x[1] == lab]
+            out[lab]["n_pred"] = len(pi)
+            out[lab]["n_truth"] = len(ti)
+            if pi and ti:
+                cost = np.full((len(pi), len(ti)), 1e6)
+                for a, i in enumerate(pi):
+                    for b, j in enumerate(ti):
+                        d = abs(pl[i][0] - tl[j][0])
+                        if d <= tol:
+                            cost[a, b] = d
+                ra, cb = linear_sum_assignment(cost)
+                for a, b in zip(ra, cb):
+                    if cost[a, b] <= tol:
+                        out[lab]["tp"] += 1
+                        matched_pred.add(pi[a]); matched_truth.add(ti[b])
+            out[lab]["fp"] = len(pi) - sum(1 for i in pi if i in matched_pred)
+            out[lab]["fn"] = len(ti) - sum(1 for j in ti if j in matched_truth)
+        for lab, other in (("DOWN", "UP"), ("UP", "DOWN")):
+            pi = [i for i, x in enumerate(pl) if x[1] == lab]
+            ti_other = [j for j, x in enumerate(tl) if x[1] == other]
+            for i in pi:
+                if i in matched_pred:
+                    continue
+                for j in ti_other:
+                    if j in matched_truth:
+                        continue
+                    if abs(pl[i][0] - tl[j][0]) <= tol:
+                        out[lab]["wrong"] += 1
+                        break
+        return out
+
+    def per_label(sel, tol):
+        acc = {lab: {"n_pred": 0, "n_truth": 0, "tp": 0, "fp": 0, "fn": 0, "wrong": 0} for lab in ("DOWN", "UP")}
+        for x in sel:
+            c = per_label_counts(x["pred"], x["truth"], tol)
+            for lab in ("DOWN", "UP"):
+                for k in acc[lab]:
+                    acc[lab][k] += c[lab][k]
+        out = {}
+        for lab in ("DOWN", "UP"):
+            c = acc[lab]
+            p = c["tp"] / c["n_pred"] if c["n_pred"] else 0
+            rr = c["tp"] / c["n_truth"] if c["n_truth"] else 0
+            out[lab] = {**c, "P": p, "R": rr, "F1": 2 * p * rr / (p + rr) if (p + rr) else 0}
+        return out
 
     def per_run(K):
         out = []
@@ -201,6 +277,12 @@ def main() -> int:
                 rec[f"tol{tol}"] = f1_of(pred, truth, tol)
             rec["truth"] = truth
             rec["pred"] = pred
+            base = get_baselines(r, seq, span)
+            rec["baseline"] = {
+                name: {f"tol{tol}": f1_of(bp, truth, tol) for tol in TOLS}
+                for name, bp in base.items()
+            }
+            rec["per_label"] = {f"tol{tol}": per_label([rec], tol) for tol in TOLS}
             out.append(rec)
         return out
 
@@ -210,18 +292,33 @@ def main() -> int:
         p = tp / (tp + fp) if (tp + fp) else 0; rr = tp / (tp + fn) if (tp + fn) else 0
         return {"tp": tp, "fp": fp, "fn": fn, "wrong": wr, "P": p, "R": rr,
                 "F1": 2 * p * rr / (p + rr) if (p + rr) else 0,
-                "n_pred": tp + fp}   # f1_of 不返回 n_pred（D-0063 口径），此处由 tp+fp 导出
+                "n_pred": tp + fp, "n_truth": tp + fn}
 
-    def per_label(sel, tol):
-        out = {}
-        for lab in ("DOWN", "UP"):
-            tp = fp = fn = 0
-            for x in sel:
-                pr = {y for y in x["pred"] if y[1] == lab}; tr = {y for y in x["truth"] if y[1] == lab}
-                m = f1_of(pr, tr, tol); tp += m["tp"]; fp += m["fp"]; fn += m["fn"]
-            p = tp / (tp + fp) if (tp + fp) else 0; rr = tp / (tp + fn) if (tp + fn) else 0
-            out[lab] = {"P": p, "R": rr, "F1": 2 * p * rr / (p + rr) if (p + rr) else 0}
-        return out
+    def f1_from_counts(rows, get):
+        tp = sum(get(x)["tp"] for x in rows); fp = sum(get(x)["fp"] for x in rows); fn = sum(get(x)["fn"] for x in rows)
+        return 2 * tp / (2 * tp + fp + fn) if (2 * tp + fp + fn) else 0.0
+
+    def bootstrap_vs(sel, method, boot, seed, tol=1.0):
+        scores = sorted({x["score"] for x in sel})
+        by = {s: [x for x in sel if x["score"] == s] for s in scores}
+        rng = random.Random(seed)
+        diffs = []
+        for _ in range(boot):
+            sample = [scores[rng.randrange(len(scores))] for _ in scores]
+            chosen = [x for s in sample for x in by[s]]
+            b2 = f1_from_counts(chosen, lambda x, t=tol: x[f"tol{t}"])
+            base = f1_from_counts(chosen, lambda x, m=method, t=tol: x["baseline"][m][f"tol{t}"])
+            diffs.append(b2 - base)
+        return {
+            "method": method,
+            "tol": tol,
+            "n_scores": len(scores),
+            "n_runs": len(sel),
+            "mean_diff": float(np.mean(diffs)),
+            "ci95_low": float(np.percentile(diffs, 2.5)),
+            "ci95_high": float(np.percentile(diffs, 97.5)),
+            "p_gt_0": float(np.mean([d > 0 for d in diffs])),
+        }
 
     out = args.out_dir; out.mkdir(parents=True, exist_ok=True)
     rows = {}
@@ -242,25 +339,46 @@ def main() -> int:
         print(f"CV K={K}: " + " ".join(f"±{t}:#pred={c[f'tol{t}']['n_pred']} P={c[f'tol{t}']['P']:.3f} R={c[f'tol{t}']['R']:.3f} F1={c[f'tol{t}']['F1']:.4f}" for t in TOLS) + f" | meanfoldF1@1={c['mean_f1_at_1']:.4f}")
     best = max(cv, key=lambda c: (c["mean_f1_at_1"], -c["K"]))
     print(f"\n选中 K = {best['K']}（各折最优跨度 = {len({int(np.argmax(c['fold_f1_at_1'])) for c in cv})} 档）")
-    summary = {"selected_K": best["K"], "cv": cv,
-               "val": {}, "test": {}, "per_label_test": {},
-               "note": "B2 与 bp2/bp4 严格同域（span = max(truth)）；与 inversion/B1 域不同 ⇒ 仅参考不作判据"}
-    for f in ("val", "test"):
-        sel = [x for x in rows[best["K"]] if x["fold"] == f]
+    summary = {
+        "selected_K": best["K"],
+        "cv": cv,
+        "val": {},
+        "test": {},
+        "full": {},
+        "per_label_test": {},
+        "n_runs": len(runs),
+        "n_scores": len({r["score"] for r in runs}),
+        "note": "B2 与 bp2/bp4 严格同域（span = max(truth)）；与 inversion/B1 域不同 ⇒ 仅参考不作判据",
+    }
+    for f in ("val", "test", "full"):
+        sel = rows[best["K"]] if f == "full" else [x for x in rows[best["K"]] if x["fold"] == f]
         summary[f] = {f"±{t}": agg(sel, t) for t in TOLS}
         summary[f]["per_label_±1"] = per_label(sel, 1.0)
         print(f"{f}: " + " ".join(f"±{t}:#pred={summary[f][f'±{t}']['n_pred']} P={summary[f][f'±{t}']['P']:.3f} R={summary[f][f'±{t}']['R']:.3f} F1={summary[f][f'±{t}']['F1']:.4f}" for t in TOLS))
         print(f"  {f} 分标签@±1: DOWN {summary[f]['per_label_±1']['DOWN']} | UP {summary[f]['per_label_±1']['UP']}")
-    # bootstrap 按主控裁定**从关键路径摘下**（B2 判据是点估计；CI 作第二遍补，见 evidence）
-    summary["bootstrap_test_vs"] = "DEFERRED（第二遍补；按 score 重采样 + 逐 run 计数求和，回到 D-0031/D-0063 口径）"
+    summary["per_label_test"] = summary["test"]["per_label_±1"]
+
+    summary["bootstrap"] = {"tol": 1.0, "test": {}, "full": {}}
+    for domain, sel in (("test", [x for x in rows[best["K"]] if x["fold"] == "test"]), ("full", rows[best["K"]])):
+        for method in ("inversion", "always_down", "beat_periodic_1", "beat_periodic_2", "beat_periodic_4"):
+            r = bootstrap_vs(sel, method, args.boot, args.seed)
+            summary["bootstrap"][domain][method] = r
+            print(f"bootstrap {domain} {method}: mean={r['mean_diff']:.4f} CI=[{r['ci95_low']:.4f},{r['ci95_high']:.4f}] pgt0={r['p_gt_0']:.4f}")
 
     with (out / "B2_perf.csv").open("w", encoding="utf-8", newline="") as fh:
-        w = csv.writer(fh); w.writerow(["K", "fold", "score", "perf", "tol", "n_pred", "tp", "fp", "fn", "wrong", "P", "R", "F1"])
+        header = ["K", "fold", "score", "perf", "tol", "n_pred", "tp", "fp", "fn", "wrong",
+                  "DOWN_n_pred", "DOWN_n_truth", "DOWN_tp", "DOWN_fp", "DOWN_fn", "DOWN_wrong",
+                  "UP_n_pred", "UP_n_truth", "UP_tp", "UP_fp", "UP_fn", "UP_wrong", "P", "R", "F1"]
+        w = csv.writer(fh); w.writerow(header)
         for K in K_GRID:
             for x in rows[K]:
                 for tol in TOLS:
                     m = x[f"tol{tol}"]
+                    pl = x["per_label"][f"tol{tol}"]
+                    d, u = pl["DOWN"], pl["UP"]
                     w.writerow([K, x["fold"], x["score"], x["perf"], tol, m["tp"] + m["fp"], m["tp"], m["fp"], m["fn"], m["wrong"],
+                                d["n_pred"], d["n_truth"], d["tp"], d["fp"], d["fn"], d["wrong"],
+                                u["n_pred"], u["n_truth"], u["tp"], u["fp"], u["fn"], u["wrong"],
                                 round(m["P"], 6), round(m["R"], 6), round(m["F1"], 6)])
     print(f"parse_cache: miss={_CACHE_MISS} (期望 36)")
     summary["cache_miss"] = _CACHE_MISS
