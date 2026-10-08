@@ -14,28 +14,28 @@
     },
     "bootstrap": {
       "always_down": {
-        "mean": 0.2317,
-        "ci95_low": 0.1252,
-        "ci95_high": 0.3363,
+        "mean": 0.228,
+        "ci95_low": 0.1183,
+        "ci95_high": 0.3323,
         "p_gt_0": 1.0
       },
       "beat_periodic_1": {
-        "mean": 0.1221,
-        "ci95_low": 0.0544,
-        "ci95_high": 0.1973,
+        "mean": 0.1196,
+        "ci95_low": 0.0504,
+        "ci95_high": 0.1937,
         "p_gt_0": 1.0
       },
       "beat_periodic_2": {
-        "mean": 0.02,
-        "ci95_low": -0.0284,
-        "ci95_high": 0.0726,
-        "p_gt_0": 0.75
+        "mean": 0.0188,
+        "ci95_low": -0.0296,
+        "ci95_high": 0.0732,
+        "p_gt_0": 0.752
       },
       "beat_periodic_4": {
-        "mean": 0.0119,
-        "ci95_low": -0.0526,
-        "ci95_high": 0.0746,
-        "p_gt_0": 0.655
+        "mean": 0.0111,
+        "ci95_low": -0.0439,
+        "ci95_high": 0.0768,
+        "p_gt_0": 0.6144
       }
     },
     "pass_criterion": "inversion 显著优于基线 = bootstrap CI 下界 > 0"
