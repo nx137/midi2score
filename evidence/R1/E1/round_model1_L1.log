@@ -1,0 +1,3 @@
+epoch 1/200 loss=nan
+  inner_val_micro=0.0840 inner_val_macro=0.3407 val_micro=0.0397 val_macro=0.3133
+epoch 2/200 loss=nan

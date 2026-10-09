@@ -1,0 +1,23 @@
+epoch 1/200 loss=243.5080
+  inner_val_micro=0.0663 inner_val_macro=0.3353 val_micro=0.0370 val_macro=0.3209
+epoch 2/200 loss=216.1350
+  inner_val_micro=0.0053 inner_val_macro=0.3231 val_micro=0.0000 val_macro=0.3298
+epoch 3/200 loss=180.5342
+  inner_val_micro=0.0000 inner_val_macro=0.3200 val_micro=0.0000 val_macro=0.3319
+epoch 4/200 loss=138.6884
+  inner_val_micro=0.0000 inner_val_macro=0.3200 val_micro=0.0000 val_macro=0.3319
+epoch 5/200 loss=93.8086
+  inner_val_micro=0.0000 inner_val_macro=0.3200 val_micro=0.0000 val_macro=0.3319
+epoch 6/200 loss=51.4992
+  inner_val_micro=0.0000 inner_val_macro=0.3200 val_micro=0.0000 val_macro=0.3319
+epoch 7/200 loss=21.8904
+  inner_val_micro=0.0000 inner_val_macro=0.3200 val_micro=0.0000 val_macro=0.3319
+epoch 8/200 loss=11.4334
+  inner_val_micro=0.0000 inner_val_macro=0.3200 val_micro=0.0000 val_macro=0.3319
+epoch 9/200 loss=6.8432
+  inner_val_micro=0.0000 inner_val_macro=0.3200 val_micro=0.0000 val_macro=0.3319
+epoch 10/200 loss=1.7872
+  inner_val_micro=0.0000 inner_val_macro=0.3200 val_micro=0.0000 val_macro=0.3319
+epoch 11/200 loss=-3.5190
+  inner_val_micro=0.0000 inner_val_macro=0.3200 val_micro=0.0000 val_macro=0.3319
+{"test_micro": 0.15159809999194912, "test_macro": 0.40584119012038816, "val_micro": 0.036977813312012796, "val_macro": 0.3209416800992226, "epochs_run": 11, "best_epoch": 1, "wall_clock_sec": 172.7632794380188}

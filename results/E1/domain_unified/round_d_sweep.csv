@@ -1,0 +1,2 @@
+stage,hidden,layers,dropout,lr,batch,seed,epochs_run,best_epoch,val_macro_f1,val_change_f1,f1_NONE,f1_DOWN,f1_UP,f1_CHANGE,wall_clock_sec,git_commit
+model1,32,1,0.0,0.0001,32,0,11,1,0.3209416800992226,NA,0.8822934068212025,0.030668453178502312,0.04986318029796291,NA,172.7632794380188,59f7af2d10c07381078176fb74f66788a904f509

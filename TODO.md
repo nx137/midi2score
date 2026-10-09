@@ -148,3 +148,11 @@
 | R1-D-F3 | BiLSTM-CRF full-seq/hidden128/早停/类权重 | blocked（训练 loss=NaN，无可信模型） |
 | R1-D-F4 | LR_struc 降为解释行 | todo（等待 F3 裁定后随主表整理） |
 | R1-D-WAIT | 主控裁定 F3 NaN 的继续/停机路径 | blocked |
+
+## T-MODEL-1（2026-10-09）
+
+| ID | 待办 | 状态 |
+|:--|:--|:--|
+| T-MODEL-1-A | harness：seed/epochs200/patience10/inner-val micro/val/NONE+DOWN+UP+macro/checkpoint/config/clip | done |
+| T-MODEL-1-B | NaN 阶梯：L1 NaN；L3 关闭 CRF 类权重后非 NaN | done |
+| T-MODEL-1-C | 完整成功运行 + best_model.pt/config.json/test/val/per-score/wall/CSV | done |

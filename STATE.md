@@ -17,12 +17,12 @@
 
 ## 当前
 
-- **更新时间**：2026-10-09（轮 D F1/F2 完成；F3 阻塞）
-- **F1**：统一 sklearn 约定；C 对数网格 train-CV 最优 C=1.0、阈值 0.85/0.80，test micro=0.392995。旧自定义 `fit_lr` 在阈值 0.70/0.75 下 test micro=0.466149；同阈值 sklearn=0.340531 ⇒ 差异来自优化器/正则/标准化路径。
-- **F2**：53 列全矩阵剥离 `<pedal>` 后逐值相等，hash `03821d67…` = `03821d67…`，271 runs / 36 scores。
-- **F3**：BiLSTM-CRF 的 full-sequence/hidden128/内层早停/CRF 类权重版本训练 loss=NaN，未产生可用模型；该行阻塞，旧 0.080336 不得当修复后结果。
-- **下一步**：等待主控裁定 F3 NaN 是继续修训练稳定性，还是按停机条件处理。
-- **活动任务**：`R1`（科研侧推进）
+- **更新时间**：2026-10-09（T-MODEL-1 完成）
+- **训练 harness**：`--seed`、`--epochs=200`、inner-val micro-F1 patience=10、显式 val、NONE/DOWN/UP 三类 F1 与 macro、best_model.pt/config.json、clip=5.0 均已落地。
+- **NaN 修复**：L1（hidden32/lr1e-4/batch32/类权重开）第 1 epoch NaN；L3 关闭 CRF 类权重后成功。最终配置：hidden32、layers1、lr1e-4、batch32、chunk256、seed0、AdamW、class_weight=none；val micro=0.036978、val macro=0.320942；test micro=0.151598、test macro=0.405841；wall=172.76s。
+- **产物**：`results/E1/domain_unified/model1/best_model.pt`、`config.json`、`round_c_bilstm_crf.json`、`round_d_sweep.csv`。
+- **下一步**：等待主控决定 D1 sweep 或结构/特征/标签方向。
+- **活动任务**：`R1`
 - **分支**：`main` → `origin/main`
 
 ## 阶段 1 交付物
