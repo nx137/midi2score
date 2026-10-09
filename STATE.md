@@ -7,24 +7,23 @@
 
 - 约定：`main` SHA = **写入本块时的 HEAD**（包含本块的提交会使其 +1；以 `git log` 为准）；四个文件哈希 = 写入时的内容
 - 记录时间：`2026-10-09 +0800`
-- `main` SHA：`3f82ebc1c0ada52c970b60ef324633499a57ca56`
+- `main` SHA：`320912c1547c509319c582f094fb52adb10391ef`
 - `PedNotate_Plan_v3.0.md` sha256：`b65b1fa6cfaa73caefccd9292ed460d5c2aac98ef56be64566a6574e98567c1b`
 - `TASK_CHARTER.md` sha256：`8c24d88707385b8104505b28b898569ad6bc207f320d2b79960cd320cfd769cf`
-- `DECISIONS.md` sha256：`31f03ee026db9783b8b71405788c55fee04401381fd5bdc45dc8626d4c6bbeb0`
-- `FIELD_DEFINITIONS.md` sha256：`0eeb37336f9269ebbecc495d0cbff3d2fada45bb8357d205f02043d0dce0aaed`
-- tracked 文件数：`141`
-- `git status --porcelain`：写入时 clean；本块提交后 HEAD +1（按约定以 `git log` 为准）
+- `DECISIONS.md` sha256：`889b3c65e7bbeffa9ae8b86e1f18eda9e68c64f53e6bdba31bbd93f097b1bfad`
+- `FIELD_DEFINITIONS.md` sha256：`e35e2bc4fcfffd2c580539173391ec6cf0abdfb265ac55ec8b5586d8fc349539`
+- tracked 文件数：`148`
+- `git status --porcelain`：轮 B 完成产物待提交
 
 ## 当前
 
-- **更新时间**：2026-10-09（轮 B：canonical 统一域复算）
-- **当前阶段**：**STOP ③ 已触发**。canonical domain 复算已完成；B1 canonical CV 的 d_min argmax 仍为 **0.0 拍**。
-- **停机事实**：full B2_K3 ±1 micro F1 = **0.26415214**（canonical），旧域 = **0.29705973**，差 **−0.03290759**（>0.03，超过轮 B 停机条件 ③）；test B2 差 −0.00465055；full B1 差 +0.00009467，test B1 差 +0.00003228。
-- **边界披露**：`[0, score_end)` 不含右端点；`Chopin/Etudes_op_10/10` 的 4 runs 各有一个 `UP` 恰落在 score_end，被排除，full n_truth=28,599（旧 28,603）。
-- **未启动**：轮 B 训练表、LR 模型、V1–V5 未开始；**不自行修统一域，不进入轮 C**。
-- **另报阻塞**：V1 要求“特征不触碰任何演奏/标注文件”，但 §5.1 A 层定义为 CC64/per-run，且 `δ_onset/δ_offset` 的最近拍、局部 IBI 需要 performance_beats 时必然触碰 `asap_annotations.json`；该定义冲突尚未裁定。
-- **活动任务**：`R1`（科研侧推进，等待停机组裁定）
-- **分支**：`main` → `origin/main`（https://github.com/nx137/midi2score.git）
+- **更新时间**：2026-10-09（轮 B 完成：闭区间 canonical + LR 首轮模型）
+- **当前阶段**：canonical domain = `[0, score_end]`；V1/V2/V3 全 PASS；轮 B LR(L2) 已完成。
+- **模型结果**：test 折 micro F1=**0.4661**（DOWN 0.5445 / UP 0.3332），full 36 首 micro F1=**0.3646**（DOWN 0.4099 / UP 0.2798）；选中 `class_weight=balanced`，阈值 DOWN/UP=0.7/0.75。
+- **V5**：对 |Δmicro|≥0.05 的 8 对做 10,000 次 score bootstrap；test LR−B1 = 0.0735 [0.0125, 0.1318]，full LR−B1 = 0.0839 [0.0362, 0.1363]；完整见 `results/E1/domain_unified/LR_model.json`。
+- **下一步**：轮 C 的结构化模型（B3）尚未开始；轮 C 门槛见 D-0072/D-0075，canonical 域、三列并列、两域同时显著。
+- **活动任务**：`R1`（科研侧推进）
+- **分支**：`main` → `origin/main`
 
 ## 阶段 1 交付物
 

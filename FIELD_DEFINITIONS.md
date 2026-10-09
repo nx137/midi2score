@@ -149,7 +149,23 @@ exit code = 记录属性，不是成功判据
 
 ## 17. 统一评测域（canonical domain，2026-10-09）
 
-- **定义**：统一评测域 = 谱面锚点栅格 `[0, score_end)` 的全部格点，`GRID = 0.25`（十六分音符），包含无音符格点。
+- **定义**：统一评测域 = 谱面锚点栅格 `[0, score_end]` 内的全部格点，`GRID = 0.25`（十六分音符），包含无音符格点。
 - **`score_end`**：仅由 MusicXML 自身的小节长度累加决定（累加规则与 `parse_score` 一致）；**不得**使用 `max(truth)`、演奏结束时间、alignment 或 performance_beats。
 - **全部方法**（inversion/B1、B2、beat_periodic_2、beat_periodic_4）在同一 canonical 域复算；旧域产物保留，不覆盖（D-0068）。
-- **边界披露**：`[0, score_end)` 不含右端点。本轮复算发现 `Chopin/Etudes_op_10/10` 的 4 个 runs 各有一个 `UP` 标签恰落在 `score_end`，因此 canonical full 域 `n_truth = 28,599`，比旧域 `28,603` 少 4。
+- **右端点**：闭区间包含 `score_end`；canonical `n_truth` 必须回到 full `28,603` / test `16,278`。若仍有标签落在范围外，停止上报，不自行扩域。
+
+## 18. 轮 B 输入空间与 V1（2026-10-09）
+
+**允许输入**：
+1. 演奏 MIDI 本身：note onset / offset / duration / velocity；
+2. 该 run 的 CC64 曲线（含连续深度）；
+3. 谱面 MusicXML 的音符、时值、声部、小节与拍网格（§1 的给定栅格 G）。
+
+**禁止输入**：
+4. 印刷 `<pedal>` 元素及其任何派生量；
+5. ASAP 人工拍标注 `asap_annotations.json` 的 `performance_beats`（只允许作为单独对照行）；
+6. 曲目身份、折身份、文件路径。
+
+- A 层 `δ_onset / δ_offset` 主配置：最近拍使用谱面拍网格；局部 IBI 使用演奏 note onset 映射到谱面位置后的滑动窗口中位 IOI。
+- V1（替代版）：把 36 首 MusicXML 全部剥离 `<pedal>` 后重算特征表，必须与原始特征表逐值全等；同时自动断言输入特征中 `score_pedal` 来源列数 = 0。
+- V1 的逐列来源函数与哈希写入 `results/E1/domain_unified/LR_model.json`。

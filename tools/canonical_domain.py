@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""统一评测域（D-0074 候选）：score-end canonical anchor grid.
+"""统一评测域（D-0074，闭区间）：[0, score_end] canonical anchor grid.
 
 score_end 只使用 MusicXML 本身的小节长度累加，与 parse_score 的
 `measure_start += max_pos if max_pos > 0 else 0.0` 逐字一致；不读取
@@ -56,10 +56,10 @@ def score_end(xml_path: Path) -> float:
 
 
 def canonical_anchors(scoreend: float, grid: float = GRID) -> list[float]:
-    """[0, scoreend) 的全部格点，包含无音符格点。"""
+    """[0, scoreend] 内的全部格点，包含无音符格点；右端点在格点上时包含。"""
     if scoreend <= 0:
         return []
-    n = int(math.ceil(scoreend / grid - 1e-9))
+    n = int(math.floor(scoreend / grid + 1e-9)) + 1
     return [round(i * grid, 6) for i in range(n)]
 
 

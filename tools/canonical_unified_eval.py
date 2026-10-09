@@ -200,7 +200,7 @@ def main() -> int:
         w = csv.DictWriter(fh, fieldnames=["domain", "method", "tol", "scope", "n_pred", "n_truth", "tp", "fp", "fn", "wrong", "P", "R", "F1"])
         w.writeheader(); w.writerows(table)
     summary = {
-        "canonical_domain": "all score-grid anchors in [0, score_end), GRID=0.25; score_end from MusicXML measure accumulation only",
+        "canonical_domain": "all score-grid anchors in [0, score_end], GRID=0.25; score_end from MusicXML measure accumulation only",
         "methods": list(METHODS), "tols": TOLS, "n_runs": len(per_run),
         "n_scores": len({x["score"] for x in per_run}), "skipped": skipped,
         "b1_cv_canonical": b1_cv,
@@ -209,7 +209,7 @@ def main() -> int:
     }
     (out / "E1_main_canonical.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     md = ["# 统一评测域：E1 主表（canonical）", "",
-          "canonical domain = `[0, score_end)` 的 score-grid 全部格点；`GRID=0.25`，含无音符格点。`score_end` 仅由 MusicXML 小节长度累加决定。", "",
+          "canonical domain = `[0, score_end]` 内的 score-grid 全部格点；`GRID=0.25`，含无音符格点。`score_end` 仅由 MusicXML 小节长度累加决定。", "",
           f"runs = {len(per_run)}; scores = {len({x['score'] for x in per_run})}; B1 CV canonical argmax d_min = {summary['b1_cv_argmax_d_min_beats']} 拍", "",
           "## test 折 / ±1 拍", "", "| 方法 | micro F1 | DOWN F1 | UP F1 |", "|:--|--:|--:|--:|"]
     for method in METHODS:

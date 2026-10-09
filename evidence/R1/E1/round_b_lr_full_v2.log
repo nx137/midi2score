@@ -1,0 +1,6 @@
+runs=271 scores=36 V1_equal=True v1_bad=0
+CV none {'fold_f1_at_1': [0.0, 0.0, 0.0, 0.0, 0.0], 'mean_f1_at_1': 0.0}
+CV balanced {'fold_f1_at_1': [0.1839033099848922, 0.08932841328413284, 0.09671264242490323, 0.017863778733343952, 0.3112526815315608], 'mean_f1_at_1': 0.13981216519176662}
+thresholds none 0.5 0.5 0.0
+thresholds balanced 0.7 0.75 0.29606942317508933
+{"selected_class_weight": "balanced", "v1": {"equal": true, "orig_sha256": "4c2ab764235146d265ad1b98dca4776460b597917b494caa078f33b0ec19365b", "strip_sha256": "4c2ab764235146d265ad1b98dca4776460b597917b494caa078f33b0ec19365b", "bad": []}, "v2": {"pass": true, "feature_keys_sha256": "669425c3619b279b02b064643bd6769a44b085e1605b183ddd933b93d3b5e621", "reference_keys_sha256": "669425c3619b279b02b064643bd6769a44b085e1605b183ddd933b93d3b5e621", "reference_anchor_rows": 764700}, "v3": {"pass": true, "recomputed": {"tp": 11012, "fp": 32798, "fn": 5266, "wrong": 358, "n_pred": 43810, "n_truth": 16278}, "recorded": {"tp": 11012, "fp": 32798, "fn": 5266, "wrong": 358, "n_pred": 43810, "n_truth": 16278}}, "change_pairs_total": 3611}

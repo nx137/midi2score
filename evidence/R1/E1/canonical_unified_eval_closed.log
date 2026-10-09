@@ -1,0 +1,2 @@
+���� runs = 271; skipped = {'alignment_or_midi': 1, 'seq_lt_2': 0, 'no_truth': 0, 'truth_outside_domain': 0}
+{"n_runs": 271, "n_scores": 36, "b1_cv_argmax_d_min_beats": 0.0, "skipped": {"alignment_or_midi": 1, "seq_lt_2": 0, "no_truth": 0, "truth_outside_domain": 0}}

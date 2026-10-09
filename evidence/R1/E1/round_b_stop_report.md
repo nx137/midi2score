@@ -1,3 +1,5 @@
+> 状态注记（2026-10-09 后续）：本报告的 open-end `[0,score_end)` 已由 D-0075 改为闭区间 `[0,score_end]`；canonical 复算与 LR 首轮均已完成，见 `results/E1/domain_unified/LR_model.md`。本文件保留为当时 STOP ③ 的历史记录。
+
 # 轮 B 停机报告（2026-10-09）
 
 ## 结论

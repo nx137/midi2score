@@ -115,3 +115,15 @@
 | R1-B3-C | 结构化模型与两域评估 | R1-B3-B | blocked |
 
 > V1 定义冲突：§5.1 A 层源自 CC64，且 δ/局部 IBI 若取 performance beats 则触碰 `asap_annotations.json`；不得自行发明 score-grid IBI。
+
+## 轮 B 完成（2026-10-09）
+
+| ID | 待办 | blocking | 状态 |
+|:--|:--|:--|:--|
+| R1-B-DU | canonical 闭区间 `[0,score_end]`；full/test n_truth 对账 | — | done（28,603 / 16,278） |
+| R1-B-FEAT | A/B/C 特征表、V1 剥离 pedal 逐值全等、命名空间检查 | R1-B-DU | done（hash 4c2ab764…） |
+| R1-B-LR | LR(L2) 两档 class_weight、DOWN/UP 独立分类、val 阈值、0.5 对照 | R1-B-FEAT | done（选中 balanced；test micro 0.4661 / full 0.3646） |
+| R1-B-V | V1/V2/V3/V4/V5 验收 | R1-B-LR | done（V1–V3 PASS；V5 8 对 bootstrap） |
+| R1-C-B3 | 轮 C：结构化模型（B3）与两域评估 | R1-B-V | todo |
+
+> 轮 C 门槛：canonical 域上 test 与 full 同时 micro 显著优于 B1（0.3935/0.2766）与 B2（0.3665/0.2641）；DOWN > 0.5445/0.4099，UP ≥ 0.3379/0.2528。主表三列并列。
