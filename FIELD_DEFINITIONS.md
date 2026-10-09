@@ -202,3 +202,17 @@ exit code = 记录属性，不是成功判据
 - DeepSeek `deepseek-flash` 官方上下文上限为 `1M tokens`，最大输出 `384K tokens`；本项目内部预算独立于该上限，按控制平面相关性裁剪。
 - `MIDI2SCORE_LLM_LOG_DIR`：可选；只记录 prompt/response hash、模型和耗时，不记录 key。
 - 角色边界：LLM 只提出计划或语义意见；控制平面仍负责 allowlist、执行、证据和最终判定。
+
+## 22. M2 v1 标签与 mask 字段（2026-10-09）
+
+- **label**：锚点唯一最终标签，取值 NONE / DOWN / UP / CHANGE。
+- **label_status**：ok 或 ambiguous_multi_event。后者表示同一锚点在 CHANGE 消费后仍残留 start 与 stop 两类事件，标签按首个残留事件写出，但 supervision_mask=0。
+- **raw_DOWN / raw_UP**：该锚点在 CHANGE 消费前的原始 start / stop 是否存在。
+- **remaining_DOWN / remaining_UP**：CHANGE 成功消费端点后，该锚点是否仍有对应原始事件残留。
+- **change_pair_count**：分配给该锚点的、满足“文档顺序紧邻 stop -> start 且 gap < 1 拍”的派生对数。
+- **mask**：run / score 的 Main 43 成员标记，只表示 Main membership；Main runs=1，其他 runs=0。
+- **supervision_mask**：M2 v1 监督 loss 掩码；仅当 Main、非 repeat、有印刷 pedal、alignment 与 MIDI 可得、且标签 status=ok 时为 1。
+- **coordinate_ambiguous**：乐谱含 repeat，M2 v1 尚未实现展开坐标；保留审计标签但不进入监督。
+- **evaluation_eligible**：run 可进入 canonical 评测域；与 supervision_mask 当前同域（271 runs），不得与 Main membership 混用。
+- **Main / repeats**：Main 43 首；其中非 repeat 且输入可得的 36 首为 evaluation-eligible，7 首 repeat 为 coordinate_ambiguous。
+- **冻结阈值**：canonical 域 [0, score_end]，GRID=0.25，CHANGE gap < 1.0 拍；不得因下游指标回改。

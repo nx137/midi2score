@@ -1,0 +1,4 @@
+fold,runs,supervised_runs,canonical_truth_elements,supervised_label_rows,label_NONE,label_DOWN,label_UP,label_CHANGE
+train,178,166,11686,65155,63620,331,347,857
+val,31,28,639,8988,8901,13,20,54
+test,82,77,16278,27399,26518,387,350,144

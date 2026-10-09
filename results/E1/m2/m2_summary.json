@@ -1,0 +1,55 @@
+{
+  "dataset_version": "m2-v1",
+  "canonical_domain": "[0, score_end]",
+  "grid": 0.25,
+  "change_merge_beats": 1.0,
+  "change_anchor_rule": "CHANGE is assigned to the start (DOWN) anchor; the paired stop is consumed",
+  "main_scores": 43,
+  "evaluation_eligible_scores": 36,
+  "coordinate_ambiguous_scores": 7,
+  "coordinate_ambiguous_score_list": [
+    "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml",
+    "Beethoven/Piano_Sonatas/31-2_no_repeat/xml_score.musicxml",
+    "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml",
+    "Brahms/Six_Pieces_op_118/2/xml_score.musicxml",
+    "Chopin/Sonata_2/2nd/xml_score.musicxml",
+    "Schumann/Arabeske/xml_score.musicxml",
+    "Schumann/Kreisleriana/7/xml_score.musicxml"
+  ],
+  "label_rows": 114401,
+  "supervised_label_rows": 101542,
+  "ambiguous_label_rows": 18,
+  "label_counts": {
+    "NONE": 111656,
+    "DOWN": 882,
+    "UP": 805,
+    "CHANGE": 1058
+  },
+  "supervised_label_counts": {
+    "NONE": 99039,
+    "DOWN": 731,
+    "UP": 717,
+    "CHANGE": 1055
+  },
+  "raw_pedal_elements": 3840,
+  "raw_DOWN": 1950,
+  "raw_UP": 1890,
+  "change_pairs": 1058,
+  "truth_outside_canonical": 0,
+  "run_rows": 1066,
+  "main_runs": 291,
+  "evaluation_domain_runs": 271,
+  "supervised_runs": 271,
+  "non_main_runs": 775,
+  "no_pedal_run_rows": 650,
+  "run_fold_counts": {
+    "train": 178,
+    "val": 31,
+    "test": 82
+  },
+  "canonical_truth_elements_full": 28603,
+  "canonical_truth_elements_train": 11686,
+  "canonical_truth_elements_val": 639,
+  "canonical_truth_elements_test": 16278,
+  "generator_sha256": "8f1cf85aeee3ce2492e136d1bf386abe3cc11077a9bf76129f219ef9d44bb1e4"
+}

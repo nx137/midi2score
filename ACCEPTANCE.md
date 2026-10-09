@@ -70,3 +70,17 @@
 | AC-E11 | 划分冻结（§4.1：70/10/20、seed 20260101、曲目为不可分单位、SHA256） | `evidence/R1/G1-split/split_v1.json` + hash | pass（2026-10-07；EV-S26） |
 | AC-E14 | Main 口径复现（43 首 / 291 演奏 / 3840 元素） | 对照计划书 §4.4 | pass（乐谱级口径逐值一致；正文冲突见 D-0037） |
 | AC-E15 | 反演一致度（交付 5） | 按 D-0031 | not_run（本轮未开始） |
+
+## M2 标签数据层（2026-10-09）
+
+| ID | 验收标准 | 判定方法 | 结果 |
+|:--|:--|:--|:--|
+| AC-M2-1 | 标签集合与 schema：所有 label 属于 NONE/DOWN/UP/CHANGE；每个（score, anchor）唯一 | validator 的 LABEL_SET / LABEL_UNIQUE / schema checks | pass（EV-M2-2） |
+| AC-M2-2 | 逐锚点、不插值；canonical [0, score_end] 与 GRID=0.25 | validator 独立 oracle 逐 score 复算 | pass（EV-M2-2） |
+| AC-M2-3 | CHANGE 仅由文档顺序紧邻 stop -> start 且 gap < 1 拍派生；归入 start 锚点并消费端点 | validator oracle + EV-M2-1 | pass（1058 pairs；EV-M2-1/2） |
+| AC-M2-4 | unlabeled / repeat / 残差混合事件不进入监督；mask 语义不混用 | validator RUN_* / LABEL_MASK checks | pass（Main runs 291；supervised runs 271；EV-M2-2） |
+| AC-M2-5 | canonical truth 对账 full=28603、test=16278；域外标签=0 | validator TRUTH_* / COUNT_* | pass（EV-M2-1/2） |
+| AC-M2-6 | 输入与产物内容哈希可复算 | validator manifest/input/output hash checks | pass（97 checks；EV-M2-2） |
+| AC-M2-7 | 相同显式参数重跑得到相同内容哈希 | tools/m2_repro_check.py | pass（4/4；EV-M2-3） |
+| AC-M2-8 | 数据表交付 Table 1、scores/folds、excluded anchors 审计表 | results/E1/m2 的 table1/scores/folds/excluded | pass（EV-M2-1） |
+| AC-M2-9 | 通过 LangGraph 控制平面执行并完成 candidate→verified、人工确认 | evidence/R1/M2/m2_control_plane_record.json | pass（alignment=aligned；WP=done；EV-M2-4） |

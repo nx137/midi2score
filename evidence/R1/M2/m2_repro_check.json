@@ -1,0 +1,49 @@
+{
+  "status": "passed",
+  "checks": {
+    "counts_equal": true,
+    "rules_equal": true,
+    "inputs_equal": true,
+    "artifact_hashes_equal": true
+  },
+  "baseline_manifest_sha256": "25173235e8eb2ad84f27b5e1d3f23cf5ee9f0ca2e9b6b17555a83dee54639a03",
+  "temp_manifest_sha256": "42a35f05d13e1bc30efe5365dd367de242ac00d2123619207a37d6104f381761",
+  "artifact_hashes": {
+    "baseline": {
+      "score_labels.jsonl.gz": "057c6aaa3eca9c3d72292718a38270be60ccf53cebbe0a17ec56c9400efbc688",
+      "run_masks.jsonl.gz": "97a1e2b271c33b10417d948a2249429af180a3a97a30e28d291a88dea7839718",
+      "m2_excluded_anchors.jsonl.gz": "9e6f60e03b76d2b7c4d3bc00920ffefb70aa800fb1dee00baad5487b611d6fa8",
+      "m2_summary.json": "92d18b6b678df636a1990ddddae57dce3b1b24e10c9a207822b0efdb4a41c116",
+      "m2_summary.md": "23511b418b8377b8bf903734b4fbffec437a3f446a4724b507f5342697e1708b",
+      "m2_label_schema.json": "4aaea6e31993318ade335767c54b82f24fcf6657815ebd199be8f26bae73d4de",
+      "m2_scores.csv": "21e84e10fb3bf6aaf425f45d7cffb9d19cd0613580f403bd84f8d7535690149a",
+      "m2_folds.csv": "4b4ce7b64247cb3a860542ca69fa6f1987c43ea77679e2a2b8e1ef6fff14406d",
+      "m2_table1.csv": "fa7ee6e526d43e7835a52e6ed27e6c5c900eadc5027b0414fa6acdf16592a6dc",
+      "m2_table1.md": "7c7964e889d5a5c9577dfda38d014a49823823a79a0067fd764e2170096c1809"
+    },
+    "repro": {
+      "score_labels.jsonl.gz": "057c6aaa3eca9c3d72292718a38270be60ccf53cebbe0a17ec56c9400efbc688",
+      "run_masks.jsonl.gz": "97a1e2b271c33b10417d948a2249429af180a3a97a30e28d291a88dea7839718",
+      "m2_excluded_anchors.jsonl.gz": "9e6f60e03b76d2b7c4d3bc00920ffefb70aa800fb1dee00baad5487b611d6fa8",
+      "m2_summary.json": "92d18b6b678df636a1990ddddae57dce3b1b24e10c9a207822b0efdb4a41c116",
+      "m2_summary.md": "23511b418b8377b8bf903734b4fbffec437a3f446a4724b507f5342697e1708b",
+      "m2_label_schema.json": "4aaea6e31993318ade335767c54b82f24fcf6657815ebd199be8f26bae73d4de",
+      "m2_scores.csv": "21e84e10fb3bf6aaf425f45d7cffb9d19cd0613580f403bd84f8d7535690149a",
+      "m2_folds.csv": "4b4ce7b64247cb3a860542ca69fa6f1987c43ea77679e2a2b8e1ef6fff14406d",
+      "m2_table1.csv": "fa7ee6e526d43e7835a52e6ed27e6c5c900eadc5027b0414fa6acdf16592a6dc",
+      "m2_table1.md": "7c7964e889d5a5c9577dfda38d014a49823823a79a0067fd764e2170096c1809"
+    }
+  },
+  "command": [
+    "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+    "tools/m2_build_label_dataset.py",
+    "--dataset",
+    "E:\\midi2score\\data\\asap-dataset",
+    "--split",
+    "E:\\midi2score\\evidence\\R1\\G1-split\\split_v1.json",
+    "--out-dir",
+    "E:\\midi2score\\data\\derived\\m2_repro_check_tmp\\results",
+    "--data-out",
+    "E:\\midi2score\\data\\derived\\m2_repro_check_tmp\\data"
+  ]
+}

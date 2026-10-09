@@ -1,11 +1,11 @@
 {
   "contract_id": "pednotate-goal-contract",
-  "contract_sha256": "bcc6da0f768b0a627801f46ebf5783a6f9d2759d40b9dbad8c0b3498d1d51e04",
+  "contract_sha256": "52b2b0d3274ae44755449108e74b9f0015d3b0a731eb46dc0191b61cba4b36aa",
   "source_hashes": {
     "charter": "c89712bc780b1a58a52453a68cac6a25cef0e6f758f2950f643d54bc1f6ce81b",
     "plan": "8b1d71c9d2698f5b8061614622e691e4afae592245d0a13d25965efdf2742cd3",
-    "decisions": "8f553e81cfc6bac965ea35be82f32944c371a4177676af9ae6dab31a6b8ad925",
-    "fields": "bbe593082339f51df41a79fc53a6e8cc17b03c6ac083c2c993104807fa58e6bc"
+    "decisions": "f9f1e4ec10dc2cfb8f644f6874cecaf221b182f40427cee6bb129c4ca5416a33",
+    "fields": "498a6355383868fafa3a270d66cc306ed6a0850f79576755fd7cde32b7fdc71d"
   },
-  "changed_by": "user: D-0087 private repo and persistence boundary"
+  "changed_by": "user: M2 data layer D-0088"
 }

@@ -1,0 +1,504 @@
+{
+  "dataset_version": "m2-v1",
+  "status": "passed",
+  "manifest_sha256": "25173235e8eb2ad84f27b5e1d3f23cf5ee9f0ca2e9b6b17555a83dee54639a03",
+  "checks": [
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "data/derived/m2/score_labels.jsonl.gz"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "data/derived/m2/run_masks.jsonl.gz"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "data/derived/m2/m2_excluded_anchors.jsonl.gz"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m2/m2_summary.json"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m2/m2_summary.md"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m2/m2_label_schema.json"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m2/m2_scores.csv"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m2/m2_folds.csv"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m2/m2_table1.csv"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m2/m2_table1.md"
+    },
+    {
+      "id": "MANIFEST_GENERATOR_HASH",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "SPLIT_RAW_HASH",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "SPLIT_LF_HASH",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "ASSIGNMENT_HASH",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "METADATA_HASH",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "ANNOTATIONS_HASH",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "LABEL_SCHEMA_VERSION",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "LABEL_SCHEMA_GRID",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "LABEL_SCHEMA_CHANGE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "LABEL_SET",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "LABEL_UNIQUE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "LABEL_MASK_BINARY",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "LABEL_EXCLUDED_ROWS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "LABEL_SCORE_SET",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Beethoven/Piano_Sonatas/11-2/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Beethoven/Piano_Sonatas/29-2/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Beethoven/Piano_Sonatas/29-3/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Beethoven/Piano_Sonatas/29-4/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Beethoven/Piano_Sonatas/31-2_no_repeat/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Brahms/Six_Pieces_op_118/2/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Ballades/1/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Ballades/3/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Barcarolle/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Etudes_op_10/1/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Etudes_op_10/10/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Etudes_op_10/5/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Etudes_op_10/7/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Etudes_op_10/8/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Etudes_op_25/1/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Etudes_op_25/12/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Etudes_op_25/8/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Scherzos/20/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Scherzos/31/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Scherzos/39/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Sonata_2/2nd/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Sonata_3/2nd/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Sonata_3/3rd/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Chopin/Sonata_3/4th/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Debussy/Images_Book_1/1_Reflets_dans_lEau/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Liszt/Ballade_2/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Liszt/Transcendental_Etudes/10/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Liszt/Transcendental_Etudes/5/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Ravel/Pavane/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Schumann/Arabeske/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Schumann/Kreisleriana/4/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Schumann/Kreisleriana/6/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Schumann/Kreisleriana/7/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Scriabin/Etudes_op_8/11/xml_score.musicxml"
+    },
+    {
+      "id": "SCORE_ROW_COUNT",
+      "passed": true,
+      "detail": "Scriabin/Sonatas/5/xml_score.musicxml"
+    },
+    {
+      "id": "COORDINATE_AMBIGUOUS_SET",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "LABEL_TOTAL",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "RUN_UNIQUE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "RUN_MAIN_MASK",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "RUN_EVAL_MASK",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "RUN_SUPERVISION_MASK",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "RUN_NON_MAIN_NOT_SUPERVISED",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "RUN_REPEAT_NOT_SUPERVISED",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "RUN_NO_PEDAL_NOT_SUPERVISED",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "RUN_SUPERVISED_REQUIRES_INPUTS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "RUN_SOURCE_HASHES",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "TRUTH_FULL",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "TRUTH_TEST",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "COUNT_main_scores",
+      "passed": true,
+      "detail": "got=43"
+    },
+    {
+      "id": "COUNT_evaluation_eligible_scores",
+      "passed": true,
+      "detail": "got=36"
+    },
+    {
+      "id": "COUNT_coordinate_ambiguous_scores",
+      "passed": true,
+      "detail": "got=7"
+    },
+    {
+      "id": "COUNT_main_runs",
+      "passed": true,
+      "detail": "got=291"
+    },
+    {
+      "id": "COUNT_evaluation_domain_runs",
+      "passed": true,
+      "detail": "got=271"
+    },
+    {
+      "id": "COUNT_raw_pedal_elements",
+      "passed": true,
+      "detail": "got=3840"
+    },
+    {
+      "id": "COUNT_canonical_truth_elements_full",
+      "passed": true,
+      "detail": "got=28603"
+    },
+    {
+      "id": "COUNT_canonical_truth_elements_test",
+      "passed": true,
+      "detail": "got=16278"
+    },
+    {
+      "id": "COUNT_label_rows",
+      "passed": true,
+      "detail": "manifest=114401 actual=114401"
+    },
+    {
+      "id": "COUNT_supervised_label_rows",
+      "passed": true,
+      "detail": "manifest=101542 actual=101542"
+    },
+    {
+      "id": "COUNT_ambiguous_label_rows",
+      "passed": true,
+      "detail": "manifest=18 actual=18"
+    },
+    {
+      "id": "COUNT_run_rows",
+      "passed": true,
+      "detail": "manifest=1066 actual=1066"
+    },
+    {
+      "id": "COUNT_main_runs",
+      "passed": true,
+      "detail": "manifest=291 actual=291"
+    },
+    {
+      "id": "COUNT_evaluation_domain_runs",
+      "passed": true,
+      "detail": "manifest=271 actual=271"
+    },
+    {
+      "id": "COUNT_supervised_runs",
+      "passed": true,
+      "detail": "manifest=271 actual=271"
+    },
+    {
+      "id": "COUNT_canonical_truth_elements_full",
+      "passed": true,
+      "detail": "manifest=28603 actual=28603"
+    },
+    {
+      "id": "COUNT_canonical_truth_elements_test",
+      "passed": true,
+      "detail": "manifest=16278 actual=16278"
+    }
+  ],
+  "failures": [],
+  "counts": {
+    "label_rows": 114401,
+    "supervised_label_rows": 101542,
+    "ambiguous_label_rows": 18,
+    "run_rows": 1066,
+    "main_runs": 291,
+    "evaluation_domain_runs": 271,
+    "supervised_runs": 271,
+    "canonical_truth_elements_full": 28603,
+    "canonical_truth_elements_test": 16278
+  }
+}

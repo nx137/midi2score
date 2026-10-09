@@ -17,19 +17,20 @@
 
 ## 当前
 
-- **更新时间**：2026-10-09（控制平面 + DeepSeek live 验收）
-- **对齐判定**：`aligned`；目标为在成熟 MIDI→MusicXML 流水线上增加 S2 踏板层。
+- **更新时间**：2026-10-09（M2 v1 数据层完成）
+- **对齐判定**：\`aligned\`；目标为在成熟 MIDI→MusicXML 流水线上增加 S2 踏板层。
 - **主指标**：**回放保真度**；**谱面一致度为强制副指标**。
 - **训练顺序**：**ASAP 初始训练 → PDMX 合成语料增强训练**。
-- **控制平面**：Goal Contract、Context Packet、allowlist、ExecutionRecord、candidate Evidence、postflight verifier 已完成。
-- **LLM**：DeepSeek `deepseek-flash`，`reasoning_effort=high`，内部 Context Packet `800000` 字符；live smoke 与 LangGraph 全链路已通过。
-- **持久化边界**：使用 `SqliteSaver` + `SqliteStore`，**不迁移 Postgres**；接受本地单进程限制。
+- **控制平面**：Goal Contract、Context Packet、allowlist、ExecutionRecord、candidate Evidence、postflight verifier、SQLite checkpointer/store、稳定 thread_id 与 interrupt/Command(resume) 已通过全链路。
+- **LLM**：DeepSeek \`deepseek-flash\`，\`reasoning_effort=high\`，内部 Context Packet \`800000\` 字符；M2 正式运行使用 \`MIDI2SCORE_LLM_ENABLED=false\`，避免真实 LLM 进入确定性验收路径。
+- **持久化边界**：使用 \`SqliteSaver\` + \`SqliteStore\`，**不迁移 Postgres**；接受本地单进程限制。
 - **仓库策略**：当前私人仓库允许模型权重存在；API key、凭据、原始语料和虚拟环境仍禁止入库。
 - **历史路径**：Round B/C/D 的 score-consistency 数字只作历史诊断，不再作当前主线 claim。
-- **下一步**：进入 V3 原计划的 M2 标签层；确认前不跑新训练。
-- **活动任务**：`M2`
-- **分支**：`main` → `origin/main`
-
+- **M2 v1**：已生成 canonical 逐锚点标签数据集；Main 43 首、evaluation-eligible 36 首、coordinate-ambiguous 7 首；Main runs 291、evaluation-domain runs 271、supervised runs 271；raw pedal elements 3840；canonical truth full/test = 28603/16278。独立 validator 97 项通过，复现检查 4/4 通过，三个受控命令均提升为 \`verified\`。
+- **M2 已知边界**：7 首含 repeat 的谱只作 \`coordinate_ambiguous\` 审计，未实现展开坐标，故 M2 v1 \`supervision_mask=0\`；18 个 residual same-anchor mixed anchors 也标为 \`ambiguous_multi_event\` 并从 loss mask 排除。不得把 M2 数据层完成写成 S2 模型已训练完成。
+- **下一步**：进入 M3/S2 训练层；先裁定是否在本轮启用 \`CHANGE\` 四分类，并决定 repeat 展开坐标是 M3 前置还是独立消融；不得直接沿用旧 Round B/C 三分类结果。
+- **活动任务**：\`V3R-11\`
+- **分支**：\`main\` → \`origin/main\`
 ## 阶段 1 交付物
 
 | 文件 | 状态 |
@@ -47,7 +48,9 @@
 
 | 时间 | 范围 | 命令 | 结果 |
 |:--|:--|:--|:--|
-| 2026-10-09 | 控制平面 + LLM adapter / D-0083/D-0084 | `.\.venv\Scripts\python.exe -m pytest -q` | **PASS 34/34**；LLM 默认关闭；未运行科研训练（EV-S51/S52） |
+| 2026-10-09 | 控制平面 + LLM adapter + M2 控制平面回归 | `.\.venv\Scripts\python.exe -m pytest -q` | **PASS 36/36**；M2 lxml 单测在 `.venv` 自动 skip（EV-S51/S52、EV-M2-*） |
+| 2026-10-09 | M2 v1 数据层与独立 validator | `python tools/m2_build_label_dataset.py ...`；`python tools/m2_validate_labels.py ...`；`python tools/m2_repro_check.py ...` | **PASS**：43/36/7、291/271/271、3840、28603/16278；validator 97 checks、repro 4/4；EV-M2-1–EV-M2-3 |
+| 2026-10-09 | M2 LangGraph 控制平面全链路 | `python tools/m2_control_plane_run.py --run-id m2-v1-contract-20261009 ...` | **PASS**：三条命令 candidate→verified，alignment=aligned，work package=done；EV-M2-4 |
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
 | 2026-10-07 | 语料 manifest 口径 | `python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv` | **PASS**：复现出计划书哈希 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa`（1,305 条 / 465,861,631 B；EV-S6、EV-S10、D-0020） |
 | 2026-10-07 | 零成本项 (a)–(d) + 交付 6 | `export_pairing_audit.py` + `split_freeze.py` | 旧式自检 42 首中 **20 首非零**（缺陷 #6 证实）；奇数 C = **0**；unexplained 4/31/33；三候选规则**无清零**；**Main 精确复现 43/291/3840**；划分 train 26/val 6/test 9 组（EV-S23–S26） |\n| 2026-10-07 | R1-3i 导出侧交付 1–4 | `musescore_export_probe.py --positive 68 --negative 3 --force` + `pedal_export_audit.py` | **68/68 导出成功；负对照 3/3 为 0 CC64**；五格 Tier = OK 42 / T1 0 / T2(含T2b) 13 / T3 13 / T4 0；**裁定5 = 71/71 逐值一致**；P5 = 0.91485(R-7) / 0.8837(nearest_rank)（EV-S19–S22） |

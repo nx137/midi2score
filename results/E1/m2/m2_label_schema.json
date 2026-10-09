@@ -1,0 +1,34 @@
+{
+  "dataset_version": "m2-v1",
+  "labels": [
+    "NONE",
+    "DOWN",
+    "UP",
+    "CHANGE"
+  ],
+  "anchor_grid": 0.25,
+  "change_merge_beats": 1.0,
+  "fields": {
+    "score": "MusicXML path relative to dataset root",
+    "anchor": "canonical score-grid position in quarter notes",
+    "label": "one of NONE/DOWN/UP/CHANGE",
+    "label_status": "ok | ambiguous_multi_event; coordinate ambiguity is carried by coordinate_ambiguous",
+    "supervision_mask": "1 only when label_status=ok and score is evaluation eligible",
+    "raw_DOWN": "raw start exists at this anchor before CHANGE consumption",
+    "raw_UP": "raw stop exists at this anchor before CHANGE consumption",
+    "raw_types": "document-order raw event types at this anchor",
+    "remaining_DOWN": "start event remains after CHANGE consumption",
+    "remaining_UP": "stop event remains after CHANGE consumption",
+    "change_pair_count": "derived stop->start CHANGE pairs assigned to this anchor",
+    "coordinate_ambiguous": "score contains repeat and is not in the M2 v1 supervision domain",
+    "evaluation_eligible": "score is Main, non-repeat, printed-pedal, and has no truth outside canonical domain"
+  },
+  "run_mask_fields": {
+    "mask": "Main 43 membership marker; 1 for Main runs, otherwise 0",
+    "main_membership": "boolean Main membership",
+    "reference_available": "score has at least one printed pedal element",
+    "coordinate_ambiguous": "score contains repeat",
+    "evaluation_eligible": "run may be used in the canonical evaluation domain",
+    "supervision_mask": "run may be used for M2 v1 supervised training"
+  }
+}

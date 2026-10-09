@@ -174,3 +174,46 @@ def test_acceptance_pass_requires_verified_evidence(graph):
     snap = graph.get_state(cfg)
     assert snap.values["alignment"].verdict == "conflicting"
     assert any("ACCEPTANCE_UNKNOWN_EVIDENCE" in x for x in snap.values["verification"].issues)
+
+
+def test_explicit_python_executable_path_is_preserved(monkeypatch, tmp_path):
+    monkeypatch.setattr(control, "REPO_ROOT", tmp_path)
+    tools = tmp_path / "tools"
+    tools.mkdir()
+    (tools / "ok.py").write_text("print('ok')\n", encoding="utf-8")
+    explicit = tmp_path / "python.exe"
+    explicit.write_bytes(b"not-a-real-binary")
+
+    class Proc:
+        returncode = 0
+        stdout = "ok"
+        stderr = ""
+
+    monkeypatch.setattr(control.subprocess, "run", lambda *args, **kwargs: Proc())
+    cmd = CommandSpec(argv=[str(explicit), "tools/ok.py"], cwd=".")
+    record, evidence = control.run_command(cmd, build_goal_contract(), {}, "RUN-EXPLICIT-PY")
+    assert record.exit_code == 0
+    assert record.argv[0] == str(explicit)
+    assert evidence.status == "not_verified"
+
+
+def test_missing_expected_output_marks_candidate_failed(monkeypatch, tmp_path):
+    monkeypatch.setattr(control, "REPO_ROOT", tmp_path)
+    (tmp_path / "tools").mkdir()
+    (tmp_path / "tools" / "ok.py").write_text("print('ok')\n", encoding="utf-8")
+
+    class Proc:
+        returncode = 0
+        stdout = "ok"
+        stderr = ""
+
+    monkeypatch.setattr(control.subprocess, "run", lambda *args, **kwargs: Proc())
+    cmd = CommandSpec(
+        argv=[sys.executable, "tools/ok.py"],
+        cwd=".",
+        expected_outputs=["results/missing.txt"],
+    )
+    record, evidence = control.run_command(cmd, build_goal_contract(), {}, "RUN-MISSING")
+    assert record.exit_code == 0
+    assert evidence.status == "failed"
+    assert control.promote_evidence(evidence).status == "failed"

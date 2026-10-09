@@ -1,0 +1,110 @@
+{
+  "dataset_version": "m2-v1",
+  "generator": {
+    "path": "tools/m2_build_label_dataset.py",
+    "sha256": "8f1cf85aeee3ce2492e136d1bf386abe3cc11077a9bf76129f219ef9d44bb1e4"
+  },
+  "command": {
+    "argv": [
+      "tools/m2_build_label_dataset.py",
+      "--dataset",
+      "data\\asap-dataset",
+      "--split",
+      "evidence\\R1\\G1-split\\split_v1.json",
+      "--out-dir",
+      "results/E1/m2",
+      "--data-out",
+      "data/derived/m2"
+    ],
+    "cwd": "E:\\midi2score",
+    "python_version": "3.14.6",
+    "platform": "Windows-11-10.0.22631-SP0"
+  },
+  "inputs": {
+    "dataset": "data/asap-dataset",
+    "split": "evidence/R1/G1-split/split_v1.json",
+    "split_raw_sha256": "e7cef67db88391676c267bbe49f6a66b5d17fed2ad2a49d4b72fdfdf4b620024",
+    "split_lf_sha256": "0896c95130128fa92d81a3e98bbd89fbf279a411a27e06420cc4c1e8bcbf0c6c",
+    "assignment_sha256": "2a5ff6e89f4407d578153b395d1bbffb28c9e9c08c1b5f5562b1fbf2eb08abbf",
+    "assignment_rows": 291,
+    "assignment_groups": 41,
+    "metadata_sha256": "35d9da267f6409dc0240963c4b155a63aced66b8474e1e3b755a708b3c8b4726",
+    "asap_annotations_sha256": "d04ad9c9d693487458b677fdc7428ea61284192ea0a3934e0df26c97c8262dc2"
+  },
+  "rules": {
+    "anchor_domain": "[0, score_end]",
+    "grid": 0.25,
+    "change_merge_beats": 1.0,
+    "change_event_order": "global position, preserving document order for equal positions",
+    "change_anchor_rule": "assign to start (DOWN) anchor; consume both endpoints",
+    "repeat_policy": "emit audit labels with coordinate_ambiguous=true and supervision_mask=0",
+    "ambiguous_policy": "residual same-anchor start/stop collisions use first remaining event as label and supervision_mask=0"
+  },
+  "outputs": {
+    "data/derived/m2/score_labels.jsonl.gz": "057c6aaa3eca9c3d72292718a38270be60ccf53cebbe0a17ec56c9400efbc688",
+    "data/derived/m2/run_masks.jsonl.gz": "97a1e2b271c33b10417d948a2249429af180a3a97a30e28d291a88dea7839718",
+    "data/derived/m2/m2_excluded_anchors.jsonl.gz": "9e6f60e03b76d2b7c4d3bc00920ffefb70aa800fb1dee00baad5487b611d6fa8",
+    "results/E1/m2/m2_summary.json": "92d18b6b678df636a1990ddddae57dce3b1b24e10c9a207822b0efdb4a41c116",
+    "results/E1/m2/m2_summary.md": "23511b418b8377b8bf903734b4fbffec437a3f446a4724b507f5342697e1708b",
+    "results/E1/m2/m2_label_schema.json": "4aaea6e31993318ade335767c54b82f24fcf6657815ebd199be8f26bae73d4de",
+    "results/E1/m2/m2_scores.csv": "21e84e10fb3bf6aaf425f45d7cffb9d19cd0613580f403bd84f8d7535690149a",
+    "results/E1/m2/m2_folds.csv": "4b4ce7b64247cb3a860542ca69fa6f1987c43ea77679e2a2b8e1ef6fff14406d",
+    "results/E1/m2/m2_table1.csv": "fa7ee6e526d43e7835a52e6ed27e6c5c900eadc5027b0414fa6acdf16592a6dc",
+    "results/E1/m2/m2_table1.md": "7c7964e889d5a5c9577dfda38d014a49823823a79a0067fd764e2170096c1809"
+  },
+  "counts": {
+    "dataset_version": "m2-v1",
+    "canonical_domain": "[0, score_end]",
+    "grid": 0.25,
+    "change_merge_beats": 1.0,
+    "change_anchor_rule": "CHANGE is assigned to the start (DOWN) anchor; the paired stop is consumed",
+    "main_scores": 43,
+    "evaluation_eligible_scores": 36,
+    "coordinate_ambiguous_scores": 7,
+    "coordinate_ambiguous_score_list": [
+      "Beethoven/Piano_Sonatas/31-2/xml_score.musicxml",
+      "Beethoven/Piano_Sonatas/31-2_no_repeat/xml_score.musicxml",
+      "Beethoven/Piano_Sonatas/32-1/xml_score.musicxml",
+      "Brahms/Six_Pieces_op_118/2/xml_score.musicxml",
+      "Chopin/Sonata_2/2nd/xml_score.musicxml",
+      "Schumann/Arabeske/xml_score.musicxml",
+      "Schumann/Kreisleriana/7/xml_score.musicxml"
+    ],
+    "label_rows": 114401,
+    "supervised_label_rows": 101542,
+    "ambiguous_label_rows": 18,
+    "label_counts": {
+      "NONE": 111656,
+      "DOWN": 882,
+      "UP": 805,
+      "CHANGE": 1058
+    },
+    "supervised_label_counts": {
+      "NONE": 99039,
+      "DOWN": 731,
+      "UP": 717,
+      "CHANGE": 1055
+    },
+    "raw_pedal_elements": 3840,
+    "raw_DOWN": 1950,
+    "raw_UP": 1890,
+    "change_pairs": 1058,
+    "truth_outside_canonical": 0,
+    "run_rows": 1066,
+    "main_runs": 291,
+    "evaluation_domain_runs": 271,
+    "supervised_runs": 271,
+    "non_main_runs": 775,
+    "no_pedal_run_rows": 650,
+    "run_fold_counts": {
+      "train": 178,
+      "val": 31,
+      "test": 82
+    },
+    "canonical_truth_elements_full": 28603,
+    "canonical_truth_elements_train": 11686,
+    "canonical_truth_elements_val": 639,
+    "canonical_truth_elements_test": 16278,
+    "generator_sha256": "8f1cf85aeee3ce2492e136d1bf386abe3cc11077a9bf76129f219ef9d44bb1e4"
+  }
+}

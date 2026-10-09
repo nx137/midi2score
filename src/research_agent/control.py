@@ -250,7 +250,7 @@ def run_command(command: CommandSpec, contract: GoalContract, state: dict[str, A
                             verifier="policy")
         return record, evidence
     argv = list(command.argv)
-    if Path(argv[0]).name.lower() in {"python", "python.exe", "py"}:
+    if Path(argv[0]).name.lower() in {"python", "python.exe", "py"} and not Path(argv[0]).is_file():
         argv[0] = sys.executable
     cwd = (REPO_ROOT / command.cwd).resolve() if not Path(command.cwd).is_absolute() else Path(command.cwd).resolve()
     started = _now()
@@ -287,9 +287,11 @@ def run_command(command: CommandSpec, contract: GoalContract, state: dict[str, A
         source_hashes={argv[1]: _file_hash(Path(argv[1]))} if len(argv) > 1 and Path(argv[1]).is_file() else {},
         timed_out=timed_out,
     )
-    status = "not_verified" if exit_code == 0 and not timed_out else "failed"
-    if status == "verified" and command.expected_outputs and len(artifacts) != len(command.expected_outputs):
-        status = "not_verified"
+    missing_outputs = [
+        out for out in command.expected_outputs
+        if not ((cwd / out).resolve() if not Path(out).is_absolute() else Path(out).resolve()).is_file()
+    ]
+    status = "not_verified" if exit_code == 0 and not timed_out and not missing_outputs else "failed"
     evidence = Evidence(
         id=f"EV-{record_id}",
         kind="experiment",
