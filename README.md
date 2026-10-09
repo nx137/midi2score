@@ -40,6 +40,32 @@ START → planner → executor → verifier ─┬─ passed ──────�
 `work_packages`、`decisions`、`assumptions`、`evidence`、`todos`、`acceptance`、
 `current_phase`、`verification`、`alignment`、`recalled_decisions`、`approval`。
 
+## 控制平面（D-0083）
+
+真实科研执行前必须先通过以下链路：
+
+```text
+TASK_CHARTER + Plan + DECISIONS + FIELD_DEFINITIONS
+        ↓
+Goal Contract（只读、带来源哈希）
+        ↓
+Context Packet（目标/阶段/约束/confirmed decisions/recent messages）
+        ↓
+preflight policy → command allowlist → shell=False argv execution
+        ↓
+ExecutionRecord + candidate Evidence
+        ↓
+postflight verifier → verified / partial / conflicting
+        ↓
+human_review（hard deny 不可 override）
+```
+
+- 未挂接 `GOAL-1`、目标相关性不足或命令越权的 work package 会在执行前进入 `blocked_by_policy`。
+- executor 只能产生 candidate Evidence；只有 verifier 能把完整证据提升为 `verified`。
+- 所有命令记录 `argv`、cwd、exit code、stdout/stderr hash、环境摘要和产物 hash。
+- `thread_id` 由 `project_id/task_id` 稳定推导，调用方不得覆盖。
+
+
 ## 中断与恢复
 
 `human_review` 节点用 `interrupt()` 暂停，恢复时传 `Command(resume=...)`：

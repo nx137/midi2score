@@ -32,6 +32,13 @@
 | AC-S8 | 多轮运行不无限追加消息上下文（裁剪 / 摘要 / 结构化） | messages 窗口裁剪测试（阶段 2） | pass（test_messages_window_bounded，上限 20） |
 | AC-S9 | 稳定 thread_id：`research:midi2score:<task_id>`，非每次随机生成 | 代码审查（阶段 2） | pass（graph.stable_thread_id → research:{project}:{task}） |
 | AC-S10 | `task_alignment` 三值可用且有明确口径 | 代码审查 + test_alignment_* | pass（阶段 3） |
+| AC-S11 | Goal Contract 从章程/计划书/决策/字段定义生成并带来源哈希 | `contract.py` + control-plane test | pass（D-0083） |
+| AC-S12 | 每次模型调用使用有界 Context Packet，含目标、约束和 confirmed decisions | context-packet test | pass |
+| AC-S13 | 明显偏离 GOAL-1 的 work package 在执行前 hard deny | off-topic test | pass |
+| AC-S14 | 命令必须是白名单 `argv`，禁止 shell 注入和路径逃逸 | command-policy tests | pass |
+| AC-S15 | executor 只产 candidate Evidence，verifier 才能提升为 `verified` | evidence promotion test | pass |
+| AC-S16 | `thread_id` 稳定且调用方不能覆盖 | thread-config test | pass |
+| AC-S17 | 长拒绝历史中消息有界、Goal Contract 哈希不变 | long-context test | pass |
 
 ## C. 治理验收（阶段 1）
 

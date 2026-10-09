@@ -24,7 +24,9 @@
 - 保留 `D-0059`：回放保真度是主指标，但本轮不做回放自监督 loss。
 - 采用 `D-0024/D-0025`：导出成功=产物存在+可解析+CC64可枚举；恒等式仅诊断；无 `[0.80,1.05]` 带宽门。
 - `results/E1/domain_unified/model1/*` 与 Round B/C/D 的 score-consistency 结果保留为历史诊断；旧 `round_c_main` 的模型数字不是当前主线结论。
-- 下一步：用户确认本轮 V3.1 复位 diff 后，按原计划进入 M2 标签层；确认前不跑新训练。
+- LangGraph 控制平面 v1 已实现：Goal Contract、Context Packet、preflight policy、命令 allowlist、ExecutionRecord/candidate Evidence、postflight verifier。
+- 目标偏移和越权命令为 hard deny；`thread_id` 不可由调用方覆盖；长上下文测试 29/29 PASS。
+- 下一步：确认控制平面验收后，按原计划进入 M2 标签层；确认前不跑新训练。
 
 ## 子 agent 纪律
 

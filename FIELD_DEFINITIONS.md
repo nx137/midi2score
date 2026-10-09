@@ -179,3 +179,12 @@ exit code = 记录属性，不是成功判据
 - **回放通道用途**：它是 S5 主指标，但本轮训练不使用它作 loss；保留 D-0059。
 - **导出 QC**：成功判据 = 产物存在 ∧ 可解析 ∧ CC64 可枚举；`C == 2×min(S,T)` 仅作诊断；不设 `[0.80,1.05]` 消息数/元素数带宽，采用 D-0024/D-0025。
 - **修改纪律**：再次改变主指标或训练顺序，必须由用户明确确认并追加 `DECISIONS.md` 记录；不得因下游指标变化自行回改。
+## 20. 控制平面字段（D-0083，2026-10-09）
+
+- `goal_contract`：从 TASK_CHARTER / 计划书 / DECISIONS / FIELD_DEFINITIONS 派生的只读目标快照，保存来源内容哈希。
+- `context_packet`：有界上下文，包含 Goal Contract、当前阶段、active WP、硬约束、confirmed decisions、最近消息和 state summary；带 `context_sha256`。
+- `CommandSpec`：受控命令声明，必须使用 `argv`、cwd、timeout、expected_outputs；禁止 shell 字符串。
+- `ExecutionRecord`：完整记录命令、cwd、退出码、stdout/stderr hash、环境摘要、输入/产物 hash。
+- `Evidence`：executor 只能写候选状态；postflight verifier 才能提升为 `verified`。
+- `PolicyDecision`：`allow / require_confirmation / deny`；目标偏移、越权命令和路径逃逸为不可 override 的 hard deny。
+- 硬门：没有 Goal Contract、Context Packet、preflight、allowlist、完整 RunManifest、postflight 验证和人工确认，不接受真实科研产出。

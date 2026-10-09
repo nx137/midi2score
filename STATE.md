@@ -8,25 +8,25 @@
 - 约定：`main` SHA = **写入本块时的 HEAD**（包含本块的提交会使其 +1；以 `git log` 为准）；四个文件哈希 = 写入时的内容
 - 记录时间：`2026-10-09 +0800`
 - `main` SHA：`df86584aa8049f38d9235af800b8f043063382f4`（本次接手审计起点；提交后以 `git log` 为准）
-- `PedNotate_Plan_v3.0.md` sha256：`7ff4ec77d634e41f01d91b98e977c84f85e7dc562007ed79f3a3d94ec737a05a`
-- `TASK_CHARTER.md` sha256：`aa248f20e0f754de2d720459e33e4be6468c77407d27dfc2896514e083ce8279`
-- `DECISIONS.md` sha256：`b7d7f3b9eb335867403dc0572286f12c76a0fe0d41c05776789d05709b1c26f6`
-- `FIELD_DEFINITIONS.md` sha256：`fc3319848dccd531b98fbe4bb030c2353408f88b4d0b7c383e800bd15e96c7e6`
+- `PedNotate_Plan_v3.0.md` sha256：`825e4c4f698fbfdb41fec6bd728ddc740c7e159c4737cc59b7e3d5b0614ae6d8`
+- `TASK_CHARTER.md` sha256：`ac131e40dc3e60b38fb7f77b870873977c16e595fba907991032406ab9b9d1a7`
+- `DECISIONS.md` sha256：`5e336c4aa6162f5c4bfa52d5d8607a2b462dddff0898e36d5a43e8532c0d8e9b`
+- `FIELD_DEFINITIONS.md` sha256：`9b7831a6548232d918d85898db5338c42c0cb3a4b676e2aaf5765b99003841ff`
 - tracked 文件数：`187`
 - `git status --porcelain`：V3.1/V3.2 文档复位尚未提交；当前有 9 个已跟踪文档修改
 
 ## 当前
 
-- **更新时间**：2026-10-09（V3 原计划复位，D-0081）
+- **更新时间**：2026-10-09（控制平面 v1，D-0083）
 - **对齐判定**：`aligned`；用户明确要求回到 V3 原计划。
 - **主指标**：**回放保真度**；**谱面一致度为强制副指标**。
 - **训练顺序**：**ASAP 初始训练 → PDMX 合成语料增强训练**；不得反转为 PDMX 预训练 → ASAP 微调。
-- **当前阶段**：治理与计划书复位已完成初稿；下一步按 V3 原计划进入 M2 标签层、M3 基线与评测框架、M4 ASAP 初始训练。
+- **当前阶段**：LangGraph 控制平面 v1 已实现，包含 Goal Contract、Context Packet、preflight policy、命令 allowlist、ExecutionRecord/Evidence、postflight verifier；尚未开始真实科研训练。
 - **历史路径**：Round B/C/D 的 score-consistency 数字、旧 `model1` harness 和 D1 sweep 选项均为历史诊断，不再作为当前主线 claim；详见 `EVIDENCE.md` `EV-S49`。
 - **回放训练用途**：主指标仍为回放保真度；回放通道**不作 loss**，保留 `D-0059`（用户已确认）。
 - **导出 QC 口径**：采用 `D-0024/D-0025`；成功=产物存在 ∧ 可解析 ∧ CC64 可枚举，恒等式 `C == 2×min(S,T)` 仅诊断，不使用 `[0.80,1.05]` 带宽门（用户已确认，D-0082）。
-- **下一步**：用户确认本复位 diff 后，进入 M2；确认前不跑新训练。
-- **活动任务**：`V3-RESET`
+- **下一步**：确认控制平面验收后，按 V3 原计划进入 M2 标签层；确认前不跑新训练。
+- **活动任务**：`CP-V1`
 - **分支**：`main` → `origin/main`
 
 ## 阶段 1 交付物
@@ -34,7 +34,7 @@
 | 文件 | 状态 |
 |:--|:--|
 | `AGENTS.md` | 完成（7 条硬规则 + 权威顺序 + 文件地图 + 多智能体写者约束） |
-| `TASK_CHARTER.md` | v1.3（GOAL-1 / 范围 / 非目标 / HC-01–HC-18 / GV-01–GV-09 / 修改流程），**不可变** |
+| `TASK_CHARTER.md` | v1.5（GOAL-1 / 范围 / 非目标 / HC-01–HC-19 / GV-01–GV-09 / 修改流程），**不可变** |
 | `RESEARCH_QUESTIONS.md` | 完成（RQ-1–RQ-7 + 已排除问题） |
 | `DECISIONS.md` | 完成（D-0001–D-0005 本次确认 + D-0006–D-0019 沿袭计划书，只追加） |
 | `ASSUMPTIONS.md` | 完成（AS-01–AS-07，均 open） |
@@ -46,7 +46,7 @@
 
 | 时间 | 范围 | 命令 | 结果 |
 |:--|:--|:--|:--|
-| 2026-10-09 | V3.2 / D-0082 文档一致性与回归 | 12 项文档断言 + `.\.venv\Scripts\python.exe -m pytest -q -rA` | **PASS**：文档断言 12/12；测试 18/18；未运行新科研训练（EV-S49、EV-S50） |
+| 2026-10-09 | 控制平面 v1 / D-0083 | `.\.venv\Scripts\python.exe -m pytest -q`：Goal Contract、Context Packet、policy、execution/evidence、长上下文与偏离探针 | **PASS 31/31**；未运行科研训练（EV-S51） |
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
 | 2026-10-07 | 语料 manifest 口径 | `python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv` | **PASS**：复现出计划书哈希 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa`（1,305 条 / 465,861,631 B；EV-S6、EV-S10、D-0020） |
 | 2026-10-07 | 零成本项 (a)–(d) + 交付 6 | `export_pairing_audit.py` + `split_freeze.py` | 旧式自检 42 首中 **20 首非零**（缺陷 #6 证实）；奇数 C = **0**；unexplained 4/31/33；三候选规则**无清零**；**Main 精确复现 43/291/3840**；划分 train 26/val 6/test 9 组（EV-S23–S26） |\n| 2026-10-07 | R1-3i 导出侧交付 1–4 | `musescore_export_probe.py --positive 68 --negative 3 --force` + `pedal_export_audit.py` | **68/68 导出成功；负对照 3/3 为 0 CC64**；五格 Tier = OK 42 / T1 0 / T2(含T2b) 13 / T3 13 / T4 0；**裁定5 = 71/71 逐值一致**；P5 = 0.91485(R-7) / 0.8837(nearest_rank)（EV-S19–S22） |

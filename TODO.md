@@ -13,6 +13,13 @@
 | V3R-1 | TASK_CHARTER v1.3：主指标恢复为回放保真度，谱面一致度改强制副指标 | — | done |
 | V3R-2 | PedNotate_Plan v3.1：明确“成熟 MIDI→MusicXML + S2 踏板层”集成定位 | V3R-1 | done |
 | V3R-3 | 冻结训练顺序：ASAP 初始训练 → PDMX 合成语料增强训练 | V3R-2 | done |
+| CP-1 | Goal Contract + 来源内容哈希 | — | done |
+| CP-2 | 有界 Context Packet + confirmed decisions 注入 | CP-1 | done |
+| CP-3 | preflight policy：目标相关性、阶段、路径、命令 allowlist | CP-1 | done |
+| CP-4 | argv / shell=False 命令执行器 + ExecutionRecord | CP-3 | done |
+| CP-5 | candidate Evidence → postflight `verified` | CP-4 | done |
+| CP-6 | 长上下文偏移、越权命令、缺证据、thread_id 覆盖测试 | CP-2,CP-5 | done |
+| CP-7 | 写入 EVIDENCE / ACCEPTANCE / STATE，生成 governance baseline | CP-6 | todo |
 | V3R-4 | 把 Round B/C/D 标为历史诊断，停止其主线 claim/闸门用途 | V3R-3 | done |
 | V3R-5 | 对齐 FIELD_DEFINITIONS / ACCEPTANCE / EVIDENCE | V3R-4 | done |
 | V3R-7 | 保留 D-0059：回放通道不作本轮 loss | V3R-5 | done |

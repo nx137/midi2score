@@ -28,8 +28,9 @@ STORE_DB = DATA_DIR / "store.db"
 ALLOWED_MSGPACK: list[tuple[str, str]] = [
     ("research_agent.schemas", name)
     for name in (
-        "ResearchQuestion", "WorkPackage", "Decision", "Assumption", "Evidence",
+        "ResearchQuestion", "CommandSpec", "WorkPackage", "Decision", "Assumption", "Evidence",
         "TodoItem", "AcceptanceCriterion", "VerificationResult", "AlignmentResult",
+        "PolicyDecision", "ExecutionRecord", "GoalContract", "ContextPacket",
     )
 ]
 
@@ -46,6 +47,8 @@ def stable_thread_id(project_id: str, task_id: str) -> str:
 
 
 def thread_config(project_id: str, task_id: str, **extra: object) -> dict:
+    if "thread_id" in extra:
+        raise ValueError("thread_id 由 project_id/task_id 稳定推导，不允许覆盖")
     return {"configurable": {"thread_id": stable_thread_id(project_id, task_id), **extra}}
 
 
