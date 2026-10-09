@@ -196,5 +196,8 @@ exit code = 记录属性，不是成功判据
 - `MIDI2SCORE_LLM_BASE_URL`：OpenAI-compatible base URL。
 - `DEEPSEEK_API_KEY` / `MIDI2SCORE_LLM_API_KEY`：只从环境变量读取，禁止入库。
 - `MIDI2SCORE_LLM_TIMEOUT_SECONDS` / `MAX_TOKENS` / `TEMPERATURE`：调用参数。
+- `MIDI2SCORE_LLM_REASONING_EFFORT`：思考强度；当前本地配置为 `high`。
+- `MIDI2SCORE_LLM_DISABLE_RESPONSE_STORAGE`：映射为请求的 `store=false`；当前本地配置为 `true`。
+- `MIDI2SCORE_LLM_MAX_CONTEXT_CHARS` / `MAX_RECENT_MESSAGES` / `MAX_DECISIONS`：Context Packet 的字符、最近消息和决策数量上限。
 - `MIDI2SCORE_LLM_LOG_DIR`：可选；只记录 prompt/response hash、模型和耗时，不记录 key。
 - 角色边界：LLM 只提出计划或语义意见；控制平面仍负责 allowlist、执行、证据和最终判定。

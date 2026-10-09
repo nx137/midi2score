@@ -42,16 +42,23 @@ def test_deepseek_client_parses_openai_compatible_response(tmp_path):
         return FakeResponse({"choices": [{"message": {"content": "OK"}}]})
 
     config = DeepSeekConfig(
-        model="deepseek-v4.1-flash",
+        model="deepseek-flash",
         base_url="https://api.example.test",
         api_key="secret",
+        reasoning_effort="high",
+        disable_response_storage=True,
+        extra_body={"thinking": {"type": "enabled"}},
         log_dir=str(tmp_path / "logs"),
     )
     client = DeepSeekClient(config, opener=opener)
     assert client.complete("hello") == "OK"
     request, timeout = calls[0]
+    body = json.loads(request.data.decode("utf-8"))
     assert request.full_url == "https://api.example.test/chat/completions"
     assert request.headers["Authorization"] == "Bearer secret"
+    assert body["reasoning_effort"] == "high"
+    assert body["store"] is False
+    assert body["thinking"] == {"type": "enabled"}
     log_text = (tmp_path / "logs" / "llm_calls.jsonl").read_text(encoding="utf-8")
     assert "secret" not in log_text
     assert "prompt_sha256" in log_text

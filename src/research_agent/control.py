@@ -77,8 +77,19 @@ def build_context_packet(
     state: dict[str, Any],
     contract: GoalContract,
     recalled_decisions: Iterable[dict[str, Any]] | None = None,
-    max_chars: int = 48000,
+    max_chars: int | None = None,
+    max_recent_messages: int | None = None,
+    max_decisions: int | None = None,
 ) -> ContextPacket:
+    from .llm.factory import runtime_env
+
+    env = runtime_env()
+    if max_chars is None:
+        max_chars = int(env.get("MIDI2SCORE_LLM_MAX_CONTEXT_CHARS", "48000"))
+    if max_recent_messages is None:
+        max_recent_messages = int(env.get("MIDI2SCORE_LLM_MAX_RECENT_MESSAGES", "8"))
+    if max_decisions is None:
+        max_decisions = int(env.get("MIDI2SCORE_LLM_MAX_DECISIONS", "8"))
     active_id = state.get("active_work_package")
     active = state.get("work_packages", {}).get(active_id) if active_id else None
     active_dump = active.model_dump(mode="json") if hasattr(active, "model_dump") else active
@@ -90,14 +101,14 @@ def build_context_packet(
             decisions.append(item)
     seen = {item.get("id") for item in decisions}
     for item in contract.decision_summaries:
-        if len(decisions) >= 8:
+        if len(decisions) >= max_decisions:
             break
         if item.get("id") not in seen:
             decisions.append(item)
             seen.add(item.get("id"))
-    decisions = decisions[:8]
+    decisions = decisions[:max_decisions]
     recent = []
-    for msg in list(state.get("messages", []))[-8:]:
+    for msg in list(state.get("messages", []))[-max_recent_messages:]:
         content = getattr(msg, "content", str(msg))
         recent.append(str(content)[:1000])
     payload = {

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import json
 import os
 from collections.abc import Mapping
 from pathlib import Path
@@ -38,7 +39,7 @@ def load_env_file(path: Path | str) -> dict[str, str]:
     return values
 
 
-def _runtime_env() -> dict[str, str]:
+def runtime_env() -> dict[str, str]:
     config_path = os.environ.get("MIDI2SCORE_LLM_CONFIG_FILE", str(DEFAULT_LOCAL_CONFIG))
     values = load_env_file(config_path)
     values.update(os.environ)
@@ -51,11 +52,11 @@ def build_llm_from_env(env: Mapping[str, str] | None = None):
     Enabling the provider without complete configuration is a hard configuration error.
     """
     runtime_mode = env is None
-    values = _runtime_env() if runtime_mode else env
+    values = runtime_env() if runtime_mode else env
     if not _truthy(values.get("MIDI2SCORE_LLM_ENABLED")):
         return None
     provider = values.get("MIDI2SCORE_LLM_PROVIDER", "deepseek").strip().lower()
-    if provider not in {"deepseek", "openai_compatible"}:
+    if provider not in {"deepseek", "openai_compatible", "custom"}:
         raise LLMError(f"unsupported MIDI2SCORE_LLM_PROVIDER: {provider}")
     model = values.get("MIDI2SCORE_LLM_MODEL", "").strip()
     base_url = values.get("MIDI2SCORE_LLM_BASE_URL", DEFAULT_BASE_URL).strip()
@@ -66,6 +67,12 @@ def build_llm_from_env(env: Mapping[str, str] | None = None):
         raise LLMError("DEEPSEEK_API_KEY or MIDI2SCORE_LLM_API_KEY is required when LLM is enabled")
     if runtime_mode and api_key.strip() in PLACEHOLDER_KEYS:
         return None
+    try:
+        extra_body = json.loads(values.get("MIDI2SCORE_LLM_EXTRA_BODY_JSON", "{}"))
+    except json.JSONDecodeError as exc:
+        raise LLMError("MIDI2SCORE_LLM_EXTRA_BODY_JSON must be a JSON object") from exc
+    if not isinstance(extra_body, dict):
+        raise LLMError("MIDI2SCORE_LLM_EXTRA_BODY_JSON must be a JSON object")
     config = DeepSeekConfig(
         model=model,
         base_url=base_url,
@@ -74,10 +81,13 @@ def build_llm_from_env(env: Mapping[str, str] | None = None):
         max_tokens=int(values.get("MIDI2SCORE_LLM_MAX_TOKENS", "4096")),
         temperature=float(values.get("MIDI2SCORE_LLM_TEMPERATURE", "0")),
         system_prompt=values.get("MIDI2SCORE_LLM_SYSTEM_PROMPT", DEFAULT_SYSTEM_PROMPT),
+        reasoning_effort=values.get("MIDI2SCORE_LLM_REASONING_EFFORT", "").strip(),
+        disable_response_storage=_truthy(values.get("MIDI2SCORE_LLM_DISABLE_RESPONSE_STORAGE")),
+        extra_body=extra_body,
         log_dir=values.get("MIDI2SCORE_LLM_LOG_DIR", ""),
     )
     client = DeepSeekClient(config)
     return client.complete
 
 
-__all__ = ["build_llm_from_env", "load_env_file", "DEFAULT_BASE_URL", "DEFAULT_LOCAL_CONFIG", "DEFAULT_SYSTEM_PROMPT"]
+__all__ = ["build_llm_from_env", "load_env_file", "runtime_env", "DEFAULT_BASE_URL", "DEFAULT_LOCAL_CONFIG", "DEFAULT_SYSTEM_PROMPT"]

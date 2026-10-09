@@ -72,8 +72,11 @@ human_review（hard deny 不可 override）
 ```powershell
 $env:MIDI2SCORE_LLM_ENABLED="true"
 $env:MIDI2SCORE_LLM_PROVIDER="deepseek"
-$env:MIDI2SCORE_LLM_MODEL="deepseek-v4.1-flash"
+$env:MIDI2SCORE_LLM_MODEL="deepseek-flash"
 $env:MIDI2SCORE_LLM_BASE_URL="https://api.deepseek.com"
+$env:MIDI2SCORE_LLM_REASONING_EFFORT="high"
+$env:MIDI2SCORE_LLM_DISABLE_RESPONSE_STORAGE="true"
+$env:MIDI2SCORE_LLM_MAX_CONTEXT_CHARS="48000"
 $env:DEEPSEEK_API_KEY="<local-secret>"
 ```
 

@@ -8,7 +8,7 @@ import os
 import time
 import urllib.error
 import urllib.request
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from typing import Any, Callable
 
@@ -26,6 +26,9 @@ class DeepSeekConfig:
     max_tokens: int = 4096
     temperature: float = 0.0
     system_prompt: str = "你是 PedNotate 科研控制平面的规划顾问。只提出计划，不执行命令，不修改权限。"
+    reasoning_effort: str = ""
+    disable_response_storage: bool = False
+    extra_body: dict[str, Any] = field(default_factory=dict)
     log_dir: str = ""
 
 
@@ -49,7 +52,7 @@ class DeepSeekClient:
         return base + "/chat/completions"
 
     def complete(self, prompt: str) -> str:
-        payload = {
+        payload: dict[str, Any] = {
             "model": self.config.model,
             "messages": [
                 {"role": "system", "content": self.config.system_prompt},
@@ -59,6 +62,13 @@ class DeepSeekClient:
             "max_tokens": self.config.max_tokens,
             "stream": False,
         }
+        if self.config.reasoning_effort:
+            payload["reasoning_effort"] = self.config.reasoning_effort
+        if self.config.disable_response_storage:
+            payload["store"] = False
+        for key, value in self.config.extra_body.items():
+            if key not in {"model", "messages", "stream"}:
+                payload[key] = value
         data = json.dumps(payload, ensure_ascii=False).encode("utf-8")
         request = urllib.request.Request(
             self._endpoint(),

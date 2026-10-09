@@ -1,11 +1,11 @@
 {
   "contract_id": "pednotate-goal-contract",
-  "contract_sha256": "b2366a6122bd5aba8714b486a69a84915e1b33c7f068eaec1bd9528142747232",
+  "contract_sha256": "c3a6f115b765d88bae9ff4138dc083cc3ce9ad6baf259977f5389661bf516c0c",
   "source_hashes": {
     "charter": "c89712bc780b1a58a52453a68cac6a25cef0e6f758f2950f643d54bc1f6ce81b",
     "plan": "8b1d71c9d2698f5b8061614622e691e4afae592245d0a13d25965efdf2742cd3",
-    "decisions": "08332e96e3adf0648fb4471e658c8002f9280a12b1837382c991870cc9e0782c",
-    "fields": "6db51df13984b5a1bdac9b0f93ebbf9618f90d1a024bd423e273e73040f354a3"
+    "decisions": "1689e8f92ca31a515445104f2b40a55e82b8f5b6482c7b926c454be9b12329ab",
+    "fields": "3d379e0ff4e555ac132443acab63160f5f3e176cfe10bef9bd7c677a502d7043"
   },
-  "changed_by": "user: DeepSeek adapter D-0084"
+  "changed_by": "user: DeepSeek runtime config D-0085"
 }
