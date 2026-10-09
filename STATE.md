@@ -7,26 +7,27 @@
 
 - 约定：`main` SHA = **写入本块时的 HEAD**（包含本块的提交会使其 +1；以 `git log` 为准）；四个文件哈希 = 写入时的内容
 - 记录时间：`2026-10-09 +0800`
-- `main` SHA：`df86584aa8049f38d9235af800b8f043063382f4`（本次接手审计起点；提交后以 `git log` 为准）
+- `main` SHA：`436320f4b1df`（本次接手审计起点；提交后以 `git log` 为准）
 - `PedNotate_Plan_v3.0.md` sha256：`825e4c4f698fbfdb41fec6bd728ddc740c7e159c4737cc59b7e3d5b0614ae6d8`
 - `TASK_CHARTER.md` sha256：`f261f8bd66957e815b8a0af390766c4549a4295218713a5584d2fbf7ad947164`
-- `DECISIONS.md` sha256：`30d6496c917911296569907a1ae69f9dc85c5bd0f399f564a106c1adcc43830c`
-- `FIELD_DEFINITIONS.md` sha256：`bbe593082339f51df41a79fc53a6e8cc17b03c6ac083c2c993104807fa58e6bc`
-- tracked 文件数：`187`
-- `git status --porcelain`：V3.1/V3.2 文档复位尚未提交；当前有 9 个已跟踪文档修改
+- `DECISIONS.md` sha256：`42a61c579415f1bd51d53784f97421c9c47f736aeff68db5eea14d807f4506c1`
+- `FIELD_DEFINITIONS.md` sha256：`4acf5ccd19f7c7cb8fc2cb7d8623fafdc9b57eb30fba71a03e9ebee6fe49ff9f`
+- tracked 文件数：`197`
+- `git status --porcelain`：D-0087 文档收敛待提交；提交后以 `git log` 为准
 
 ## 当前
 
-- **更新时间**：2026-10-09（控制平面 v1，D-0083）
-- **对齐判定**：`aligned`；用户明确要求回到 V3 原计划。
+- **更新时间**：2026-10-09（控制平面 + DeepSeek live 验收）
+- **对齐判定**：`aligned`；目标为在成熟 MIDI→MusicXML 流水线上增加 S2 踏板层。
 - **主指标**：**回放保真度**；**谱面一致度为强制副指标**。
-- **训练顺序**：**ASAP 初始训练 → PDMX 合成语料增强训练**；不得反转为 PDMX 预训练 → ASAP 微调。
-- **当前阶段**：控制平面 v1 + DeepSeek v4.1 flash 可选 LLM 适配器已实现；LLM 默认关闭，启用时只作为 planner/说明器，不获得执行、权限或 `verified` Evidence 资格。
-- **历史路径**：Round B/C/D 的 score-consistency 数字、旧 `model1` harness 和 D1 sweep 选项均为历史诊断，不再作为当前主线 claim；详见 `EVIDENCE.md` `EV-S49`。
-- **回放训练用途**：主指标仍为回放保真度；回放通道**不作 loss**，保留 `D-0059`（用户已确认）。
-- **导出 QC 口径**：采用 `D-0024/D-0025`；成功=产物存在 ∧ 可解析 ∧ CC64 可枚举，恒等式 `C == 2×min(S,T)` 仅诊断，不使用 `[0.80,1.05]` 带宽门（用户已确认，D-0082）。
-- **下一步**：在 `config/llm.local.env` 填入真实 `DEEPSEEK_API_KEY`，做一次 live smoke；确认后进入 M2。
-- **活动任务**：`CP-V1`
+- **训练顺序**：**ASAP 初始训练 → PDMX 合成语料增强训练**。
+- **控制平面**：Goal Contract、Context Packet、allowlist、ExecutionRecord、candidate Evidence、postflight verifier 已完成。
+- **LLM**：DeepSeek `deepseek-flash`，`reasoning_effort=high`，内部 Context Packet `800000` 字符；live smoke 与 LangGraph 全链路已通过。
+- **持久化边界**：使用 `SqliteSaver` + `SqliteStore`，**不迁移 Postgres**；接受本地单进程限制。
+- **仓库策略**：当前私人仓库允许模型权重存在；API key、凭据、原始语料和虚拟环境仍禁止入库。
+- **历史路径**：Round B/C/D 的 score-consistency 数字只作历史诊断，不再作当前主线 claim。
+- **下一步**：进入 V3 原计划的 M2 标签层；确认前不跑新训练。
+- **活动任务**：`M2`
 - **分支**：`main` → `origin/main`
 
 ## 阶段 1 交付物

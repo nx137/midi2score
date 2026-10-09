@@ -31,8 +31,10 @@ START → planner → executor → verifier ─┬─ passed ──────�
 | 组件 | 实现 | 说明 |
 |:--|:--|:--|
 | 短期状态 | `SqliteSaver`（`data/checkpoints.db`） | 每个 super-step 落盘；按 thread 隔离 |
-| 长期记忆 | `SqliteStore`（`data/store.db`） | 跨 thread 的已确认决策 / 事实 |
+| 长期记忆 | `SqliteStore`（`data/store.db`） | 跨 thread 的已确认决策 |
 | thread_id | `research:{project_id}:{task_id}` | **稳定可推导**，禁止随机生成 |
+
+> 当前持久化只使用 SQLite，不计划迁移 Postgres；接受本地单进程限制。`HANDOFF.md` 是人类接手入口，不是 LangGraph runtime state。 |
 | 上下文 | `messages` 保留最近 20 条 | 更早信息进结构化字段；**不建 conversation_summary.md** |
 | 状态模型 | `src/research_agent/schemas.py` | TypedDict 根状态 + Pydantic 记录 |
 

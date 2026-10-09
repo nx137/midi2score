@@ -22,7 +22,10 @@
 | CP-7 | 写入 EVIDENCE / ACCEPTANCE / STATE，生成 governance baseline | CP-6 | done |
 | LLM-1 | 可选 DeepSeek/OpenAI-compatible HTTP adapter；默认关闭 | — | done |
 | LLM-2 | 环境变量配置 model/base URL/key；key 不入库 | LLM-1 | done |
-| LLM-3 | live smoke：真实 API 返回受控计划文本 | LLM-2 | todo |
+| LLM-3 | live smoke：真实 API 返回受控计划文本；LangGraph 全链路 + 进程重开恢复 | LLM-2 | done |
+| DOC-1 | HANDOFF 精简为接手入口，不再保存机器状态 | — | done |
+| DOC-2 | 记录私人仓库权重例外；明确不迁移 Postgres（D-0087） | — | done |
+| DOC-3 | 修正 README：SqliteStore 只保存 confirmed decisions | — | done |
 | V3R-4 | 把 Round B/C/D 标为历史诊断，停止其主线 claim/闸门用途 | V3R-3 | done |
 | V3R-5 | 对齐 FIELD_DEFINITIONS / ACCEPTANCE / EVIDENCE | V3R-4 | done |
 | V3R-7 | 保留 D-0059：回放通道不作本轮 loss | V3R-5 | done |

@@ -11,7 +11,7 @@
 | AS-03 | 半踏板（CC64 中间值）可用"显式二值化阈值 + 连续深度特征"近似处理，无需完整连续建模 | medium | E3 阈值敏感性显示结论不稳（阈值改变导致主指标排序翻转） | open |
 | AS-04 | 反向回放通道（记号 → MuseScore 导出 MIDI → CC64）可作为无偏主指标 | medium-high | G1' 三条判据未通过（含 `-f` 退出码 1320 命中） | open |
 | AS-05 | 导出 MIDI 的 CC64 消息数 ≈ pedal 元素数（≈1.0 倍），可作导出链路验收点 | high | 抽样显著偏离 1.0 | open |
-| AS-06 | LangGraph `SqliteSaver` + `SqliteStore` 足以支撑本地单进程科研任务管理 | medium-high | 需要跨进程并发、异步或多用户时（届时升级 Postgres / 其他后端） | open（工程假设） |
+| AS-06 | LangGraph `SqliteSaver` + `SqliteStore` 足以支撑本地单进程科研任务管理 | high | 用户明确不迁移 Postgres；若未来重新变更部署范围再评估 | supported（D-0087） |
 | AS-07 | 43 首主轴规模足以支撑方法有效性结论（G2 可判定） | medium | G2 若因样本量不足而统计不可判定 | open |
 
 ## 备注
