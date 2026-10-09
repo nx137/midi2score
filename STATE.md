@@ -10,8 +10,8 @@
 - `main` SHA：`df86584aa8049f38d9235af800b8f043063382f4`（本次接手审计起点；提交后以 `git log` 为准）
 - `PedNotate_Plan_v3.0.md` sha256：`825e4c4f698fbfdb41fec6bd728ddc740c7e159c4737cc59b7e3d5b0614ae6d8`
 - `TASK_CHARTER.md` sha256：`f261f8bd66957e815b8a0af390766c4549a4295218713a5584d2fbf7ad947164`
-- `DECISIONS.md` sha256：`d33d983d6d935667a2c7c543df7189d070e4c718867588aacf083e14822deaa5`
-- `FIELD_DEFINITIONS.md` sha256：`2b6b68656caaf80a573b1a95751109af83f5f3bd051c7fca343346c73a50a588`
+- `DECISIONS.md` sha256：`30d6496c917911296569907a1ae69f9dc85c5bd0f399f564a106c1adcc43830c`
+- `FIELD_DEFINITIONS.md` sha256：`bbe593082339f51df41a79fc53a6e8cc17b03c6ac083c2c993104807fa58e6bc`
 - tracked 文件数：`187`
 - `git status --porcelain`：V3.1/V3.2 文档复位尚未提交；当前有 9 个已跟踪文档修改
 
