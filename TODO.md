@@ -4,7 +4,25 @@
 > **阶段推进必须等待用户逐阶段确认**；确认前不得进入下一阶段。
 > 本文件只放待办；决策见 `DECISIONS.md`，假设见 `ASSUMPTIONS.md`。
 
-## 阶段 1：项目规则与科研任务文件（当前）
+## 2026-10-09 V3 原计划复位（当前）
+
+> 权威决策：`D-0081`。以下条目替代下方旧轮次作为当前执行路径；旧 Round B/C/D、D1 sweep 与 score-consistency 主线保留为历史记录和诊断证据，不再作为当前主线。
+
+| ID | 待办 | blocking | 状态 |
+|:--|:--|:--|:--|
+| V3R-1 | TASK_CHARTER v1.3：主指标恢复为回放保真度，谱面一致度改强制副指标 | — | done |
+| V3R-2 | PedNotate_Plan v3.1：明确“成熟 MIDI→MusicXML + S2 踏板层”集成定位 | V3R-1 | done |
+| V3R-3 | 冻结训练顺序：ASAP 初始训练 → PDMX 合成语料增强训练 | V3R-2 | done |
+| V3R-4 | 把 Round B/C/D 标为历史诊断，停止其主线 claim/闸门用途 | V3R-3 | done |
+| V3R-5 | 对齐 FIELD_DEFINITIONS / ACCEPTANCE / EVIDENCE | V3R-4 | done |
+| V3R-7 | 保留 D-0059：回放通道不作本轮 loss | V3R-5 | done |
+| V3R-8 | 采用 D-0024/D-0025：成功判据恢复、恒等式诊断、废弃带宽门 | V3R-5 | done |
+| V3R-6 | 主线恢复为 S2 + S3 + S5；Round D 的 `model1` 仅作历史 harness 证据 | V3R-3 | todo |
+| V3R-9 | 按 V3 原计划进入 M2 标签层 | V3R-5,V3R-7,V3R-8 | todo |
+
+> 下方旧条目按日期保留，其中出现的旧主指标、旧 blocked 状态和旧路线不再自动生效；如与 D-0081 冲突，以 D-0081 为准。
+
+## 阶段 1：项目规则与科研任务文件（历史）
 
 | ID | 待办 | owner | blocking | 状态 |
 |:--|:--|:--|:--|:--|

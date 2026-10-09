@@ -18,10 +18,13 @@
 
 ## 当前科研状态
 
-- 最新模型产物：`results/E1/domain_unified/model1/best_model.pt`、`config.json`、`round_c_bilstm_crf.json`、`round_d_sweep.csv`。
-- `model1` 当前配置：`hidden=32, layers=1, lr=1e-4, batch=32, chunk=256, seed=0, class_weight=none, AdamW, clip=5.0`。
-- 之前轮 B/C 产物保留作历史证据；不要把旧 `round_c_main` 的模型数字当当前模型状态。
-- 下一步由用户指定：D1 sweep，或结构/特征/标签三方向之一，不叠加。
+- **路线已由用户复位到 V3 原计划（D-0081）**：目标是在成熟 MIDI→MusicXML 流水线上增加 S2 踏板层，不是重做完整 S1。
+- **主指标恢复为回放保真度**；谱面一致度为强制副指标。
+- **训练顺序冻结为 ASAP 初始训练 → PDMX 合成语料增强训练**；不再用 PDMX 预训练 → ASAP 微调作为当前主线。
+- 保留 `D-0059`：回放保真度是主指标，但本轮不做回放自监督 loss。
+- 采用 `D-0024/D-0025`：导出成功=产物存在+可解析+CC64可枚举；恒等式仅诊断；无 `[0.80,1.05]` 带宽门。
+- `results/E1/domain_unified/model1/*` 与 Round B/C/D 的 score-consistency 结果保留为历史诊断；旧 `round_c_main` 的模型数字不是当前主线结论。
+- 下一步：用户确认本轮 V3.1 复位 diff 后，按原计划进入 M2 标签层；确认前不跑新训练。
 
 ## 子 agent 纪律
 

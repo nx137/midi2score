@@ -134,3 +134,11 @@
 | ID | 事实 | 证据 | 状态 |
 |:--|:--|:--|:--|
 | EV-S48 | **T-MODEL-1**：train 标签 unique={0:NONE,1:DOWN,2:UP}，无 CHANGE；harness 新增 seed/epochs200/patience10/inner_val micro-F1/显式 val/NONE+DOWN+UP+macro/checkpoint/config/clip5.0。L1（hidden32,lr1e-4,batch32,chunk256,seed0,类权重开）epoch1 NaN；L3 关闭 CRF 类权重后成功运行 11 epochs（best_epoch=1）。val micro=0.0369778133、val macro=0.3209416801；test micro=0.1515981000、test macro=0.4058411901；wall=172.763279s。产物 `model1/best_model.pt`、`model1/config.json`、`round_d_sweep.csv` | `tools/round_c_bilstm_crf.py`、`evidence/R1/E1/round_model1_L1.log`、`round_model1_L3.log`、`round_model1_final.log`、`results/E1/domain_unified/model1/*` | verified_in_this_repo |
+
+## 13. V3 原计划复位（2026-10-09）
+
+| ID | 事实 | 证据 | 状态 |
+|:--|:--|:--|:--|
+| EV-S49 | 用户明确确认 V3 原计划复位：项目定位为在成熟 MIDI→MusicXML 流水线上增加 S2 踏板层；主指标恢复为回放保真度，谱面一致度为强制副指标；新增 `HC-18`，训练顺序冻结为 ASAP 初始训练 → PDMX 合成语料增强训练。Round B/C/D 的 score-consistency 与 `model1` 保留为历史诊断。 | `D-0081`；`TASK_CHARTER.md` sha256 `77D71D7FB1E6733AF0B5A26032CBF24AB36CCE33E8FAA0BF6730B55F5492D4B2`；`PedNotate_Plan_v3.0.md` sha256 `DBA71B01DB0BA5942C89BC89DBE4E5916D7ED12F32A9693E441C447F0A62A0C4`；`DECISIONS.md` sha256 `11DA89E4D45804EF951B102CD40FF4D7EBEEF9253A0147273B946105F5C460CE`；字段定义 sha256 `0F9F467A6E2B945845DFA5F9F908D05F9C4EB02783BB6E7D4423F82E17576DC4` | verified_in_this_repo（文档级复位；命令：9 项文档断言 + `.\.venv\Scripts\python.exe -m pytest -q -rA`；exit 0，测试 18 passed；新训练未运行） |
+
+| EV-S50 | 用户明确确认保留 `D-0059` 并采用 `D-0024/D-0025`：回放保真度仍是主指标但本轮不作为训练 loss；导出 QC 成功 = 产物存在 ∧ 可解析 ∧ CC64 可枚举，`C == 2×min(S,T)` 仅作诊断，`[0.80,1.05]` 带宽及元素比约 1.0 作废。 | `D-0082`；`TASK_CHARTER.md` sha256 `AA248F20E0F754DE2D720459E33E4BE6468C77407D27DFC2896514E083CE8279`；`PedNotate_Plan_v3.0.md` sha256 `7FF4EC77D634E41F01D91B98E977C84F85E7DC562007ED79F3A3D94EC737A05A`；`DECISIONS.md` sha256 `B7D7F3B9EB335867403DC0572286F12C76A0FE0D41C05776789D05709B1C26F6`；`FIELD_DEFINITIONS.md` sha256 `FC3319848DCCD531B98FBE4BB030C2353408F88B4D0B7C383E800BD15E96C7E6`；`ACCEPTANCE.md` AC-R9/AC-R10 | verified_in_this_repo（文档级收口；命令：12 项文档断言 + `.\.venv\Scripts\python.exe -m pytest -q -rA`；exit 0，测试 18 passed；新训练未运行） |

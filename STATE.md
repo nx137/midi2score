@@ -7,22 +7,26 @@
 
 - 约定：`main` SHA = **写入本块时的 HEAD**（包含本块的提交会使其 +1；以 `git log` 为准）；四个文件哈希 = 写入时的内容
 - 记录时间：`2026-10-09 +0800`
-- `main` SHA：`862cb636e5c80b6b04cbe3f5611cd265c22f80fb`
-- `PedNotate_Plan_v3.0.md` sha256：`d2950733f2d4b8b2d94c549a0459c4fe4e99c8507803239b5570b951d2aacbb8`
-- `TASK_CHARTER.md` sha256：`8c24d88707385b8104505b28b898569ad6bc207f320d2b79960cd320cfd769cf`
-- `DECISIONS.md` sha256：`237555e04e2bc25c5aec061980a918189d150bd0467dfb2806d2f4b3710191d4`
-- `FIELD_DEFINITIONS.md` sha256：`e35e2bc4fcfffd2c580539173391ec6cf0abdfb265ac55ec8b5586d8fc349539`
+- `main` SHA：`df86584aa8049f38d9235af800b8f043063382f4`（本次接手审计起点；提交后以 `git log` 为准）
+- `PedNotate_Plan_v3.0.md` sha256：`7ff4ec77d634e41f01d91b98e977c84f85e7dc562007ed79f3a3d94ec737a05a`
+- `TASK_CHARTER.md` sha256：`aa248f20e0f754de2d720459e33e4be6468c77407d27dfc2896514e083ce8279`
+- `DECISIONS.md` sha256：`b7d7f3b9eb335867403dc0572286f12c76a0fe0d41c05776789d05709b1c26f6`
+- `FIELD_DEFINITIONS.md` sha256：`fc3319848dccd531b98fbe4bb030c2353408f88b4d0b7c383e800bd15e96c7e6`
 - tracked 文件数：`187`
-- `git status --porcelain`：写入时 clean；本块提交后 HEAD +1
+- `git status --porcelain`：V3.1/V3.2 文档复位尚未提交；当前有 9 个已跟踪文档修改
 
 ## 当前
 
-- **更新时间**：2026-10-09（T-MODEL-1 完成）
-- **训练 harness**：`--seed`、`--epochs=200`、inner-val micro-F1 patience=10、显式 val、NONE/DOWN/UP 三类 F1 与 macro、best_model.pt/config.json、clip=5.0 均已落地。
-- **NaN 修复**：L1（hidden32/lr1e-4/batch32/类权重开）第 1 epoch NaN；L3 关闭 CRF 类权重后成功。最终配置：hidden32、layers1、lr1e-4、batch32、chunk256、seed0、AdamW、class_weight=none；val micro=0.036978、val macro=0.320942；test micro=0.151598、test macro=0.405841；wall=172.76s。
-- **产物**：`results/E1/domain_unified/model1/best_model.pt`、`config.json`、`round_c_bilstm_crf.json`、`round_d_sweep.csv`。
-- **下一步**：等待主控决定 D1 sweep 或结构/特征/标签方向。
-- **活动任务**：`R1`
+- **更新时间**：2026-10-09（V3 原计划复位，D-0081）
+- **对齐判定**：`aligned`；用户明确要求回到 V3 原计划。
+- **主指标**：**回放保真度**；**谱面一致度为强制副指标**。
+- **训练顺序**：**ASAP 初始训练 → PDMX 合成语料增强训练**；不得反转为 PDMX 预训练 → ASAP 微调。
+- **当前阶段**：治理与计划书复位已完成初稿；下一步按 V3 原计划进入 M2 标签层、M3 基线与评测框架、M4 ASAP 初始训练。
+- **历史路径**：Round B/C/D 的 score-consistency 数字、旧 `model1` harness 和 D1 sweep 选项均为历史诊断，不再作为当前主线 claim；详见 `EVIDENCE.md` `EV-S49`。
+- **回放训练用途**：主指标仍为回放保真度；回放通道**不作 loss**，保留 `D-0059`（用户已确认）。
+- **导出 QC 口径**：采用 `D-0024/D-0025`；成功=产物存在 ∧ 可解析 ∧ CC64 可枚举，恒等式 `C == 2×min(S,T)` 仅诊断，不使用 `[0.80,1.05]` 带宽门（用户已确认，D-0082）。
+- **下一步**：用户确认本复位 diff 后，进入 M2；确认前不跑新训练。
+- **活动任务**：`V3-RESET`
 - **分支**：`main` → `origin/main`
 
 ## 阶段 1 交付物
@@ -30,7 +34,7 @@
 | 文件 | 状态 |
 |:--|:--|
 | `AGENTS.md` | 完成（7 条硬规则 + 权威顺序 + 文件地图 + 多智能体写者约束） |
-| `TASK_CHARTER.md` | 完成（GOAL-1 / 范围 / 非目标 / HC-01–HC-16 / GV-01–GV-06 / 修改流程），**不可变** |
+| `TASK_CHARTER.md` | v1.3（GOAL-1 / 范围 / 非目标 / HC-01–HC-18 / GV-01–GV-09 / 修改流程），**不可变** |
 | `RESEARCH_QUESTIONS.md` | 完成（RQ-1–RQ-7 + 已排除问题） |
 | `DECISIONS.md` | 完成（D-0001–D-0005 本次确认 + D-0006–D-0019 沿袭计划书，只追加） |
 | `ASSUMPTIONS.md` | 完成（AS-01–AS-07，均 open） |
@@ -42,6 +46,7 @@
 
 | 时间 | 范围 | 命令 | 结果 |
 |:--|:--|:--|:--|
+| 2026-10-09 | V3.2 / D-0082 文档一致性与回归 | 12 项文档断言 + `.\.venv\Scripts\python.exe -m pytest -q -rA` | **PASS**：文档断言 12/12；测试 18/18；未运行新科研训练（EV-S49、EV-S50） |
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
 | 2026-10-07 | 语料 manifest 口径 | `python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv` | **PASS**：复现出计划书哈希 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa`（1,305 条 / 465,861,631 B；EV-S6、EV-S10、D-0020） |
 | 2026-10-07 | 零成本项 (a)–(d) + 交付 6 | `export_pairing_audit.py` + `split_freeze.py` | 旧式自检 42 首中 **20 首非零**（缺陷 #6 证实）；奇数 C = **0**；unexplained 4/31/33；三候选规则**无清零**；**Main 精确复现 43/291/3840**；划分 train 26/val 6/test 9 组（EV-S23–S26） |\n| 2026-10-07 | R1-3i 导出侧交付 1–4 | `musescore_export_probe.py --positive 68 --negative 3 --force` + `pedal_export_audit.py` | **68/68 导出成功；负对照 3/3 为 0 CC64**；五格 Tier = OK 42 / T1 0 / T2(含T2b) 13 / T3 13 / T4 0；**裁定5 = 71/71 逐值一致**；P5 = 0.91485(R-7) / 0.8837(nearest_rank)（EV-S19–S22） |
@@ -70,7 +75,7 @@
 
 - **阶段 1 提交**：已完成（提交前已展示 `git diff --cached --stat`；完整 diff 用 `git show HEAD` 查看）。
 - **Git 身份 / 远程**：已完成 —— 提交身份 `nx137 <nx137@users.noreply.github.com>`；remote `origin` 已配置并推送 `main`。
-- 阶段 2–4 代码与 6 项测试：**未开始**。
+- 阶段 2–4 代码与 6 项测试：**历史说明已作废**；后续已完成，见“测试记录”和 `ACCEPTANCE.md`。
 
 ## 阶段 2 交付物（2026-10-07）
 
@@ -92,7 +97,7 @@
 ## 关键路径提醒
 
 - **G1'（回放通道端到端）是所有科研工作的先决闸门**（计划书 §9.3）。
-- 语料与渲染器已就位（见下节）；但**尚未运行任何科研实验**，所有实验结论仍为 `not_run`。
+- 语料与渲染器已就位（见下节）。该行写于 2026-10-07，现已过期；后续 G0/G1'/E1 已运行，状态以 `EVIDENCE.md` 的 `EV-S*` 为准。
 - `TASK_CHARTER.md` 不得被程序自动修改（`GV-01`）；违反即为 `conflicting`。
 
 ## 数据与渲染器（2026-10-07）
