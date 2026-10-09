@@ -138,3 +138,13 @@
 | R1-C-STRUCT | LR + 确定性结构解码 | R1-C-PROTO | done（test micro 0.230132） |
 | R1-C-B4 | BiLSTM-CRF 行 | R1-C-PROTO | done（test micro 0.080336；对 LR 门槛不过） |
 | R1-C-WAIT | 主控终局判读/claim 确认 | R1-C-B4 | blocked（等待裁定） |
+
+## 轮 D 修复（2026-10-09）
+
+| ID | 待办 | 状态 |
+|:--|:--|:--|
+| R1-D-F1 | 全库 LR 统一 sklearn 约定；C 对数网格 train-CV | done（C=1.0；test 0.392995） |
+| R1-D-F2 | V1 扩展到 53 列全矩阵 | done（hash 03821d67…） |
+| R1-D-F3 | BiLSTM-CRF full-seq/hidden128/早停/类权重 | blocked（训练 loss=NaN，无可信模型） |
+| R1-D-F4 | LR_struc 降为解释行 | todo（等待 F3 裁定后随主表整理） |
+| R1-D-WAIT | 主控裁定 F3 NaN 的继续/停机路径 | blocked |

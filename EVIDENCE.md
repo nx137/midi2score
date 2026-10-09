@@ -120,3 +120,9 @@
 | ID | 事实 | 证据 | 状态 |
 |:--|:--|:--|:--|
 | EV-S46 | **轮 C 完成**：LR/GBDT/LR+确定性结构解码/BiLSTM-CRF 全部在 canonical `[0,score_end]` 与 train-CV 选择协议下出数。test ±1 micro：LR **0.392995**、GBDT **0.310068**、LR_struc **0.230132**、BiLSTM-CRF **0.080336**；B1=0.393531、B2=0.366529。BiLSTM-CRF 对 LR Δ=−0.312659，CI low=−0.413922，预声明 claim 门槛**不过**；对 B1/B2 也不显著。V1/V3/V4 PASS；V5 对 28 个方法对按 |Δ|≥0.05 做 score 重采样 bootstrap | `tools/round_c_classical.py`、`tools/round_c_bilstm_crf.py`、`tools/round_c_combine.py`、`results/E1/domain_unified/round_c_main.{json,md}`、`round_c_classical.json`、`round_c_bilstm_crf.json`、`evidence/R1/E1/round_c_*.log` | verified_in_this_repo |
+
+## 11. 轮 D 修复与阻塞（2026-10-09）
+
+| ID | 事实 | 证据 | 状态 |
+|:--|:--|:--|:--|
+| EV-S47 | **F1**：sklearn LR 的 C 对数网格 train-CV 最优 C=1.0、阈值 0.85/0.80，test micro=0.392995；同一特征上 legacy custom fit_lr 在阈值 0.70/0.75 下 test micro=0.466149，而 sklearn 同阈值=0.340531，差异归因于优化器/正则/标准化路径。**F2**：53 列全矩阵剥离 `<pedal>` 后逐值相等，hash `03821d67ffd1f55c…` = `03821d67ffd1f55c…`（271 runs / 36 scores）。**F3**：BiLSTM-CRF 的 full-sequence/hidden128/内层早停/CRF 类权重版本训练 loss=NaN，未产生可用模型；该行阻塞 | `round_d_lr_grid.log/json/csv`、`round_d_v1_full.log/json`、`round_d_bilstm128.log` | F1/F2 verified；F3 blocked |

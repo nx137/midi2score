@@ -10,18 +10,18 @@
 - `main` SHA：`5650c3d4f7e6ca95daa55e9dc5280650b9f40209`
 - `PedNotate_Plan_v3.0.md` sha256：`b65b1fa6cfaa73caefccd9292ed460d5c2aac98ef56be64566a6574e98567c1b`
 - `TASK_CHARTER.md` sha256：`8c24d88707385b8104505b28b898569ad6bc207f320d2b79960cd320cfd769cf`
-- `DECISIONS.md` sha256：`b70dbf0deb9ff35e65d18848f465d7ab25c42d616eeacb796832d56d172cbd5d`
+- `DECISIONS.md` sha256：`998d75ba09e2f6047efc18e299680e11d625cf679252ed7977179987cf686705`
 - `FIELD_DEFINITIONS.md` sha256：`e35e2bc4fcfffd2c580539173391ec6cf0abdfb265ac55ec8b5586d8fc349539`
 - tracked 文件数：`172`
-- `git status --porcelain`：写入时 clean；本块提交后 HEAD +1
+- `git status --porcelain`：轮 D 修复产物待提交
 
 ## 当前
 
-- **更新时间**：2026-10-09（轮 C 完成：train-CV 协议 + 四阶梯）
-- **当前阶段**：主判域 test；LR、GBDT、LR+结构解码、BiLSTM-CRF 均已出数；V1/V3/V4 通过。
-- **轮 C test ±1 micro**：LR **0.392995**、GBDT **0.310068**、LR_struc **0.230132**、BiLSTM-CRF **0.080336**；B1=0.393531、B2=0.366529。
-- **预声明 claim 门槛**：BiLSTM-CRF 对 LR Δ=−0.312659，CI low=−0.413922 ⇒ **不过**；对 B1/B2 也不过。按 D-0077，模型贡献改写方向为“序列建模在此任务上非必需”。
-- **下一步**：等待主控对轮 C 终局判读/论文 claim 的确认；不自行把 full-36 或 val+test 当门槛。
+- **更新时间**：2026-10-09（轮 D F1/F2 完成；F3 阻塞）
+- **F1**：统一 sklearn 约定；C 对数网格 train-CV 最优 C=1.0、阈值 0.85/0.80，test micro=0.392995。旧自定义 `fit_lr` 在阈值 0.70/0.75 下 test micro=0.466149；同阈值 sklearn=0.340531 ⇒ 差异来自优化器/正则/标准化路径。
+- **F2**：53 列全矩阵剥离 `<pedal>` 后逐值相等，hash `03821d67…` = `03821d67…`，271 runs / 36 scores。
+- **F3**：BiLSTM-CRF 的 full-sequence/hidden128/内层早停/CRF 类权重版本训练 loss=NaN，未产生可用模型；该行阻塞，旧 0.080336 不得当修复后结果。
+- **下一步**：等待主控裁定 F3 NaN 是继续修训练稳定性，还是按停机条件处理。
 - **活动任务**：`R1`（科研侧推进）
 - **分支**：`main` → `origin/main`
 

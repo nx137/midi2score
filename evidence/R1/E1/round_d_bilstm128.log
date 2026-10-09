@@ -1,0 +1,5 @@
+epoch 1/3 loss=nan
+  val_loss=nan
+epoch 2/3 loss=nan
+  val_loss=nan
+trained test model 227.8 s

@@ -56,6 +56,8 @@ def logsumexp(x, dim):
 
 def crf_nll(em, tags, mask, trans, start, end, class_weight=None):
     B, T, K = em.shape
+    if class_weight is not None:
+        em = em + torch.log(class_weight).view(1, 1, -1)
     score = start[tags[:, 0]] + em[:, 0, tags[:, 0]]
     for t in range(1, T):
         m = mask[:, t].float()
@@ -68,14 +70,7 @@ def crf_nll(em, tags, mask, trans, start, end, class_weight=None):
         nxt = torch.logsumexp(alpha.unsqueeze(2) + trans.unsqueeze(0), dim=1) + em[:, t]
         alpha = torch.where(mask[:, t].unsqueeze(1), nxt, alpha)
     logZ = torch.logsumexp(alpha + end.unsqueeze(0), dim=1)
-    loss = (logZ - score)
-    if class_weight is not None:
-        w = class_weight[tags]
-        w = w * mask.float()
-        loss = (loss * w.sum(dim=1) / mask.float().sum(dim=1).clamp_min(1.0)).mean()
-    else:
-        loss = loss.mean()
-    return loss
+    return (logZ - score).mean()
 
 
 @torch.no_grad()
@@ -102,6 +97,8 @@ def make_chunks(runs, mean, std, chunk=256):
     out=[]
     for ri,r in enumerate(runs):
         x=scale(r,mean,std); y=tagseq(r)
+        if chunk <= 0:
+            out.append((ri,0,len(y),x,y)); continue
         for s in range(0,len(y),chunk):
             e=min(len(y),s+chunk)
             out.append((ri,s,e,x[s:e],y[s:e]))
@@ -116,26 +113,42 @@ def collate(batch):
     return X,Y,M
 
 
-def train_model(runs, epochs=4, hidden=32, chunk=256, batch_size=32, lr=1e-3, max_train_runs=0, seed=20260101):
+def train_model(runs, epochs=4, hidden=32, chunk=256, batch_size=32, lr=1e-3, max_train_runs=0, seed=20260101, val_runs=None, patience=2):
     random.seed(seed); np.random.seed(seed); torch.manual_seed(seed)
     mean,std=fit_scaler(runs)
     chunks=make_chunks(runs,mean,std,chunk)
     if max_train_runs:
         keep=set(range(min(max_train_runs,len(runs)))); chunks=[c for c in chunks if c[0] in keep]
     counts=np.bincount(np.concatenate([c[4] for c in chunks]),minlength=TAGS).astype(np.float64)
-    cw=torch.tensor((counts.sum()/(TAGS*np.maximum(counts,1))),dtype=torch.float32)
+    cw_np=np.clip(counts.sum()/(TAGS*np.maximum(counts,1)),1.0,5.0)
+    cw=torch.tensor(cw_np,dtype=torch.float32)
     model=BiLSTMCRF(hidden=hidden)
     opt=torch.optim.AdamW(model.parameters(),lr=lr,weight_decay=1e-4)
     order=list(range(len(chunks)))
+    best=float('inf'); best_state=None; bad=0
     for ep in range(epochs):
-        random.shuffle(order); total=0.0; nb=0
+        model.train(); random.shuffle(order); total=0.0; nb=0
         for s in range(0,len(order),batch_size):
             ids=order[s:s+batch_size]; batch=[chunks[i] for i in ids]
             X,Y,M=collate(batch); opt.zero_grad()
-            em=model.emissions(X); loss=crf_nll(em,Y,M,model.trans,model.start,model.end,None)
-            loss.backward(); torch.nn.utils.clip_grad_norm_(model.parameters(),5.0); opt.step()
+            em=model.emissions(X); loss=crf_nll(em,Y,M,model.trans,model.start,model.end,torch.log(cw))
+            loss.backward(); torch.nn.utils.clip_grad_norm_(model.parameters(),1.0); opt.step()
             total+=float(loss.detach()); nb+=1
         print(f'epoch {ep+1}/{epochs} loss={total/max(nb,1):.4f}',flush=True)
+        if val_runs is not None:
+            model.eval(); vchunks=make_chunks(val_runs,mean,std,chunk); vloss=torch.tensor(0.0); vn=0
+            with torch.no_grad():
+                for s in range(0,len(vchunks),batch_size):
+                    X,Y,M=collate(vchunks[s:s+batch_size])
+                    vloss=vloss+crf_nll(model.emissions(X),Y,M,model.trans,model.start,model.end,torch.log(cw)); vn+=1
+            vloss=float(vloss/max(vn,1)); print(f'  val_loss={vloss:.4f}',flush=True)
+            if vloss < best-1e-4:
+                best=vloss; best_state={k:v.detach().clone() for k,v in model.state_dict().items()}; bad=0
+            else:
+                bad+=1
+                if bad>=patience: break
+    if best_state is not None:
+        model.load_state_dict(best_state)
     return model,mean,std
 
 
@@ -175,11 +188,13 @@ def main():
     args=ap.parse_args()
     built=load_cache(args.cache); runs=built['runs']
     train=[r for r in runs if r['fold']=='train']; val=[r for r in runs if r['fold']=='val']; test=[r for r in runs if r['fold']=='test']; vtest=val+test
-    t0=time.time(); model,mean,std=train_model(train,epochs=args.epochs,hidden=args.hidden,chunk=args.chunk,batch_size=args.batch_size,lr=args.lr,max_train_runs=args.max_train_runs)
+    inner_groups=sorted({r['group'] for r in train})[::5]
+    inner_val=[r for r in train if r['group'] in inner_groups]
+    inner_train=[r for r in train if r['group'] not in inner_groups]
+    t0=time.time(); model,mean,std=train_model(inner_train,epochs=args.epochs,hidden=args.hidden,chunk=args.chunk,batch_size=args.batch_size,lr=args.lr,max_train_runs=args.max_train_runs,val_runs=inner_val)
     print('trained test model',round(time.time()-t0,1),'s',flush=True)
     test_sum,test_counts=eval_model(model,mean,std,test); vt_sum,vt_counts=eval_model(model,mean,std,vtest)
-    model2,mean2,std2=train_model(train+val,epochs=args.epochs,hidden=args.hidden,chunk=args.chunk,batch_size=args.batch_size,lr=args.lr,max_train_runs=args.max_train_runs)
-    full_sum,full_counts=eval_model(model2,mean2,std2,runs)
+    full_sum,full_counts=eval_model(model,mean,std,runs)
     table=[]
     for dom,summ in (('test',test_sum),('val_test',vt_sum),('full',full_sum)):
         for scope in ('micro','DOWN','UP'):
