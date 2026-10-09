@@ -103,3 +103,15 @@
 | R1-B2-A3 | floor 表 notation_reference 恒等行、回放轴独立表、注记 1 的 36 域分母更正、test 7 首清点 | — | done（`floor_reference_test.md`、`replay_fidelity_reference.md`、`fold_test_inventory.md`） |
 | R1-B3-B | 轮 B：锚点级训练表（标签 + A/B/C 特征 + 命名空间检查；CHANGE 关闭并报合并对数） | R1-B2-A3 | todo |
 | R1-B3-C | 轮 C：HistGradientBoosting 两独立二分类训练 + 两域评估 + 消融 | R1-B3-B | todo |
+
+## 轮 B：canonical 统一域（2026-10-09，STOP ③）
+
+| ID | 待办 | blocking | 状态 |
+|:--|:--|:--|:--|
+| R1-DU-1 | canonical `[0,score_end)` 定义与全部方法复算 | — | done（`results/E1/domain_unified/`；D-0074） |
+| R1-DU-2 | B1 canonical CV argmax 披露 | — | done（argmax d_min=0.0 拍） |
+| R1-DU-3 | 停机条件 ③ 判定：B2 full canonical−旧域 micro 差 | R1-DU-1 | **blocked/stop**（−0.03290759 > 0.03） |
+| R1-B3-B | 训练表 A/B/C + 无泄漏自证 + LR | R1-DU-3 + V1 定义裁定 | blocked |
+| R1-B3-C | 结构化模型与两域评估 | R1-B3-B | blocked |
+
+> V1 定义冲突：§5.1 A 层源自 CC64，且 δ/局部 IBI 若取 performance beats 则触碰 `asap_annotations.json`；不得自行发明 score-grid IBI。

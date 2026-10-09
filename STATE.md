@@ -7,24 +7,24 @@
 
 - 约定：`main` SHA = **写入本块时的 HEAD**（包含本块的提交会使其 +1；以 `git log` 为准）；四个文件哈希 = 写入时的内容
 - 记录时间：`2026-10-09 +0800`
-- `main` SHA：`67adced0d084a3d3acc0f5ec72c906101bd98005`
+- `main` SHA：`7db3d6eb737731b57d72f33f5588505082074a37`
 - `PedNotate_Plan_v3.0.md` sha256：`b65b1fa6cfaa73caefccd9292ed460d5c2aac98ef56be64566a6574e98567c1b`
 - `TASK_CHARTER.md` sha256：`8c24d88707385b8104505b28b898569ad6bc207f320d2b79960cd320cfd769cf`
-- `DECISIONS.md` sha256：`29a697759ae30fe595d36cd61e4ed37a49524f0516813fae78c014f5c097f592`
-- `FIELD_DEFINITIONS.md` sha256：`ebd19f068c4382a4a75f43422bdc3e1c3defaf0b54bc851edd51243033fe7c3a`
-- tracked 文件数：`133`
-- `git status --porcelain`：写入时为 clean；本块提交后 HEAD +1（按约定以 `git log` 为准）
+- `DECISIONS.md` sha256：`31f03ee026db9783b8b71405788c55fee04401381fd5bdc45dc8626d4c6bbeb0`
+- `FIELD_DEFINITIONS.md` sha256：`0eeb37336f9269ebbecc495d0cbff3d2fada45bb8357d205f02043d0dce0aaed`
+- tracked 文件数：`141`
+- `git status --porcelain`：轮 B 停机产物待提交
 
 ## 当前
 
-- **更新时间**：2026-10-09（R1 模型线，B2 Round A 收尾）
-- **当前阶段**：B1 与 B2 均已出数；B2 已完成 36 首全量列、分标签绝对计数、两域 micro/bootstrap 与分标签 bootstrap；`notation_reference` 回归谱面轴恒等行、回放轴副指标独立表已落库。
-- **阶段状态**：B2 test ±1 micro = 0.3712；test DOWN = 0.4850、UP = 0.2550；全量 36 域 ±1 micro = 0.2971。B2 分标签 bootstrap：test DOWN(B2−bp4) 0.0293 [−0.1021, 0.1187]，test UP(B2−inversion) −0.0761 [−0.1538, 0.0122]；全量 DOWN(B2−bp4) 0.0188 [−0.0285, 0.0734]，UP(B2−inversion) −0.0125 [−0.0623, 0.0366]；完整见 `results/E1/B2_bootstrap_perlabel.json`。
-- **评测域**：36 首 / 271 runs；train 166 / val 28 / test 78（test 可评估 77）；test pedal elements=1051/3615=29.1%，不是 33.8%。
-- **下一步**：按控制器顺序进入 B3（轮 B：锚点级训练表；轮 C：HistGradientBoosting 训练与两域评估）；本轮不自行启动 B3。
-- **活动任务**：`R1`（科研侧推进）
-- **分支**：`main` → `origin/main`（https://github.com/nx137/midi2score.git，已推送）
-- **thread_id 约定**（阶段 2 实现）：`research:midi2score:<task_id>`，稳定可推导，禁止每次随机生成
+- **更新时间**：2026-10-09（轮 B：canonical 统一域复算）
+- **当前阶段**：**STOP ③ 已触发**。canonical domain 复算已完成；B1 canonical CV 的 d_min argmax 仍为 **0.0 拍**。
+- **停机事实**：full B2_K3 ±1 micro F1 = **0.26415214**（canonical），旧域 = **0.29705973**，差 **−0.03290759**（>0.03，超过轮 B 停机条件 ③）；test B2 差 −0.00465055；full B1 差 +0.00009467，test B1 差 +0.00003228。
+- **边界披露**：`[0, score_end)` 不含右端点；`Chopin/Etudes_op_10/10` 的 4 runs 各有一个 `UP` 恰落在 score_end，被排除，full n_truth=28,599（旧 28,603）。
+- **未启动**：轮 B 训练表、LR 模型、V1–V5 未开始；**不自行修统一域，不进入轮 C**。
+- **另报阻塞**：V1 要求“特征不触碰任何演奏/标注文件”，但 §5.1 A 层定义为 CC64/per-run，且 `δ_onset/δ_offset` 的最近拍、局部 IBI 需要 performance_beats 时必然触碰 `asap_annotations.json`；该定义冲突尚未裁定。
+- **活动任务**：`R1`（科研侧推进，等待停机组裁定）
+- **分支**：`main` → `origin/main`（https://github.com/nx137/midi2score.git）
 
 ## 阶段 1 交付物
 

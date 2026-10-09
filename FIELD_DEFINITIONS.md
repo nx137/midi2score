@@ -146,3 +146,10 @@ exit code = 记录属性，不是成功判据
 - **评测域 = Main 43 首中的 36 首**（剔除含 `<repeat>` 的 7 首）。**与 D-0045 并列**：含 repeat 的谱**仍全部保留在语料**，只是不进反演/B1/B2 评测域（其 `I/g/Tier` 记 `coordinate_ambiguous`）。
 - **小节首锚点**：`measure_starts` 记录的每小节起始全局位置；锚点 t 是小节首 ⟺ `snap(t) ∈ snap(measure_starts)`（D-0067①）。
 - **末段右端 = 序列末锚点（span）**：边界列表末尾补合成边界（D-0067 授权取值，已追认）。
+
+## 17. 统一评测域（canonical domain，2026-10-09）
+
+- **定义**：统一评测域 = 谱面锚点栅格 `[0, score_end)` 的全部格点，`GRID = 0.25`（十六分音符），包含无音符格点。
+- **`score_end`**：仅由 MusicXML 自身的小节长度累加决定（累加规则与 `parse_score` 一致）；**不得**使用 `max(truth)`、演奏结束时间、alignment 或 performance_beats。
+- **全部方法**（inversion/B1、B2、beat_periodic_2、beat_periodic_4）在同一 canonical 域复算；旧域产物保留，不覆盖（D-0068）。
+- **边界披露**：`[0, score_end)` 不含右端点。本轮复算发现 `Chopin/Etudes_op_10/10` 的 4 个 runs 各有一个 `UP` 标签恰落在 `score_end`，因此 canonical full 域 `n_truth = 28,599`，比旧域 `28,603` 少 4。

@@ -7,6 +7,7 @@ from pathlib import Path
 import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from score_features import anchor_features, measure_starts, parse_score_extended  # noqa: E402
+from canonical_domain import canonical_anchors  # noqa: E402
 from inversion_consistency import GRID, cc64_transitions, parse_alignment, parse_score, snap, to_anchor  # noqa: E402
 from inversion_baselines import f1_of  # noqa: E402
 from scipy.optimize import linear_sum_assignment  # noqa: E402
@@ -30,7 +31,7 @@ def cached_parse(xml_path: Path) -> dict:
 K_GRID = [1, 2, 3]
 
 
-def features_once(xml: Path):
+def features_once(xml: Path, end: float | None = None):
     """每 run 只算一次（K 无关）：锚点 / 特征序列 / 真值 / span / 小节首集合。
 
     分桶用**单遍双指针**，比较式与 anchor_features 的选择谓词逐字相同（半开区间 [t, t+GRID)）：
@@ -43,8 +44,12 @@ def features_once(xml: Path):
     truth = {(snap(o), "DOWN" if k == "start" else "UP") for (m, o, k) in pedals}
     if not truth:
         return None
-    span = max(t for t, _ in truth)
-    anchors = [round(i * GRID, 6) for i in range(int(round(span / GRID)) + 1)]
+    if end is None:
+        span = max(t for t, _ in truth)
+        anchors = [round(i * GRID, 6) for i in range(int(round(span / GRID)) + 1)]
+    else:
+        span = float(end)
+        anchors = canonical_anchors(span)
     items = sorted(((n["pos"], i, n) for i, n in notes_ext.items() if n["pitch"] is not None), key=lambda x: x[0])
     onsets = [x[0] for x in items]
     raw, lo, hi = [], 0, 0
