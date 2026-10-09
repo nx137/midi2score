@@ -7,13 +7,13 @@
 
 - 约定：`main` SHA = **写入本块时的 HEAD**（包含本块的提交会使其 +1；以 `git log` 为准）；四个文件哈希 = 写入时的内容
 - 记录时间：`2026-10-09 +0800`
-- `main` SHA：`320912c1547c509319c582f094fb52adb10391ef`
+- `main` SHA：`58cf1571a439006ca1b3fe45bb1ee29026c7de2f`
 - `PedNotate_Plan_v3.0.md` sha256：`b65b1fa6cfaa73caefccd9292ed460d5c2aac98ef56be64566a6574e98567c1b`
 - `TASK_CHARTER.md` sha256：`8c24d88707385b8104505b28b898569ad6bc207f320d2b79960cd320cfd769cf`
 - `DECISIONS.md` sha256：`889b3c65e7bbeffa9ae8b86e1f18eda9e68c64f53e6bdba31bbd93f097b1bfad`
 - `FIELD_DEFINITIONS.md` sha256：`e35e2bc4fcfffd2c580539173391ec6cf0abdfb265ac55ec8b5586d8fc349539`
-- tracked 文件数：`148`
-- `git status --porcelain`：轮 B 完成产物待提交
+- tracked 文件数：`158`
+- `git status --porcelain`：写入时 clean；本块提交后 HEAD +1
 
 ## 当前
 
