@@ -38,9 +38,10 @@
 | M3L-2 | train-CV 选择正则化线性模型 C；首次 test 评估并输出分标签指标/混淆矩阵 | M3L-1 | done（C=10.0；test micro 0.63512 / macro 0.34603） |
 | M3L-3 | 独立 validator + 可复现性检查 + LangGraph candidate→verified | M3L-2 | done（35 checks；repro 11/11；EV-M3L-1–4） |
 | M3L-4 | 前置条件评审通过后才进入小型 BiLSTM-CRF | M3L-3 | done（前置条件通过；进入下一阶段） |
-| M3S-1 | 小型 BiLSTM-CRF：同一 M2 三分类标签与 36 首 / 271 runs 协议 | M3L-4 | todo |
-| M3S-2 | 小型序列模型 validator + 可复现性 + 控制平面验收 | M3S-1 | todo |
-| M3T-1 | 完整 run Transformer：仅在 M3S 前置条件与对照完成后启动 | M3S-2 | todo |
+| M3S-1 | 小型 BiLSTM-CRF：同一 M2 三分类标签与 36 首 / 271 runs 协议 | M3L-4 | done（best_epoch=3；test macro 0.32585；DOWN/UP F1=0；相对门未过） |
+| M3S-2 | 小型序列模型 validator + 可复现性 + 控制平面验收 | M3S-1 | done（validator 通过；repro 9/9；三条命令 verified；EV-M3S-1–5） |
+| M3S-3 | 诊断 BiLSTM-CRF 类别塌缩：损失权重、CRF/解码阈值、窗口长度与类别先验，禁止直接上 Transformer | M3S-2 | todo |
+| M3T-1 | 完整 run Transformer：仅在 M3S-3 诊断并有通过前提前启动 | M3S-3 | blocked |
 
 > 下方旧条目按日期保留，其中出现的旧主指标、旧 blocked 状态和旧路线不再自动生效；如与 D-0081 冲突，以 D-0081 为准。
 

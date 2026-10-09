@@ -1,0 +1,24 @@
+{
+  "dataset_version": "m3-bilstm-crf-v1",
+  "input_dim": 53,
+  "hidden": 32,
+  "dropout": 0.2,
+  "layers": 1,
+  "bidirectional": true,
+  "tags": [
+    "NONE",
+    "DOWN",
+    "UP"
+  ],
+  "chunk": 256,
+  "batch_size": 32,
+  "lr": 0.0001,
+  "weight_decay": 0.0001,
+  "clip_grad_norm": 5.0,
+  "class_weight": "balanced_clipped",
+  "early_stop": "inner_val_macro_f1 patience=10",
+  "best_epoch": 3,
+  "epochs_run": 13,
+  "seed": 20260101,
+  "optimizer": "AdamW"
+}

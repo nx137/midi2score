@@ -1,0 +1,227 @@
+{
+  "dataset_version": "m3-bilstm-crf-v1",
+  "status": "passed",
+  "gate_passed": false,
+  "gate": {
+    "macro_f1_improved": false,
+    "down_f1_improved": false,
+    "up_f1_improved": false,
+    "down_recall_nonzero": false,
+    "up_recall_nonzero": false,
+    "passed": false
+  },
+  "manifest_sha256": "7b7ba2e040051330c10d449d3028cdf95b85f0acccb0e21ae0d504531e054062",
+  "checks": [
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "data/derived/m3/bilstm_crf/best_model.pt"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "data/derived/m3/bilstm_crf/predictions.jsonl.gz"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/bilstm_crf/bilstm_crf_model.json"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/bilstm_crf/bilstm_crf_summary.json"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/bilstm_crf/bilstm_crf_data_summary.json"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/bilstm_crf/bilstm_crf_table.csv"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/bilstm_crf/bilstm_crf_per_class.csv"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/bilstm_crf/bilstm_crf_confusion.csv"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/bilstm_crf/bilstm_crf_training_curve.csv"
+    },
+    {
+      "id": "GENERATOR_HASH",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "MODEL_CONFIG",
+      "passed": true,
+      "detail": "{\"dataset_version\": \"m3-bilstm-crf-v1\", \"input_dim\": 53, \"hidden\": 32, \"dropout\": 0.2, \"layers\": 1, \"bidirectional\": true, \"tags\": [\"NONE\", \"DOWN\", \"UP\"], \"chunk\": 256, \"batch_size\": 32, \"lr\": 0.0001, \"weight_decay\": 0.0001, \"clip_grad_norm\": 5.0, \"class_weight\": \"balanced_clipped\", \"early_stop\": \"inner_val_macro_f1 patience=10\", \"best_epoch\": 3, \"epochs_run\": 13, \"seed\": 20260101, \"optimizer\": \"AdamW\"}"
+    },
+    {
+      "id": "CLASS_WEIGHT_MODE",
+      "passed": true,
+      "detail": "balanced_clipped"
+    },
+    {
+      "id": "BEST_EPOCH",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "NO_NAN_HISTORY",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "PREDICTION_ROWS",
+      "passed": true,
+      "detail": "758365 vs 758365"
+    },
+    {
+      "id": "PREDICTION_LABELS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "METRIC_val",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "METRIC_test",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "METRIC_full",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "RELATIVE_GATE",
+      "passed": true,
+      "detail": "gate is reported separately"
+    }
+  ],
+  "failures": [],
+  "linear_test": {
+    "micro_f1": 0.635120563231345,
+    "macro_f1": 0.3460285512858288,
+    "accuracy": 0.635120563231345,
+    "n": 287484,
+    "per_class": {
+      "NONE": {
+        "precision": 0.9952910152571106,
+        "recall": 0.6323645673917301,
+        "f1": 0.7733660351751773,
+        "support": 275746
+      },
+      "DOWN": {
+        "precision": 0.07857622565480188,
+        "recall": 0.7186035235170519,
+        "f1": 0.14166228552310853,
+        "support": 6187
+      },
+      "UP": {
+        "precision": 0.06765999461448703,
+        "recall": 0.6789767609439741,
+        "f1": 0.12305733315920073,
+        "support": 5551
+      }
+    },
+    "confusion_matrix": [
+      [
+        174372,
+        51084,
+        50290
+      ],
+      [
+        95,
+        4446,
+        1646
+      ],
+      [
+        730,
+        1052,
+        3769
+      ]
+    ]
+  },
+  "bilstm_test": {
+    "micro_f1": 0.956056684893768,
+    "macro_f1": 0.32584549395910617,
+    "accuracy": 0.956056684893768,
+    "n": 287484,
+    "per_class": {
+      "NONE": {
+        "precision": 0.9590457381327899,
+        "recall": 0.9967542593546235,
+        "f1": 0.9775364818773185,
+        "support": 275746
+      },
+      "DOWN": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 6187
+      },
+      "UP": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "support": 5551
+      }
+    },
+    "confusion_matrix": [
+      [
+        274851,
+        590,
+        305
+      ],
+      [
+        6187,
+        0,
+        0
+      ],
+      [
+        5550,
+        1,
+        0
+      ]
+    ]
+  },
+  "config": {
+    "dataset_version": "m3-bilstm-crf-v1",
+    "input_dim": 53,
+    "hidden": 32,
+    "dropout": 0.2,
+    "layers": 1,
+    "bidirectional": true,
+    "tags": [
+      "NONE",
+      "DOWN",
+      "UP"
+    ],
+    "chunk": 256,
+    "batch_size": 32,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "clip_grad_norm": 5.0,
+    "class_weight": "balanced_clipped",
+    "early_stop": "inner_val_macro_f1 patience=10",
+    "best_epoch": 3,
+    "epochs_run": 13,
+    "seed": 20260101,
+    "optimizer": "AdamW"
+  }
+}

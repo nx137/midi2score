@@ -165,3 +165,13 @@
 | EV-M3L-3 | 二次运行（控制平面）与预控制平面快照比较：model/data_summary/feature_schema/table/per-class/confusion/cv/predictions/runs 的 hash 全同，summary 语义与 NPZ 数组含义全同，**11/11 checks 通过**。repro json sha256 \`b2ef43e48981bf58c28d0ed83ea6511f236b455df177ceca6f5d2d3854a5f98f\`。 | verified（EV-RUN-WP-M3-LINEAR-3） |
 | EV-M3L-4 | LangGraph 控制平面 \`tools/m3_control_plane_run.py --run-id m3-linear-20261010\` 执行 baseline → validator → repro；三条命令均 candidate→postflight \`verified\`，alignment=aligned、verification.passed=true、WP-M3-LINEAR=done。record sha256 \`fc85c7dedaa2d0cb49fb0b64562bc4c13dce3e158e7c6ac089682dc0a8ee94e2\`。 | verified |
 | EV-M3L-5 | 本层只做序列模型前置条件验证，不把线性 baseline 当最终模型；原始特征矩阵与逐锚点预测保留在 \`data/derived/m3/linear/\`（被 .gitignore 排除），其内容哈希见 \`linear_manifest.json\` 与 \`linear_control_plane_record.json\`。 | verified |
+## M3S-1 小型 BiLSTM-CRF（2026-10-10）
+
+| ID | 事实 / 命令 | 状态 |
+|:--|:--|:--|
+| EV-M3S-1 | 小型 BiLSTM-CRF（hidden=32、dropout=0.2、1 层双向、CRF、chunk=256、class_weight=balanced_clipped、lr=1e-4、seed=20260101）在 M3.1 的 36 首 / 271 runs 上训练。best_epoch=3、实际运行 13 epochs；训练在第 4 轮后退化为几乎全 NONE。 | verified（EV-RUN-WP-M3-BILSTM-CRF-1） |
+| EV-M3S-2 | test：micro F1 0.9560566849、macro F1 0.3258454940；NONE F1 0.9775364819；DOWN F1 0、UP F1 0；DOWN/UP 混淆矩阵均为全零预测。相对 M3.1 linear（test macro 0.3460285513；DOWN F1 0.1416622855；UP F1 0.1230573332）**放行门失败**。summary sha256 28e89d5c8e9ac66edb0aca761f82bad6f99ec56a8a982415297da3839f40ec74。 | verified（EV-RUN-WP-M3-BILSTM-CRF-1） |
+| EV-M3S-3 | 独立 validator 通过内部一致性检查（status=passed），但相对放行门 gate_passed=false；gate 中 macro 改善、DOWN/UP F1 改善、DOWN/UP recall 非零全部为 false。validation sha256 d493402e163c7da1c2c036005ffee57a30c03e358b7b3349352f12783feef821。 | verified（EV-RUN-WP-M3-BILSTM-CRF-2） |
+| EV-M3S-4 | 控制平面二次运行与预控制快照比较：model/config/data_summary/table/per-class/confusion/training curve/best_model/predictions/summary 语义全部一致，9/9 checks 通过。repro sha256 829c922917bcc43a244eeb6ce388b9d854b9600327c40a915db46c658cac7e15。 | verified（EV-RUN-WP-M3-BILSTM-CRF-3） |
+| EV-M3S-5 | LangGraph 控制平面 record sha256 62817ad5f8ac75ea5ccd7154f85a3f96f4ea478aa3f147bff20aa11c40ea8a98；三条命令 candidate→postflight verified、alignment=aligned、WP-M3-BILSTM-CRF=done。该记录说明执行链正确，不表示模型放行门通过。 | verified |
+| EV-M3S-6 | 结论：小型 BiLSTM-CRF 首版未通过 D-0089 的相对门槛；下一步不得直接进入完整 Transformer，需先诊断类别塌缩/决策阈值/损失权重。 | verified（negative result） |

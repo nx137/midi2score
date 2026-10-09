@@ -1,0 +1,16 @@
+{
+  "dataset_version": "m3-bilstm-crf-v1",
+  "status": "passed",
+  "checks": {
+    "hash_bilstm_crf_model.json": true,
+    "hash_bilstm_crf_data_summary.json": true,
+    "hash_bilstm_crf_table.csv": true,
+    "hash_bilstm_crf_per_class.csv": true,
+    "hash_bilstm_crf_confusion.csv": true,
+    "hash_bilstm_crf_training_curve.csv": true,
+    "hash_best_model.pt": true,
+    "hash_predictions.jsonl.gz": true,
+    "summary_semantic": true
+  },
+  "failures": []
+}

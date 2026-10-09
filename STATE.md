@@ -17,20 +17,16 @@
 
 ## 当前
 
-- **更新时间**：2026-10-10（M3.1 三分类线性前置层完成）
-- **对齐判定**：aligned；目标为在成熟 MIDI→MusicXML 流水线上增加 S2 踏板层。
-- **主指标**：**回放保真度**；**谱面一致度为强制副指标**。
-- **训练顺序**：**ASAP 初始训练 → PDMX 合成语料增强训练**。
-- **控制平面**：Goal Contract、Context Packet、allowlist、ExecutionRecord、candidate Evidence、postflight verifier、SQLite checkpointer/store、稳定 thread_id 与 interrupt/Command(resume) 已通过 M2/M3 全链路。
-- **LLM**：DeepSeek deepseek-flash，reasoning_effort=high，内部 Context Packet 800000 字符；M2/M3.1 的确定性验收使用 MIDI2SCORE_LLM_ENABLED=false。
-- **持久化边界**：使用 SqliteSaver + SqliteStore，不迁移 Postgres；接受本地单进程限制。
-- **仓库策略**：当前私人仓库允许模型权重存在；API key、凭据、原始语料和虚拟环境仍禁止入库。
-- **历史路径**：Round B/C/D 的 score-consistency 数字只作历史诊断，不再作当前主线 claim。
-- **M2 v1**：canonical 标签数据层完成；Main 43 / evaluation-eligible 36 / coordinate-ambiguous 7；Main runs 291 / supervised runs 271；独立 validator 97 checks；repro 4/4；控制平面 verified。
-- **M3.1**：按 D-0089 完成三分类正则化线性前置层。36 首 / 271 runs；included 758,365 行；CHANGE 排除 6,335 行；V1_pass=true、feature_source_leak={}；train-only score-group CV 选中 C=10.0；test micro/macro F1 = 0.63512 / 0.34603；独立 validator 35 checks、repro 11/11、控制平面三条命令 verified。
-- **M3 已知边界**：M3.1 的 micro F1 受 NONE 主导；DOWN/UP 的 precision 仍低（test 0.0786 / 0.0677），说明线性模型只适合作前置条件，不应当作最终 S2 结果。下一阶段必须实现小型 BiLSTM-CRF 并沿用同一 3 分类协议。
-- **下一步**：进入 M3S-1 小型 BiLSTM-CRF；先复用 M3.1 数据/折/指标协议，再验证序列结构是否改善 DOWN/UP 的 precision 与 macro F1；完整 run Transformer 仅在 M3S 对照完成后启动。
-- **活动任务**：M3S-1
+- **更新时间**：2026-10-10（M3S-1 BiLSTM-CRF 负结果）
+- **对齐判定**：aligned；目标仍为成熟 MIDI→MusicXML 流水线上的踏板层。
+- **主指标**：回放保真度；谱面一致度为强制副指标。
+- **训练顺序**：ASAP 初始训练 → PDMX 合成语料增强训练。
+- **控制平面**：M2、M3.1、M3S-1 均已通过 LangGraph 受控执行；执行链 verified 不等于模型科研门通过。
+- **M2 v1**：canonical 标签数据层完成；Main 43 / evaluation-eligible 36 / repeat-ambiguous 7；validator 97 checks；repro 4/4。
+- **M3.1**：三分类正则化线性模型完成；included 758,365 行；excluded 6,335 CHANGE；test micro/macro = 0.63512 / 0.34603；validator 35 checks、repro 11/11。
+- **M3S-1**：小型 BiLSTM-CRF（hidden=32、dropout=0.2、balanced_clipped、chunk=256）失败。best_epoch=3、13 epochs；test micro 0.95606、macro 0.32585；DOWN/UP F1 均为 0，模型塌缩为几乎全 NONE。相对 M3.1 放行门未通过。
+- **下一步**：执行 M3S-3 诊断：先检查 class weight 是否真正进入 CRF 损失、解码阈值/类别先验、chunk 长度与窗口上下文；在诊断通过前不得进入完整 Transformer。
+- **活动任务**：M3S-3
 - **分支**：main → origin/main## 阶段 1 交付物
 
 | 文件 | 状态 |
@@ -53,6 +49,8 @@
 | 2026-10-09 | M2 LangGraph 控制平面全链路 | `python tools/m2_control_plane_run.py --run-id m2-v1-contract-20261009 ...` | **PASS**：三条命令 candidate→verified，alignment=aligned，work package=done；EV-M2-4 |
 | 2026-10-10 | M3.1 三分类线性前置层 | `tools/m3_linear_baseline.py` + `tools/m3_validate_linear.py` + `tools/m3_repro_check.py` | **PASS**：36 首 / 271 runs；included 758,365；excluded 6,335 CHANGE；test micro 0.63512 / macro 0.34603；validator 35 checks、repro 11/11（EV-M3L-1–3） |
 | 2026-10-10 | M3.1 LangGraph 控制平面全链路 | `tools/m3_control_plane_run.py --run-id m3-linear-20261010` | **PASS**：三条命令 candidate→verified，alignment=aligned，WP-M3-LINEAR=done；EV-M3L-4 |
+| 2026-10-10 | M3S-1 小型 BiLSTM-CRF | `tools/m3_bilstm_crf.py` + validator + repro | **negative gate**：test macro 0.32585 < 线性 0.34603；DOWN/UP F1=0；validator 内部通过、repro 9/9（EV-M3S-1–4） |
+| 2026-10-10 | M3S-1 LangGraph 控制平面 | `tools/m3_bilstm_control_plane_run.py --run-id m3-bilstm-20261010b` | **execution PASS**：三条命令 verified；但模型相对门 fail，禁止进入 Transformer（EV-M3S-5/6） |
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
 | 2026-10-07 | 语料 manifest 口径 | `python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv` | **PASS**：复现出计划书哈希 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa`（1,305 条 / 465,861,631 B；EV-S6、EV-S10、D-0020） |
 | 2026-10-07 | 零成本项 (a)–(d) + 交付 6 | `export_pairing_audit.py` + `split_freeze.py` | 旧式自检 42 首中 **20 首非零**（缺陷 #6 证实）；奇数 C = **0**；unexplained 4/31/33；三候选规则**无清零**；**Main 精确复现 43/291/3840**；划分 train 26/val 6/test 9 组（EV-S23–S26） |\n| 2026-10-07 | R1-3i 导出侧交付 1–4 | `musescore_export_probe.py --positive 68 --negative 3 --force` + `pedal_export_audit.py` | **68/68 导出成功；负对照 3/3 为 0 CC64**；五格 Tier = OK 42 / T1 0 / T2(含T2b) 13 / T3 13 / T4 0；**裁定5 = 71/71 逐值一致**；P5 = 0.91485(R-7) / 0.8837(nearest_rank)（EV-S19–S22） |

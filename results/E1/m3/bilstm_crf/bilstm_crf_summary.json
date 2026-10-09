@@ -1,0 +1,274 @@
+{
+  "dataset_version": "m3-bilstm-crf-v1",
+  "model_family": "small_bilstm_crf",
+  "selection": "train_only_score_group_inner_validation",
+  "domains": {
+    "inner_train": {
+      "micro_f1": 0.9909806604806889,
+      "macro_f1": 0.34648051111789374,
+      "accuracy": 0.9909806604806889,
+      "n": 369761,
+      "per_class": {
+        "NONE": {
+          "precision": 0.9936377763133273,
+          "recall": 0.9973106938028913,
+          "f1": 0.9954708471444873,
+          "support": 367381
+        },
+        "DOWN": {
+          "precision": 0.05536912751677853,
+          "recall": 0.036464088397790057,
+          "f1": 0.04397068620919387,
+          "support": 905
+        },
+        "UP": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 1475
+        }
+      },
+      "confusion_matrix": [
+        [
+          366393,
+          562,
+          426
+        ],
+        [
+          872,
+          33,
+          0
+        ],
+        [
+          1474,
+          1,
+          0
+        ]
+      ]
+    },
+    "inner_val": {
+      "micro_f1": 0.9498873772411929,
+      "macro_f1": 0.34639652766955353,
+      "accuracy": 0.9498873772411929,
+      "n": 55495,
+      "per_class": {
+        "NONE": {
+          "precision": 0.9699576349235587,
+          "recall": 0.9786281105391291,
+          "f1": 0.9742735825493298,
+          "support": 53809
+        },
+        "DOWN": {
+          "precision": 0.04315886134067952,
+          "recall": 0.047522750252780584,
+          "f1": 0.04523580365736285,
+          "support": 989
+        },
+        "UP": {
+          "precision": 0.06896551724137931,
+          "recall": 0.011477761836441894,
+          "f1": 0.01968019680196802,
+          "support": 697
+        }
+      },
+      "confusion_matrix": [
+        [
+          52659,
+          1042,
+          108
+        ],
+        [
+          942,
+          47,
+          0
+        ],
+        [
+          689,
+          0,
+          8
+        ]
+      ]
+    },
+    "val": {
+      "micro_f1": 0.9939506849315068,
+      "macro_f1": 0.332325708360356,
+      "accuracy": 0.9939506849315068,
+      "n": 45625,
+      "per_class": {
+        "NONE": {
+          "precision": 0.9971853904171339,
+          "recall": 0.9967689467205908,
+          "f1": 0.9969771250810681,
+          "support": 45496
+        },
+        "DOWN": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 54
+        },
+        "UP": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 75
+        }
+      },
+      "confusion_matrix": [
+        [
+          45349,
+          102,
+          45
+        ],
+        [
+          54,
+          0,
+          0
+        ],
+        [
+          74,
+          1,
+          0
+        ]
+      ]
+    },
+    "test": {
+      "micro_f1": 0.956056684893768,
+      "macro_f1": 0.32584549395910617,
+      "accuracy": 0.956056684893768,
+      "n": 287484,
+      "per_class": {
+        "NONE": {
+          "precision": 0.9590457381327899,
+          "recall": 0.9967542593546235,
+          "f1": 0.9775364818773185,
+          "support": 275746
+        },
+        "DOWN": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 6187
+        },
+        "UP": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "support": 5551
+        }
+      },
+      "confusion_matrix": [
+        [
+          274851,
+          590,
+          305
+        ],
+        [
+          6187,
+          0,
+          0
+        ],
+        [
+          5550,
+          1,
+          0
+        ]
+      ]
+    },
+    "full": {
+      "micro_f1": 0.9749131354954409,
+      "macro_f1": 0.33478557265880665,
+      "accuracy": 0.9749131354954409,
+      "n": 758365,
+      "per_class": {
+        "NONE": {
+          "precision": 0.979019830643602,
+          "recall": 0.9957167794491617,
+          "f1": 0.987297716366861,
+          "support": 742432
+        },
+        "DOWN": {
+          "precision": 0.03362757461118117,
+          "recall": 0.009834050399508297,
+          "f1": 0.015217804831653034,
+          "support": 8135
+        },
+        "UP": {
+          "precision": 0.008968609865470852,
+          "recall": 0.0010259040779687098,
+          "f1": 0.0018411967779056386,
+          "support": 7798
+        }
+      },
+      "confusion_matrix": [
+        [
+          739252,
+          2296,
+          884
+        ],
+        [
+          8055,
+          80,
+          0
+        ],
+        [
+          7787,
+          3,
+          8
+        ]
+      ]
+    }
+  },
+  "data": {
+    "dataset_version": "m3-bilstm-crf-v1",
+    "scores": 36,
+    "runs": 271,
+    "rows": 758365,
+    "included_counts": {
+      "NONE": 742432,
+      "DOWN": 8135,
+      "UP": 7798
+    },
+    "fold_runs": {
+      "train": 166,
+      "val": 28,
+      "test": 77
+    },
+    "inner_train_runs": 136,
+    "inner_val_runs": 30,
+    "inner_val_groups": [
+      "Beethoven||Piano_Sonatas_11-2",
+      "Chopin||Barcarolle",
+      "Chopin||Etudes_op_25_12",
+      "Chopin||Sonata_3_3rd",
+      "Schumann||Kreisleriana_4"
+    ],
+    "class_weight": "balanced_clipped"
+  },
+  "config": {
+    "dataset_version": "m3-bilstm-crf-v1",
+    "input_dim": 53,
+    "hidden": 32,
+    "dropout": 0.2,
+    "layers": 1,
+    "bidirectional": true,
+    "tags": [
+      "NONE",
+      "DOWN",
+      "UP"
+    ],
+    "chunk": 256,
+    "batch_size": 32,
+    "lr": 0.0001,
+    "weight_decay": 0.0001,
+    "clip_grad_norm": 5.0,
+    "class_weight": "balanced_clipped",
+    "early_stop": "inner_val_macro_f1 patience=10",
+    "best_epoch": 3,
+    "epochs_run": 13,
+    "seed": 20260101,
+    "optimizer": "AdamW"
+  },
+  "wall_clock_sec": 269.556,
+  "generator_sha256": "8edf93626b9bcaa71879217a95cb7ec10e9e60d015b3c349c124d3c9935c43b6"
+}

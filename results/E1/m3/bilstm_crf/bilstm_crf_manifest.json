@@ -1,0 +1,65 @@
+{
+  "dataset_version": "m3-bilstm-crf-v1",
+  "generator": {
+    "path": "tools/m3_bilstm_crf.py",
+    "sha256": "8edf93626b9bcaa71879217a95cb7ec10e9e60d015b3c349c124d3c9935c43b6"
+  },
+  "inputs": {
+    "dataset": "data/asap-dataset",
+    "data_dir": "data/derived/m3/linear",
+    "out_data": "data/derived/m3/bilstm_crf",
+    "linear_dataset": "data/derived/m3/linear/linear_dataset.npz",
+    "linear_dataset_sha256": "1a3e95a861a00b11966627abcdc57362d5163d47a64f2e19bfd6ddd91bd552ec",
+    "linear_runs": "data/derived/m3/linear/linear_runs.jsonl.gz",
+    "linear_runs_sha256": "3615e3067b8a90122d37e0b7e514a650a448f01c662e8701dbf19b6d6d509230"
+  },
+  "rules": {
+    "classes": [
+      "NONE",
+      "DOWN",
+      "UP"
+    ],
+    "change_policy": "M3.1 included rows only; CHANGE excluded before sequence build",
+    "chunk": 256,
+    "class_weight": "balanced_clipped",
+    "selection": "train_only_score_group_inner_validation",
+    "test_used_once": true
+  },
+  "outputs": {
+    "data/derived/m3/bilstm_crf/best_model.pt": "c9d41e1cf649ce689bd9e06884299b02b4e9eb5a4556ed152ca2de3d36886715",
+    "data/derived/m3/bilstm_crf/predictions.jsonl.gz": "1d50181fad52b2e688816d59d38df06a4863e231bdaccb5bae19e7ba702dc7f1",
+    "results/E1/m3/bilstm_crf/bilstm_crf_model.json": "7ed24c0d8457d36f51eeef968f63b94427461b32967ea4f632be574186efc56a",
+    "results/E1/m3/bilstm_crf/bilstm_crf_summary.json": "28e89d5c8e9ac66edb0aca761f82bad6f99ec56a8a982415297da3839f40ec74",
+    "results/E1/m3/bilstm_crf/bilstm_crf_data_summary.json": "223ac85f269275243e99afb06274a7f142e04b64dcec8926ef0c8a518a1709fc",
+    "results/E1/m3/bilstm_crf/bilstm_crf_table.csv": "f989c23e4d8d050a522c1cc98747a9a49765ccc7a751572d5d710b57b1db6105",
+    "results/E1/m3/bilstm_crf/bilstm_crf_per_class.csv": "cb211ccbdcebdee56c47be2b9aa888f643b4dd6a0ecdaa466cf318848de88811",
+    "results/E1/m3/bilstm_crf/bilstm_crf_confusion.csv": "93c4960d00a1a0f7f6e4414a12a40409bac45f4253fbabb195f623f4b80e79cc",
+    "results/E1/m3/bilstm_crf/bilstm_crf_training_curve.csv": "9e1cd3a0c0b3f9aa8f3748cce923b3b7f9c777f1011338a7ede8fb42b8b8de22"
+  },
+  "counts": {
+    "dataset_version": "m3-bilstm-crf-v1",
+    "scores": 36,
+    "runs": 271,
+    "rows": 758365,
+    "included_counts": {
+      "NONE": 742432,
+      "DOWN": 8135,
+      "UP": 7798
+    },
+    "fold_runs": {
+      "train": 166,
+      "val": 28,
+      "test": 77
+    },
+    "inner_train_runs": 136,
+    "inner_val_runs": 30,
+    "inner_val_groups": [
+      "Beethoven||Piano_Sonatas_11-2",
+      "Chopin||Barcarolle",
+      "Chopin||Etudes_op_25_12",
+      "Chopin||Sonata_3_3rd",
+      "Schumann||Kreisleriana_4"
+    ],
+    "class_weight": "balanced_clipped"
+  }
+}

@@ -96,3 +96,14 @@
 | AC-M3L-5 | 独立 validator 能从 predictions 复算全部指标并核对 mask、折隔离、模型形状与 hash | tools/m3_validate_linear.py | pass（35 checks，0 failures；EV-M3L-2） |
 | AC-M3L-6 | 相同输入二次运行得到相同模型/输出内容语义；通过 LangGraph candidate→verified | m3_repro_check.py + m3_control_plane_record.json | pass（repro 11/11；三条命令 verified；EV-M3L-3/4） |
 | AC-M3L-7 | 本层仅作序列模型前置条件，不把线性结果写成最终 S2 模型 | 对照 D-0089 与 EVIDENCE 边界 | pass（下一步为小型 BiLSTM-CRF；EV-M3L-5） |
+
+## M3S-1 小型 BiLSTM-CRF（2026-10-10）
+
+| ID | 验收标准 | 判定方法 | 结果 |
+|:--|:--|:--|:--|
+| AC-M3S-1 | 使用 M3.1 的同一 36 首 / 271 runs、三分类协议，CHANGE/ambiguous 不进入监督 | validator + 数据摘要 | pass（EV-M3S-2/3） |
+| AC-M3S-2 | 小型 BiLSTM-CRF 训练稳定；best_epoch 可复算；无 NaN | training curve + validator | pass（best_epoch=3；13 epochs；EV-M3S-1/3） |
+| AC-M3S-3 | 独立 validator 复算 micro/macro、分标签指标和混淆矩阵 | tools/m3_validate_bilstm_crf.py | pass（internal checks）；EV-M3S-3 |
+| AC-M3S-4 | 相对 M3.1 改善 macro F1、DOWN F1、UP F1，且正类 recall 非零 | relative gate | **fail**：macro 0.32585 < 0.34603；DOWN/UP F1 = 0；EV-M3S-2/3 |
+| AC-M3S-5 | 控制平面二次运行语义一致 | m3_bilstm_repro_check.py | pass（9/9；EV-M3S-4） |
+| AC-M3S-6 | 未通过相对门槛时不得进入完整 Transformer | D-0089 门控 | pass（尚未进入；EV-M3S-6） |

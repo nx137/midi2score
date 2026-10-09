@@ -1,0 +1,26 @@
+{
+  "dataset_version": "m3-bilstm-crf-v1",
+  "scores": 36,
+  "runs": 271,
+  "rows": 758365,
+  "included_counts": {
+    "NONE": 742432,
+    "DOWN": 8135,
+    "UP": 7798
+  },
+  "fold_runs": {
+    "train": 166,
+    "val": 28,
+    "test": 77
+  },
+  "inner_train_runs": 136,
+  "inner_val_runs": 30,
+  "inner_val_groups": [
+    "Beethoven||Piano_Sonatas_11-2",
+    "Chopin||Barcarolle",
+    "Chopin||Etudes_op_25_12",
+    "Chopin||Sonata_3_3rd",
+    "Schumann||Kreisleriana_4"
+  ],
+  "class_weight": "balanced_clipped"
+}

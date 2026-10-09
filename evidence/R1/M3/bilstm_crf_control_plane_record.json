@@ -1,0 +1,458 @@
+{
+  "run_id": "m3-bilstm-20261010b",
+  "thread_id": "research:midi2score:M3-BILSTM-CRF-m3-bilstm-20261010b",
+  "checkpoint_db": "E:\\midi2score\\data\\m3_bilstm_control_plane_m3-bilstm-20261010b.db",
+  "store_db": "E:\\midi2score\\data\\m3_bilstm_control_plane_m3-bilstm-20261010b_store.db",
+  "approved": true,
+  "current_phase": "reviewed",
+  "alignment": {
+    "id": "AL",
+    "created_at": "2026-10-09T16:52:10+00:00",
+    "verdict": "aligned",
+    "violates": [],
+    "issues": [],
+    "needs_user_confirmation": false,
+    "rationale": "work package is within the Goal Contract",
+    "contract_sha256": "2f1c7f5e29d2e975b605e24d71962cb744da48471e188ac3107139f93136161e"
+  },
+  "verification": {
+    "id": "VR",
+    "created_at": "2026-10-09T16:52:10+00:00",
+    "passed": true,
+    "issues": [],
+    "reason_codes": [],
+    "charter_sha256": "f261f8bd66957e815b8a0af390766c4549a4295218713a5584d2fbf7ad947164",
+    "contract_sha256": "2f1c7f5e29d2e975b605e24d71962cb744da48471e188ac3107139f93136161e"
+  },
+  "work_package": {
+    "id": "WP-M3-BILSTM-CRF",
+    "created_at": "2026-10-09T16:47:31+00:00",
+    "goal": "训练并验证小型 BiLSTM-CRF 踏板锚点序列模型，检查其是否相对 M3.1 线性模型改善 DOWN/UP precision 与 macro F1",
+    "status": "done",
+    "outputs": [
+      "results/E1/m3/bilstm_crf/bilstm_crf_summary.json",
+      "evidence/R1/M3/bilstm_crf_validation.json",
+      "evidence/R1/M3/bilstm_crf_repro_check.json"
+    ],
+    "verification": null,
+    "phase": "execute",
+    "goal_refs": [
+      "GOAL-1"
+    ],
+    "constraint_refs": [
+      "HC-01",
+      "HC-08",
+      "HC-11",
+      "HC-13",
+      "HC-18"
+    ],
+    "decision_refs": [
+      "D-0059",
+      "D-0081",
+      "D-0082",
+      "D-0089"
+    ],
+    "acceptance_refs": [],
+    "allowed_tools": [
+      "python"
+    ],
+    "commands": [
+      {
+        "argv": [
+          "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+          "tools/m3_bilstm_crf.py",
+          "--dataset",
+          "data\\asap-dataset",
+          "--data-dir",
+          "data\\derived\\m3\\linear",
+          "--out-data",
+          "data/derived/m3/bilstm_crf",
+          "--out-dir",
+          "results/E1/m3/bilstm_crf",
+          "--hidden",
+          "32",
+          "--dropout",
+          "0.2",
+          "--chunk",
+          "256",
+          "--batch-size",
+          "32",
+          "--lr",
+          "0.0001",
+          "--epochs",
+          "100",
+          "--patience",
+          "10",
+          "--seed",
+          "20260101",
+          "--class-weight-mode",
+          "balanced_clipped"
+        ],
+        "cwd": ".",
+        "timeout_seconds": 1800,
+        "expected_outputs": [
+          "data/derived/m3/bilstm_crf/best_model.pt",
+          "data/derived/m3/bilstm_crf/predictions.jsonl.gz",
+          "results/E1/m3/bilstm_crf/bilstm_crf_model.json",
+          "results/E1/m3/bilstm_crf/bilstm_crf_summary.json",
+          "results/E1/m3/bilstm_crf/bilstm_crf_data_summary.json",
+          "results/E1/m3/bilstm_crf/bilstm_crf_table.csv",
+          "results/E1/m3/bilstm_crf/bilstm_crf_per_class.csv",
+          "results/E1/m3/bilstm_crf/bilstm_crf_confusion.csv",
+          "results/E1/m3/bilstm_crf/bilstm_crf_training_curve.csv",
+          "results/E1/m3/bilstm_crf/bilstm_crf_manifest.json"
+        ],
+        "description": "train small BiLSTM-CRF under M3S-1 protocol",
+        "network": false,
+        "writes": [
+          "data/derived/m3/bilstm_crf/best_model.pt",
+          "data/derived/m3/bilstm_crf/predictions.jsonl.gz",
+          "results/E1/m3/bilstm_crf/bilstm_crf_model.json",
+          "results/E1/m3/bilstm_crf/bilstm_crf_summary.json",
+          "results/E1/m3/bilstm_crf/bilstm_crf_data_summary.json",
+          "results/E1/m3/bilstm_crf/bilstm_crf_table.csv",
+          "results/E1/m3/bilstm_crf/bilstm_crf_per_class.csv",
+          "results/E1/m3/bilstm_crf/bilstm_crf_confusion.csv",
+          "results/E1/m3/bilstm_crf/bilstm_crf_training_curve.csv",
+          "results/E1/m3/bilstm_crf/bilstm_crf_manifest.json"
+        ]
+      },
+      {
+        "argv": [
+          "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+          "tools/m3_validate_bilstm_crf.py",
+          "--results-dir",
+          "results/E1/m3/bilstm_crf",
+          "--data-dir",
+          "data/derived/m3/bilstm_crf",
+          "--linear-summary",
+          "results\\E1\\m3\\linear\\linear_summary.json",
+          "--out",
+          "evidence/R1/M3/bilstm_crf_validation.json"
+        ],
+        "cwd": ".",
+        "timeout_seconds": 1800,
+        "expected_outputs": [
+          "evidence/R1/M3/bilstm_crf_validation.json",
+          "evidence/R1/M3/bilstm_crf_validation.md"
+        ],
+        "description": "independent M3S-1 validator including relative gate",
+        "network": false,
+        "writes": [
+          "evidence/R1/M3/bilstm_crf_validation.json",
+          "evidence/R1/M3/bilstm_crf_validation.md"
+        ]
+      },
+      {
+        "argv": [
+          "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+          "tools/m3_bilstm_repro_check.py",
+          "--results-dir",
+          "results/E1/m3/bilstm_crf",
+          "--data-dir",
+          "data/derived/m3/bilstm_crf",
+          "--check",
+          "evidence/R1/M3/bilstm_crf_pre_control_plane_snapshot.json",
+          "--out",
+          "evidence/R1/M3/bilstm_crf_repro_check.json"
+        ],
+        "cwd": ".",
+        "timeout_seconds": 1800,
+        "expected_outputs": [
+          "evidence/R1/M3/bilstm_crf_repro_check.json",
+          "evidence/R1/M3/bilstm_crf_repro_check.md"
+        ],
+        "description": "compare controlled BiLSTM-CRF rerun against pre-control snapshot",
+        "network": false,
+        "writes": [
+          "evidence/R1/M3/bilstm_crf_repro_check.json",
+          "evidence/R1/M3/bilstm_crf_repro_check.md"
+        ]
+      }
+    ],
+    "expected_outputs": [
+      "data/derived/m3/bilstm_crf/best_model.pt",
+      "data/derived/m3/bilstm_crf/predictions.jsonl.gz",
+      "results/E1/m3/bilstm_crf/bilstm_crf_model.json",
+      "results/E1/m3/bilstm_crf/bilstm_crf_summary.json",
+      "results/E1/m3/bilstm_crf/bilstm_crf_data_summary.json",
+      "results/E1/m3/bilstm_crf/bilstm_crf_table.csv",
+      "results/E1/m3/bilstm_crf/bilstm_crf_per_class.csv",
+      "results/E1/m3/bilstm_crf/bilstm_crf_confusion.csv",
+      "results/E1/m3/bilstm_crf/bilstm_crf_training_curve.csv",
+      "results/E1/m3/bilstm_crf/bilstm_crf_manifest.json",
+      "evidence/R1/M3/bilstm_crf_validation.json",
+      "evidence/R1/M3/bilstm_crf_validation.md",
+      "evidence/R1/M3/bilstm_crf_repro_check.json",
+      "evidence/R1/M3/bilstm_crf_repro_check.md"
+    ]
+  },
+  "execution_records": {
+    "RUN-WP-M3-BILSTM-CRF-1": {
+      "id": "RUN-WP-M3-BILSTM-CRF-1",
+      "created_at": "2026-10-09T16:52:06+00:00",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_bilstm_crf.py --dataset data\\asap-dataset --data-dir data\\derived\\m3\\linear --out-data data/derived/m3/bilstm_crf --out-dir results/E1/m3/bilstm_crf --hidden 32 --dropout 0.2 --chunk 256 --batch-size 32 --lr 0.0001 --epochs 100 --patience 10 --seed 20260101 --class-weight-mode balanced_clipped",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_bilstm_crf.py",
+        "--dataset",
+        "data\\asap-dataset",
+        "--data-dir",
+        "data\\derived\\m3\\linear",
+        "--out-data",
+        "data/derived/m3/bilstm_crf",
+        "--out-dir",
+        "results/E1/m3/bilstm_crf",
+        "--hidden",
+        "32",
+        "--dropout",
+        "0.2",
+        "--chunk",
+        "256",
+        "--batch-size",
+        "32",
+        "--lr",
+        "0.0001",
+        "--epochs",
+        "100",
+        "--patience",
+        "10",
+        "--seed",
+        "20260101",
+        "--class-weight-mode",
+        "balanced_clipped"
+      ],
+      "cwd": "E:\\midi2score",
+      "timeout_seconds": 1800,
+      "started_at": "2026-10-09T16:47:31+00:00",
+      "ended_at": "2026-10-09T16:52:06+00:00",
+      "exit_code": 0,
+      "stdout": "{\"epoch\": 1, \"train_loss\": 740.1122826109541, \"inner_val_micro\": 0.5773853500315344, \"inner_val_macro\": 0.26581638823720816, \"inner_val_DOWN_f1\": 0.05000290714576429, \"inner_val_UP_f1\": 0.014929282346778419, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 2, \"train_loss\": 686.919373857214, \"inner_val_micro\": 0.831155959996396, \"inner_val_macro\": 0.33102420234494095, \"inner_val_DOWN_f1\": 0.06391409945033874, \"inner_val_UP_f1\": 0.020739404869251576, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 3, \"train_loss\": 619.679026502244, \"inner_val_micro\": 0.9498873772411929, \"inner_val_macro\": 0.34639652766955353, \"inner_val_DOWN_f1\": 0.04523580365736285, \"inner_val_UP_f1\": 0.01968019680196802, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 4, \"train_loss\": 532.0018635201961, \"inner_val_micro\": 0.9691683935489683, \"inner_val_macro\": 0.32942771415873917, \"inner_val_DOWN_f1\": 0.003940886699507389, \"inner_val_UP_f1\": 0.0, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 5, \"train_loss\": 420.3002293363531, \"inner_val_micro\": 0.9696008649427876, \"inner_val_macro\": 0.3281886133043009, \"inner_val_DOWN_f1\": 0.0, \"inner_val_UP_f1\": 0.0, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 6, \"train_loss\": 283.9318967778632, \"inner_val_micro\": 0.9696188845841968, \"inner_val_macro\": 0.3281917099709678, \"inner_val_DOWN_f1\": 0.0, \"inner_val_UP_f1\": 0.0, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 7, \"train_loss\": 134.95228268237824, \"inner_val_micro\": 0.9696188845841968, \"inner_val_macro\": 0.3281917099709678, \"inner_val_DOWN_f1\": 0.0, \"inner_val_UP_f1\": 0.0, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 8, \"train_loss\": 38.97072660162094, \"inner_val_micro\": 0.9696188845841968, \"inner_val_macro\": 0.3281917099709678, \"inner_val_DOWN_f1\": 0.0, \"inner_val_UP_f1\": 0.0, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 9, \"train_loss\": 12.251059970957167, \"inner_val_micro\": 0.9696188845841968, \"inner_val_macro\": 0.3281917099709678, \"inner_val_DOWN_f1\": 0.0, \"inner_val_UP_f1\": 0.0, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 10, \"train_loss\": 6.818558725904911, \"inner_val_micro\": 0.9696188845841968, \"inner_val_macro\": 0.3281917099709678, \"inner_val_DOWN_f1\": 0.0, \"inner_val_UP_f1\": 0.0, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 11, \"train_loss\": 3.424114830950473, \"inner_val_micro\": 0.9696188845841968, \"inner_val_macro\": 0.3281917099709678, \"inner_val_DOWN_f1\": 0.0, \"inner_val_UP_f1\": 0.0, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 12, \"train_loss\": -0.17808246612548828, \"inner_val_micro\": 0.9696188845841968, \"inner_val_macro\": 0.3281917099709678, \"inner_val_DOWN_f1\": 0.0, \"inner_val_UP_f1\": 0.0, \"class_weight_mode\": \"balanced_clipped\"}\n{\"epoch\": 13, \"train_loss\": -3.340873730943558, \"inner_val_micro\": 0.9696188845841968, \"inner_val_macro\": 0.3281917099709678, \"inner_val_DOWN_f1\": 0.0, \"inner_val_UP_f1\": 0.0, \"class_weight_mode\": \"balanced_clipped\"}\n{\"status\": \"ok\", \"runs\": 271, \"scores\": 36, \"rows\": 758365, \"best_epoch\": 3, \"epochs_run\": 13, \"test_micro_f1\": 0.956056684893768, \"test_macro_f1\": 0.32584549395910617, \"test_DOWN_f1\": 0.0, \"test_UP_f1\": 0.0, \"wall_clock_sec\": 269.556}\n",
+      "stderr": "",
+      "stdout_sha256": "b8ab7057f0dffd91eb4bc0a70d5496aeb81eb3b6442ecc41076488b2e4afa80c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "data\\derived\\m3\\bilstm_crf\\best_model.pt": "c9d41e1cf649ce689bd9e06884299b02b4e9eb5a4556ed152ca2de3d36886715",
+        "data\\derived\\m3\\bilstm_crf\\predictions.jsonl.gz": "1d50181fad52b2e688816d59d38df06a4863e231bdaccb5bae19e7ba702dc7f1",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_model.json": "7ed24c0d8457d36f51eeef968f63b94427461b32967ea4f632be574186efc56a",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_summary.json": "28e89d5c8e9ac66edb0aca761f82bad6f99ec56a8a982415297da3839f40ec74",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_data_summary.json": "223ac85f269275243e99afb06274a7f142e04b64dcec8926ef0c8a518a1709fc",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_table.csv": "f989c23e4d8d050a522c1cc98747a9a49765ccc7a751572d5d710b57b1db6105",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_per_class.csv": "cb211ccbdcebdee56c47be2b9aa888f643b4dd6a0ecdaa466cf318848de88811",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_confusion.csv": "93c4960d00a1a0f7f6e4414a12a40409bac45f4253fbabb195f623f4b80e79cc",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_training_curve.csv": "9e1cd3a0c0b3f9aa8f3748cce923b3b7f9c777f1011338a7ede8fb42b8b8de22",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_manifest.json": "7b7ba2e040051330c10d449d3028cdf95b85f0acccb0e21ae0d504531e054062"
+      },
+      "source_hashes": {
+        "tools/m3_bilstm_crf.py": "8edf93626b9bcaa71879217a95cb7ec10e9e60d015b3c349c124d3c9935c43b6"
+      },
+      "timed_out": false
+    },
+    "RUN-WP-M3-BILSTM-CRF-2": {
+      "id": "RUN-WP-M3-BILSTM-CRF-2",
+      "created_at": "2026-10-09T16:52:10+00:00",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_validate_bilstm_crf.py --results-dir results/E1/m3/bilstm_crf --data-dir data/derived/m3/bilstm_crf --linear-summary results\\E1\\m3\\linear\\linear_summary.json --out evidence/R1/M3/bilstm_crf_validation.json",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_validate_bilstm_crf.py",
+        "--results-dir",
+        "results/E1/m3/bilstm_crf",
+        "--data-dir",
+        "data/derived/m3/bilstm_crf",
+        "--linear-summary",
+        "results\\E1\\m3\\linear\\linear_summary.json",
+        "--out",
+        "evidence/R1/M3/bilstm_crf_validation.json"
+      ],
+      "cwd": "E:\\midi2score",
+      "timeout_seconds": 1800,
+      "started_at": "2026-10-09T16:52:06+00:00",
+      "ended_at": "2026-10-09T16:52:10+00:00",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"gate_passed\": false, \"failures\": []}\n",
+      "stderr": "",
+      "stdout_sha256": "75c5f5631e3f4fb6d0c30f1bbba93d183e193e04e046a95e22c3e44932c0b760",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "evidence\\R1\\M3\\bilstm_crf_validation.json": "d493402e163c7da1c2c036005ffee57a30c03e358b7b3349352f12783feef821",
+        "evidence\\R1\\M3\\bilstm_crf_validation.md": "ea0adf717e6f2331287a6b635c1a05482faf390cb5089c961f4ba6614d08e863"
+      },
+      "source_hashes": {
+        "tools/m3_validate_bilstm_crf.py": "988df142ff71329a64ae2c19e0ac4dad01709d5aa3b056495b13213e1e7c4b7b"
+      },
+      "timed_out": false
+    },
+    "RUN-WP-M3-BILSTM-CRF-3": {
+      "id": "RUN-WP-M3-BILSTM-CRF-3",
+      "created_at": "2026-10-09T16:52:10+00:00",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_bilstm_repro_check.py --results-dir results/E1/m3/bilstm_crf --data-dir data/derived/m3/bilstm_crf --check evidence/R1/M3/bilstm_crf_pre_control_plane_snapshot.json --out evidence/R1/M3/bilstm_crf_repro_check.json",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_bilstm_repro_check.py",
+        "--results-dir",
+        "results/E1/m3/bilstm_crf",
+        "--data-dir",
+        "data/derived/m3/bilstm_crf",
+        "--check",
+        "evidence/R1/M3/bilstm_crf_pre_control_plane_snapshot.json",
+        "--out",
+        "evidence/R1/M3/bilstm_crf_repro_check.json"
+      ],
+      "cwd": "E:\\midi2score",
+      "timeout_seconds": 1800,
+      "started_at": "2026-10-09T16:52:10+00:00",
+      "ended_at": "2026-10-09T16:52:10+00:00",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"checks\": 9, \"failures\": []}\n",
+      "stderr": "",
+      "stdout_sha256": "85dea94bf68c7b602cc331328a67e320313f8b1fff563aea2cc3c38003206e12",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "evidence\\R1\\M3\\bilstm_crf_repro_check.json": "829c922917bcc43a244eeb6ce388b9d854b9600327c40a915db46c658cac7e15",
+        "evidence\\R1\\M3\\bilstm_crf_repro_check.md": "17fe0f486847819a150174553292b5b75343bddfd23cc1b36d42b0c2bfaafe25"
+      },
+      "source_hashes": {
+        "tools/m3_bilstm_repro_check.py": "8282e44a08b34fcda787475e38d843dc196002a8e7c8dda5676cf4d369c5cec6"
+      },
+      "timed_out": false
+    }
+  },
+  "evidence": {
+    "EV-RUN-WP-M3-BILSTM-CRF-1": {
+      "id": "EV-RUN-WP-M3-BILSTM-CRF-1",
+      "created_at": "2026-10-09T16:52:06+00:00",
+      "kind": "experiment",
+      "locator": "command:RUN-WP-M3-BILSTM-CRF-1",
+      "status": "verified",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_bilstm_crf.py --dataset data\\asap-dataset --data-dir data\\derived\\m3\\linear --out-data data/derived/m3/bilstm_crf --out-dir results/E1/m3/bilstm_crf --hidden 32 --dropout 0.2 --chunk 256 --batch-size 32 --lr 0.0001 --epochs 100 --patience 10 --seed 20260101 --class-weight-mode balanced_clipped",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_bilstm_crf.py",
+        "--dataset",
+        "data\\asap-dataset",
+        "--data-dir",
+        "data\\derived\\m3\\linear",
+        "--out-data",
+        "data/derived/m3/bilstm_crf",
+        "--out-dir",
+        "results/E1/m3/bilstm_crf",
+        "--hidden",
+        "32",
+        "--dropout",
+        "0.2",
+        "--chunk",
+        "256",
+        "--batch-size",
+        "32",
+        "--lr",
+        "0.0001",
+        "--epochs",
+        "100",
+        "--patience",
+        "10",
+        "--seed",
+        "20260101",
+        "--class-weight-mode",
+        "balanced_clipped"
+      ],
+      "cwd": "E:\\midi2score",
+      "exit_code": 0,
+      "started_at": "2026-10-09T16:47:31+00:00",
+      "ended_at": "2026-10-09T16:52:06+00:00",
+      "stdout_sha256": "b8ab7057f0dffd91eb4bc0a70d5496aeb81eb3b6442ecc41076488b2e4afa80c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "data\\derived\\m3\\bilstm_crf\\best_model.pt": "c9d41e1cf649ce689bd9e06884299b02b4e9eb5a4556ed152ca2de3d36886715",
+        "data\\derived\\m3\\bilstm_crf\\predictions.jsonl.gz": "1d50181fad52b2e688816d59d38df06a4863e231bdaccb5bae19e7ba702dc7f1",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_model.json": "7ed24c0d8457d36f51eeef968f63b94427461b32967ea4f632be574186efc56a",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_summary.json": "28e89d5c8e9ac66edb0aca761f82bad6f99ec56a8a982415297da3839f40ec74",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_data_summary.json": "223ac85f269275243e99afb06274a7f142e04b64dcec8926ef0c8a518a1709fc",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_table.csv": "f989c23e4d8d050a522c1cc98747a9a49765ccc7a751572d5d710b57b1db6105",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_per_class.csv": "cb211ccbdcebdee56c47be2b9aa888f643b4dd6a0ecdaa466cf318848de88811",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_confusion.csv": "93c4960d00a1a0f7f6e4414a12a40409bac45f4253fbabb195f623f4b80e79cc",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_training_curve.csv": "9e1cd3a0c0b3f9aa8f3748cce923b3b7f9c777f1011338a7ede8fb42b8b8de22",
+        "results\\E1\\m3\\bilstm_crf\\bilstm_crf_manifest.json": "7b7ba2e040051330c10d449d3028cdf95b85f0acccb0e21ae0d504531e054062"
+      },
+      "source_hashes": {
+        "tools/m3_bilstm_crf.py": "8edf93626b9bcaa71879217a95cb7ec10e9e60d015b3c349c124d3c9935c43b6"
+      },
+      "verifier": "postflight"
+    },
+    "EV-RUN-WP-M3-BILSTM-CRF-2": {
+      "id": "EV-RUN-WP-M3-BILSTM-CRF-2",
+      "created_at": "2026-10-09T16:52:10+00:00",
+      "kind": "experiment",
+      "locator": "command:RUN-WP-M3-BILSTM-CRF-2",
+      "status": "verified",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_validate_bilstm_crf.py --results-dir results/E1/m3/bilstm_crf --data-dir data/derived/m3/bilstm_crf --linear-summary results\\E1\\m3\\linear\\linear_summary.json --out evidence/R1/M3/bilstm_crf_validation.json",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_validate_bilstm_crf.py",
+        "--results-dir",
+        "results/E1/m3/bilstm_crf",
+        "--data-dir",
+        "data/derived/m3/bilstm_crf",
+        "--linear-summary",
+        "results\\E1\\m3\\linear\\linear_summary.json",
+        "--out",
+        "evidence/R1/M3/bilstm_crf_validation.json"
+      ],
+      "cwd": "E:\\midi2score",
+      "exit_code": 0,
+      "started_at": "2026-10-09T16:52:06+00:00",
+      "ended_at": "2026-10-09T16:52:10+00:00",
+      "stdout_sha256": "75c5f5631e3f4fb6d0c30f1bbba93d183e193e04e046a95e22c3e44932c0b760",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "evidence\\R1\\M3\\bilstm_crf_validation.json": "d493402e163c7da1c2c036005ffee57a30c03e358b7b3349352f12783feef821",
+        "evidence\\R1\\M3\\bilstm_crf_validation.md": "ea0adf717e6f2331287a6b635c1a05482faf390cb5089c961f4ba6614d08e863"
+      },
+      "source_hashes": {
+        "tools/m3_validate_bilstm_crf.py": "988df142ff71329a64ae2c19e0ac4dad01709d5aa3b056495b13213e1e7c4b7b"
+      },
+      "verifier": "postflight"
+    },
+    "EV-RUN-WP-M3-BILSTM-CRF-3": {
+      "id": "EV-RUN-WP-M3-BILSTM-CRF-3",
+      "created_at": "2026-10-09T16:52:10+00:00",
+      "kind": "experiment",
+      "locator": "command:RUN-WP-M3-BILSTM-CRF-3",
+      "status": "verified",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_bilstm_repro_check.py --results-dir results/E1/m3/bilstm_crf --data-dir data/derived/m3/bilstm_crf --check evidence/R1/M3/bilstm_crf_pre_control_plane_snapshot.json --out evidence/R1/M3/bilstm_crf_repro_check.json",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_bilstm_repro_check.py",
+        "--results-dir",
+        "results/E1/m3/bilstm_crf",
+        "--data-dir",
+        "data/derived/m3/bilstm_crf",
+        "--check",
+        "evidence/R1/M3/bilstm_crf_pre_control_plane_snapshot.json",
+        "--out",
+        "evidence/R1/M3/bilstm_crf_repro_check.json"
+      ],
+      "cwd": "E:\\midi2score",
+      "exit_code": 0,
+      "started_at": "2026-10-09T16:52:10+00:00",
+      "ended_at": "2026-10-09T16:52:10+00:00",
+      "stdout_sha256": "85dea94bf68c7b602cc331328a67e320313f8b1fff563aea2cc3c38003206e12",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "evidence\\R1\\M3\\bilstm_crf_repro_check.json": "829c922917bcc43a244eeb6ce388b9d854b9600327c40a915db46c658cac7e15",
+        "evidence\\R1\\M3\\bilstm_crf_repro_check.md": "17fe0f486847819a150174553292b5b75343bddfd23cc1b36d42b0c2bfaafe25"
+      },
+      "source_hashes": {
+        "tools/m3_bilstm_repro_check.py": "8282e44a08b34fcda787475e38d843dc196002a8e7c8dda5676cf4d369c5cec6"
+      },
+      "verifier": "postflight"
+    }
+  },
+  "approval": "approve",
+  "pending_human_action": null
+}
