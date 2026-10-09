@@ -4,10 +4,12 @@
 > 未在本仓库实际运行的实验**不得**写成 `verified`。每条证据须可复现：命令 / 退出码 / 环境版本 / 产物路径 / 哈希。
 > 本文件只放**事实与依据**；决策放 `DECISIONS.md`，假设放 `ASSUMPTIONS.md`，待办放 `TODO.md`。
 
-## 0. 本仓库验证状态说明
+## 0. 文档状态与当前入口（2026-10-09 更正）
 
-当前仓库**尚未获取语料、未安装 MuseScore、未运行任何实验**。因此下列来自 `PedNotate_Plan_v3.0.md` 的数字一律标注
-`claimed_by_charter；not_verified_in_this_repo`。它们可被引用，但引用时**必须保留该状态标注**。
+- 本文件是**追加式证据账本**：前面的 `EV-nn` 多为计划书来源的历史 `claimed_by_charter` 条目，不代表当前仓库尚未运行实验。
+- 当前状态与下一步只看 `STATE.md`；当前确认决策只看 `DECISIONS.md`；字段口径只看 `FIELD_DEFINITIONS.md`。
+- 当前仓库已获取 ASAP、已安装 MuseScore、已运行 G0/G1'/R1/E1 等实验；具体验证状态以各 `EV-S*` 条目的实际命令与产物为准。
+- 未在本仓库实际运行的内容仍不得写成 `verified`；早期未复核的 `claimed_by_charter` 数字不得当作当前运行状态。
 
 ## 1. 语料普查（来源：计划书 §4.1 / §10.2 / 附录 A）
 
