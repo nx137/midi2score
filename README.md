@@ -77,7 +77,7 @@ $env:MIDI2SCORE_LLM_BASE_URL="https://api.deepseek.com"
 $env:DEEPSEEK_API_KEY="<local-secret>"
 ```
 
-可选配置见 `config/llm.env.example`。LLM 只作为 planner/说明器，不能执行命令、修改权限或产生 `verified` Evidence；API key 只从环境变量读取。
+本工作区的本地配置文件是 `config/llm.local.env`（已 gitignore）：只需把其中的 `DEEPSEEK_API_KEY` 占位符替换为真实 key。也可参考 `config/llm.env.example`。LLM 只作为 planner/说明器，不能执行命令、修改权限或产生 `verified` Evidence；API key 不进入仓库。
 
 
 ## 中断与恢复

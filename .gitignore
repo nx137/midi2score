@@ -32,6 +32,7 @@ Thumbs.db
 .env.*
 *.key
 credentials.json
+config/llm.local.env
 
 # Generated MIDI from export probes (regenerate via tools/musescore_export_probe.py)
 evidence/**/*.mid

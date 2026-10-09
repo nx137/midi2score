@@ -25,7 +25,7 @@
 - **历史路径**：Round B/C/D 的 score-consistency 数字、旧 `model1` harness 和 D1 sweep 选项均为历史诊断，不再作为当前主线 claim；详见 `EVIDENCE.md` `EV-S49`。
 - **回放训练用途**：主指标仍为回放保真度；回放通道**不作 loss**，保留 `D-0059`（用户已确认）。
 - **导出 QC 口径**：采用 `D-0024/D-0025`；成功=产物存在 ∧ 可解析 ∧ CC64 可枚举，恒等式 `C == 2×min(S,T)` 仅诊断，不使用 `[0.80,1.05]` 带宽门（用户已确认，D-0082）。
-- **下一步**：配置 `DEEPSEEK_API_KEY`、`MIDI2SCORE_LLM_MODEL` 和 base URL，做一次 live smoke；确认后进入 M2。
+- **下一步**：在 `config/llm.local.env` 填入真实 `DEEPSEEK_API_KEY`，做一次 live smoke；确认后进入 M2。
 - **活动任务**：`CP-V1`
 - **分支**：`main` → `origin/main`
 
