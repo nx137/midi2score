@@ -42,3 +42,5 @@ evidence/**/rt_*.musicxml
 # 合成注入的中间产物（可复现，不入库）
 evidence/R1/G1-synthetic/xml/
 evidence/R1/G1-synthetic/mid/
+
+data/derived/

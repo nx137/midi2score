@@ -1,0 +1,8303 @@
+{
+  "config": {
+    "epochs": 4,
+    "hidden": 16,
+    "chunk": 256,
+    "batch_size": 1,
+    "lr": 0.001,
+    "note": "BiLSTM-CRF sequence architecture fixed; test trained on train only; full retrained train+val and is non-independent"
+  },
+  "table": [
+    {
+      "domain": "test",
+      "method": "BiLSTM_CRF",
+      "scope": "micro",
+      "tp": 727,
+      "fp": 1094,
+      "fn": 15551,
+      "wrong": 288,
+      "n_pred": 1821,
+      "n_truth": 16278,
+      "P": 0.39923119165293797,
+      "R": 0.04466150632755867,
+      "F1": 0.0803359301618874
+    },
+    {
+      "domain": "test",
+      "method": "BiLSTM_CRF",
+      "scope": "DOWN",
+      "tp": 78,
+      "fp": 38,
+      "fn": 8379,
+      "wrong": 6,
+      "n_pred": 116,
+      "n_truth": 8457,
+      "P": 0.6724137931034483,
+      "R": 0.009223128769067045,
+      "F1": 0.018196663944943427
+    },
+    {
+      "domain": "test",
+      "method": "BiLSTM_CRF",
+      "scope": "UP",
+      "tp": 649,
+      "fp": 1056,
+      "fn": 7172,
+      "wrong": 282,
+      "n_pred": 1705,
+      "n_truth": 7821,
+      "P": 0.38064516129032255,
+      "R": 0.0829817158931083,
+      "F1": 0.13625866050808313
+    },
+    {
+      "domain": "val_test",
+      "method": "BiLSTM_CRF",
+      "scope": "micro",
+      "tp": 727,
+      "fp": 1118,
+      "fn": 16190,
+      "wrong": 288,
+      "n_pred": 1845,
+      "n_truth": 16917,
+      "P": 0.3940379403794038,
+      "R": 0.04297452266950405,
+      "F1": 0.07749706854279928
+    },
+    {
+      "domain": "val_test",
+      "method": "BiLSTM_CRF",
+      "scope": "DOWN",
+      "tp": 78,
+      "fp": 38,
+      "fn": 8688,
+      "wrong": 6,
+      "n_pred": 116,
+      "n_truth": 8766,
+      "P": 0.6724137931034483,
+      "R": 0.00889801505817933,
+      "F1": 0.017563611799144337
+    },
+    {
+      "domain": "val_test",
+      "method": "BiLSTM_CRF",
+      "scope": "UP",
+      "tp": 649,
+      "fp": 1080,
+      "fn": 7502,
+      "wrong": 282,
+      "n_pred": 1729,
+      "n_truth": 8151,
+      "P": 0.37536148062463853,
+      "R": 0.0796221322537112,
+      "F1": 0.13137651821862348
+    },
+    {
+      "domain": "full",
+      "method": "BiLSTM_CRF",
+      "scope": "micro",
+      "tp": 3202,
+      "fp": 388,
+      "fn": 25401,
+      "wrong": 100,
+      "n_pred": 3590,
+      "n_truth": 28603,
+      "P": 0.8919220055710306,
+      "R": 0.11194629933923016,
+      "F1": 0.19892523219333397
+    },
+    {
+      "domain": "full",
+      "method": "BiLSTM_CRF",
+      "scope": "DOWN",
+      "tp": 1407,
+      "fp": 150,
+      "fn": 13063,
+      "wrong": 39,
+      "n_pred": 1557,
+      "n_truth": 14470,
+      "P": 0.9036608863198459,
+      "R": 0.0972356599861783,
+      "F1": 0.17557871092531352
+    },
+    {
+      "domain": "full",
+      "method": "BiLSTM_CRF",
+      "scope": "UP",
+      "tp": 1795,
+      "fp": 238,
+      "fn": 12338,
+      "wrong": 61,
+      "n_pred": 2033,
+      "n_truth": 14133,
+      "P": 0.88293162813576,
+      "R": 0.12700771244604825,
+      "F1": 0.22207101323765926
+    }
+  ],
+  "test_counts": [
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 2,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 2,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 2,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 2,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 1,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 2,
+        "n_truth": 12,
+        "tp": 0,
+        "fp": 2,
+        "fn": 12,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 5,
+        "n_truth": 242,
+        "tp": 4,
+        "fp": 1,
+        "fn": 238,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 72,
+        "n_truth": 223,
+        "tp": 36,
+        "fp": 36,
+        "fn": 187,
+        "wrong": 13
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 4,
+        "n_truth": 242,
+        "tp": 4,
+        "fp": 0,
+        "fn": 238,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 71,
+        "n_truth": 223,
+        "tp": 29,
+        "fp": 42,
+        "fn": 194,
+        "wrong": 13
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 4,
+        "n_truth": 242,
+        "tp": 3,
+        "fp": 1,
+        "fn": 239,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 67,
+        "n_truth": 223,
+        "tp": 29,
+        "fp": 38,
+        "fn": 194,
+        "wrong": 14
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 5,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 0,
+        "fn": 237,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 77,
+        "n_truth": 223,
+        "tp": 35,
+        "fp": 42,
+        "fn": 188,
+        "wrong": 14
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 1,
+        "fn": 237,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 71,
+        "n_truth": 223,
+        "tp": 29,
+        "fp": 42,
+        "fn": 194,
+        "wrong": 15
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 4,
+        "fp": 2,
+        "fn": 238,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 75,
+        "n_truth": 223,
+        "tp": 34,
+        "fp": 41,
+        "fn": 189,
+        "wrong": 16
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 242,
+        "tp": 3,
+        "fp": 0,
+        "fn": 239,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 72,
+        "n_truth": 223,
+        "tp": 35,
+        "fp": 37,
+        "fn": 188,
+        "wrong": 17
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 4,
+        "n_truth": 242,
+        "tp": 3,
+        "fp": 1,
+        "fn": 239,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 72,
+        "n_truth": 223,
+        "tp": 31,
+        "fp": 41,
+        "fn": 192,
+        "wrong": 17
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 1,
+        "fn": 237,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 74,
+        "n_truth": 223,
+        "tp": 31,
+        "fp": 43,
+        "fn": 192,
+        "wrong": 15
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 7,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 2,
+        "fn": 237,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 76,
+        "n_truth": 223,
+        "tp": 35,
+        "fp": 41,
+        "fn": 188,
+        "wrong": 14
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 4,
+        "fp": 2,
+        "fn": 238,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 86,
+        "n_truth": 223,
+        "tp": 37,
+        "fp": 49,
+        "fn": 186,
+        "wrong": 15
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 4,
+        "n_truth": 242,
+        "tp": 3,
+        "fp": 1,
+        "fn": 239,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 71,
+        "n_truth": 223,
+        "tp": 29,
+        "fp": 42,
+        "fn": 194,
+        "wrong": 11
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 8,
+        "n_truth": 242,
+        "tp": 6,
+        "fp": 2,
+        "fn": 236,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 62,
+        "n_truth": 223,
+        "tp": 25,
+        "fp": 37,
+        "fn": 198,
+        "wrong": 12
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 1,
+        "fn": 237,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 69,
+        "n_truth": 223,
+        "tp": 29,
+        "fp": 40,
+        "fn": 194,
+        "wrong": 15
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 1,
+        "fn": 237,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 73,
+        "n_truth": 223,
+        "tp": 31,
+        "fp": 42,
+        "fn": 192,
+        "wrong": 14
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 242,
+        "tp": 2,
+        "fp": 1,
+        "fn": 240,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 78,
+        "n_truth": 223,
+        "tp": 35,
+        "fp": 43,
+        "fn": 188,
+        "wrong": 16
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 8,
+        "n_truth": 242,
+        "tp": 6,
+        "fp": 2,
+        "fn": 236,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 72,
+        "n_truth": 223,
+        "tp": 30,
+        "fp": 42,
+        "fn": 193,
+        "wrong": 12
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 7,
+        "n_truth": 242,
+        "tp": 6,
+        "fp": 1,
+        "fn": 236,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 74,
+        "n_truth": 223,
+        "tp": 32,
+        "fp": 42,
+        "fn": 191,
+        "wrong": 15
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 29,
+        "n_truth": 229,
+        "tp": 4,
+        "fp": 25,
+        "fn": 225,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 1,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 29,
+        "n_truth": 229,
+        "tp": 4,
+        "fp": 25,
+        "fn": 225,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 34,
+        "n_truth": 229,
+        "tp": 7,
+        "fp": 27,
+        "fn": 222,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 29,
+        "n_truth": 229,
+        "tp": 4,
+        "fp": 25,
+        "fn": 225,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 29,
+        "n_truth": 229,
+        "tp": 4,
+        "fp": 25,
+        "fn": 225,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 2,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 30,
+        "n_truth": 229,
+        "tp": 6,
+        "fp": 24,
+        "fn": 223,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 37,
+        "n_truth": 229,
+        "tp": 10,
+        "fp": 27,
+        "fn": 219,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 2,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 28,
+        "n_truth": 229,
+        "tp": 6,
+        "fp": 22,
+        "fn": 223,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 2,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 41,
+        "n_truth": 229,
+        "tp": 11,
+        "fp": 30,
+        "fn": 218,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 1,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 31,
+        "n_truth": 229,
+        "tp": 7,
+        "fp": 24,
+        "fn": 222,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 30,
+        "n_truth": 229,
+        "tp": 4,
+        "fp": 26,
+        "fn": 225,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 1,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 36,
+        "n_truth": 229,
+        "tp": 10,
+        "fp": 26,
+        "fn": 219,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    }
+  ],
+  "vtest_counts": [
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 4,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 4,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 10,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 10,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 9,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 9,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 1,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 1,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 2,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 2,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 2,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 2,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 2,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 1,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 2,
+        "n_truth": 12,
+        "tp": 0,
+        "fp": 2,
+        "fn": 12,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 5,
+        "n_truth": 242,
+        "tp": 4,
+        "fp": 1,
+        "fn": 238,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 72,
+        "n_truth": 223,
+        "tp": 36,
+        "fp": 36,
+        "fn": 187,
+        "wrong": 13
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 4,
+        "n_truth": 242,
+        "tp": 4,
+        "fp": 0,
+        "fn": 238,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 71,
+        "n_truth": 223,
+        "tp": 29,
+        "fp": 42,
+        "fn": 194,
+        "wrong": 13
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 4,
+        "n_truth": 242,
+        "tp": 3,
+        "fp": 1,
+        "fn": 239,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 67,
+        "n_truth": 223,
+        "tp": 29,
+        "fp": 38,
+        "fn": 194,
+        "wrong": 14
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 5,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 0,
+        "fn": 237,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 77,
+        "n_truth": 223,
+        "tp": 35,
+        "fp": 42,
+        "fn": 188,
+        "wrong": 14
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 1,
+        "fn": 237,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 71,
+        "n_truth": 223,
+        "tp": 29,
+        "fp": 42,
+        "fn": 194,
+        "wrong": 15
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 4,
+        "fp": 2,
+        "fn": 238,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 75,
+        "n_truth": 223,
+        "tp": 34,
+        "fp": 41,
+        "fn": 189,
+        "wrong": 16
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 242,
+        "tp": 3,
+        "fp": 0,
+        "fn": 239,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 72,
+        "n_truth": 223,
+        "tp": 35,
+        "fp": 37,
+        "fn": 188,
+        "wrong": 17
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 4,
+        "n_truth": 242,
+        "tp": 3,
+        "fp": 1,
+        "fn": 239,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 72,
+        "n_truth": 223,
+        "tp": 31,
+        "fp": 41,
+        "fn": 192,
+        "wrong": 17
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 1,
+        "fn": 237,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 74,
+        "n_truth": 223,
+        "tp": 31,
+        "fp": 43,
+        "fn": 192,
+        "wrong": 15
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 7,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 2,
+        "fn": 237,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 76,
+        "n_truth": 223,
+        "tp": 35,
+        "fp": 41,
+        "fn": 188,
+        "wrong": 14
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 4,
+        "fp": 2,
+        "fn": 238,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 86,
+        "n_truth": 223,
+        "tp": 37,
+        "fp": 49,
+        "fn": 186,
+        "wrong": 15
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 4,
+        "n_truth": 242,
+        "tp": 3,
+        "fp": 1,
+        "fn": 239,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 71,
+        "n_truth": 223,
+        "tp": 29,
+        "fp": 42,
+        "fn": 194,
+        "wrong": 11
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 8,
+        "n_truth": 242,
+        "tp": 6,
+        "fp": 2,
+        "fn": 236,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 62,
+        "n_truth": 223,
+        "tp": 25,
+        "fp": 37,
+        "fn": 198,
+        "wrong": 12
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 1,
+        "fn": 237,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 69,
+        "n_truth": 223,
+        "tp": 29,
+        "fp": 40,
+        "fn": 194,
+        "wrong": 15
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 242,
+        "tp": 5,
+        "fp": 1,
+        "fn": 237,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 73,
+        "n_truth": 223,
+        "tp": 31,
+        "fp": 42,
+        "fn": 192,
+        "wrong": 14
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 242,
+        "tp": 2,
+        "fp": 1,
+        "fn": 240,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 78,
+        "n_truth": 223,
+        "tp": 35,
+        "fp": 43,
+        "fn": 188,
+        "wrong": 16
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 8,
+        "n_truth": 242,
+        "tp": 6,
+        "fp": 2,
+        "fn": 236,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 72,
+        "n_truth": 223,
+        "tp": 30,
+        "fp": 42,
+        "fn": 193,
+        "wrong": 12
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 7,
+        "n_truth": 242,
+        "tp": 6,
+        "fp": 1,
+        "fn": 236,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 74,
+        "n_truth": 223,
+        "tp": 32,
+        "fp": 42,
+        "fn": 191,
+        "wrong": 15
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 29,
+        "n_truth": 229,
+        "tp": 4,
+        "fp": 25,
+        "fn": 225,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 1,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 29,
+        "n_truth": 229,
+        "tp": 4,
+        "fp": 25,
+        "fn": 225,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 34,
+        "n_truth": 229,
+        "tp": 7,
+        "fp": 27,
+        "fn": 222,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 29,
+        "n_truth": 229,
+        "tp": 4,
+        "fp": 25,
+        "fn": 225,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 29,
+        "n_truth": 229,
+        "tp": 4,
+        "fp": 25,
+        "fn": 225,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 2,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 30,
+        "n_truth": 229,
+        "tp": 6,
+        "fp": 24,
+        "fn": 223,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 37,
+        "n_truth": 229,
+        "tp": 10,
+        "fp": 27,
+        "fn": 219,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 2,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 28,
+        "n_truth": 229,
+        "tp": 6,
+        "fp": 22,
+        "fn": 223,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 2,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 41,
+        "n_truth": 229,
+        "tp": 11,
+        "fp": 30,
+        "fn": 218,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 1,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 31,
+        "n_truth": 229,
+        "tp": 7,
+        "fp": 24,
+        "fn": 222,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 30,
+        "n_truth": 229,
+        "tp": 4,
+        "fp": 26,
+        "fn": 225,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 1,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 36,
+        "n_truth": 229,
+        "tp": 10,
+        "fp": 26,
+        "fn": 219,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    }
+  ],
+  "full_counts": [
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 83,
+        "tp": 0,
+        "fp": 0,
+        "fn": 83,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 83,
+        "tp": 0,
+        "fp": 0,
+        "fn": 83,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 1,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 5,
+        "tp": 1,
+        "fp": 0,
+        "fn": 4,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 10,
+        "tp": 1,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 2,
+        "n_truth": 12,
+        "tp": 0,
+        "fp": 2,
+        "fn": 12,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 15,
+        "n_truth": 223,
+        "tp": 8,
+        "fp": 7,
+        "fn": 215,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 9,
+        "n_truth": 223,
+        "tp": 4,
+        "fp": 5,
+        "fn": 219,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 8,
+        "n_truth": 223,
+        "tp": 4,
+        "fp": 4,
+        "fn": 219,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 12,
+        "n_truth": 223,
+        "tp": 7,
+        "fp": 5,
+        "fn": 216,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 11,
+        "n_truth": 223,
+        "tp": 5,
+        "fp": 6,
+        "fn": 218,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 14,
+        "n_truth": 223,
+        "tp": 8,
+        "fp": 6,
+        "fn": 215,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 14,
+        "n_truth": 223,
+        "tp": 7,
+        "fp": 7,
+        "fn": 216,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 11,
+        "n_truth": 223,
+        "tp": 5,
+        "fp": 6,
+        "fn": 218,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 14,
+        "n_truth": 223,
+        "tp": 9,
+        "fp": 5,
+        "fn": 214,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 11,
+        "n_truth": 223,
+        "tp": 7,
+        "fp": 4,
+        "fn": 216,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 1,
+        "fn": 242,
+        "wrong": 1
+      },
+      "UP": {
+        "n_pred": 12,
+        "n_truth": 223,
+        "tp": 7,
+        "fp": 5,
+        "fn": 216,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 10,
+        "n_truth": 223,
+        "tp": 7,
+        "fp": 3,
+        "fn": 216,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 11,
+        "n_truth": 223,
+        "tp": 5,
+        "fp": 6,
+        "fn": 218,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 13,
+        "n_truth": 223,
+        "tp": 9,
+        "fp": 4,
+        "fn": 214,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 12,
+        "n_truth": 223,
+        "tp": 7,
+        "fp": 5,
+        "fn": 216,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 14,
+        "n_truth": 223,
+        "tp": 9,
+        "fp": 5,
+        "fn": 214,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 13,
+        "n_truth": 223,
+        "tp": 9,
+        "fp": 4,
+        "fn": 214,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 242,
+        "tp": 0,
+        "fp": 0,
+        "fn": 242,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 10,
+        "n_truth": 223,
+        "tp": 5,
+        "fp": 5,
+        "fn": 218,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 239,
+        "tp": 0,
+        "fp": 0,
+        "fn": 239,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 239,
+        "tp": 0,
+        "fp": 0,
+        "fn": 239,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 239,
+        "tp": 0,
+        "fp": 0,
+        "fn": 239,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 239,
+        "tp": 0,
+        "fp": 0,
+        "fn": 239,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 239,
+        "tp": 0,
+        "fp": 0,
+        "fn": 239,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 239,
+        "tp": 0,
+        "fp": 0,
+        "fn": 239,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 151,
+        "n_truth": 246,
+        "tp": 136,
+        "fp": 15,
+        "fn": 110,
+        "wrong": 4
+      },
+      "UP": {
+        "n_pred": 36,
+        "n_truth": 209,
+        "tp": 34,
+        "fp": 2,
+        "fn": 175,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 151,
+        "n_truth": 246,
+        "tp": 137,
+        "fp": 14,
+        "fn": 109,
+        "wrong": 4
+      },
+      "UP": {
+        "n_pred": 37,
+        "n_truth": 209,
+        "tp": 34,
+        "fp": 3,
+        "fn": 175,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 148,
+        "n_truth": 246,
+        "tp": 134,
+        "fp": 14,
+        "fn": 112,
+        "wrong": 4
+      },
+      "UP": {
+        "n_pred": 31,
+        "n_truth": 209,
+        "tp": 28,
+        "fp": 3,
+        "fn": 181,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 147,
+        "n_truth": 246,
+        "tp": 134,
+        "fp": 13,
+        "fn": 112,
+        "wrong": 4
+      },
+      "UP": {
+        "n_pred": 29,
+        "n_truth": 209,
+        "tp": 26,
+        "fp": 3,
+        "fn": 183,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 148,
+        "n_truth": 246,
+        "tp": 132,
+        "fp": 16,
+        "fn": 114,
+        "wrong": 4
+      },
+      "UP": {
+        "n_pred": 28,
+        "n_truth": 209,
+        "tp": 25,
+        "fp": 3,
+        "fn": 184,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 152,
+        "n_truth": 246,
+        "tp": 136,
+        "fp": 16,
+        "fn": 110,
+        "wrong": 5
+      },
+      "UP": {
+        "n_pred": 29,
+        "n_truth": 209,
+        "tp": 28,
+        "fp": 1,
+        "fn": 181,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 139,
+        "n_truth": 246,
+        "tp": 128,
+        "fp": 11,
+        "fn": 118,
+        "wrong": 4
+      },
+      "UP": {
+        "n_pred": 31,
+        "n_truth": 209,
+        "tp": 29,
+        "fp": 2,
+        "fn": 180,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 149,
+        "n_truth": 246,
+        "tp": 133,
+        "fp": 16,
+        "fn": 113,
+        "wrong": 4
+      },
+      "UP": {
+        "n_pred": 33,
+        "n_truth": 209,
+        "tp": 31,
+        "fp": 2,
+        "fn": 178,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 146,
+        "n_truth": 246,
+        "tp": 132,
+        "fp": 14,
+        "fn": 114,
+        "wrong": 5
+      },
+      "UP": {
+        "n_pred": 33,
+        "n_truth": 209,
+        "tp": 30,
+        "fp": 3,
+        "fn": 179,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 2,
+        "n_truth": 4,
+        "tp": 2,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 4,
+        "tp": 1,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 143,
+        "tp": 0,
+        "fp": 0,
+        "fn": 143,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 113,
+        "n_truth": 143,
+        "tp": 111,
+        "fp": 2,
+        "fn": 32,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 143,
+        "tp": 0,
+        "fp": 0,
+        "fn": 143,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 119,
+        "n_truth": 143,
+        "tp": 115,
+        "fp": 4,
+        "fn": 28,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 143,
+        "tp": 0,
+        "fp": 0,
+        "fn": 143,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 116,
+        "n_truth": 143,
+        "tp": 110,
+        "fp": 6,
+        "fn": 33,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 143,
+        "tp": 0,
+        "fp": 0,
+        "fn": 143,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 117,
+        "n_truth": 143,
+        "tp": 111,
+        "fp": 6,
+        "fn": 32,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 9,
+        "tp": 0,
+        "fp": 0,
+        "fn": 9,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 9,
+        "tp": 1,
+        "fp": 0,
+        "fn": 8,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 37,
+        "tp": 0,
+        "fp": 0,
+        "fn": 37,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 35,
+        "tp": 0,
+        "fp": 0,
+        "fn": 35,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 96,
+        "tp": 1,
+        "fp": 0,
+        "fn": 95,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 2,
+        "n_truth": 86,
+        "tp": 2,
+        "fp": 0,
+        "fn": 84,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 96,
+        "tp": 2,
+        "fp": 0,
+        "fn": 94,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 4,
+        "n_truth": 86,
+        "tp": 4,
+        "fp": 0,
+        "fn": 82,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 96,
+        "tp": 1,
+        "fp": 0,
+        "fn": 95,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 3,
+        "n_truth": 86,
+        "tp": 3,
+        "fp": 0,
+        "fn": 83,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 96,
+        "tp": 1,
+        "fp": 0,
+        "fn": 95,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 4,
+        "n_truth": 86,
+        "tp": 4,
+        "fp": 0,
+        "fn": 82,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 2,
+        "n_truth": 96,
+        "tp": 2,
+        "fp": 0,
+        "fn": 94,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 86,
+        "tp": 1,
+        "fp": 0,
+        "fn": 85,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 48,
+        "tp": 0,
+        "fp": 0,
+        "fn": 48,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 210,
+        "tp": 0,
+        "fp": 0,
+        "fn": 210,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 55,
+        "n_truth": 210,
+        "tp": 55,
+        "fp": 0,
+        "fn": 155,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 210,
+        "tp": 0,
+        "fp": 0,
+        "fn": 210,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 56,
+        "n_truth": 210,
+        "tp": 56,
+        "fp": 0,
+        "fn": 154,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 210,
+        "tp": 0,
+        "fp": 0,
+        "fn": 210,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 67,
+        "n_truth": 210,
+        "tp": 67,
+        "fp": 0,
+        "fn": 143,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 210,
+        "tp": 0,
+        "fp": 0,
+        "fn": 210,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 67,
+        "n_truth": 210,
+        "tp": 67,
+        "fp": 0,
+        "fn": 143,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 229,
+        "tp": 0,
+        "fp": 7,
+        "fn": 229,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 8,
+        "n_truth": 229,
+        "tp": 0,
+        "fp": 8,
+        "fn": 229,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 13,
+        "n_truth": 229,
+        "tp": 0,
+        "fp": 13,
+        "fn": 229,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 229,
+        "tp": 0,
+        "fp": 7,
+        "fn": 229,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 229,
+        "tp": 0,
+        "fp": 7,
+        "fn": 229,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 229,
+        "tp": 0,
+        "fp": 7,
+        "fn": 229,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 229,
+        "tp": 0,
+        "fp": 6,
+        "fn": 229,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 229,
+        "tp": 0,
+        "fp": 7,
+        "fn": 229,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 8,
+        "n_truth": 229,
+        "tp": 0,
+        "fp": 8,
+        "fn": 229,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 8,
+        "n_truth": 229,
+        "tp": 1,
+        "fp": 7,
+        "fn": 228,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 8,
+        "n_truth": 229,
+        "tp": 2,
+        "fp": 6,
+        "fn": 227,
+        "wrong": 1
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 250,
+        "tp": 0,
+        "fp": 0,
+        "fn": 250,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 229,
+        "tp": 0,
+        "fp": 7,
+        "fn": 229,
+        "wrong": 2
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 109,
+        "tp": 0,
+        "fp": 0,
+        "fn": 109,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 109,
+        "tp": 0,
+        "fp": 1,
+        "fn": 109,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 109,
+        "tp": 0,
+        "fp": 0,
+        "fn": 109,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 109,
+        "tp": 0,
+        "fp": 1,
+        "fn": 109,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 1,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 41,
+        "n_truth": 42,
+        "tp": 40,
+        "fp": 1,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 42,
+        "n_truth": 42,
+        "tp": 40,
+        "fp": 2,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 41,
+        "n_truth": 42,
+        "tp": 39,
+        "fp": 2,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 40,
+        "n_truth": 42,
+        "tp": 40,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 37,
+        "n_truth": 42,
+        "tp": 37,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 42,
+        "n_truth": 42,
+        "tp": 40,
+        "fp": 2,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 39,
+        "n_truth": 42,
+        "tp": 39,
+        "fp": 0,
+        "fn": 3,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 42,
+        "n_truth": 42,
+        "tp": 41,
+        "fp": 1,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 40,
+        "n_truth": 42,
+        "tp": 40,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 8,
+        "tp": 2,
+        "fp": 1,
+        "fn": 6,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 5,
+        "n_truth": 12,
+        "tp": 5,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 8,
+        "tp": 2,
+        "fp": 1,
+        "fn": 6,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 5,
+        "n_truth": 12,
+        "tp": 5,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 8,
+        "tp": 2,
+        "fp": 1,
+        "fn": 6,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 12,
+        "tp": 6,
+        "fp": 0,
+        "fn": 6,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 8,
+        "tp": 2,
+        "fp": 1,
+        "fn": 6,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 5,
+        "n_truth": 12,
+        "tp": 5,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 8,
+        "tp": 2,
+        "fp": 1,
+        "fn": 6,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 12,
+        "tp": 6,
+        "fp": 0,
+        "fn": 6,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 8,
+        "tp": 2,
+        "fp": 1,
+        "fn": 6,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 5,
+        "n_truth": 12,
+        "tp": 5,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 8,
+        "tp": 2,
+        "fp": 1,
+        "fn": 6,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 5,
+        "n_truth": 12,
+        "tp": 5,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 8,
+        "tp": 2,
+        "fp": 1,
+        "fn": 6,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 12,
+        "tp": 6,
+        "fp": 0,
+        "fn": 6,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 3,
+        "n_truth": 8,
+        "tp": 2,
+        "fp": 1,
+        "fn": 6,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 12,
+        "tp": 6,
+        "fp": 0,
+        "fn": 6,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 14,
+        "tp": 6,
+        "fp": 0,
+        "fn": 8,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 14,
+        "tp": 6,
+        "fp": 0,
+        "fn": 8,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 14,
+        "tp": 7,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 14,
+        "tp": 7,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 14,
+        "tp": 7,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 14,
+        "tp": 6,
+        "fp": 0,
+        "fn": 8,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 14,
+        "tp": 7,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 14,
+        "tp": 6,
+        "fp": 0,
+        "fn": 8,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 0,
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 14,
+        "tp": 7,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 17,
+        "tp": 0,
+        "fp": 0,
+        "fn": 17,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 4,
+        "n_truth": 17,
+        "tp": 4,
+        "fp": 0,
+        "fn": 13,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 17,
+        "tp": 1,
+        "fp": 0,
+        "fn": 16,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 4,
+        "n_truth": 17,
+        "tp": 4,
+        "fp": 0,
+        "fn": 13,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 17,
+        "tp": 1,
+        "fp": 0,
+        "fn": 16,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 4,
+        "n_truth": 17,
+        "tp": 4,
+        "fp": 0,
+        "fn": 13,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 17,
+        "tp": 0,
+        "fp": 0,
+        "fn": 17,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 4,
+        "n_truth": 17,
+        "tp": 4,
+        "fp": 0,
+        "fn": 13,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 17,
+        "tp": 0,
+        "fp": 0,
+        "fn": 17,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 4,
+        "n_truth": 17,
+        "tp": 4,
+        "fp": 0,
+        "fn": 13,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 1,
+        "n_truth": 17,
+        "tp": 1,
+        "fp": 0,
+        "fn": 16,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 4,
+        "n_truth": 17,
+        "tp": 4,
+        "fp": 0,
+        "fn": 13,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 5,
+        "n_truth": 7,
+        "tp": 5,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 5,
+        "n_truth": 7,
+        "tp": 5,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 5,
+        "n_truth": 7,
+        "tp": 5,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 7,
+        "n_truth": 7,
+        "tp": 7,
+        "fp": 0,
+        "fn": 0,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 5,
+        "n_truth": 7,
+        "tp": 5,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 5,
+        "n_truth": 7,
+        "tp": 5,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 6,
+        "n_truth": 7,
+        "tp": 6,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 5,
+        "tp": 0,
+        "fp": 0,
+        "fn": 5,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 4,
+        "tp": 0,
+        "fp": 0,
+        "fn": 4,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 2,
+        "tp": 0,
+        "fp": 0,
+        "fn": 2,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 11,
+        "tp": 2,
+        "fp": 4,
+        "fn": 9,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 5,
+        "n_truth": 11,
+        "tp": 2,
+        "fp": 3,
+        "fn": 9,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 6,
+        "n_truth": 11,
+        "tp": 2,
+        "fp": 4,
+        "fn": 9,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 1,
+        "tp": 0,
+        "fp": 0,
+        "fn": 1,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 1,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 1,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    },
+    {
+      "DOWN": {
+        "n_pred": 0,
+        "n_truth": 10,
+        "tp": 0,
+        "fp": 0,
+        "fn": 10,
+        "wrong": 0
+      },
+      "UP": {
+        "n_pred": 0,
+        "n_truth": 7,
+        "tp": 0,
+        "fp": 0,
+        "fn": 7,
+        "wrong": 0
+      }
+    }
+  ],
+  "v1": {
+    "pass": true,
+    "orig_sha256": "4c2ab764235146d265ad1b98dca4776460b597917b494caa078f33b0ec19365b",
+    "strip_sha256": "4c2ab764235146d265ad1b98dca4776460b597917b494caa078f33b0ec19365b"
+  }
+}

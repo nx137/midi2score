@@ -114,3 +114,9 @@
 |:--|:--|:--|:--|
 | EV-S44 | **canonical 域改闭区间 `[0,score_end]`** 后复算：full n_truth=28,603、test n_truth=16,278，right-end 排除修复；B1 canonical CV argmax d_min 仍 0.0 拍。±1 micro F1（test/full）：B1 0.39353135 / 0.27657959；B2 0.36652909 / 0.26412246；bp2 0.32179490 / 0.22465639；bp4 0.34142376 / 0.23971261 | `tools/canonical_domain.py`、`tools/canonical_unified_eval.py`、`results/E1/domain_unified/E1_main_canonical.*`、`evidence/R1/E1/canonical_unified_eval_closed.log` | verified_in_this_repo |
 | EV-S45 | **轮 B LR(L2) 首轮完成**：V1 特征剥离 `<pedal>` 后逐值全等（hash 4c2ab764…）；V2 训练/评测锚点 key hash 相同 669425c3…；V3 B2 canonical test ±1 复算 tp/fp/fn/wrong/n_pred/n_truth=11012/32798/5266/358/43810/16278，逐值等于 canonical JSON。选中 class_weight=balanced，thresholds DOWN/UP=0.7/0.75；test micro F1=0.46614888，DOWN=0.54452211，UP=0.33315439；full micro F1=0.36455978，DOWN=0.40986115，UP=0.27981286。V5 对 8 个 |Δmicro|≥0.05 方法对做 10,000 次 score bootstrap；test LR−B1 0.0735 [0.0125,0.1318]，full LR−B1 0.0839 [0.0362,0.1363]；CHANGE 关闭，若开启 merge 对数=3611 | `tools/round_b_features.py`、`tools/round_b_lr.py`、`results/E1/domain_unified/LR_model.{json,csv,md}`、`evidence/R1/E1/round_b_lr_full_v2.log` | verified_in_this_repo |
+
+## 10. 轮 C 四阶梯与序列模型（2026-10-09）
+
+| ID | 事实 | 证据 | 状态 |
+|:--|:--|:--|:--|
+| EV-S46 | **轮 C 完成**：LR/GBDT/LR+确定性结构解码/BiLSTM-CRF 全部在 canonical `[0,score_end]` 与 train-CV 选择协议下出数。test ±1 micro：LR **0.392995**、GBDT **0.310068**、LR_struc **0.230132**、BiLSTM-CRF **0.080336**；B1=0.393531、B2=0.366529。BiLSTM-CRF 对 LR Δ=−0.312659，CI low=−0.413922，预声明 claim 门槛**不过**；对 B1/B2 也不显著。V1/V3/V4 PASS；V5 对 28 个方法对按 |Δ|≥0.05 做 score 重采样 bootstrap | `tools/round_c_classical.py`、`tools/round_c_bilstm_crf.py`、`tools/round_c_combine.py`、`results/E1/domain_unified/round_c_main.{json,md}`、`round_c_classical.json`、`round_c_bilstm_crf.json`、`evidence/R1/E1/round_c_*.log` | verified_in_this_repo |

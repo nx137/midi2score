@@ -127,3 +127,14 @@
 | R1-C-B3 | 轮 C：结构化模型（B3）与两域评估 | R1-B-V | todo |
 
 > 轮 C 门槛：canonical 域上 test 与 full 同时 micro 显著优于 B1（0.3935/0.2766）与 B2（0.3665/0.2641）；DOWN > 0.5445/0.4099，UP ≥ 0.3379/0.2528。主表三列并列。
+
+## 轮 C 完成（2026-10-09）
+
+| ID | 待办 | blocking | 状态 |
+|:--|:--|:--|:--|
+| R1-C-PROTO | train-CV 选择协议；val/test 不参与选择 | — | done |
+| R1-C-LR | 重跑 LR(L2)，所有超参与阈值 train-CV | R1-C-PROTO | done（test micro 0.392995） |
+| R1-C-GBDT | GBDT 行 | R1-C-PROTO | done（test micro 0.310068） |
+| R1-C-STRUCT | LR + 确定性结构解码 | R1-C-PROTO | done（test micro 0.230132） |
+| R1-C-B4 | BiLSTM-CRF 行 | R1-C-PROTO | done（test micro 0.080336；对 LR 门槛不过） |
+| R1-C-WAIT | 主控终局判读/claim 确认 | R1-C-B4 | blocked（等待裁定） |

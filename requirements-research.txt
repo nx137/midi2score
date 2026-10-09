@@ -7,3 +7,6 @@ parangonar==3.3.3
 lxml==6.1.3
 numpy==2.5.3
 pandas==3.0.6
+scikit-learn==1.9.1
+# Round C B4; CPU wheel index: https://download.pytorch.org/whl/cpu
+torch==2.14.1

@@ -1,0 +1,10 @@
+epoch 1/4 loss=34.5846
+epoch 2/4 loss=23.1027
+epoch 3/4 loss=20.7095
+epoch 4/4 loss=19.1566
+trained test model 639.2 s
+epoch 1/4 loss=32.3604
+epoch 2/4 loss=21.5323
+epoch 3/4 loss=18.8931
+epoch 4/4 loss=17.5210
+{"test_micro": 0.0803359301618874, "test_down": 0.018196663944943427, "test_up": 0.13625866050808313, "full_micro": 0.19892523219333397}

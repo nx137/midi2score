@@ -7,21 +7,21 @@
 
 - 约定：`main` SHA = **写入本块时的 HEAD**（包含本块的提交会使其 +1；以 `git log` 为准）；四个文件哈希 = 写入时的内容
 - 记录时间：`2026-10-09 +0800`
-- `main` SHA：`58cf1571a439006ca1b3fe45bb1ee29026c7de2f`
+- `main` SHA：`cdaceed977497968bf2ed5e066baa8689f745ab8`
 - `PedNotate_Plan_v3.0.md` sha256：`b65b1fa6cfaa73caefccd9292ed460d5c2aac98ef56be64566a6574e98567c1b`
 - `TASK_CHARTER.md` sha256：`8c24d88707385b8104505b28b898569ad6bc207f320d2b79960cd320cfd769cf`
-- `DECISIONS.md` sha256：`889b3c65e7bbeffa9ae8b86e1f18eda9e68c64f53e6bdba31bbd93f097b1bfad`
+- `DECISIONS.md` sha256：`b70dbf0deb9ff35e65d18848f465d7ab25c42d616eeacb796832d56d172cbd5d`
 - `FIELD_DEFINITIONS.md` sha256：`e35e2bc4fcfffd2c580539173391ec6cf0abdfb265ac55ec8b5586d8fc349539`
 - tracked 文件数：`158`
-- `git status --porcelain`：写入时 clean；本块提交后 HEAD +1
+- `git status --porcelain`：轮 C 完成产物待提交
 
 ## 当前
 
-- **更新时间**：2026-10-09（轮 B 完成：闭区间 canonical + LR 首轮模型）
-- **当前阶段**：canonical domain = `[0, score_end]`；V1/V2/V3 全 PASS；轮 B LR(L2) 已完成。
-- **模型结果**：test 折 micro F1=**0.4661**（DOWN 0.5445 / UP 0.3332），full 36 首 micro F1=**0.3646**（DOWN 0.4099 / UP 0.2798）；选中 `class_weight=balanced`，阈值 DOWN/UP=0.7/0.75。
-- **V5**：对 |Δmicro|≥0.05 的 8 对做 10,000 次 score bootstrap；test LR−B1 = 0.0735 [0.0125, 0.1318]，full LR−B1 = 0.0839 [0.0362, 0.1363]；完整见 `results/E1/domain_unified/LR_model.json`。
-- **下一步**：轮 C 的结构化模型（B3）尚未开始；轮 C 门槛见 D-0072/D-0075，canonical 域、三列并列、两域同时显著。
+- **更新时间**：2026-10-09（轮 C 完成：train-CV 协议 + 四阶梯）
+- **当前阶段**：主判域 test；LR、GBDT、LR+结构解码、BiLSTM-CRF 均已出数；V1/V3/V4 通过。
+- **轮 C test ±1 micro**：LR **0.392995**、GBDT **0.310068**、LR_struc **0.230132**、BiLSTM-CRF **0.080336**；B1=0.393531、B2=0.366529。
+- **预声明 claim 门槛**：BiLSTM-CRF 对 LR Δ=−0.312659，CI low=−0.413922 ⇒ **不过**；对 B1/B2 也不过。按 D-0077，模型贡献改写方向为“序列建模在此任务上非必需”。
+- **下一步**：等待主控对轮 C 终局判读/论文 claim 的确认；不自行把 full-36 或 val+test 当门槛。
 - **活动任务**：`R1`（科研侧推进）
 - **分支**：`main` → `origin/main`
 
