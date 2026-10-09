@@ -188,3 +188,13 @@ exit code = 记录属性，不是成功判据
 - `Evidence`：executor 只能写候选状态；postflight verifier 才能提升为 `verified`。
 - `PolicyDecision`：`allow / require_confirmation / deny`；目标偏移、越权命令和路径逃逸为不可 override 的 hard deny。
 - 硬门：没有 Goal Contract、Context Packet、preflight、allowlist、完整 RunManifest、postflight 验证和人工确认，不接受真实科研产出。
+## 21. 可选 LLM 适配层（D-0084，2026-10-09）
+
+- `MIDI2SCORE_LLM_ENABLED`：默认 false；未启用时使用 stub。
+- `MIDI2SCORE_LLM_PROVIDER`：`deepseek` 或 `openai_compatible`。
+- `MIDI2SCORE_LLM_MODEL`：provider 的实际模型标识。
+- `MIDI2SCORE_LLM_BASE_URL`：OpenAI-compatible base URL。
+- `DEEPSEEK_API_KEY` / `MIDI2SCORE_LLM_API_KEY`：只从环境变量读取，禁止入库。
+- `MIDI2SCORE_LLM_TIMEOUT_SECONDS` / `MAX_TOKENS` / `TEMPERATURE`：调用参数。
+- `MIDI2SCORE_LLM_LOG_DIR`：可选；只记录 prompt/response hash、模型和耗时，不记录 key。
+- 角色边界：LLM 只提出计划或语义意见；控制平面仍负责 allowlist、执行、证据和最终判定。

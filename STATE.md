@@ -9,9 +9,9 @@
 - 记录时间：`2026-10-09 +0800`
 - `main` SHA：`df86584aa8049f38d9235af800b8f043063382f4`（本次接手审计起点；提交后以 `git log` 为准）
 - `PedNotate_Plan_v3.0.md` sha256：`825e4c4f698fbfdb41fec6bd728ddc740c7e159c4737cc59b7e3d5b0614ae6d8`
-- `TASK_CHARTER.md` sha256：`ac131e40dc3e60b38fb7f77b870873977c16e595fba907991032406ab9b9d1a7`
-- `DECISIONS.md` sha256：`5e336c4aa6162f5c4bfa52d5d8607a2b462dddff0898e36d5a43e8532c0d8e9b`
-- `FIELD_DEFINITIONS.md` sha256：`9b7831a6548232d918d85898db5338c42c0cb3a4b676e2aaf5765b99003841ff`
+- `TASK_CHARTER.md` sha256：`f261f8bd66957e815b8a0af390766c4549a4295218713a5584d2fbf7ad947164`
+- `DECISIONS.md` sha256：`406ecd063c1b5751e6cdb8360e28ecc051cd5a7b343a00ff02ee78fcb7246ee6`
+- `FIELD_DEFINITIONS.md` sha256：`744c66c5685511bba123f8dc4d99b9885b27690ba4a77472a70662660cc5f16e`
 - tracked 文件数：`187`
 - `git status --porcelain`：V3.1/V3.2 文档复位尚未提交；当前有 9 个已跟踪文档修改
 
@@ -21,11 +21,11 @@
 - **对齐判定**：`aligned`；用户明确要求回到 V3 原计划。
 - **主指标**：**回放保真度**；**谱面一致度为强制副指标**。
 - **训练顺序**：**ASAP 初始训练 → PDMX 合成语料增强训练**；不得反转为 PDMX 预训练 → ASAP 微调。
-- **当前阶段**：LangGraph 控制平面 v1 已实现，包含 Goal Contract、Context Packet、preflight policy、命令 allowlist、ExecutionRecord/Evidence、postflight verifier；尚未开始真实科研训练。
+- **当前阶段**：控制平面 v1 + DeepSeek v4.1 flash 可选 LLM 适配器已实现；LLM 默认关闭，启用时只作为 planner/说明器，不获得执行、权限或 `verified` Evidence 资格。
 - **历史路径**：Round B/C/D 的 score-consistency 数字、旧 `model1` harness 和 D1 sweep 选项均为历史诊断，不再作为当前主线 claim；详见 `EVIDENCE.md` `EV-S49`。
 - **回放训练用途**：主指标仍为回放保真度；回放通道**不作 loss**，保留 `D-0059`（用户已确认）。
 - **导出 QC 口径**：采用 `D-0024/D-0025`；成功=产物存在 ∧ 可解析 ∧ CC64 可枚举，恒等式 `C == 2×min(S,T)` 仅诊断，不使用 `[0.80,1.05]` 带宽门（用户已确认，D-0082）。
-- **下一步**：确认控制平面验收后，按 V3 原计划进入 M2 标签层；确认前不跑新训练。
+- **下一步**：配置 `DEEPSEEK_API_KEY`、`MIDI2SCORE_LLM_MODEL` 和 base URL，做一次 live smoke；确认后进入 M2。
 - **活动任务**：`CP-V1`
 - **分支**：`main` → `origin/main`
 
@@ -46,7 +46,7 @@
 
 | 时间 | 范围 | 命令 | 结果 |
 |:--|:--|:--|:--|
-| 2026-10-09 | 控制平面 v1 / D-0083 | `.\.venv\Scripts\python.exe -m pytest -q`：Goal Contract、Context Packet、policy、execution/evidence、长上下文与偏离探针 | **PASS 31/31**；未运行科研训练（EV-S51） |
+| 2026-10-09 | 控制平面 + LLM adapter / D-0083/D-0084 | `.\.venv\Scripts\python.exe -m pytest -q` | **PASS 34/34**；LLM 默认关闭；未运行科研训练（EV-S51/S52） |
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
 | 2026-10-07 | 语料 manifest 口径 | `python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv` | **PASS**：复现出计划书哈希 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa`（1,305 条 / 465,861,631 B；EV-S6、EV-S10、D-0020） |
 | 2026-10-07 | 零成本项 (a)–(d) + 交付 6 | `export_pairing_audit.py` + `split_freeze.py` | 旧式自检 42 首中 **20 首非零**（缺陷 #6 证实）；奇数 C = **0**；unexplained 4/31/33；三候选规则**无清零**；**Main 精确复现 43/291/3840**；划分 train 26/val 6/test 9 组（EV-S23–S26） |\n| 2026-10-07 | R1-3i 导出侧交付 1–4 | `musescore_export_probe.py --positive 68 --negative 3 --force` + `pedal_export_audit.py` | **68/68 导出成功；负对照 3/3 为 0 CC64**；五格 Tier = OK 42 / T1 0 / T2(含T2b) 13 / T3 13 / T4 0；**裁定5 = 71/71 逐值一致**；P5 = 0.91485(R-7) / 0.8837(nearest_rank)（EV-S19–S22） |

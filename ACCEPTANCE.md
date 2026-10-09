@@ -39,6 +39,8 @@
 | AC-S15 | executor 只产 candidate Evidence，verifier 才能提升为 `verified` | evidence promotion test | pass |
 | AC-S16 | `thread_id` 稳定且调用方不能覆盖 | thread-config test | pass |
 | AC-S17 | 长拒绝历史中消息有界、Goal Contract 哈希不变 | long-context test | pass |
+| AC-S18 | LLM 默认关闭；启用时从环境变量读取 provider/model/base URL/key，key 不入库 | llm adapter tests | pass（D-0084） |
+| AC-S19 | LLM 只作建议，不能执行命令、修改权限或产生 verified Evidence | control-plane + LLM boundary review | pass |
 
 ## C. 治理验收（阶段 1）
 

@@ -14,6 +14,7 @@ from langgraph.graph import END, START, StateGraph
 from langgraph.store.sqlite import SqliteStore
 
 from . import nodes, schemas
+from .llm.factory import build_llm_from_env
 from .schemas import TaskState
 
 DEFAULT_LLM: Callable[[str], str] = nodes._stub_llm
@@ -69,7 +70,7 @@ def route_after_review(state: TaskState) -> str:
 
 
 def build_graph(llm: Callable[[str], str] | None = None):
-    llm = llm or DEFAULT_LLM
+    llm = llm or build_llm_from_env() or DEFAULT_LLM
     builder = StateGraph(TaskState)
     builder.add_node("planner", partial(nodes.planner, llm=llm))
     builder.add_node("executor", partial(nodes.executor, llm=llm))

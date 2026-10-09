@@ -65,6 +65,20 @@ human_review（hard deny 不可 override）
 - 所有命令记录 `argv`、cwd、exit code、stdout/stderr hash、环境摘要和产物 hash。
 - `thread_id` 由 `project_id/task_id` 稳定推导，调用方不得覆盖。
 
+## 可选 LLM（DeepSeek / OpenAI-compatible）
+
+默认关闭；未配置时使用 stub。启用示例：
+
+```powershell
+$env:MIDI2SCORE_LLM_ENABLED="true"
+$env:MIDI2SCORE_LLM_PROVIDER="deepseek"
+$env:MIDI2SCORE_LLM_MODEL="deepseek-v4.1-flash"
+$env:MIDI2SCORE_LLM_BASE_URL="https://api.deepseek.com"
+$env:DEEPSEEK_API_KEY="<local-secret>"
+```
+
+可选配置见 `config/llm.env.example`。LLM 只作为 planner/说明器，不能执行命令、修改权限或产生 `verified` Evidence；API key 只从环境变量读取。
+
 
 ## 中断与恢复
 

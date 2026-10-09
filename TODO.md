@@ -19,7 +19,10 @@
 | CP-4 | argv / shell=False 命令执行器 + ExecutionRecord | CP-3 | done |
 | CP-5 | candidate Evidence → postflight `verified` | CP-4 | done |
 | CP-6 | 长上下文偏移、越权命令、缺证据、thread_id 覆盖测试 | CP-2,CP-5 | done |
-| CP-7 | 写入 EVIDENCE / ACCEPTANCE / STATE，生成 governance baseline | CP-6 | todo |
+| CP-7 | 写入 EVIDENCE / ACCEPTANCE / STATE，生成 governance baseline | CP-6 | done |
+| LLM-1 | 可选 DeepSeek/OpenAI-compatible HTTP adapter；默认关闭 | — | done |
+| LLM-2 | 环境变量配置 model/base URL/key；key 不入库 | LLM-1 | done |
+| LLM-3 | live smoke：真实 API 返回受控计划文本 | LLM-2 | todo |
 | V3R-4 | 把 Round B/C/D 标为历史诊断，停止其主线 claim/闸门用途 | V3R-3 | done |
 | V3R-5 | 对齐 FIELD_DEFINITIONS / ACCEPTANCE / EVIDENCE | V3R-4 | done |
 | V3R-7 | 保留 D-0059：回放通道不作本轮 loss | V3R-5 | done |

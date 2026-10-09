@@ -5,8 +5,8 @@
 > 程序侧（planner / executor / verifier / 任何 LangGraph 节点）**一律禁止自动修改本文件**。
 > 违者视为目标偏离（`conflicting`），必须暂停并请求人工确认。
 
-- 章程版本：`v1.5`
-- 建立日期：`2026-10-07`；最近修订：`v1.5`（2026-10-09，用户明确要求把 LangGraph 升级为科研控制平面；新增 HC-19。见 `DECISIONS.md` D-0083）
+- 章程版本：`v1.6`
+- 建立日期：`2026-10-07`；最近修订：`v1.6`（2026-10-09，用户明确确认接入 DeepSeek v4.1 flash 可选 LLM 适配器；新增 HC-20。见 `DECISIONS.md` D-0084）
 - 内容来源：`PedNotate_Plan_v3.0.md`（唯一权威规格，以下简称"计划书"）
 - 内容来源哈希：见 `EVIDENCE.md` 的 `EV-CHARTER-SRC` 条目；运行时校验由 `charter_sha256` 字段执行
 
@@ -76,6 +76,7 @@
 - **HC-17** **主指标复位纪律**：当前主指标为 **回放保真度**，谱面一致度为强制副指标；这是按用户明确指令执行的 V3 原计划复位。今后若要再次改变主指标，必须先给出原主指标失效的独立证据与等价替代，并走第 8 节修改流程；不得用副指标结果直接替换主指标。（D-0081）
 - **HC-18** **训练顺序**：S2 必须先完成 **ASAP 初始训练**并冻结首版模型，再使用 **PDMX 合成语料增强训练**；不得反转为 PDMX 预训练 → ASAP 微调，也不得让合成语料覆盖初始真实域训练。（D-0081）
 - **HC-19** **控制平面硬门**：任何真实科研命令或产物必须经过 Goal Contract、Context Packet、preflight 策略、工具 allowlist 和 postflight 证据验证；命令使用 `argv` 列表且 `shell=False`，executor 不得直接产生 `verified`；目标偏移或越权命令为不可 override 的 hard deny。（D-0083）
+- **HC-20** **LLM 只读/建议边界**：LLM 默认关闭；启用时必须通过环境变量配置 provider/model/base URL/key，key 不得入库；LLM 只能提出计划或语义意见，不得执行命令、修改权限、篡改章程、生成 `verified` Evidence 或绕过 hard deny。（D-0084）
 
 ### 5.2 治理级硬约束（GV）
 
@@ -102,6 +103,7 @@
 | 回放通道 loss | **本轮不启用**（主指标仍为回放保真度；见 D-0059/D-0082） |
 | 导出 QC | 成功 = 产物存在 ∧ 可解析 ∧ CC64 可枚举；`C == 2×min(S,T)` 作诊断，无 `[0.80,1.05]` 带宽（D-0024/D-0025/D-0082） |
 | 科研执行边界 | 真实工具执行必须先通过 Goal Contract / Context Packet / allowlist / evidence；hard deny 不可 override（HC-19/D-0083） |
+| LLM 接入 | DeepSeek/OpenAI-compatible HTTP，默认关闭、环境变量配置、只读建议；不得获得执行或验证权限（HC-20/D-0084） |
 | 对齐坐标系 | 训练真谱 / 推理重建谱 |
 | S1 选型 | MIDI2ScoreTransformer 先 spike 后定（3 天，后置到 M7） |
 | 合成数据域差 | 作为独立消融章节系统研究 |

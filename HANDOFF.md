@@ -26,7 +26,9 @@
 - `results/E1/domain_unified/model1/*` 与 Round B/C/D 的 score-consistency 结果保留为历史诊断；旧 `round_c_main` 的模型数字不是当前主线结论。
 - LangGraph 控制平面 v1 已实现：Goal Contract、Context Packet、preflight policy、命令 allowlist、ExecutionRecord/candidate Evidence、postflight verifier。
 - 目标偏移和越权命令为 hard deny；`thread_id` 不可由调用方覆盖；长上下文测试 29/29 PASS。
-- 下一步：确认控制平面验收后，按原计划进入 M2 标签层；确认前不跑新训练。
+- 可选 LLM 适配器已接入：DeepSeek / OpenAI-compatible，默认关闭；配置见 `config/llm.env.example`。
+- LLM 只作 planner/说明器，不能执行命令、修改权限或产生 verified Evidence。
+- 下一步：设置环境变量并做 live smoke；确认后进入 M2。
 
 ## 子 agent 纪律
 
