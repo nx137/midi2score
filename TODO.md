@@ -33,7 +33,14 @@
 | V3R-6 | 主线恢复为 S2 + S3 + S5；Round D 的 `model1` 仅作历史 harness 证据 | V3R-3 | todo |
 | V3R-9 | 按 V3 原计划进入 M2 标签层 | V3R-5,V3R-7,V3R-8 | done（M2 v1 标签数据集 + Table 1 + 独立验证 + 可复现性检查） |
 | V3R-10 | 将 M2 构建/验证/复现纳入 LangGraph 控制平面并留痕 | V3R-9 | done（三种命令均 candidate→verified；D-0088） |
-| V3R-11 | 下一阶段：在 M2 数据层之上实现 S2 四分类训练/消融（是否启用 CHANGE 需另行确认） | V3R-9 | todo |
+| V3R-11 | 下一阶段：按 D-0089 执行三分类线性前置 → 小型 BiLSTM-CRF → 完整 run Transformer | V3R-9 | doing |
+| M3L-1 | 构建 36 首 / 271 runs 的 3 分类特征与标签数据；CHANGE/ambiguous 保持 mask=0 | V3R-11 | done（rows 764,700；included 758,365；excluded 6,335 CHANGE） |
+| M3L-2 | train-CV 选择正则化线性模型 C；首次 test 评估并输出分标签指标/混淆矩阵 | M3L-1 | done（C=10.0；test micro 0.63512 / macro 0.34603） |
+| M3L-3 | 独立 validator + 可复现性检查 + LangGraph candidate→verified | M3L-2 | done（35 checks；repro 11/11；EV-M3L-1–4） |
+| M3L-4 | 前置条件评审通过后才进入小型 BiLSTM-CRF | M3L-3 | done（前置条件通过；进入下一阶段） |
+| M3S-1 | 小型 BiLSTM-CRF：同一 M2 三分类标签与 36 首 / 271 runs 协议 | M3L-4 | todo |
+| M3S-2 | 小型序列模型 validator + 可复现性 + 控制平面验收 | M3S-1 | todo |
+| M3T-1 | 完整 run Transformer：仅在 M3S 前置条件与对照完成后启动 | M3S-2 | todo |
 
 > 下方旧条目按日期保留，其中出现的旧主指标、旧 blocked 状态和旧路线不再自动生效；如与 D-0081 冲突，以 D-0081 为准。
 

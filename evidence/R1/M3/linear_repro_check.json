@@ -1,0 +1,18 @@
+{
+  "dataset_version": "m3-linear-v1",
+  "status": "passed",
+  "checks": {
+    "hash_linear_model.json": true,
+    "hash_linear_data_summary.json": true,
+    "hash_linear_feature_schema.json": true,
+    "hash_linear_table.csv": true,
+    "hash_linear_per_class.csv": true,
+    "hash_linear_confusion.csv": true,
+    "hash_linear_cv.csv": true,
+    "hash_linear_predictions.jsonl.gz": true,
+    "hash_linear_runs.jsonl.gz": true,
+    "summary_semantic": true,
+    "npz_semantic": true
+  },
+  "failures": []
+}

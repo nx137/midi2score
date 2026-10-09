@@ -7,31 +7,31 @@
 
 - 约定：`main` SHA = **写入本块时的 HEAD**（包含本块的提交会使其 +1；以 `git log` 为准）；四个文件哈希 = 写入时的内容
 - 记录时间：`2026-10-09 +0800`
-- `main` SHA：`436320f4b1df`（本次接手审计起点；提交后以 `git log` 为准）
+- `main` SHA：以提交后 `git log` 为准（不在本页写死）
 - `PedNotate_Plan_v3.0.md` sha256：`825e4c4f698fbfdb41fec6bd728ddc740c7e159c4737cc59b7e3d5b0614ae6d8`
 - `TASK_CHARTER.md` sha256：`f261f8bd66957e815b8a0af390766c4549a4295218713a5584d2fbf7ad947164`
-- `DECISIONS.md` sha256：`42a61c579415f1bd51d53784f97421c9c47f736aeff68db5eea14d807f4506c1`
-- `FIELD_DEFINITIONS.md` sha256：`4acf5ccd19f7c7cb8fc2cb7d8623fafdc9b57eb30fba71a03e9ebee6fe49ff9f`
+- `DECISIONS.md` sha256：`a130cdb6cbda1c6ebd016480607c646582fd640c9da2e4ac7119e640fd24876c`
+- `FIELD_DEFINITIONS.md` sha256：`498a6355383868fafa3a270d66cc306ed6a0850f79576755fd7cde32b7fdc71d`
 - tracked 文件数：`197`
-- `git status --porcelain`：D-0087 文档收敛待提交；提交后以 `git log` 为准
+- `git status --porcelain`：M3.1 提交待执行；提交后以 `git status` 为准
 
 ## 当前
 
-- **更新时间**：2026-10-09（M2 v1 数据层完成）
-- **对齐判定**：\`aligned\`；目标为在成熟 MIDI→MusicXML 流水线上增加 S2 踏板层。
+- **更新时间**：2026-10-10（M3.1 三分类线性前置层完成）
+- **对齐判定**：aligned；目标为在成熟 MIDI→MusicXML 流水线上增加 S2 踏板层。
 - **主指标**：**回放保真度**；**谱面一致度为强制副指标**。
 - **训练顺序**：**ASAP 初始训练 → PDMX 合成语料增强训练**。
-- **控制平面**：Goal Contract、Context Packet、allowlist、ExecutionRecord、candidate Evidence、postflight verifier、SQLite checkpointer/store、稳定 thread_id 与 interrupt/Command(resume) 已通过全链路。
-- **LLM**：DeepSeek \`deepseek-flash\`，\`reasoning_effort=high\`，内部 Context Packet \`800000\` 字符；M2 正式运行使用 \`MIDI2SCORE_LLM_ENABLED=false\`，避免真实 LLM 进入确定性验收路径。
-- **持久化边界**：使用 \`SqliteSaver\` + \`SqliteStore\`，**不迁移 Postgres**；接受本地单进程限制。
+- **控制平面**：Goal Contract、Context Packet、allowlist、ExecutionRecord、candidate Evidence、postflight verifier、SQLite checkpointer/store、稳定 thread_id 与 interrupt/Command(resume) 已通过 M2/M3 全链路。
+- **LLM**：DeepSeek deepseek-flash，reasoning_effort=high，内部 Context Packet 800000 字符；M2/M3.1 的确定性验收使用 MIDI2SCORE_LLM_ENABLED=false。
+- **持久化边界**：使用 SqliteSaver + SqliteStore，不迁移 Postgres；接受本地单进程限制。
 - **仓库策略**：当前私人仓库允许模型权重存在；API key、凭据、原始语料和虚拟环境仍禁止入库。
 - **历史路径**：Round B/C/D 的 score-consistency 数字只作历史诊断，不再作当前主线 claim。
-- **M2 v1**：已生成 canonical 逐锚点标签数据集；Main 43 首、evaluation-eligible 36 首、coordinate-ambiguous 7 首；Main runs 291、evaluation-domain runs 271、supervised runs 271；raw pedal elements 3840；canonical truth full/test = 28603/16278。独立 validator 97 项通过，复现检查 4/4 通过，三个受控命令均提升为 \`verified\`。
-- **M2 已知边界**：7 首含 repeat 的谱只作 \`coordinate_ambiguous\` 审计，未实现展开坐标，故 M2 v1 \`supervision_mask=0\`；18 个 residual same-anchor mixed anchors 也标为 \`ambiguous_multi_event\` 并从 loss mask 排除。不得把 M2 数据层完成写成 S2 模型已训练完成。
-- **下一步**：进入 M3/S2 训练层；先裁定是否在本轮启用 \`CHANGE\` 四分类，并决定 repeat 展开坐标是 M3 前置还是独立消融；不得直接沿用旧 Round B/C 三分类结果。
-- **活动任务**：\`V3R-11\`
-- **分支**：\`main\` → \`origin/main\`
-## 阶段 1 交付物
+- **M2 v1**：canonical 标签数据层完成；Main 43 / evaluation-eligible 36 / coordinate-ambiguous 7；Main runs 291 / supervised runs 271；独立 validator 97 checks；repro 4/4；控制平面 verified。
+- **M3.1**：按 D-0089 完成三分类正则化线性前置层。36 首 / 271 runs；included 758,365 行；CHANGE 排除 6,335 行；V1_pass=true、feature_source_leak={}；train-only score-group CV 选中 C=10.0；test micro/macro F1 = 0.63512 / 0.34603；独立 validator 35 checks、repro 11/11、控制平面三条命令 verified。
+- **M3 已知边界**：M3.1 的 micro F1 受 NONE 主导；DOWN/UP 的 precision 仍低（test 0.0786 / 0.0677），说明线性模型只适合作前置条件，不应当作最终 S2 结果。下一阶段必须实现小型 BiLSTM-CRF 并沿用同一 3 分类协议。
+- **下一步**：进入 M3S-1 小型 BiLSTM-CRF；先复用 M3.1 数据/折/指标协议，再验证序列结构是否改善 DOWN/UP 的 precision 与 macro F1；完整 run Transformer 仅在 M3S 对照完成后启动。
+- **活动任务**：M3S-1
+- **分支**：main → origin/main## 阶段 1 交付物
 
 | 文件 | 状态 |
 |:--|:--|
@@ -51,6 +51,8 @@
 | 2026-10-09 | 控制平面 + LLM adapter + M2 控制平面回归 | `.\.venv\Scripts\python.exe -m pytest -q` | **PASS 36/36**；M2 lxml 单测在 `.venv` 自动 skip（EV-S51/S52、EV-M2-*） |
 | 2026-10-09 | M2 v1 数据层与独立 validator | `python tools/m2_build_label_dataset.py ...`；`python tools/m2_validate_labels.py ...`；`python tools/m2_repro_check.py ...` | **PASS**：43/36/7、291/271/271、3840、28603/16278；validator 97 checks、repro 4/4；EV-M2-1–EV-M2-3 |
 | 2026-10-09 | M2 LangGraph 控制平面全链路 | `python tools/m2_control_plane_run.py --run-id m2-v1-contract-20261009 ...` | **PASS**：三条命令 candidate→verified，alignment=aligned，work package=done；EV-M2-4 |
+| 2026-10-10 | M3.1 三分类线性前置层 | `tools/m3_linear_baseline.py` + `tools/m3_validate_linear.py` + `tools/m3_repro_check.py` | **PASS**：36 首 / 271 runs；included 758,365；excluded 6,335 CHANGE；test micro 0.63512 / macro 0.34603；validator 35 checks、repro 11/11（EV-M3L-1–3） |
+| 2026-10-10 | M3.1 LangGraph 控制平面全链路 | `tools/m3_control_plane_run.py --run-id m3-linear-20261010` | **PASS**：三条命令 candidate→verified，alignment=aligned，WP-M3-LINEAR=done；EV-M3L-4 |
 | 2026-10-07 | 阶段 1（无代码，文档级校验） | 文件存在性 + 硬约束可机读 + AGENTS 规则覆盖 + 无 `conversation_summary.md` + UTF-8 无 BOM | **PASS**：9/9 文件存在；HC 条目 16 条、GV 条目 6 条；AGENTS 规则全覆盖；无摘要文件；无 BOM |
 | 2026-10-07 | 语料 manifest 口径 | `python tools/corpus_manifest.py --dataset data/asap-dataset --out evidence/corpus_manifest.csv` | **PASS**：复现出计划书哈希 `051713f7e60240be4d98389a7abc4655a69c8118e9d4231a262e7797f95914fa`（1,305 条 / 465,861,631 B；EV-S6、EV-S10、D-0020） |
 | 2026-10-07 | 零成本项 (a)–(d) + 交付 6 | `export_pairing_audit.py` + `split_freeze.py` | 旧式自检 42 首中 **20 首非零**（缺陷 #6 证实）；奇数 C = **0**；unexplained 4/31/33；三候选规则**无清零**；**Main 精确复现 43/291/3840**；划分 train 26/val 6/test 9 组（EV-S23–S26） |\n| 2026-10-07 | R1-3i 导出侧交付 1–4 | `musescore_export_probe.py --positive 68 --negative 3 --force` + `pedal_export_audit.py` | **68/68 导出成功；负对照 3/3 为 0 CC64**；五格 Tier = OK 42 / T1 0 / T2(含T2b) 13 / T3 13 / T4 0；**裁定5 = 71/71 逐值一致**；P5 = 0.91485(R-7) / 0.8837(nearest_rank)（EV-S19–S22） |

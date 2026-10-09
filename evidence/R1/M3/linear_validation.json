@@ -1,0 +1,234 @@
+{
+  "dataset_version": "m3-linear-v1",
+  "status": "passed",
+  "manifest_sha256": "cf8aec0987d3c772d79b278262d8abd5c749242aca8463b0e717540e5fc3ffd2",
+  "checks": [
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "data/derived/m3/linear/linear_dataset.npz"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "data/derived/m3/linear/linear_runs.jsonl.gz"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "data/derived/m3/linear/linear_predictions.jsonl.gz"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/linear/linear_model.json"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/linear/linear_summary.json"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/linear/linear_data_summary.json"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/linear/linear_feature_schema.json"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/linear/linear_table.csv"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/linear/linear_per_class.csv"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/linear/linear_confusion.csv"
+    },
+    {
+      "id": "MANIFEST_OUTPUT_HASH",
+      "passed": true,
+      "detail": "results/E1/m3/linear/linear_cv.csv"
+    },
+    {
+      "id": "GENERATOR_HASH",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "FEATURE_SHAPE",
+      "passed": true,
+      "detail": "(764700, 53)"
+    },
+    {
+      "id": "FEATURE_FINITE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "LABEL_DOMAIN",
+      "passed": true,
+      "detail": "[-1, 0, 1, 2]"
+    },
+    {
+      "id": "RUN_COUNT",
+      "passed": true,
+      "detail": "271"
+    },
+    {
+      "id": "SCORE_COUNT",
+      "passed": true,
+      "detail": "36"
+    },
+    {
+      "id": "GROUP_DISJOINT_TRAIN_VAL",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "GROUP_DISJOINT_TRAIN_TEST",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "GROUP_DISJOINT_VAL_TEST",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "FOLD_RUNS",
+      "passed": true,
+      "detail": "{'train': 166, 'val': 28, 'test': 77}"
+    },
+    {
+      "id": "INCLUDED_COUNTS",
+      "passed": true,
+      "detail": "{'NONE': 742432, 'DOWN': 8135, 'UP': 7798}"
+    },
+    {
+      "id": "EXCLUDED_COUNTS_CHANGE",
+      "passed": true,
+      "detail": "{'CHANGE': 5982, 'DOWN': 353}"
+    },
+    {
+      "id": "EXCLUDED_SUM",
+      "passed": true,
+      "detail": "{'CHANGE': 5982, 'DOWN': 353}"
+    },
+    {
+      "id": "V1_PASS",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "FEATURE_SOURCE_LEAK_EMPTY",
+      "passed": true,
+      "detail": "{}"
+    },
+    {
+      "id": "FEATURE_SCHEMA_NO_LEAK",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "MODEL_COEF_SHAPE",
+      "passed": true,
+      "detail": "[53, 53, 53]"
+    },
+    {
+      "id": "SCALER_SHAPE",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "SELECTED_C_MATCH",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "id": "PREDICTION_ROWS",
+      "passed": true,
+      "detail": "758365 vs 758365"
+    },
+    {
+      "id": "METRIC_train",
+      "passed": true,
+      "detail": "recomputed=0.6874564967925203/0.29947025456677734"
+    },
+    {
+      "id": "METRIC_val",
+      "passed": true,
+      "detail": "recomputed=0.7316164383561644/0.2900833396626792"
+    },
+    {
+      "id": "METRIC_test",
+      "passed": true,
+      "detail": "recomputed=0.635120563231345/0.3460285512858288"
+    },
+    {
+      "id": "METRIC_full",
+      "passed": true,
+      "detail": "recomputed=0.6702735490166345/0.32159735684957763"
+    }
+  ],
+  "failures": [],
+  "summary": {
+    "runs": 271,
+    "scores": 36,
+    "rows": 764700,
+    "included_rows": 758365,
+    "excluded_rows": 6335,
+    "selected_C": 10.0,
+    "test": {
+      "micro_f1": 0.635120563231345,
+      "macro_f1": 0.3460285512858288,
+      "accuracy": 0.635120563231345,
+      "n": 287484,
+      "per_class": {
+        "NONE": {
+          "precision": 0.9952910152571106,
+          "recall": 0.6323645673917301,
+          "f1": 0.7733660351751773,
+          "support": 275746
+        },
+        "DOWN": {
+          "precision": 0.07857622565480188,
+          "recall": 0.7186035235170519,
+          "f1": 0.14166228552310853,
+          "support": 6187
+        },
+        "UP": {
+          "precision": 0.06765999461448703,
+          "recall": 0.6789767609439741,
+          "f1": 0.12305733315920073,
+          "support": 5551
+        }
+      },
+      "confusion_matrix": [
+        [
+          174372,
+          51084,
+          50290
+        ],
+        [
+          95,
+          4446,
+          1646
+        ],
+        [
+          730,
+          1052,
+          3769
+        ]
+      ]
+    }
+  }
+}

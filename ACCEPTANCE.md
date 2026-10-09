@@ -84,3 +84,15 @@
 | AC-M2-7 | 相同显式参数重跑得到相同内容哈希 | tools/m2_repro_check.py | pass（4/4；EV-M2-3） |
 | AC-M2-8 | 数据表交付 Table 1、scores/folds、excluded anchors 审计表 | results/E1/m2 的 table1/scores/folds/excluded | pass（EV-M2-1） |
 | AC-M2-9 | 通过 LangGraph 控制平面执行并完成 candidate→verified、人工确认 | evidence/R1/M2/m2_control_plane_record.json | pass（alignment=aligned；WP=done；EV-M2-4） |
+
+## M3.1 三分类线性前置层（2026-10-10）
+
+| ID | 验收标准 | 判定方法 | 结果 |
+|:--|:--|:--|:--|
+| AC-M3L-1 | 只使用 36 首 / 271 supervised runs；CHANGE 与 ambiguous 不进入三分类训练，不做静默映射 | validator 的 RUN/INCLUDED/EXCLUDED checks | pass（included 758,365；excluded 6,335 CHANGE；EV-M3L-2） |
+| AC-M3L-2 | 特征 53 列来自允许的 A/B/C 空间；无印刷 pedal 派生特征；V1 剥离 pedal 后 B 特征逐值一致 | data summary + validator FEATURE_SOURCE/V1 checks | pass（feature_source_leak={}；V1_pass=true；EV-M3L-1/2） |
+| AC-M3L-3 | 模型选择只在 train 折内按 score group CV；test 只在选择完成后评估一次 | summary selection / CV / domains | pass（选中 C=10.0；EV-M3L-1） |
+| AC-M3L-4 | 报告 micro/macro + NONE/DOWN/UP 分标签 P/R/F1 + 混淆矩阵 | linear_per_class.csv / linear_confusion.csv | pass（test micro 0.63512 / macro 0.34603；EV-M3L-1） |
+| AC-M3L-5 | 独立 validator 能从 predictions 复算全部指标并核对 mask、折隔离、模型形状与 hash | tools/m3_validate_linear.py | pass（35 checks，0 failures；EV-M3L-2） |
+| AC-M3L-6 | 相同输入二次运行得到相同模型/输出内容语义；通过 LangGraph candidate→verified | m3_repro_check.py + m3_control_plane_record.json | pass（repro 11/11；三条命令 verified；EV-M3L-3/4） |
+| AC-M3L-7 | 本层仅作序列模型前置条件，不把线性结果写成最终 S2 模型 | 对照 D-0089 与 EVIDENCE 边界 | pass（下一步为小型 BiLSTM-CRF；EV-M3L-5） |

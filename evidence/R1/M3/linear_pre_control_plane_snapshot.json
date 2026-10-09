@@ -1,0 +1,498 @@
+{
+  "dataset_version": "m3-linear-v1",
+  "outputs": {
+    "linear_model.json": "2daa499107d7dc99a4f47aa15f90530830a4b7a83771730a1d21b0d6a0204e91",
+    "linear_data_summary.json": "8d88e0f68dff9761838c2772bb51201bea5d34b7b7341861ddede327ca87a229",
+    "linear_feature_schema.json": "9e94472deedfcc312883a2ced2fe9d8270d7a8d4301f9ac47a72c61afb51cf65",
+    "linear_table.csv": "6ca389e5fcc46fedc1fa0f6cccc4bd2b6a7f1a7964cf6b08dcbccb009efee26b",
+    "linear_per_class.csv": "2cf342fa3ba45d91ef922f25b7d4984a2105248deacd014084275cef57148dbd",
+    "linear_confusion.csv": "16e1258e844b2b6e63a399a5477243c2905fe2fe5203e2f4c17c88ad9acfb730",
+    "linear_cv.csv": "149bc531c564fb5429cac5cd23c3552fd56a0211d5e6a9bbc3bee9447b0cd8fd"
+  },
+  "data_outputs": {
+    "linear_predictions.jsonl.gz": "e9855ee98c4643c866046f259742661a18a28040f167f7bbff78bda3757fa657",
+    "linear_runs.jsonl.gz": "3615e3067b8a90122d37e0b7e514a650a448f01c662e8701dbf19b6d6d509230"
+  },
+  "summary_semantic": {
+    "dataset_version": "m3-linear-v1",
+    "model_family": "regularized_multinomial_logistic_regression",
+    "selection": "train_only_score_group_cv",
+    "selected_C": 10.0,
+    "c_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "cv": [
+      {
+        "C": 0.1,
+        "fold": 1,
+        "n_train": 323986,
+        "n_val": 101270,
+        "macro_f1": 0.23996782597972943,
+        "micro_f1": 0.5328527698232448,
+        "class_f1_NONE": 0.6951061484208287,
+        "class_f1_DOWN": 0.02479732951835956,
+        "class_f1_UP": 0.0
+      },
+      {
+        "C": 0.1,
+        "fold": 2,
+        "n_train": 344074,
+        "n_val": 81182,
+        "macro_f1": 0.28052148582795455,
+        "micro_f1": 0.6576334655465498,
+        "class_f1_NONE": 0.793476392283487,
+        "class_f1_DOWN": 0.038203582647083796,
+        "class_f1_UP": 0.009884482553292842
+      },
+      {
+        "C": 0.1,
+        "fold": 3,
+        "n_train": 344502,
+        "n_val": 80754,
+        "macro_f1": 0.256090460446273,
+        "micro_f1": 0.6145577928028333,
+        "class_f1_NONE": 0.7612853687564787,
+        "class_f1_DOWN": 0.0029451137884872825,
+        "class_f1_UP": 0.004040898793852936
+      },
+      {
+        "C": 0.1,
+        "fold": 4,
+        "n_train": 344830,
+        "n_val": 80426,
+        "macro_f1": 0.31665941509115597,
+        "micro_f1": 0.7595802352473081,
+        "class_f1_NONE": 0.8657794269811253,
+        "class_f1_DOWN": 0.04927408710954685,
+        "class_f1_UP": 0.034924731182795696
+      },
+      {
+        "C": 0.1,
+        "fold": 5,
+        "n_train": 343632,
+        "n_val": 81624,
+        "macro_f1": 0.2714265503117827,
+        "micro_f1": 0.6232235616975399,
+        "class_f1_NONE": 0.7672256653299308,
+        "class_f1_DOWN": 0.027837101406583697,
+        "class_f1_UP": 0.019216884198833658
+      },
+      {
+        "C": 1.0,
+        "fold": 1,
+        "n_train": 323986,
+        "n_val": 101270,
+        "macro_f1": 0.23995463858674512,
+        "micro_f1": 0.5328132714525525,
+        "class_f1_NONE": 0.6950724974050506,
+        "class_f1_DOWN": 0.024791418355184745,
+        "class_f1_UP": 0.0
+      },
+      {
+        "C": 1.0,
+        "fold": 2,
+        "n_train": 344074,
+        "n_val": 81182,
+        "macro_f1": 0.28013479359817794,
+        "micro_f1": 0.656845113448794,
+        "class_f1_NONE": 0.7929110895087116,
+        "class_f1_DOWN": 0.037487335359675786,
+        "class_f1_UP": 0.010005955926146516
+      },
+      {
+        "C": 1.0,
+        "fold": 3,
+        "n_train": 344502,
+        "n_val": 80754,
+        "macro_f1": 0.2562399240968052,
+        "micro_f1": 0.6148426084156822,
+        "class_f1_NONE": 0.7614792295231734,
+        "class_f1_DOWN": 0.0031135779071341544,
+        "class_f1_UP": 0.004126964860108029
+      },
+      {
+        "C": 1.0,
+        "fold": 4,
+        "n_train": 344830,
+        "n_val": 80426,
+        "macro_f1": 0.31728414965373075,
+        "micro_f1": 0.7601894909606346,
+        "class_f1_NONE": 0.8661026379991725,
+        "class_f1_DOWN": 0.050011213276519396,
+        "class_f1_UP": 0.03573859768550034
+      },
+      {
+        "C": 1.0,
+        "fold": 5,
+        "n_train": 343632,
+        "n_val": 81624,
+        "macro_f1": 0.2711882156192518,
+        "micro_f1": 0.6224639811820053,
+        "class_f1_NONE": 0.7666448838163554,
+        "class_f1_DOWN": 0.027694336581434536,
+        "class_f1_UP": 0.01922542645996555
+      },
+      {
+        "C": 10.0,
+        "fold": 1,
+        "n_train": 323986,
+        "n_val": 101270,
+        "macro_f1": 0.2399462254531294,
+        "micro_f1": 0.5327836476745335,
+        "class_f1_NONE": 0.6950472580042035,
+        "class_f1_DOWN": 0.024791418355184745,
+        "class_f1_UP": 0.0
+      },
+      {
+        "C": 10.0,
+        "fold": 2,
+        "n_train": 344074,
+        "n_val": 81182,
+        "macro_f1": 0.2802111457750209,
+        "micro_f1": 0.6565494814121356,
+        "class_f1_NONE": 0.7926582998010501,
+        "class_f1_DOWN": 0.03783738333473472,
+        "class_f1_UP": 0.010137754189277834
+      },
+      {
+        "C": 10.0,
+        "fold": 3,
+        "n_train": 344502,
+        "n_val": 80754,
+        "macro_f1": 0.25615831646367715,
+        "micro_f1": 0.6146692423904698,
+        "class_f1_NONE": 0.7613556094714535,
+        "class_f1_DOWN": 0.003093476798924008,
+        "class_f1_UP": 0.004025863120653898
+      },
+      {
+        "C": 10.0,
+        "fold": 4,
+        "n_train": 344830,
+        "n_val": 80426,
+        "macro_f1": 0.3179324416683587,
+        "micro_f1": 0.760699276353418,
+        "class_f1_NONE": 0.8663714100287412,
+        "class_f1_DOWN": 0.05114857983478556,
+        "class_f1_UP": 0.03627733514154941
+      },
+      {
+        "C": 10.0,
+        "fold": 5,
+        "n_train": 343632,
+        "n_val": 81624,
+        "macro_f1": 0.2712945783766781,
+        "micro_f1": 0.6228192688424973,
+        "class_f1_NONE": 0.7669166077899583,
+        "class_f1_DOWN": 0.02772887323943662,
+        "class_f1_UP": 0.01923825410063942
+      }
+    ],
+    "domains": {
+      "train": {
+        "micro_f1": 0.6874564967925203,
+        "macro_f1": 0.29947025456677734,
+        "accuracy": 0.6874564967925203,
+        "n": 425256,
+        "per_class": {
+          "NONE": {
+            "precision": 0.9981066419277075,
+            "recall": 0.6871293240580261,
+            "f1": 0.8139255938612193,
+            "support": 421190
+          },
+          "DOWN": {
+            "precision": 0.022955637007077857,
+            "recall": 0.7671594508975713,
+            "f1": 0.044577389170118116,
+            "support": 1894
+          },
+          "UP": {
+            "precision": 0.020555841053347963,
+            "recall": 0.6813996316758748,
+            "f1": 0.03990778066899462,
+            "support": 2172
+          }
+        },
+        "confusion_matrix": [
+          [
+            289412,
+            61468,
+            70310
+          ],
+          [
+            232,
+            1453,
+            209
+          ],
+          [
+            317,
+            375,
+            1480
+          ]
+        ]
+      },
+      "val": {
+        "micro_f1": 0.7316164383561644,
+        "macro_f1": 0.2900833396626792,
+        "accuracy": 0.7316164383561644,
+        "n": 45625,
+        "per_class": {
+          "NONE": {
+            "precision": 0.9995200671905933,
+            "recall": 0.7324160365746439,
+            "f1": 0.8453712865007484,
+            "support": 45496
+          },
+          "DOWN": {
+            "precision": 0.008695652173913044,
+            "recall": 0.2962962962962963,
+            "f1": 0.01689545934530095,
+            "support": 54
+          },
+          "UP": {
+            "precision": 0.004020292907054657,
+            "recall": 0.56,
+            "f1": 0.007983273141988215,
+            "support": 75
+          }
+        },
+        "confusion_matrix": [
+          [
+            33322,
+            1806,
+            10368
+          ],
+          [
+            1,
+            16,
+            37
+          ],
+          [
+            15,
+            18,
+            42
+          ]
+        ]
+      },
+      "test": {
+        "micro_f1": 0.635120563231345,
+        "macro_f1": 0.3460285512858288,
+        "accuracy": 0.635120563231345,
+        "n": 287484,
+        "per_class": {
+          "NONE": {
+            "precision": 0.9952910152571106,
+            "recall": 0.6323645673917301,
+            "f1": 0.7733660351751773,
+            "support": 275746
+          },
+          "DOWN": {
+            "precision": 0.07857622565480188,
+            "recall": 0.7186035235170519,
+            "f1": 0.14166228552310853,
+            "support": 6187
+          },
+          "UP": {
+            "precision": 0.06765999461448703,
+            "recall": 0.6789767609439741,
+            "f1": 0.12305733315920073,
+            "support": 5551
+          }
+        },
+        "confusion_matrix": [
+          [
+            174372,
+            51084,
+            50290
+          ],
+          [
+            95,
+            4446,
+            1646
+          ],
+          [
+            730,
+            1052,
+            3769
+          ]
+        ]
+      },
+      "full": {
+        "micro_f1": 0.6702735490166345,
+        "macro_f1": 0.32159735684957763,
+        "accuracy": 0.6702735490166345,
+        "n": 758365,
+        "per_class": {
+          "NONE": {
+            "precision": 0.9972116125304917,
+            "recall": 0.6695643506745399,
+            "f1": 0.8011842749941979,
+            "support": 742432
+          },
+          "DOWN": {
+            "precision": 0.04859593486583743,
+            "recall": 0.7271051014136447,
+            "f1": 0.09110301648787475,
+            "support": 8135
+          },
+          "UP": {
+            "precision": 0.038298673190928764,
+            "recall": 0.6785073095665555,
+            "f1": 0.07250477906666027,
+            "support": 7798
+          }
+        },
+        "confusion_matrix": [
+          [
+            497106,
+            114358,
+            130968
+          ],
+          [
+            328,
+            5915,
+            1892
+          ],
+          [
+            1062,
+            1445,
+            5291
+          ]
+        ]
+      }
+    },
+    "data": {
+      "dataset_version": "m3-linear-v1",
+      "main_scores": 36,
+      "supervised_runs": 271,
+      "feature_count": 53,
+      "row_count": 764700,
+      "included_row_count": 758365,
+      "excluded_row_count": 6335,
+      "included_counts": {
+        "NONE": 742432,
+        "DOWN": 8135,
+        "UP": 7798
+      },
+      "excluded_counts": {
+        "CHANGE": 5982,
+        "DOWN": 353
+      },
+      "fold_run_counts": {
+        "train": 166,
+        "val": 28,
+        "test": 77
+      },
+      "v1_pass": true,
+      "v1_bad_scores": [],
+      "v1_results": {
+        "Beethoven/Piano_Sonatas/11-2/xml_score.musicxml": true,
+        "Beethoven/Piano_Sonatas/21-3/xml_score.musicxml": true,
+        "Beethoven/Piano_Sonatas/26-2/xml_score.musicxml": true,
+        "Beethoven/Piano_Sonatas/28-1/xml_score.musicxml": true,
+        "Beethoven/Piano_Sonatas/29-2/xml_score.musicxml": true,
+        "Beethoven/Piano_Sonatas/29-3/xml_score.musicxml": true,
+        "Beethoven/Piano_Sonatas/29-4/xml_score.musicxml": true,
+        "Chopin/Ballades/1/xml_score.musicxml": true,
+        "Chopin/Ballades/3/xml_score.musicxml": true,
+        "Chopin/Barcarolle/xml_score.musicxml": true,
+        "Chopin/Etudes_op_10/1/xml_score.musicxml": true,
+        "Chopin/Etudes_op_10/10/xml_score.musicxml": true,
+        "Chopin/Etudes_op_10/5/xml_score.musicxml": true,
+        "Chopin/Etudes_op_10/7/xml_score.musicxml": true,
+        "Chopin/Etudes_op_10/8/xml_score.musicxml": true,
+        "Chopin/Etudes_op_25/1/xml_score.musicxml": true,
+        "Chopin/Etudes_op_25/12/xml_score.musicxml": true,
+        "Chopin/Etudes_op_25/8/xml_score.musicxml": true,
+        "Chopin/Scherzos/20/xml_score.musicxml": true,
+        "Chopin/Scherzos/31/xml_score.musicxml": true,
+        "Chopin/Scherzos/39/xml_score.musicxml": true,
+        "Chopin/Sonata_2/1st_no_repeat/xml_score.musicxml": true,
+        "Chopin/Sonata_2/2nd_no_repeat/xml_score.musicxml": true,
+        "Chopin/Sonata_3/2nd/xml_score.musicxml": true,
+        "Chopin/Sonata_3/3rd/xml_score.musicxml": true,
+        "Chopin/Sonata_3/4th/xml_score.musicxml": true,
+        "Debussy/Images_Book_1/1_Reflets_dans_lEau/xml_score.musicxml": true,
+        "Liszt/Ballade_2/xml_score.musicxml": true,
+        "Liszt/Gran_Etudes_de_Paganini/2_La_campanella/xml_score.musicxml": true,
+        "Liszt/Transcendental_Etudes/10/xml_score.musicxml": true,
+        "Liszt/Transcendental_Etudes/5/xml_score.musicxml": true,
+        "Ravel/Pavane/xml_score.musicxml": true,
+        "Schumann/Kreisleriana/4/xml_score.musicxml": true,
+        "Schumann/Kreisleriana/6/xml_score.musicxml": true,
+        "Scriabin/Etudes_op_8/11/xml_score.musicxml": true,
+        "Scriabin/Sonatas/5/xml_score.musicxml": true
+      },
+      "feature_sources": {
+        "cc64_on": "round_b_features.midi_cc64_features",
+        "d_press_beats": "round_b_features.midi_cc64_features",
+        "d_release_beats": "round_b_features.midi_cc64_features",
+        "cc64_depth": "round_b_features.midi_cc64_features",
+        "cc64_depth_mean_win": "round_b_features.midi_cc64_features",
+        "has_press_win": "round_b_features.midi_cc64_features",
+        "has_release_win": "round_b_features.midi_cc64_features",
+        "is_chord_bass": "round_b_features.score_note_features",
+        "delta_bass_pc": "round_b_features.score_note_features",
+        "delta_pcs_card": "round_b_features.score_note_features",
+        "crosses_barlines": "round_b_features.score_note_features",
+        "pos_in_measure_beats": "round_b_features.score_note_features",
+        "bars_since_last_down": "round_b_features.cc64_down_history",
+        "c1_is_chord_bass_off-4": "round_b_features.shifted_score_note_features",
+        "c1_is_chord_bass_off-3": "round_b_features.shifted_score_note_features",
+        "c1_is_chord_bass_off-2": "round_b_features.shifted_score_note_features",
+        "c1_is_chord_bass_off-1": "round_b_features.shifted_score_note_features",
+        "c1_is_chord_bass_off+0": "round_b_features.shifted_score_note_features",
+        "c1_is_chord_bass_off+1": "round_b_features.shifted_score_note_features",
+        "c1_is_chord_bass_off+2": "round_b_features.shifted_score_note_features",
+        "c1_is_chord_bass_off+3": "round_b_features.shifted_score_note_features",
+        "c1_delta_bass_pc_off-4": "round_b_features.shifted_score_note_features",
+        "c1_delta_bass_pc_off-3": "round_b_features.shifted_score_note_features",
+        "c1_delta_bass_pc_off-2": "round_b_features.shifted_score_note_features",
+        "c1_delta_bass_pc_off-1": "round_b_features.shifted_score_note_features",
+        "c1_delta_bass_pc_off+0": "round_b_features.shifted_score_note_features",
+        "c1_delta_bass_pc_off+1": "round_b_features.shifted_score_note_features",
+        "c1_delta_bass_pc_off+2": "round_b_features.shifted_score_note_features",
+        "c1_delta_bass_pc_off+3": "round_b_features.shifted_score_note_features",
+        "c1_delta_pcs_card_off-4": "round_b_features.shifted_score_note_features",
+        "c1_delta_pcs_card_off-3": "round_b_features.shifted_score_note_features",
+        "c1_delta_pcs_card_off-2": "round_b_features.shifted_score_note_features",
+        "c1_delta_pcs_card_off-1": "round_b_features.shifted_score_note_features",
+        "c1_delta_pcs_card_off+0": "round_b_features.shifted_score_note_features",
+        "c1_delta_pcs_card_off+1": "round_b_features.shifted_score_note_features",
+        "c1_delta_pcs_card_off+2": "round_b_features.shifted_score_note_features",
+        "c1_delta_pcs_card_off+3": "round_b_features.shifted_score_note_features",
+        "c1_crosses_barlines_off-4": "round_b_features.shifted_score_note_features",
+        "c1_crosses_barlines_off-3": "round_b_features.shifted_score_note_features",
+        "c1_crosses_barlines_off-2": "round_b_features.shifted_score_note_features",
+        "c1_crosses_barlines_off-1": "round_b_features.shifted_score_note_features",
+        "c1_crosses_barlines_off+0": "round_b_features.shifted_score_note_features",
+        "c1_crosses_barlines_off+1": "round_b_features.shifted_score_note_features",
+        "c1_crosses_barlines_off+2": "round_b_features.shifted_score_note_features",
+        "c1_crosses_barlines_off+3": "round_b_features.shifted_score_note_features",
+        "c1_pos_in_measure_beats_off-4": "round_b_features.shifted_score_note_features",
+        "c1_pos_in_measure_beats_off-3": "round_b_features.shifted_score_note_features",
+        "c1_pos_in_measure_beats_off-2": "round_b_features.shifted_score_note_features",
+        "c1_pos_in_measure_beats_off-1": "round_b_features.shifted_score_note_features",
+        "c1_pos_in_measure_beats_off+0": "round_b_features.shifted_score_note_features",
+        "c1_pos_in_measure_beats_off+1": "round_b_features.shifted_score_note_features",
+        "c1_pos_in_measure_beats_off+2": "round_b_features.shifted_score_note_features",
+        "c1_pos_in_measure_beats_off+3": "round_b_features.shifted_score_note_features"
+      },
+      "feature_source_leak": {},
+      "label_map": {
+        "NONE": 0,
+        "DOWN": 1,
+        "UP": 2
+      }
+    },
+    "generator_sha256": "5994bd96771200ff57ebf290818dc104a2b10b59d2f7b4f111df6f6c26ed5281"
+  },
+  "npz_semantic": {
+    "X": "03821d67ffd1f55c9b41f5eb72372194d615cbf42d4c337c870f903c8155f5ad",
+    "y": "3dacf5119a5d4b83646c234ef0032c8ddc1a2ed9c96dd97264e557857c2fbde9",
+    "offsets": "3b2efc1709e49f3b00bea7904409c9771669816d928f0608b6403b4e0eb74214"
+  }
+}

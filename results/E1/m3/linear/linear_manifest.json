@@ -1,0 +1,62 @@
+{
+  "dataset_version": "m3-linear-v1",
+  "generator": {
+    "path": "tools/m3_linear_baseline.py",
+    "sha256": "5994bd96771200ff57ebf290818dc104a2b10b59d2f7b4f111df6f6c26ed5281"
+  },
+  "inputs": {
+    "dataset": "data/asap-dataset",
+    "split": "evidence/R1/G1-split/split_v1.json",
+    "split_raw_sha256": "e7cef67db88391676c267bbe49f6a66b5d17fed2ad2a49d4b72fdfdf4b620024",
+    "m2_labels": "data/derived/m2/score_labels.jsonl.gz",
+    "m2_labels_sha256": "057c6aaa3eca9c3d72292718a38270be60ccf53cebbe0a17ec56c9400efbc688",
+    "m2_runs": "data/derived/m2/run_masks.jsonl.gz",
+    "m2_runs_sha256": "97a1e2b271c33b10417d948a2249429af180a3a97a30e28d291a88dea7839718"
+  },
+  "rules": {
+    "domain": "36 M2 supervised scores / 271 runs",
+    "classes": [
+      "NONE",
+      "DOWN",
+      "UP"
+    ],
+    "change_policy": "M2 supervision_mask=0 rows excluded; no remap",
+    "selection": "train_only_score_group_cv",
+    "features": "round_b_features A/B/C, no printed-pedal-derived features",
+    "replay_loss": false
+  },
+  "outputs": {
+    "data/derived/m3/linear/linear_dataset.npz": "1a3e95a861a00b11966627abcdc57362d5163d47a64f2e19bfd6ddd91bd552ec",
+    "data/derived/m3/linear/linear_runs.jsonl.gz": "3615e3067b8a90122d37e0b7e514a650a448f01c662e8701dbf19b6d6d509230",
+    "data/derived/m3/linear/linear_predictions.jsonl.gz": "e9855ee98c4643c866046f259742661a18a28040f167f7bbff78bda3757fa657",
+    "results/E1/m3/linear/linear_model.json": "2daa499107d7dc99a4f47aa15f90530830a4b7a83771730a1d21b0d6a0204e91",
+    "results/E1/m3/linear/linear_summary.json": "713204c58ab26872c9eacb3d23ffea4203769604ef0b06745df3bea5393c1626",
+    "results/E1/m3/linear/linear_data_summary.json": "8d88e0f68dff9761838c2772bb51201bea5d34b7b7341861ddede327ca87a229",
+    "results/E1/m3/linear/linear_feature_schema.json": "9e94472deedfcc312883a2ced2fe9d8270d7a8d4301f9ac47a72c61afb51cf65",
+    "results/E1/m3/linear/linear_table.csv": "6ca389e5fcc46fedc1fa0f6cccc4bd2b6a7f1a7964cf6b08dcbccb009efee26b",
+    "results/E1/m3/linear/linear_per_class.csv": "2cf342fa3ba45d91ef922f25b7d4984a2105248deacd014084275cef57148dbd",
+    "results/E1/m3/linear/linear_confusion.csv": "16e1258e844b2b6e63a399a5477243c2905fe2fe5203e2f4c17c88ad9acfb730",
+    "results/E1/m3/linear/linear_cv.csv": "149bc531c564fb5429cac5cd23c3552fd56a0211d5e6a9bbc3bee9447b0cd8fd"
+  },
+  "counts": {
+    "runs": 271,
+    "scores": 36,
+    "rows": 764700,
+    "included_rows": 758365,
+    "excluded_rows": 6335,
+    "included_counts": {
+      "NONE": 742432,
+      "DOWN": 8135,
+      "UP": 7798
+    },
+    "excluded_counts": {
+      "CHANGE": 5982,
+      "DOWN": 353
+    },
+    "selected_C": 10.0
+  },
+  "environment": {
+    "python_version": "3.14.6",
+    "platform": "Windows-11-10.0.22631-SP0"
+  }
+}

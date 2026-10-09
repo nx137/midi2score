@@ -1,0 +1,432 @@
+{
+  "run_id": "m3-linear-20261010",
+  "thread_id": "research:midi2score:M3-LINEAR-m3-linear-20261010",
+  "checkpoint_db": "E:\\midi2score\\data\\m3_linear_control_plane_m3-linear-20261010.db",
+  "store_db": "E:\\midi2score\\data\\m3_linear_control_plane_m3-linear-20261010_store.db",
+  "approved": true,
+  "current_phase": "reviewed",
+  "alignment": {
+    "id": "AL",
+    "created_at": "2026-10-09T16:06:23+00:00",
+    "verdict": "aligned",
+    "violates": [],
+    "issues": [],
+    "needs_user_confirmation": false,
+    "rationale": "work package is within the Goal Contract",
+    "contract_sha256": "2f1c7f5e29d2e975b605e24d71962cb744da48471e188ac3107139f93136161e"
+  },
+  "verification": {
+    "id": "VR",
+    "created_at": "2026-10-09T16:06:23+00:00",
+    "passed": true,
+    "issues": [],
+    "reason_codes": [],
+    "charter_sha256": "f261f8bd66957e815b8a0af390766c4549a4295218713a5584d2fbf7ad947164",
+    "contract_sha256": "2f1c7f5e29d2e975b605e24d71962cb744da48471e188ac3107139f93136161e"
+  },
+  "work_package": {
+    "id": "WP-M3-LINEAR",
+    "created_at": "2026-10-09T16:00:37+00:00",
+    "goal": "在 M2 三分类监督域上训练正则化线性 baseline，验证标签、mask、特征隔离、折隔离和可复现性作为序列模型前置条件",
+    "status": "done",
+    "outputs": [
+      "results/E1/m3/linear/linear_summary.json",
+      "evidence/R1/M3/linear_validation.json",
+      "evidence/R1/M3/linear_repro_check.json"
+    ],
+    "verification": null,
+    "phase": "execute",
+    "goal_refs": [
+      "GOAL-1"
+    ],
+    "constraint_refs": [
+      "HC-01",
+      "HC-08",
+      "HC-11",
+      "HC-13",
+      "HC-18"
+    ],
+    "decision_refs": [
+      "D-0059",
+      "D-0081",
+      "D-0082",
+      "D-0089"
+    ],
+    "acceptance_refs": [],
+    "allowed_tools": [
+      "python"
+    ],
+    "commands": [
+      {
+        "argv": [
+          "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+          "tools/m3_linear_baseline.py",
+          "--dataset",
+          "data\\asap-dataset",
+          "--split",
+          "evidence\\R1\\G1-split\\split_v1.json",
+          "--m2-labels",
+          "data\\derived\\m2\\score_labels.jsonl.gz",
+          "--m2-runs",
+          "data\\derived\\m2\\run_masks.jsonl.gz",
+          "--out-dir",
+          "results/E1/m3/linear",
+          "--data-out",
+          "data/derived/m3/linear",
+          "--c-grid",
+          "0.1,1.0,10.0",
+          "--seed",
+          "20260101"
+        ],
+        "cwd": ".",
+        "timeout_seconds": 1800,
+        "expected_outputs": [
+          "data/derived/m3/linear/linear_dataset.npz",
+          "data/derived/m3/linear/linear_runs.jsonl.gz",
+          "data/derived/m3/linear/linear_predictions.jsonl.gz",
+          "results/E1/m3/linear/linear_model.json",
+          "results/E1/m3/linear/linear_summary.json",
+          "results/E1/m3/linear/linear_data_summary.json",
+          "results/E1/m3/linear/linear_feature_schema.json",
+          "results/E1/m3/linear/linear_table.csv",
+          "results/E1/m3/linear/linear_per_class.csv",
+          "results/E1/m3/linear/linear_confusion.csv",
+          "results/E1/m3/linear/linear_cv.csv",
+          "results/E1/m3/linear/linear_manifest.json"
+        ],
+        "description": "train M3.1 three-class regularized linear baseline",
+        "network": false,
+        "writes": [
+          "data/derived/m3/linear/linear_dataset.npz",
+          "data/derived/m3/linear/linear_runs.jsonl.gz",
+          "data/derived/m3/linear/linear_predictions.jsonl.gz",
+          "results/E1/m3/linear/linear_model.json",
+          "results/E1/m3/linear/linear_summary.json",
+          "results/E1/m3/linear/linear_data_summary.json",
+          "results/E1/m3/linear/linear_feature_schema.json",
+          "results/E1/m3/linear/linear_table.csv",
+          "results/E1/m3/linear/linear_per_class.csv",
+          "results/E1/m3/linear/linear_confusion.csv",
+          "results/E1/m3/linear/linear_cv.csv",
+          "results/E1/m3/linear/linear_manifest.json"
+        ]
+      },
+      {
+        "argv": [
+          "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+          "tools/m3_validate_linear.py",
+          "--results-dir",
+          "results/E1/m3/linear",
+          "--data-dir",
+          "data/derived/m3/linear",
+          "--out",
+          "evidence/R1/M3/linear_validation.json"
+        ],
+        "cwd": ".",
+        "timeout_seconds": 1800,
+        "expected_outputs": [
+          "evidence/R1/M3/linear_validation.json",
+          "evidence/R1/M3/linear_validation.md"
+        ],
+        "description": "independently validate M3.1 linear baseline",
+        "network": false,
+        "writes": [
+          "evidence/R1/M3/linear_validation.json",
+          "evidence/R1/M3/linear_validation.md"
+        ]
+      },
+      {
+        "argv": [
+          "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+          "tools/m3_repro_check.py",
+          "--results-dir",
+          "results/E1/m3/linear",
+          "--data-dir",
+          "data/derived/m3/linear",
+          "--check",
+          "evidence/R1/M3/linear_pre_control_plane_snapshot.json",
+          "--out",
+          "evidence/R1/M3/linear_repro_check.json"
+        ],
+        "cwd": ".",
+        "timeout_seconds": 1800,
+        "expected_outputs": [
+          "evidence/R1/M3/linear_repro_check.json",
+          "evidence/R1/M3/linear_repro_check.md"
+        ],
+        "description": "compare controlled rerun against pre-control-plane M3 snapshot",
+        "network": false,
+        "writes": [
+          "evidence/R1/M3/linear_repro_check.json",
+          "evidence/R1/M3/linear_repro_check.md"
+        ]
+      }
+    ],
+    "expected_outputs": [
+      "data/derived/m3/linear/linear_dataset.npz",
+      "data/derived/m3/linear/linear_runs.jsonl.gz",
+      "data/derived/m3/linear/linear_predictions.jsonl.gz",
+      "results/E1/m3/linear/linear_model.json",
+      "results/E1/m3/linear/linear_summary.json",
+      "results/E1/m3/linear/linear_data_summary.json",
+      "results/E1/m3/linear/linear_feature_schema.json",
+      "results/E1/m3/linear/linear_table.csv",
+      "results/E1/m3/linear/linear_per_class.csv",
+      "results/E1/m3/linear/linear_confusion.csv",
+      "results/E1/m3/linear/linear_cv.csv",
+      "results/E1/m3/linear/linear_manifest.json",
+      "evidence/R1/M3/linear_validation.json",
+      "evidence/R1/M3/linear_validation.md",
+      "evidence/R1/M3/linear_repro_check.json",
+      "evidence/R1/M3/linear_repro_check.md"
+    ]
+  },
+  "execution_records": {
+    "RUN-WP-M3-LINEAR-1": {
+      "id": "RUN-WP-M3-LINEAR-1",
+      "created_at": "2026-10-09T16:06:17+00:00",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_linear_baseline.py --dataset data\\asap-dataset --split evidence\\R1\\G1-split\\split_v1.json --m2-labels data\\derived\\m2\\score_labels.jsonl.gz --m2-runs data\\derived\\m2\\run_masks.jsonl.gz --out-dir results/E1/m3/linear --data-out data/derived/m3/linear --c-grid 0.1,1.0,10.0 --seed 20260101",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_linear_baseline.py",
+        "--dataset",
+        "data\\asap-dataset",
+        "--split",
+        "evidence\\R1\\G1-split\\split_v1.json",
+        "--m2-labels",
+        "data\\derived\\m2\\score_labels.jsonl.gz",
+        "--m2-runs",
+        "data\\derived\\m2\\run_masks.jsonl.gz",
+        "--out-dir",
+        "results/E1/m3/linear",
+        "--data-out",
+        "data/derived/m3/linear",
+        "--c-grid",
+        "0.1,1.0,10.0",
+        "--seed",
+        "20260101"
+      ],
+      "cwd": "E:\\midi2score",
+      "timeout_seconds": 1800,
+      "started_at": "2026-10-09T16:00:37+00:00",
+      "ended_at": "2026-10-09T16:06:17+00:00",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"ok\", \"runs\": 271, \"scores\": 36, \"rows\": 764700, \"included_rows\": 758365, \"excluded_rows\": 6335, \"selected_C\": 10.0, \"test_micro_f1\": 0.635120563231345, \"test_macro_f1\": 0.3460285512858288, \"v1_pass\": true, \"feature_source_leak\": {}, \"wall_clock_sec\": 332.979}\n",
+      "stderr": "",
+      "stdout_sha256": "95c17a95860076d4e7a3733bb0f395e787357cadb31fe29a3073c3e3ba5fbadd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "data\\derived\\m3\\linear\\linear_dataset.npz": "1a3e95a861a00b11966627abcdc57362d5163d47a64f2e19bfd6ddd91bd552ec",
+        "data\\derived\\m3\\linear\\linear_runs.jsonl.gz": "3615e3067b8a90122d37e0b7e514a650a448f01c662e8701dbf19b6d6d509230",
+        "data\\derived\\m3\\linear\\linear_predictions.jsonl.gz": "e9855ee98c4643c866046f259742661a18a28040f167f7bbff78bda3757fa657",
+        "results\\E1\\m3\\linear\\linear_model.json": "2daa499107d7dc99a4f47aa15f90530830a4b7a83771730a1d21b0d6a0204e91",
+        "results\\E1\\m3\\linear\\linear_summary.json": "713204c58ab26872c9eacb3d23ffea4203769604ef0b06745df3bea5393c1626",
+        "results\\E1\\m3\\linear\\linear_data_summary.json": "8d88e0f68dff9761838c2772bb51201bea5d34b7b7341861ddede327ca87a229",
+        "results\\E1\\m3\\linear\\linear_feature_schema.json": "9e94472deedfcc312883a2ced2fe9d8270d7a8d4301f9ac47a72c61afb51cf65",
+        "results\\E1\\m3\\linear\\linear_table.csv": "6ca389e5fcc46fedc1fa0f6cccc4bd2b6a7f1a7964cf6b08dcbccb009efee26b",
+        "results\\E1\\m3\\linear\\linear_per_class.csv": "2cf342fa3ba45d91ef922f25b7d4984a2105248deacd014084275cef57148dbd",
+        "results\\E1\\m3\\linear\\linear_confusion.csv": "16e1258e844b2b6e63a399a5477243c2905fe2fe5203e2f4c17c88ad9acfb730",
+        "results\\E1\\m3\\linear\\linear_cv.csv": "149bc531c564fb5429cac5cd23c3552fd56a0211d5e6a9bbc3bee9447b0cd8fd",
+        "results\\E1\\m3\\linear\\linear_manifest.json": "cf8aec0987d3c772d79b278262d8abd5c749242aca8463b0e717540e5fc3ffd2"
+      },
+      "source_hashes": {
+        "tools/m3_linear_baseline.py": "5994bd96771200ff57ebf290818dc104a2b10b59d2f7b4f111df6f6c26ed5281"
+      },
+      "timed_out": false
+    },
+    "RUN-WP-M3-LINEAR-2": {
+      "id": "RUN-WP-M3-LINEAR-2",
+      "created_at": "2026-10-09T16:06:22+00:00",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_validate_linear.py --results-dir results/E1/m3/linear --data-dir data/derived/m3/linear --out evidence/R1/M3/linear_validation.json",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_validate_linear.py",
+        "--results-dir",
+        "results/E1/m3/linear",
+        "--data-dir",
+        "data/derived/m3/linear",
+        "--out",
+        "evidence/R1/M3/linear_validation.json"
+      ],
+      "cwd": "E:\\midi2score",
+      "timeout_seconds": 1800,
+      "started_at": "2026-10-09T16:06:17+00:00",
+      "ended_at": "2026-10-09T16:06:22+00:00",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"checks\": 35, \"failures\": []}\n",
+      "stderr": "",
+      "stdout_sha256": "8efd606e0853ea950624b3e7796b28192b382aac238c8506a4e07fdb54bfff69",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "evidence\\R1\\M3\\linear_validation.json": "4727d0f7b4a7854ccf9895bca5eb28963e86ffb2dc9594b59349cb8bcff00909",
+        "evidence\\R1\\M3\\linear_validation.md": "56a4b6839bd994643eb791f7db8a5969383505bc055cc08391e2da0d9ec4ad23"
+      },
+      "source_hashes": {
+        "tools/m3_validate_linear.py": "5a3c0156778ccf60c0394780a474594239bbf7e1c423ec26c8477d8a31c62aae"
+      },
+      "timed_out": false
+    },
+    "RUN-WP-M3-LINEAR-3": {
+      "id": "RUN-WP-M3-LINEAR-3",
+      "created_at": "2026-10-09T16:06:23+00:00",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_repro_check.py --results-dir results/E1/m3/linear --data-dir data/derived/m3/linear --check evidence/R1/M3/linear_pre_control_plane_snapshot.json --out evidence/R1/M3/linear_repro_check.json",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_repro_check.py",
+        "--results-dir",
+        "results/E1/m3/linear",
+        "--data-dir",
+        "data/derived/m3/linear",
+        "--check",
+        "evidence/R1/M3/linear_pre_control_plane_snapshot.json",
+        "--out",
+        "evidence/R1/M3/linear_repro_check.json"
+      ],
+      "cwd": "E:\\midi2score",
+      "timeout_seconds": 1800,
+      "started_at": "2026-10-09T16:06:22+00:00",
+      "ended_at": "2026-10-09T16:06:23+00:00",
+      "exit_code": 0,
+      "stdout": "{\"status\": \"passed\", \"checks\": 11, \"failures\": []}\n",
+      "stderr": "",
+      "stdout_sha256": "a87d6a97159363f03aaede2bbf0f3ed91ee680f2fcd405c944d2c8e9c8b13701",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "evidence\\R1\\M3\\linear_repro_check.json": "b2ef43e48981bf58c28d0ed83ea6511f236b455df177ceca6f5d2d3854a5f98f",
+        "evidence\\R1\\M3\\linear_repro_check.md": "e53611746147dd208736963985c892f8e902837bb68744716d9c9f6ad67f9051"
+      },
+      "source_hashes": {
+        "tools/m3_repro_check.py": "1d3802c27b983dd4cb7f09bacbc5cbcd79bf97eb2a9ee63e698c02d6acf648e1"
+      },
+      "timed_out": false
+    }
+  },
+  "evidence": {
+    "EV-RUN-WP-M3-LINEAR-1": {
+      "id": "EV-RUN-WP-M3-LINEAR-1",
+      "created_at": "2026-10-09T16:06:17+00:00",
+      "kind": "experiment",
+      "locator": "command:RUN-WP-M3-LINEAR-1",
+      "status": "verified",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_linear_baseline.py --dataset data\\asap-dataset --split evidence\\R1\\G1-split\\split_v1.json --m2-labels data\\derived\\m2\\score_labels.jsonl.gz --m2-runs data\\derived\\m2\\run_masks.jsonl.gz --out-dir results/E1/m3/linear --data-out data/derived/m3/linear --c-grid 0.1,1.0,10.0 --seed 20260101",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_linear_baseline.py",
+        "--dataset",
+        "data\\asap-dataset",
+        "--split",
+        "evidence\\R1\\G1-split\\split_v1.json",
+        "--m2-labels",
+        "data\\derived\\m2\\score_labels.jsonl.gz",
+        "--m2-runs",
+        "data\\derived\\m2\\run_masks.jsonl.gz",
+        "--out-dir",
+        "results/E1/m3/linear",
+        "--data-out",
+        "data/derived/m3/linear",
+        "--c-grid",
+        "0.1,1.0,10.0",
+        "--seed",
+        "20260101"
+      ],
+      "cwd": "E:\\midi2score",
+      "exit_code": 0,
+      "started_at": "2026-10-09T16:00:37+00:00",
+      "ended_at": "2026-10-09T16:06:17+00:00",
+      "stdout_sha256": "95c17a95860076d4e7a3733bb0f395e787357cadb31fe29a3073c3e3ba5fbadd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "data\\derived\\m3\\linear\\linear_dataset.npz": "1a3e95a861a00b11966627abcdc57362d5163d47a64f2e19bfd6ddd91bd552ec",
+        "data\\derived\\m3\\linear\\linear_runs.jsonl.gz": "3615e3067b8a90122d37e0b7e514a650a448f01c662e8701dbf19b6d6d509230",
+        "data\\derived\\m3\\linear\\linear_predictions.jsonl.gz": "e9855ee98c4643c866046f259742661a18a28040f167f7bbff78bda3757fa657",
+        "results\\E1\\m3\\linear\\linear_model.json": "2daa499107d7dc99a4f47aa15f90530830a4b7a83771730a1d21b0d6a0204e91",
+        "results\\E1\\m3\\linear\\linear_summary.json": "713204c58ab26872c9eacb3d23ffea4203769604ef0b06745df3bea5393c1626",
+        "results\\E1\\m3\\linear\\linear_data_summary.json": "8d88e0f68dff9761838c2772bb51201bea5d34b7b7341861ddede327ca87a229",
+        "results\\E1\\m3\\linear\\linear_feature_schema.json": "9e94472deedfcc312883a2ced2fe9d8270d7a8d4301f9ac47a72c61afb51cf65",
+        "results\\E1\\m3\\linear\\linear_table.csv": "6ca389e5fcc46fedc1fa0f6cccc4bd2b6a7f1a7964cf6b08dcbccb009efee26b",
+        "results\\E1\\m3\\linear\\linear_per_class.csv": "2cf342fa3ba45d91ef922f25b7d4984a2105248deacd014084275cef57148dbd",
+        "results\\E1\\m3\\linear\\linear_confusion.csv": "16e1258e844b2b6e63a399a5477243c2905fe2fe5203e2f4c17c88ad9acfb730",
+        "results\\E1\\m3\\linear\\linear_cv.csv": "149bc531c564fb5429cac5cd23c3552fd56a0211d5e6a9bbc3bee9447b0cd8fd",
+        "results\\E1\\m3\\linear\\linear_manifest.json": "cf8aec0987d3c772d79b278262d8abd5c749242aca8463b0e717540e5fc3ffd2"
+      },
+      "source_hashes": {
+        "tools/m3_linear_baseline.py": "5994bd96771200ff57ebf290818dc104a2b10b59d2f7b4f111df6f6c26ed5281"
+      },
+      "verifier": "postflight"
+    },
+    "EV-RUN-WP-M3-LINEAR-2": {
+      "id": "EV-RUN-WP-M3-LINEAR-2",
+      "created_at": "2026-10-09T16:06:22+00:00",
+      "kind": "experiment",
+      "locator": "command:RUN-WP-M3-LINEAR-2",
+      "status": "verified",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_validate_linear.py --results-dir results/E1/m3/linear --data-dir data/derived/m3/linear --out evidence/R1/M3/linear_validation.json",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_validate_linear.py",
+        "--results-dir",
+        "results/E1/m3/linear",
+        "--data-dir",
+        "data/derived/m3/linear",
+        "--out",
+        "evidence/R1/M3/linear_validation.json"
+      ],
+      "cwd": "E:\\midi2score",
+      "exit_code": 0,
+      "started_at": "2026-10-09T16:06:17+00:00",
+      "ended_at": "2026-10-09T16:06:22+00:00",
+      "stdout_sha256": "8efd606e0853ea950624b3e7796b28192b382aac238c8506a4e07fdb54bfff69",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "evidence\\R1\\M3\\linear_validation.json": "4727d0f7b4a7854ccf9895bca5eb28963e86ffb2dc9594b59349cb8bcff00909",
+        "evidence\\R1\\M3\\linear_validation.md": "56a4b6839bd994643eb791f7db8a5969383505bc055cc08391e2da0d9ec4ad23"
+      },
+      "source_hashes": {
+        "tools/m3_validate_linear.py": "5a3c0156778ccf60c0394780a474594239bbf7e1c423ec26c8477d8a31c62aae"
+      },
+      "verifier": "postflight"
+    },
+    "EV-RUN-WP-M3-LINEAR-3": {
+      "id": "EV-RUN-WP-M3-LINEAR-3",
+      "created_at": "2026-10-09T16:06:23+00:00",
+      "kind": "experiment",
+      "locator": "command:RUN-WP-M3-LINEAR-3",
+      "status": "verified",
+      "command": "E:\\midi2score\\.venv-research\\Scripts\\python.exe tools/m3_repro_check.py --results-dir results/E1/m3/linear --data-dir data/derived/m3/linear --check evidence/R1/M3/linear_pre_control_plane_snapshot.json --out evidence/R1/M3/linear_repro_check.json",
+      "argv": [
+        "E:\\midi2score\\.venv-research\\Scripts\\python.exe",
+        "tools/m3_repro_check.py",
+        "--results-dir",
+        "results/E1/m3/linear",
+        "--data-dir",
+        "data/derived/m3/linear",
+        "--check",
+        "evidence/R1/M3/linear_pre_control_plane_snapshot.json",
+        "--out",
+        "evidence/R1/M3/linear_repro_check.json"
+      ],
+      "cwd": "E:\\midi2score",
+      "exit_code": 0,
+      "started_at": "2026-10-09T16:06:22+00:00",
+      "ended_at": "2026-10-09T16:06:23+00:00",
+      "stdout_sha256": "a87d6a97159363f03aaede2bbf0f3ed91ee680f2fcd405c944d2c8e9c8b13701",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "environment_sha256": "2ad9cfdf580c5a4132124e50663059099d064e29f714e3d0758f7555b3cce1ca",
+      "artifact_hashes": {
+        "evidence\\R1\\M3\\linear_repro_check.json": "b2ef43e48981bf58c28d0ed83ea6511f236b455df177ceca6f5d2d3854a5f98f",
+        "evidence\\R1\\M3\\linear_repro_check.md": "e53611746147dd208736963985c892f8e902837bb68744716d9c9f6ad67f9051"
+      },
+      "source_hashes": {
+        "tools/m3_repro_check.py": "1d3802c27b983dd4cb7f09bacbc5cbcd79bf97eb2a9ee63e698c02d6acf648e1"
+      },
+      "verifier": "postflight"
+    }
+  },
+  "approval": "approve",
+  "pending_human_action": null
+}
