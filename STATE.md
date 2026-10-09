@@ -7,13 +7,13 @@
 
 - 约定：`main` SHA = **写入本块时的 HEAD**（包含本块的提交会使其 +1；以 `git log` 为准）；四个文件哈希 = 写入时的内容
 - 记录时间：`2026-10-09 +0800`
-- `main` SHA：`5650c3d4f7e6ca95daa55e9dc5280650b9f40209`
-- `PedNotate_Plan_v3.0.md` sha256：`b65b1fa6cfaa73caefccd9292ed460d5c2aac98ef56be64566a6574e98567c1b`
+- `main` SHA：`3aa305cde01c120b80bcbf664197c81b5e981908`
+- `PedNotate_Plan_v3.0.md` sha256：`d2950733f2d4b8b2d94c549a0459c4fe4e99c8507803239b5570b951d2aacbb8`
 - `TASK_CHARTER.md` sha256：`8c24d88707385b8104505b28b898569ad6bc207f320d2b79960cd320cfd769cf`
-- `DECISIONS.md` sha256：`998d75ba09e2f6047efc18e299680e11d625cf679252ed7977179987cf686705`
+- `DECISIONS.md` sha256：`237555e04e2bc25c5aec061980a918189d150bd0467dfb2806d2f4b3710191d4`
 - `FIELD_DEFINITIONS.md` sha256：`e35e2bc4fcfffd2c580539173391ec6cf0abdfb265ac55ec8b5586d8fc349539`
-- tracked 文件数：`172`
-- `git status --porcelain`：轮 D 修复产物待提交
+- tracked 文件数：`186`
+- `git status --porcelain`：本地接手清理与文档待提交
 
 ## 当前
 

@@ -91,3 +91,11 @@
 - 不得修改与当前阶段无关的代码或文件。
 - 不得提交原始数据集、模型权重、凭据、虚拟环境与大型生成物。
 
+
+## 本地会话接手协议（2026-10-09）
+
+- **权威来源**：新会话先读 `TASK_CHARTER.md`、`PedNotate_Plan_v3.0.md`、`DECISIONS.md`、`STATE.md`、`FIELD_DEFINITIONS.md`；网页端粘贴历史、旧会话摘要和旧 SHA 均只作背景，不作权威。
+- **目标防漂移**：任何新任务必须先从 `STATE.md`/`DECISIONS.md` 对齐当前阶段与禁止项；冲突先停报，不沿用网页端的旧结论。
+- **架构保留**：继续保留 LangGraph 的 `src/research_agent/`、checkpointer/store、thread_id、interrupt/人工确认和 verifier；不得以“简化”为由删除这些能力。
+- **子 agent**：鼓励并行调用子 agent 做只读盘点、代码审阅、独立复算和证据整理；同一文件同一时刻只允许主代理写入，子 agent 默认只读或返回结果，写入前必须由主代理验证并串行落地。
+- **会话卫生**：新会话不得恢复旧本地 checkpointer/store 状态；发现旧缓存、临时目录或未验证产物先列审计，再决定保留/删除。
