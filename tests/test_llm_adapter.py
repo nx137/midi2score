@@ -46,7 +46,7 @@ def test_deepseek_client_parses_openai_compatible_response(tmp_path):
         base_url="https://api.example.test",
         api_key="secret",
         reasoning_effort="high",
-        disable_response_storage=True,
+        disable_response_storage=False,
         extra_body={"thinking": {"type": "enabled"}},
         log_dir=str(tmp_path / "logs"),
     )
@@ -57,7 +57,7 @@ def test_deepseek_client_parses_openai_compatible_response(tmp_path):
     assert request.full_url == "https://api.example.test/chat/completions"
     assert request.headers["Authorization"] == "Bearer secret"
     assert body["reasoning_effort"] == "high"
-    assert body["store"] is False
+    assert "store" not in body
     assert body["thinking"] == {"type": "enabled"}
     log_text = (tmp_path / "logs" / "llm_calls.jsonl").read_text(encoding="utf-8")
     assert "secret" not in log_text

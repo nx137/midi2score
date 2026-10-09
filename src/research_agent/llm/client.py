@@ -64,8 +64,6 @@ class DeepSeekClient:
         }
         if self.config.reasoning_effort:
             payload["reasoning_effort"] = self.config.reasoning_effort
-        if self.config.disable_response_storage:
-            payload["store"] = False
         for key, value in self.config.extra_body.items():
             if key not in {"model", "messages", "stream"}:
                 payload[key] = value
@@ -93,7 +91,8 @@ class DeepSeekClient:
             content = body["choices"][0]["message"]["content"]
         except Exception as exc:
             raise LLMError(f"LLM response schema error: {raw[:500]}") from exc
-        self._log(prompt, str(content), time.time() - started)
+        if not self.config.disable_response_storage:
+            self._log(prompt, str(content), time.time() - started)
         return str(content)
 
     def _log(self, prompt: str, content: str, elapsed: float) -> None:
